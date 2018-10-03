@@ -1,0 +1,1 @@
+# Creating boxes from error bars using PatchCollection

@@ -1,0 +1,1 @@
+# Using accented text in matplotlib

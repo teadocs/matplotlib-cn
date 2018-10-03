@@ -1,0 +1,1 @@
+# Colormap Normalizations Power

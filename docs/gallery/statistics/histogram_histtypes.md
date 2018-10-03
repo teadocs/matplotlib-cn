@@ -1,0 +1,1 @@
+# Demo of the histogram function’s different histtype settings

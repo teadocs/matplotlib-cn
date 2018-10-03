@@ -1,0 +1,1 @@
+# Tight Bbox Test

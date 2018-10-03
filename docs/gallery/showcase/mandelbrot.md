@@ -1,0 +1,1 @@
+# Shaded & power normalized rendering

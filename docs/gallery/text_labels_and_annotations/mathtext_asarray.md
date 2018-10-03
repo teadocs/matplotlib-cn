@@ -1,0 +1,1 @@
+# A mathtext image as numpy array

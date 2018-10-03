@@ -1,0 +1,1 @@
+# Default text rotation demonstration

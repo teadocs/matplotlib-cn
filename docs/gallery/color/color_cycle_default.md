@@ -1,0 +1,1 @@
+# Colors in the default property cycle

@@ -1,0 +1,1 @@
+# Creating a colormap from a list of colors

@@ -1,0 +1,1 @@
+# Rendering math equation using TeX

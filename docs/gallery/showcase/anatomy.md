@@ -1,0 +1,1 @@
+# Anatomy of a figure

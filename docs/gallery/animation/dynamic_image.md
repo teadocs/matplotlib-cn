@@ -1,0 +1,1 @@
+# Animated image using a precomputed list of images

@@ -1,0 +1,1 @@
+# Modifying the coordinate formatter

@@ -1,0 +1,1 @@
+# Grayscale style sheet

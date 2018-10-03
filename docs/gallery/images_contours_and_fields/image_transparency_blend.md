@@ -1,0 +1,1 @@
+# Blend transparency with color in 2-D images
