@@ -20,6 +20,15 @@ module.exports = {
         `,
         footHtml: `
         <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?ffb401b873c9c6f5368dcd814cd15ba7";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>        
+        <script>
             var comments = window.document.createElement("div");
             comments.style.maxWidth = "900px";
             comments.style.backgroundColor = "#fff";
