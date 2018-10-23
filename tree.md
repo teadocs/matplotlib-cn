@@ -1,6 +1,6 @@
 - [matplotlib 中文文档](/index) 
 - [matplotlib 介绍](/home)
-- [+matplotlib 例子](/gallery/index)
+- [matplotlib 例子](/gallery/index)
     - 线条、条形和标记
         - [拉弧测试](/gallery/lines_bars_and_markers/arctest)
         - [堆积条形图](/gallery/lines_bars_and_markers/bar_stacked)
@@ -547,7 +547,7 @@
         - [Span Selector](/gallery/widgets/span_selector)
         - [Textbox](/gallery/widgets/textbox)
     - [所有示例下载](/gallery/download)
-- [+matplotlib 教程](/tutorials/index)
+- [matplotlib 教程](/tutorials/index)
     - [matplotlib 入门](/tutorials/introductory/index)
         - [使用指南](/tutorials/introductory/usage)
         - [Pyplot教程](/tutorials/introductory/pyplot)
@@ -584,7 +584,7 @@
         - [Overview of axisartist toolkit](/tutorials/toolkits/axisartist)
         - [The mplot3d Toolkit](/tutorials/toolkits/mplot3d)
     - [所有教程示例的下载](/tutorials/download)
-- +matplotlib API
+- matplotlib API
     - [MatplotlibAPI 概述](/api/overview/index)
     - [MatplotlibAPI 更新日志](/api/overview/change)
     - [MatplotlibAPI 列表](/api/modules/index)
