@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.numpy.org.cn$ [NC]
+RewriteCond %{REQUEST_URI} !^/numpy-cn
+RewriteRule ^(.*)$ /numpy-cn/$1 [L]
+RewriteCond %{HTTP_HOST} ^numpy.org.cn$ [NC]
+RewriteCond %{REQUEST_URI} !^/numpy-cn
+RewriteRule ^(.*)$ /numpy-cn/$1 [L]
+RewriteCond %{HTTP_HOST} ^www.matplotlib.org.cn$ [NC]
+RewriteCond %{REQUEST_URI} !^/matplotlib-cn
+RewriteRule ^(.*)$ /matplotlib-cn/$1 [L]
+RewriteCond %{HTTP_HOST} ^matplotlib.org.cn$ [NC]
+RewriteCond %{REQUEST_URI} !^/matplotlib-cn
+RewriteRule ^(.*)$ /matplotlib-cn/$1 [L]
+</IfModule>
