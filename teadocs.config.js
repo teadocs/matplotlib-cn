@@ -27,7 +27,7 @@ module.exports = {
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
         })();
-        </script>        
+        </script>
         <script>
             var comments = window.document.createElement("div");
             comments.style.maxWidth = "900px";
