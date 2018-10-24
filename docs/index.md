@@ -22,7 +22,9 @@ numpy中文文档 | [https://www.numpy.org.cn/](https://www.numpy.org.cn/)
 
 ## 联系方式
 
-- 发起人邮箱：l@matplotlib.org.cn
+- 发起人邮箱：l@numpy.org.cn
+- 发起人微信号：iamnotahacker
+- QQ交流群：294639068
 
 ## 贡献翻译
 
