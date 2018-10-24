@@ -1,4 +1,4 @@
-- [matplotlib 中文文档](/index) 
+- [关于中文文档](/index) 
 - [matplotlib 介绍](/home)
 - [matplotlib 例子](/gallery/index)
     - 线条、条形和标记
