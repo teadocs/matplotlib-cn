@@ -1,71 +1,71 @@
 # matplotlib 介绍
 
-Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. Matplotlib can be used in Python scripts, the Python and IPython shells, the Jupyter notebook, web application servers, and four graphical user interface toolkits.
+Matplotlib是一个Python 2D绘图库，可以生成各种硬拷贝格式和跨平台交互式环境的出版物质量数据。Matplotlib可用于Python脚本，Python和IPython shell，Jupyter笔记本，Web应用程序服务器和四个图形用户界面工具包。
 
 <a href="https://matplotlib.org/tutorials/introductory/sample_plots.html"><img src="/static/images/home/sphx_glr_membrane_thumb.png" style='width: 160px'></a><a href="https://matplotlib.org/tutorials/introductory/sample_plots.html"><img src="/static/images/home/sphx_glr_histogram_thumb.png" style='width: 160px'></a><a href="https://matplotlib.org/tutorials/introductory/sample_plots.html"><img src="/static/images/home/sphx_glr_contour_thumb.png" style='width: 160px'></a><a href="https://matplotlib.org/tutorials/introductory/sample_plots.html"><img src="/static/images/home/sphx_glr_3D_thumb.png" style='width: 160px'></a>
 
-Matplotlib tries to make easy things easy and hard things possible. You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc., with just a few lines of code. For examples, see the sample plots and thumbnail gallery.
+Matplotlib试图让简单易事的事情成为可能。你只需几行代码即可生成绘图，直方图，功率谱，条形图，错误图，散点图等。有关示例，请参阅[示例图库](https://matplotlib.org/tutorials/introductory/sample_plots.html)和[缩略图库](https://matplotlib.org/gallery/index.html)。
 
-For simple plotting the pyplot module provides a MATLAB-like interface, particularly when combined with IPython. For the power user, you have full control of line styles, font properties, axes properties, etc, via an object oriented interface or via a set of functions familiar to MATLAB users.
+对于简单的绘图，pyplot模块提供类似MATLAB的接口，特别是与IPython结合使用时。 对于高级用户，你可以通过面向对象的界面或通过MATLAB用户熟悉的一组函数完全控制线型，字体属性，轴属性等。
 
 ## 安装
 
-Visit the [Matplotlib installation instructions](https://matplotlib.org/users/installing.html).
+请参看 [Matplotlib安装说明](https://matplotlib.org/users/installing.html).
 
 ## 文档
 
-This is the documentation for Matplotlib version 3.0.0.
+这是Matplotlib版本3.0.0的文档。
 
-To get started, read the [User's Guide](https://matplotlib.org/users/index.html).
+要开始，请阅读[用户指南](https://matplotlib.org/users/index.html).
 
-Other versions are available:
+其他版本有：
 
 - 3.0.0 Stable version.
 - 2.2.3 LTS LTS version.
-- 3.x Latest git master (unstable)
+- 3.x Latest git master (不稳定)
 - 2.1.2 Older stable version.
 
-Trying to learn how to do a particular kind of plot? Check out the examples gallery or the list of plotting commands.
+试图学习如何绘制一种特定的图像？查看[示例库](https://matplotlib.org/gallery/index.html)或[绘图命令列表](https://matplotlib.org/api/pyplot_summary.html)。
 
-### Other learning resources
+### 其他的学习资源
 
-There are many external learning resources available including printed material, videos and tutorials.
+有许多外部学习资源，包括印刷材料，视频和教程。
 
-### Need help?
+### 需要帮助？
 
-Matplotlib is a welcoming, inclusive project, and we try to follow the Python Software Foundation Code of Conduct in everything we do.
+Matplotlib是一个热情，包容的项目，我们尝试在我们所做的每件事情中遵循Python软件基金会行为准则。
 
-Check the FAQ and the API docs.
+查看[常见问题解答](https://matplotlib.org/faq/index.html)和[API文档](https://matplotlib.org/api/index.html)。
 
-For help, join the gitter channel and the matplotlib-users, matplotlib-devel, and matplotlib-announce mailing lists, or check out the Matplotlib tag on stackoverflow. The search tool searches all of the documentation, including full text search of over 350 complete examples which exercise almost every corner of Matplotlib.
+如需帮助，请加入[gitter channel](https://gitter.im/matplotlib/matplotlib)和[matplotlib-users](https://mail.python.org/mailman/listinfo/matplotlib-users)，[matplotlib-devel](https://mail.python.org/mailman/listinfo/matplotlib-devel)和[matplotlib-announce](https://mail.python.org/mailman/listinfo/matplotlib-announce)邮件列表，或查看[stackoverflow](http://stackoverflow.com/questions/tagged/matplotlib)上的Matplotlib标记。[搜索工具](https://matplotlib.org/search.html)可以搜索所有文档，包括350多个完整示例的全文搜索，这些示例几乎遍布Matplotlib的每个角落。
 
-You can file bugs, patches and feature requests on the issue tracker, but it is a good idea to ping us on the mailing list too.
+你可以在问题跟踪器上提交错误，补丁和功能请求，但最好也可以在邮件列表上ping我们。
 
-To keep up to date with what's going on in Matplotlib, see the what's new page or browse the source code. Anything that could require changes to your existing code is logged in the API changes file.
+要及时了解Matplotlib中的最新信息，请查看新页面或浏览源代码。 任何可能需要更改现有代码的内容都会记录在API更改文件中。
 
-#### Toolkits
+#### 工具包
 
-Matplotlib ships with several add-on toolkits, including 3d plotting with mplot3d, axes helpers in axes_grid1 and axis helpers in axisartist.
+Matplotlib附带了几个附加工具包，包括mplot3d三维绘图、AXIS_GID 1中的轴帮助器和轴辅助器。
 
-#### Third party packages
+#### 第三方包
 
-A large number of third party packages extend and build on Matplotlib functionality, including several higher-level plotting interfaces (seaborn, holoviews, ggplot, ...), and two projection and mapping toolkits (basemap and cartopy).
+大量第三方包扩展并构建了Matplotlib功能，包括几个较高级别的绘图接口(seaborn、全视图、ggmap 等)，以及两个投影和绘图工具包(basemap和cartopy)。
 
-#### Citing Matplotlib
+#### 引用Matplotlib
 
-Matplotlib is the brainchild of John Hunter (1968-2012), who, along with its many contributors, have put an immeasurable amount of time and effort into producing a piece of software utilized by thousands of scientists worldwide.
+Matplotlib是约翰·亨特（John Hunter，1968-2012）的心血结晶，他和许多贡献者一起投入了不可估量的时间和精力来制作一套全球数千名科学家使用的软件。
 
-If Matplotlib contributes to a project that leads to a scientific publication, please acknowledge this work by citing the project. A ready-made citation entry is available.
+如果你的科学出版物中有Matplotlib做出了贡献，请通过引用Matplotlib来表示。可提供现成的引文条目。
 
-#### Open source
+#### 开源
 
-![A Fiscally Sponsored Project of NUMFocus](/static/images/home/numfocus_badge.png)
-[A Fiscally Sponsored Project of NUMFocus](https://numfocus.org/)
+![NUMFocus的财政赞助项目](/static/images/home/numfocus_badge.png)
+[NUMFocus的财政赞助项目](https://numfocus.org/)
 
-Please consider donating to the Matplotlib project through the Numfocus organization or to the John Hunter Technology Fellowship.
+请考虑通过Numfocus组织或[John Hunter技术奖学金](https://www.numfocus.org/programs/john-hunter-technology-fellowship/)[捐赠给Matplotlib项目](https://www.flipcause.com/secure/cause_pdetails/MjI1OA==)。
 
-The Matplotlib license is based on the Python Software Foundation (PSF) license.
+[Matplotlib许可证](https://matplotlib.org/users/license.html)基于[Python软件基金会（PSF）许可证](http://www.python.org/psf/license)。
 
-There is an active developer community and a long list of people who have made significant contributions.
+有一个活跃的开发者社区和一长串做出重大[贡献](https://matplotlib.org/users/credits.html)的人。
 
-Matplotlib is hosted on Github. Issues and Pull requests are tracked at Github too.
+Matplotlib托管在[Github](https://github.com/matplotlib/matplotlib)上。Github也会跟踪[问题](https://github.com/matplotlib/matplotlib/issues)和[拉取请求](https://github.com/matplotlib/matplotlib/pulls)。

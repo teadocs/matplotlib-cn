@@ -5,7 +5,7 @@
         - [拉弧测试](/gallery/lines_bars_and_markers/arctest)
         - [堆积条形图](/gallery/lines_bars_and_markers/bar_stacked)
         - [条形图](/gallery/lines_bars_and_markers/barchart)
-        - [水平条形图](/gallery/lines_bars_and_markers/bar_stacked)
+        - [水平条形图](/gallery/lines_bars_and_markers/horizontal_bar_chart)
         - [破损条形图](/gallery/lines_bars_and_markers/broken_barh)
         - [绘制分类变量](/gallery/lines_bars_and_markers/categorical_variables)
         - [绘制两个信号的相干性](/gallery/lines_bars_and_markers/cohere)
