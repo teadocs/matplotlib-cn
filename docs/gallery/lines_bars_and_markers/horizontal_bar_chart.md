@@ -2,7 +2,7 @@
 
 这个例子展示了一个简单的水平条形图。
 
-![堆积条形图示](/static/images/gallery/sphx_glr_barh_001.png);
+![水平条形图示](/static/images/gallery/sphx_glr_barh_001.png);
 
 ```python
 import matplotlib.pyplot as plt
