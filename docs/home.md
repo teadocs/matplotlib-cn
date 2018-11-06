@@ -33,7 +33,7 @@ Matplotlib试图让简单易事的事情成为可能。你只需几行代码即�
 
 ### 需要帮助？
 
-Matplotlib是一个热情，包容的项目，我们尝试在我们所做的每件事情中遵循Python软件基金会行为准则。
+Matplotlib是一个热情、包容的项目，我们尝试在我们所做的每件事情中遵循[Python软件基金会](http://www.python.org/psf/codeofconduct/)行为准则。
 
 查看[常见问题解答](https://matplotlib.org/faq/index.html)和[API文档](https://matplotlib.org/api/index.html)。
 
@@ -49,13 +49,13 @@ Matplotlib附带了几个附加工具包，包括mplot3d三维绘图、AXIS_GID 
 
 #### 第三方包
 
-大量第三方包扩展并构建了Matplotlib功能，包括几个较高级别的绘图接口(seaborn、全视图、ggmap 等)，以及两个投影和绘图工具包(basemap和cartopy)。
+[大量第三方包](https://matplotlib.org/thirdpartypackages/index.html)扩展并构建了Matplotlib功能，包括几个较高级别的绘图接口([seaborn](https://seaborn.github.io/)、[holoviews](http://holoviews.org/)、[ggplot](http://ggplot.yhathq.com/) 等)，以及两个投影和绘图工具包([basemap](http://matplotlib.org/basemap)和[cartopy](http://scitools.org.uk/cartopy/docs/latest))。
 
 #### 引用Matplotlib
 
 Matplotlib是约翰·亨特（John Hunter，1968-2012）的心血结晶，他和许多贡献者一起投入了不可估量的时间和精力来制作一套全球数千名科学家使用的软件。
 
-如果你的科学出版物中有Matplotlib做出了贡献，请通过引用Matplotlib来表示。可提供现成的引文条目。
+如果你的科学出版物中有Matplotlib做出了贡献，请通过引用Matplotlib来表示。可使用这个列表里提供的[现成的引文条目](https://matplotlib.org/citing.html)。
 
 #### 开源
 
