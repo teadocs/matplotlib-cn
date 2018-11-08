@@ -29,7 +29,7 @@ ax.set_ylim(-.5, 5.5)
 plt.show()
 ```
 
-![连接图样式](/static/images/gallery/sphx_glr_interp_demo_001.png)
+![连接图样式](/static/images/gallery/sphx_glr_joinstyle_001.png)
 
 ```python
 import matplotlib.pyplot as plt
