@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = {
     doc: {
-        name: "Matplotlib中文文档",
+        name: "Matplotlib 中文文档",
         description: "这是Matplotlib官方的中文文档，Matplotlib 是一个 Python 的 2D绘图库，它以各种硬拷贝格式和跨平台的交互式环境生成出版质量级别的图形。",
         version: "3.0.0",
         dir: "",
@@ -12,7 +12,7 @@ module.exports = {
     }, 
     theme: {
         dir: "", 
-        title: "Matplotlibb中文文档",
+        title: "Matplotlib中文文档",
         headHtml: `
         <meta name="description" content="这是Matplotlib官方的中文文档，Matplotlib 是一个 Python 的 2D绘图库，它以各种硬拷贝格式和跨平台的交互式环境生成出版质量级别的图形。" />
         <meta name="keywords" content="matplotlib中文文档,matplotlib中文api,matplotlib中文手册,matplotlib教程,matplotlib下载安装,matplotlib" />
