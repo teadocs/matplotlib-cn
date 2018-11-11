@@ -30,6 +30,7 @@
         - [prop_cycle属性的markevery支持](/gallery/lines_bars_and_markers/markevery_prop_cycle)
         - [遮盖示例](/gallery/lines_bars_and_markers/masked_demo)
         - [五彩线条](/gallery/lines_bars_and_markers/multicolored_line)
+        - [Nan测试](/gallery/lines_bars_and_markers/nan_test)
         - [功率谱密度图示例](/gallery/lines_bars_and_markers/psd_demo)
         - [散点图自定义符号](/gallery/lines_bars_and_markers/scatter_custom_symbol)
         - [散点图自定义样式](/gallery/lines_bars_and_markers/scatter_demo2)
