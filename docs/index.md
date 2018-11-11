@@ -16,9 +16,9 @@
 
 ## 兄弟文档
 
-文档名称 | 访问地址 
+文档名称 | 备注 
 ---|---
-numpy中文文档 | [https://www.numpy.org.cn/](https://www.numpy.org.cn/)
+[numpy中文文档](https://www.numpy.org.cn/) | numpy中文文档
 
 ## 联系方式
 
