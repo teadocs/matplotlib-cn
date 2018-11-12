@@ -6,7 +6,7 @@ matplotlib中文文档是使用markdown编写的技术文档，目前文档还�
 
 ## 在线访问
 
-[NumPy中文文档](https://www.matplotlib.org.cn/)
+[Matplotlib中文文档](https://www.matplotlib.org.cn/)
 
 ## 贡献翻译与构建
 
@@ -21,9 +21,9 @@ teadocs build
 
 ## 兄弟文档
 
-文档名称 | 访问地址 
+文档名称 | 备注 
 ---|---
-numpy中文文档 | [https://www.numpy.org.cn/](https://www.numpy.org.cn/)
+[NumPy中文文档](https://www.numpy.org.cn/) | - 
 
 ## 版权信息
 
