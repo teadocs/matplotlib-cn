@@ -44,6 +44,7 @@
         - [使用span_where](/gallery/lines_bars_and_markers/span_regions)
         - [频谱表示图](/gallery/lines_bars_and_markers/spectrum_demo)
         - [堆栈图示例](/gallery/lines_bars_and_markers/stackplot_demo)
+        - [茎状图示](/gallery/lines_bars_and_markers/stem_plot)
         - [阶梯图示例](/gallery/lines_bars_and_markers/step_demo)
         - [使用线、日期、文本创建时间轴图](/gallery/lines_bars_and_markers/timeline)
         - [hlines和vlines](/gallery/lines_bars_and_markers/vline_hline_demo)
