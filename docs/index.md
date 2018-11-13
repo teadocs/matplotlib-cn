@@ -18,13 +18,13 @@
 
 文档名称 | 备注 
 ---|---
-[numpy中文文档](https://www.numpy.org.cn/) | numpy中文文档
+[NumPy中文文档](https://www.numpy.org.cn/) | NumPy中文文档
+[Pandas中文文档](https://www.pypandas.cn/) | Pandas中文文档
 
 ## 联系方式
 
 - 发起人邮箱：l@numpy.org.cn
 - 发起人微信号：iamnotahacker
-- QQ交流群：294639068
 
 ## 贡献翻译
 
