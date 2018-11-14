@@ -49,14 +49,14 @@
         - [使用线、日期、文本创建时间轴图](/gallery/lines_bars_and_markers/timeline)
         - [hlines和vlines](/gallery/lines_bars_and_markers/vline_hline_demo)
         - [交叉和自动关联演示](/gallery/lines_bars_and_markers/xcorr_acorr_demo)
-    - 图像、轮廓相关
+    - 图像、等高线相关
         - [图像的仿射变换](/gallery/images_contours_and_fields/affine_image)
         - [倒勾图示例](/gallery/images_contours_and_fields/barb_demo)
         - [条形码示例](/gallery/images_contours_and_fields/barcode_demo)
         - [等高线角遮盖](/gallery/images_contours_and_fields/contour_corner_mask)
         - [等高线演示](/gallery/images_contours_and_fields/contour_demo)
         - [等高线图像](/gallery/images_contours_and_fields/contour_image)
-        - [轮廓标签演示](/gallery/images_contours_and_fields/contour_label_demo)
+        - [等高线标签演示](/gallery/images_contours_and_fields/contour_label_demo)
         - [Contourf演示](/gallery/images_contours_and_fields/contourf_demo)
         - [Contourf影线法](/gallery/images_contours_and_fields/contourf_hatching)
         - [Contourf与记录颜色刻度](/gallery/images_contours_and_fields/contourf_log)
