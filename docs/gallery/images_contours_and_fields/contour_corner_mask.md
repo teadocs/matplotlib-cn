@@ -47,8 +47,6 @@ matplotlib.axes.Axes.contour
 matplotlib.pyplot.contour
 matplotlib.axes.Axes.contourf
 matplotlib.pyplot.contourf
-Download Python source code: contour_corner_mask.py
-Download Jupyter notebook: contour_corner_mask.ipynb
 ```
 
 ## 下载这个示例
