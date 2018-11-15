@@ -1,1 +1,2 @@
-# Creating a colormap from a list of colors
+#  从颜色列表创建颜色图
+
