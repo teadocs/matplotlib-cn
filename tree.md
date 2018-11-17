@@ -69,7 +69,7 @@
         - [不均匀分布图像](/gallery/images_contours_and_fields/image_nonuniform)
         - [在二维图像中混合透明和颜色](/gallery/images_contours_and_fields/image_transparency_blend)
         - [修改坐标格式化程序](/gallery/images_contours_and_fields/image_zcoord)
-        - [无显示/矩阵显示的插值](/gallery/images_contours_and_fields/interpolation_methods)
+        - [imshow或matshow的插值](/gallery/images_contours_and_fields/interpolation_methods)
         - [不规则空间数据的等高线图](/gallery/images_contours_and_fields/irregulardatagrid)
         - [图层图像](/gallery/images_contours_and_fields/layer_images)
         - [Matshow](/gallery/images_contours_and_fields/matshow)
