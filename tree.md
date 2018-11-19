@@ -84,7 +84,7 @@
         - [频谱图演示](/gallery/images_contours_and_fields/specgram_demo)
         - [Spy演示](/gallery/images_contours_and_fields/spy_demos)
         - [Tricontour演示](/gallery/images_contours_and_fields/tricontour_demo)
-        - [Tricontour Smooth Delaunay](/gallery/images_contours_and_fields/tricontour_smooth_delaunay)
+        - [Tricontour 德洛内三角](/gallery/images_contours_and_fields/tricontour_smooth_delaunay)
         - [Tricontour Smooth User](/gallery/images_contours_and_fields/tricontour_smooth_user)
         - [Trigradient演示](/gallery/images_contours_and_fields/trigradient_demo)
         - [Triinterp演示](/gallery/images_contours_and_fields/triinterp_demo)

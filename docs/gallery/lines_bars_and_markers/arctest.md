@@ -1,6 +1,8 @@
 # 拉弧测试
 
-![拉弧测试图示](/static/images/gallery/sphx_glr_arctest_001.png);
+拉弧测试示例。
+
+![拉弧测试图示](/static/images/gallery/sphx_glr_arctest_001.png)
 
 ```python
 import matplotlib.pyplot as plt
