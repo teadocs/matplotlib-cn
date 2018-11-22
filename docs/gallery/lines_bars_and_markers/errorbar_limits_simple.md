@@ -1,6 +1,6 @@
-# 绘制限制型错误条形图
+# 绘制限制型误差条形图
 
-错误条上的上限符号和下限符号的说明
+误差条上的上限符号和下限符号的说明
 
 ```python
 import numpy as np
@@ -25,7 +25,7 @@ plt.errorbar(x, y, yerr=0.1, uplims=upperlimits, lolims=lowerlimits)
 plt.xlim(-1, 10)
 ```
 
-![限制型错误条形图示](/static/images/gallery/sphx_glr_errorbar_limits_simple_000.png);
+![限制型误差条形图示](/static/images/gallery/sphx_glr_errorbar_limits_simple_000.png);
 
 ```python
 fig = plt.figure(1)
@@ -46,7 +46,7 @@ plt.ylim(-0.1, 1.3)
 plt.show()
 ```
 
-![限制型错误条形图示2](/static/images/gallery/sphx_glr_errorbar_limits_simple_002.png);
+![限制型误差条形图示2](/static/images/gallery/sphx_glr_errorbar_limits_simple_002.png);
 
 ## 下载这个示例
 

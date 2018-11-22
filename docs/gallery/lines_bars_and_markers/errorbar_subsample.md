@@ -1,8 +1,8 @@
-# 绘制错误条形图子样本
+# 绘制误差条形图子样本
 
-演示 errorevery 关键字，以显示数据的完全精度数据图与很少的错误条。
+演示 errorevery 关键字，以显示数据的完全精度数据图与很少的误差条。
 
-![绘制错误条形图子样本](/static/images/gallery/sphx_glr_errorbar_subsample_001.png);
+![绘制误差条形图子样本](/static/images/gallery/sphx_glr_errorbar_subsample_001.png);
 
 ```python
 import numpy as np

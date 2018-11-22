@@ -2,7 +2,7 @@
 
 [pcolormesh](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.pcolormesh.html#matplotlib.axes.Axes.pcolormesh) 使用[QuadMesh](https://matplotlib.org/api/collections_api.html#matplotlib.collections.QuadMesh)，一种更快的 [pcolor](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.pcolor.html#matplotlib.axes.Axes.pcolor) 泛化，但有一些限制。
 
-此演示说明了带有掩码数据的quadmesh中的错误。
+此演示说明了带有掩码数据的quadmesh中的误差。
 
 ```python
 import copy

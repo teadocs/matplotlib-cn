@@ -4,7 +4,7 @@ Matplotlib是一个Python 2D绘图库，可以生成各种硬拷贝格式和跨�
 
 <a href="https://matplotlib.org/tutorials/introductory/sample_plots.html"><img src="/static/images/home/sphx_glr_membrane_thumb.png" style='width: 160px'></a><a href="https://matplotlib.org/tutorials/introductory/sample_plots.html"><img src="/static/images/home/sphx_glr_histogram_thumb.png" style='width: 160px'></a><a href="https://matplotlib.org/tutorials/introductory/sample_plots.html"><img src="/static/images/home/sphx_glr_contour_thumb.png" style='width: 160px'></a><a href="https://matplotlib.org/tutorials/introductory/sample_plots.html"><img src="/static/images/home/sphx_glr_3D_thumb.png" style='width: 160px'></a>
 
-Matplotlib试图让简单易事的事情成为可能。你只需几行代码即可生成绘图，直方图，功率谱，条形图，错误图，散点图等。有关示例，请参阅[示例图库](https://matplotlib.org/tutorials/introductory/sample_plots.html)和[缩略图库](https://matplotlib.org/gallery/index.html)。
+Matplotlib试图让简单易事的事情成为可能。你只需几行代码即可生成绘图，直方图，功率谱，条形图，误差图，散点图等。有关示例，请参阅[示例图库](https://matplotlib.org/tutorials/introductory/sample_plots.html)和[缩略图库](https://matplotlib.org/gallery/index.html)。
 
 对于简单的绘图，pyplot模块提供类似MATLAB的接口，特别是与IPython结合使用时。 对于高级用户，你可以通过面向对象的界面或通过MATLAB用户熟悉的一组函数完全控制线型，字体属性，轴属性等。
 
@@ -39,7 +39,7 @@ Matplotlib是一个热情、包容的项目，我们尝试在我们所做的每�
 
 如需帮助，请加入[gitter channel](https://gitter.im/matplotlib/matplotlib)和[matplotlib-users](https://mail.python.org/mailman/listinfo/matplotlib-users)，[matplotlib-devel](https://mail.python.org/mailman/listinfo/matplotlib-devel)和[matplotlib-announce](https://mail.python.org/mailman/listinfo/matplotlib-announce)邮件列表，或查看[stackoverflow](http://stackoverflow.com/questions/tagged/matplotlib)上的Matplotlib标记。[搜索工具](https://matplotlib.org/search.html)可以搜索所有文档，包括350多个完整示例的全文搜索，这些示例几乎遍布Matplotlib的每个角落。
 
-你可以在问题跟踪器上提交错误，补丁和功能请求，但最好也可以在邮件列表上ping我们。
+你可以在问题跟踪器上提交误差，补丁和功能请求，但最好也可以在邮件列表上ping我们。
 
 要及时了解Matplotlib中的最新信息，请查看新页面或浏览源代码。 任何可能需要更改现有代码的内容都会记录在API更改文件中。
 
