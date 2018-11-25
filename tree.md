@@ -167,7 +167,7 @@
         - [使用工程符号标记刻度线](/gallery/text_labels_and_annotations/engineering_formatter)
         - [花式箭头符号演示](/gallery/text_labels_and_annotations/fancyarrow_demo)
         - [花式文本框演示](/gallery/text_labels_and_annotations/fancytextbox_demo)
-        - [Figure legend demo](/gallery/text_labels_and_annotations/figlegend_demo)
+        - [图形图例演示](/gallery/text_labels_and_annotations/figlegend_demo)
         - [Configuring the font family](/gallery/text_labels_and_annotations/font_family_rc_sgskip)
         - [Using a ttf font file in Matplotlib](/gallery/text_labels_and_annotations/font_file)
         - [Font Table TTF](/gallery/text_labels_and_annotations/font_table_ttf_sgskip)
