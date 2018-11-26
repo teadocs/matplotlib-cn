@@ -466,5 +466,5 @@ mplstyle.use(['dark_background', 'ggplot', 'fast'])
 
 ## 下载本文的所有示例
 
-- [下载python源码: affine_image.py](https://matplotlib.org/_downloads/44756043dd6d8c4d37f2ae34ec869dde/usage.py)
-- [下载Jupyter notebook: affine_image.ipynb](https://matplotlib.org/_downloads/60b66634a88a8f759450ae8638e59340/usage.ipynb)
+- [下载python源码: usage.py](https://matplotlib.org/_downloads/44756043dd6d8c4d37f2ae34ec869dde/usage.py)
+- [下载Jupyter notebook: usage.ipynb](https://matplotlib.org/_downloads/60b66634a88a8f759450ae8638e59340/usage.ipynb)
