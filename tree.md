@@ -591,7 +591,7 @@
     - [MatplotlibAPI 更新日志](/api/overview/change)
     - [MatplotlibAPI 列表](/api/modules/index)
         - [顶级`matplotlib`模块](/api/modules/matplotlib_configuration_api.html)
-        - [Pyplot function overview](/api/modules/pyplot_summary.html)
+        - [Pyplot函数概述](/api/modules/pyplot_summary.html)
         - [Colors in Matplotlib](/api/modules/pyplot_summary.html#colors-in-matplotlib)
         - [afm (Adobe Font Metrics interface)](/api/modules/afm_api.html)
         - [animation](/api/modules/animation_api.html)
