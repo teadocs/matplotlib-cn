@@ -637,12 +637,12 @@
         - [type1font](/api/modules/type1font.html)
         - [units](/api/modules/units_api.html)
         - [widgets](/api/modules/widgets_api.html)
-    - [工具包](/api/toolkits/index)
-        - [Toolkits](/api/toolkits/index.html)
-        - [mplot3d API](/api/toolkits/mplot3d.html)
-        - [Matplotlib axes_grid1 Toolkit](/api/toolkits/axes_grid1.html)
-        - [Matplotlib axisartist Toolkit](/api/toolkits/axisartist.html)
-        - [Matplotlib axes_grid Toolkit](/api/toolkits/axes_grid.html)
+    - 工具包
+        - [Toolkits](/api/toolkits/index)
+        - [mplot3d API](/api/toolkits/mplot3d)
+        - [Matplotlib axes_grid1 Toolkit](/api/toolkits/axes_grid1)
+        - [Matplotlib axisartist Toolkit](/api/toolkits/axisartist)
+        - [Matplotlib axes_grid Toolkit](/api/toolkits/axes_grid)
 - +matplotlib 文档地图
     - [用户指南](/docsmap/users/index)
     - [Matplotlib 常见问题](/docsmap/faq/index)
