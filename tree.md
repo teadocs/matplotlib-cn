@@ -191,7 +191,7 @@
         - [Unicode 负表示](/gallery/text_labels_and_annotations/unicode_minus)
         - [Usetex 基线测试](/gallery/text_labels_and_annotations/usetex_baseline_test)
         - [Usetex 演示](/gallery/text_labels_and_annotations/usetex_demo)
-        - [Usetex Fonteffects](/gallery/text_labels_and_annotations/usetex_fonteffects)
+        - [Usetex 字体效果](/gallery/text_labels_and_annotations/usetex_fonteffects)
         - [Text watermark](/gallery/text_labels_and_annotations/watermark_text)
     - Pyplot绘图
         - [Align y-labels](/gallery/pyplots/align_ylabels)
