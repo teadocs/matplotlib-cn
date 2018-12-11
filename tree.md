@@ -225,9 +225,10 @@
         - [通过y-value绘制颜色](/gallery/color/color_by_yvalue)
         - [默认属性循环中的颜色](/gallery/color/color_cycle_default)
         - [用cycler定型](/gallery/color/color_cycler)
-        - [Colorbar](/gallery/color/colorbar_basics)
-        - [Colormap reference](/gallery/color/colormap_reference)
-        - [Visualizing named colors](/gallery/color/named_colors)
+        - [颜色条](/gallery/color/colorbar_basics)
+        - [Colormap参考](/gallery/color/colormap_reference)
+        - [从颜色列表创建颜色映射](/gallery/color/custom_cmap)
+        - [可视化命名颜色](/gallery/color/named_colors)
     - 形状和集合
         - [Arrow guide](/gallery/shapes-and-collections/arrow_guide)
         - [Reference for matplotlib artists](/gallery/shapes-and-collections/artist_reference)
