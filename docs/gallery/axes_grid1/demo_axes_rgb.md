@@ -2,6 +2,10 @@
 
 RGBAxes显示RGB合成图像。
 
+![演示轴 RGB](/static/images/gallery/sphx_glr_demo_axes_rgb_001.png)
+
+![演示轴 RGB2](/static/images/gallery/sphx_glr_demo_axes_rgb_002.png)
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
