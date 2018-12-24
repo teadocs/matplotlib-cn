@@ -279,9 +279,9 @@
         - [简单轴分割器示例3](/gallery/axes_grid1/simple_axes_divider3)
         - [简单的轴线网格](/gallery/axes_grid1/simple_axesgrid)
         - [简单的轴线网格2](/gallery/axes_grid1/simple_axesgrid2)
-        - [Simple Axisline4](/gallery/axes_grid1/simple_axisline4)
-        - [Simple Colorbar](/gallery/axes_grid1/simple_colorbar)
-        - [Simple RGB](/gallery/axes_grid1/simple_rgb)
+        - [简单的 Axisline4](/gallery/axes_grid1/simple_axisline4)
+        - [简单的彩色条实现](/gallery/axes_grid1/simple_colorbar)
+        - [简单的 RGB](/gallery/axes_grid1/simple_rgb)
     - 轴线艺术
         - [Axis Direction Demo Step01](/gallery/axisartist/axis_direction_demo_step01)
         - [Axis Direction Demo Step02](/gallery/axisartist/axis_direction_demo_step02)
