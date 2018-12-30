@@ -305,10 +305,10 @@
         - [简单的轴线2](/gallery/axisartist/simple_axisline2)
         - [简单的轴线3](/gallery/axisartist/simple_axisline3)
     - 案例展示柜
-        - [Anatomy of a figure](/gallery/showcase/anatomy)
-        - [Bachelor’s degrees by gender](/gallery/showcase/bachelors_degrees_by_gender)
-        - [Firefox](/gallery/showcase/firefox)
-        - [Integral as the area under a curve](/gallery/showcase/integral)
+        - [解剖图](/gallery/showcase/anatomy)
+        - [按性别分列的学士学位](/gallery/showcase/bachelors_degrees_by_gender)
+        - [绘制火狐浏览器logo](/gallery/showcase/firefox)
+        - [积分作为曲线下面积](/gallery/showcase/integral)
         - [Shaded & power normalized rendering](/gallery/showcase/mandelbrot)
         - [XKCD](/gallery/showcase/xkcd)
     - 动画
