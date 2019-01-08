@@ -346,7 +346,12 @@
         - [计时器](/gallery/event_handling/timers)
         - [Trifinder 事件演示](/gallery/event_handling/trifinder_event_demo)
         - [Viewlims](/gallery/event_handling/viewlims)
-        - [Zoom Window](/gallery/event_handling/zoom_window)
+        - [缩放窗口](/gallery/event_handling/zoom_window)
+    - 头版
+        - [Frontpage 3D示例](/gallery/frontpage/3D)
+        - [Frontpage 轮廓示例](/gallery/frontpage/contour)
+        - [Frontpage 直方图示例](/gallery/frontpage/histogram)
+        - [Frontpage 绘图示例](/gallery/frontpage/membrane)
     - 杂项
         - [Agg Buffer](/gallery/misc/agg_buffer)
         - [Agg Buffer To Array](/gallery/misc/agg_buffer_to_array)
