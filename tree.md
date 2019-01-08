@@ -342,9 +342,9 @@
         - [Pipong](/gallery/event_handling/pipong)
         - [综合编辑器](/gallery/event_handling/poly_editor)
         - [Pong](/gallery/event_handling/pong_sgskip)
-        - [Resampling Data](/gallery/event_handling/resample)
-        - [Timers](/gallery/event_handling/timers)
-        - [Trifinder Event Demo](/gallery/event_handling/trifinder_event_demo)
+        - [重采样数据](/gallery/event_handling/resample)
+        - [计时器](/gallery/event_handling/timers)
+        - [Trifinder 事件演示](/gallery/event_handling/trifinder_event_demo)
         - [Viewlims](/gallery/event_handling/viewlims)
         - [Zoom Window](/gallery/event_handling/zoom_window)
     - 杂项
