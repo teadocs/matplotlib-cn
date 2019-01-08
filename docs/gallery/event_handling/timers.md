@@ -2,7 +2,7 @@
 
 使用通用计时器对象的简单示例。这用于更新图中标题的时间。
 
-![计时器](/static/images/gallery/sphx_glr_timers_001.png)
+![计时器示例](/static/images/gallery/sphx_glr_timers_001.png)
 
 ```python
 import matplotlib.pyplot as plt
