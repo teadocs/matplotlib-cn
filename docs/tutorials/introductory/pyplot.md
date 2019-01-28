@@ -6,11 +6,12 @@
 
 [matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) 是命令样式函数的集合，使matplotlib像MATLAB一样工作。 每个pyplot函数对图形进行一些更改：例如，创建图形，在图形中创建绘图区域，在绘图区域中绘制一些线条，用标签装饰图形等。
 
-In [matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) various states are preserved across function calls, so that it keeps track of things like the current figure and plotting area, and the plotting functions are directed to the current axes (please note that "axes" here and in most places in the documentation refers to the axes [part of a figure](https://matplotlib.org/tutorials/introductory/usage.html#figure-parts) and not the strict mathematical term for more than one axis).
+在[matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)中，各种状态在函数调用中保留，以便跟踪当前图形和绘图区域等内容，并且绘图函数指向当前轴（请注意“轴”在此处以及在大多数位置 文档是指[图形的轴部分](https://matplotlib.org/tutorials/introductory/usage.html#figure-parts)，而不是多个轴的严格数学术语。
 
-**Note**: the pyplot API is generally less-flexible than the object-oriented API. Most of the function calls you see here can also be called as methods from an Axes object. We recommend browsing the tutorials and examples to see how this works.
 
-Generating visualizations with pyplot is very quick:
+**注意**: pyplot API通常不如面向对象的API灵活。您在此处看到的大多数函数调用也可以作为Axes对象中的方法调用。 我们建议您浏览教程和示例以了解其工作原理。
+
+使用pyplot生成可视化非常快速：
 
 ```python
 import matplotlib.pyplot as plt
@@ -21,19 +22,19 @@ plt.show()
 
 ![绘制的一张图](/static/images/tutorials/sphx_glr_pyplot_001.png)
 
-You may be wondering why the x-axis ranges from 0-3 and the y-axis from 1-4. If you provide a single list or array to the [plot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot) command, matplotlib assumes it is a sequence of y values, and automatically generates the x values for you. Since python ranges start with 0, the default x vector has the same length as y but starts with 0. Hence the x data are ``[0,1,2,3]``.
+您可能想知道为什么x轴的范围是0-3，y轴的范围是1-4。如果为[plot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot)命令提供单个列表或数组，则matplotlib假定它是一系列y值，并自动为您生成x值。由于python范围以0开头，因此默认的x向量与y具有相同的长度，但从0开始。因此x数据为 ``[0,1,2,3]``。
 
-[plot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot) is a versatile command, and will take an arbitrary number of arguments. For example, to plot x versus y, you can issue the command:
+[plot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot) 是一个多功能命令，将采用任意数量的参数。 例如，要绘制x与y的关系，您可以发出命令：
 
 ```python
 plt.plot([1, 2, 3, 4], [1, 4, 9, 16])
 ```
 
-![绘制的一张折线图](/static/images/tutorials/sphx_glr_pyplot_002.png)
+![绘制的一张折线图2](/static/images/tutorials/sphx_glr_pyplot_002.png)
 
-## Formatting the style of your plot
+## 格式化绘图的样式
 
-For every x, y pair of arguments, there is an optional third argument which is the format string that indicates the color and line type of the plot. The letters and symbols of the format string are from MATLAB, and you concatenate a color string with a line style string. The default format string is 'b-', which is a solid blue line. For example, to plot the above with red circles, you would issue
+对于每对x，y对的参数，有一个可选的第三个参数，它是指示绘图的颜色和线型的格式字符串。格式字符串的字母和符号来自MATLAB，您可以将颜色字符串与线型字符串连接起来。默认格式字符串为“b-”，为蓝色实线。例如，要用红色圆圈绘制上述内容，您将发出：
 
 ```python
 plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')
@@ -41,11 +42,11 @@ plt.axis([0, 6, 0, 20])
 plt.show()
 ```
 
-![绘制的一张散点图](/static/images/tutorials/sphx_glr_pyplot_003.png)
+![绘制的一张散点图3](/static/images/tutorials/sphx_glr_pyplot_003.png)
 
-See the [plot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot) documentation for a complete list of line styles and format strings. The [axis()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axis.html#matplotlib.pyplot.axis) command in the example above takes a list of ``[xmin, xmax, ymin, ymax]`` and specifies the viewport of the axes.
+有关线型和格式字符串的完整列表，请参阅 [plot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot) 文档。 上例中的 [axis()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axis.html#matplotlib.pyplot.axis) 命令采用 ``[xmin, xmax, ymin, ymax]`` 列表并指定轴的视口。
 
-If matplotlib were limited to working with lists, it would be fairly useless for numeric processing. Generally, you will use numpy arrays. In fact, all sequences are converted to numpy arrays internally. The example below illustrates a plotting several lines with different format styles in one command using arrays.
+如果matplotlib仅限于使用列表，那么数字处理将毫无用处。通常，您将使用numpy数组。实际上，所有序列都在内部转换为numpy数组。 下面的示例说明了使用数组在一个命令中绘制具有不同格式样式的多行。
 
 ```python
 import numpy as np
@@ -60,11 +61,11 @@ plt.show()
 
 ![绘制的一张符号散点图](/static/images/tutorials/sphx_glr_pyplot_004.png)
 
-## Plotting with keyword strings
+## 使用关键字字符串绘图
 
-There are some instances where you have data in a format that lets you access particular variables with strings. For example, with [numpy.recarray](https://docs.scipy.org/doc/numpy/reference/generated/numpy.recarray.html#numpy.recarray) or [pandas.DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame).
+在某些情况下，您可以使用允许您使用字符串访问特定变量的格式的数据。例如，使用 [numpy.recarray](https://docs.scipy.org/doc/numpy/reference/generated/numpy.recarray.html#numpy.recarray) 或[pandas.DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas.DataFrame)。
 
-Matplotlib allows you provide such an object with the data keyword argument. If provided, then you may generate plots with the strings corresponding to these variables.
+Matplotlib允许您使用data关键字参数提供此类对象。如果提供，那么您可以生成包含与这些变量对应的字符串的图。
 
 ```python
 data = {'a': np.arange(50),
@@ -81,9 +82,9 @@ plt.show()
 
 ![绘制的一张大小不一散点图](/static/images/tutorials/sphx_glr_pyplot_005.png)
 
-## Plotting with categorical variables
+## 用分类变量绘图
 
-It is also possible to create a plot using categorical variables. Matplotlib allows you to pass categorical variables directly to many plotting functions. For example:
+也可以使用分类变量创建绘图。Matplotlib允许您将分类变量直接传递给许多绘图函数。例如：
 
 ```python
 names = ['group_a', 'group_b', 'group_c']
@@ -103,20 +104,20 @@ plt.show()
 
 ![绘制子图](/static/images/tutorials/sphx_glr_pyplot_006.png)
 
-## Controlling line properties
+## 控制线的属性
 
-Lines have many attributes that you can set: linewidth, dash style, antialiased, etc; see [matplotlib.lines.Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D). There are several ways to set line properties
+线可以设置许多属性：linewidth，dash style，antialiased等; 请参阅 [matplotlib.lines.Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)。 有几种方法可以设置线属性。
 
-- Use keyword args:
+- 使用关键字args：
     ```python
     plt.plot(x, y, linewidth=2.0)
     ```
-- Use the setter methods of a Line2D instance. plot returns a list of Line2D objects; e.g., line1, line2 = plot(x1, y1, x2, y2). In the code below we will suppose that we have only one line so that the list returned is of length 1. We use tuple unpacking with line, to get the first element of that list:
+- 使用Line2D实例的setter方法。 plot返回Line2D对象列表; 例如，line1，line2 = plot（x1，y1，x2，y2）。 在下面的代码中，我们假设我们只有一行，因此返回的列表的长度为1.我们使用tuple解压缩为line，以获取该列表的第一个元素：
     ```python
     line, = plt.plot(x, y, '-')
     line.set_antialiased(False) # turn off antialising
     ```
-- Use the [setp()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp) command. The example below uses a MATLAB-style command to set multiple properties on a list of lines. setp works transparently with a list of objects or a single object. You can either use python keyword arguments or MATLAB-style string/value pairs:
+- 使用 [setp()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp) 命令。 下面的示例使用MATLAB样式命令在行列表上设置多个属性。setp透明地使用对象列表或单个对象。您可以使用python关键字参数或MATLAB样式的字符串/值对：
     ```python
     lines = plt.plot(x1, y1, x2, y2)
     # use keyword args
@@ -125,9 +126,9 @@ Lines have many attributes that you can set: linewidth, dash style, antialiased,
     plt.setp(lines, 'color', 'r', 'linewidth', 2.0)
     ```
 
-Here are the available [Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) properties.
+以下是可用的[Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)属性。
 
-Property | Value Type
+属性 | 值类型
 ---|---
 alpha | float
 animated | [True \| False]
