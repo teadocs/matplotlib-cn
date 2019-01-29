@@ -132,38 +132,38 @@ plt.show()
 ---|---
 alpha | float
 animated | [True \| False]
-antialiased or aa | [True \| False]
-clip_box | a matplotlib.transform.Bbox instance
+antialiased 或 aa | [True \| False]
+clip_box | matplotlib.transform.Bbox实例
 clip_on | [True \| False]
-clip_path | a Path instance and a Transform instance, a Patch
-color or c | any matplotlib color
+clip_path | 路径实例和变换实例(修补程序)
+color 或 c | 任何Matplotlib颜色
 contains | the hit testing function
 dash_capstyle | ['butt' \| 'round' \| 'projecting']
 dash_joinstyle | ['miter' \| 'round' \| 'bevel']
-dashes | sequence of on/off ink in points
+dashes | 以点为单位的开/关油墨顺序
 data | (np.array xdata, np.array ydata)
-figure | a matplotlib.figure.Figure instance
-label | any string
+figure | matplotlib.quire.Figure实例
+label | 任何字符串
 linestyle or ls | [ '-' \| '--' \| '-.' \| ':' \| 'steps' \| ...]
-linewidth or lw | float value in points
+linewidth or lw | 浮点值
 lod | [True \| False]
 marker | [ '+' \| ',' \| '.' \| '1' \| '2' \| '3' \| '4' ]
-markeredgecolor or mec | any matplotlib color
-markeredgewidth or mew | float value in points
-markerfacecolor or mfc | any matplotlib color
-markersize or ms | float
+markeredgecolor or mec | 任何Matplotlib颜色
+markeredgewidth or mew | 浮点值
+markerfacecolor or mfc | 任何Matplotlib颜色
+markersize or ms | 浮点数
 markevery | [ None \| integer \| (startind, stride) ]
-picker | used in interactive line selection
-pickradius | the line pick selection radius
+picker | 用于交互式选线
+pickradius | 线拾取选择半径
 solid_capstyle | ['butt' \| 'round' \| 'projecting']
 solid_joinstyle | ['miter' \| 'round' \| 'bevel']
-transform | a matplotlib.transforms.Transform instance
+transform | matplotlib.transforms.Transform实例
 visible | [True \| False]
 xdata | np.array
 ydata | np.array
-zorder | any number
+zorder | 任意数字
 
-To get a list of settable line properties, call the [setp()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp) function with a line or lines as argument
+若要获取可设置行属性的列表，请使用一行或多行作为参数调用[setp()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp) 函数。
 
 ```python
 In [69]: lines = plt.plot([1, 2, 3])
@@ -175,9 +175,9 @@ In [70]: plt.setp(lines)
   ...snip
 ```
 
-## Working with multiple figures and axes
+## 使用多个图形和轴
 
-MATLAB, and [pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot), have the concept of the current figure and the current axes. All plotting commands apply to the current axes. The function [gca()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.gca.html#matplotlib.pyplot.gca) returns the current axes (a [matplotlib.axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) instance), and [gcf()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.gcf.html#matplotlib.pyplot.gcf) returns the current figure ([matplotlib.figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) instance). Normally, you don't have to worry about this, because it is all taken care of behind the scenes. Below is a script to create two subplots.
+MATLAB和[pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)，都有当前图形和当前轴的概念。所有打印命令都适用于当前轴。函数[gca()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.gca.html#matplotlib.pyplot.gca) 返回当前轴([matplotlib.axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)实例)，[gcf()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.gcf.html#matplotlib.pyplot.gcf) 返回当前地物([matplotlib.figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)实例)。通常情况下，你不必担心这一点，因为这一切都是在幕后处理的。下面是创建两个子图的脚本。
 
 ```python
 def f(t):
@@ -197,11 +197,11 @@ plt.show()
 
 ![图例](/static/images/tutorials/sphx_glr_pyplot_007.png)
 
-The [figure()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure) command here is optional because ``figure(1)`` will be created by default, just as a ``subplot(111)`` will be created by default if you don't manually specify any axes. The [subplot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot) command specifies ``numrows``, ``numcols``, ``plot_number`` where ``plot_number`` ranges ``from 1 to numrows*numcols``. The commas in the subplot command are optional if ``numrows*numcols<10``. So ``subplot(211)`` is identical to ``subplot(2, 1, 1)``.
+这里的 [figure()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure) 命令是可选的，因为默认情况下将创建 ``figure(1)``，就像默认情况下创建 ``subplot(111)`` 一样，如果不手动指定任何轴。[subplot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot)命令指定``numrows``, ``numcols``, ``plot_number``，其中 ``plot_number`` 的范围 ``从1到numrows*numcols``。如果 ``numrows * numcols <10``，则subplot命令中的逗号是可选的。因此 ``subplot(211)`` 与 ``subplot(2, 1, 1)`` 相同。
 
-You can create an arbitrary number of subplots and axes. If you want to place an axes manually, i.e., not on a rectangular grid, use the axes() command, which allows you to specify the location as ``axes([left, bottom, width, height])`` where all values are in fractional (0 to 1) coordinates. See [Axes Demo](https://matplotlib.org/gallery/subplots_axes_and_figures/axes_demo.html) for an example of placing axes manually and [Basic Subplot Demo](https://matplotlib.org/gallery/subplots_axes_and_figures/subplot_demo.html) for an example with lots of subplots.
+您可以创建任意数量的子图和轴。如果要手动放置轴，即不在矩形网格上，请使用 axes() 命令，该命令允许您将位置指定为``axes([left，bottom，width，height])``，其中所有值均为小数（0到1）坐标。有关手动放置轴的示例，请参阅[Axes Demo](https://matplotlib.org/gallery/subplots_axes_and_figures/axes_demo.html);有关具有大量子图的示例，请参阅 [Basic Subplot Demo](https://matplotlib.org/gallery/subplots_axes_and_figures/subplot_demo.html)。
 
-You can create multiple figures by using multiple [figure()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure) calls with an increasing figure number. Of course, each figure can contain as many axes and subplots as your heart desires:
+您可以使用具有增加的图号的多个[figure()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure) 调用来创建多个数字。当然，每个图形可以包含您心中所需的轴和子图：
 
 ```python
 import matplotlib.pyplot as plt
@@ -220,11 +220,11 @@ plt.subplot(211)             # make subplot(211) in figure1 current
 plt.title('Easy as 1, 2, 3') # subplot 211 title
 ```
 
-You can clear the current figure with [clf()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.clf.html#matplotlib.pyplot.clf) and the current axes with [cla()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.cla.html#matplotlib.pyplot.cla). If you find it annoying that states (specifically the current image, figure and axes) are being maintained for you behind the scenes, don't despair: this is just a thin stateful wrapper around an object oriented API, which you can use instead (see [Artist tutorial](https://matplotlib.org/tutorials/intermediate/artists.html))
+您可以使用 [clf()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.clf.html#matplotlib.pyplot.clf) 清除当前图形，使用 [cla()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.cla.html#matplotlib.pyplot.cla) 清除当前轴。如果您发现在幕后为您维护状态（特别是当前图像，图形和轴）很烦人，请不要绝望：这只是围绕面向对象API的瘦状态包装器，您可以使用它（见[Artist tutorial](https://matplotlib.org/tutorials/intermediate/artists.html)）
 
-If you are making lots of figures, you need to be aware of one more thing: the memory required for a figure is not completely released until the figure is explicitly closed with [close()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.close.html#matplotlib.pyplot.close). Deleting all references to the figure, and/or using the window manager to kill the window in which the figure appears on the screen, is not enough, because pyplot maintains internal references until [close()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.close.html#matplotlib.pyplot.close) is called.
+如果你要制作大量的图像，你还需要注意一件事：在用 [close()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.close.html#matplotlib.pyplot.close) 显式关闭数字之前，数字所需的内存不会完全释放。删除对图的所有引用，和/或使用窗口管理器来杀死屏幕上出现图形的窗口是不够的，因为pyplot会保持内部引用，直到调用[close()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.close.html#matplotlib.pyplot.close)。
 
-## Working with text
+## 使用文本
 
 The [text()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.text.html#matplotlib.pyplot.text) command can be used to add text in an arbitrary location, and the [xlabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel), [ylabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel) and [title()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title) are used to add text in the indicated locations (see [Text in Matplotlib Plots](https://matplotlib.org/tutorials/text/text_intro.html) for a more detailed example)
 
