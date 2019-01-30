@@ -226,7 +226,7 @@ plt.title('Easy as 1, 2, 3') # subplot 211 title
 
 ## 使用文本
 
-The [text()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.text.html#matplotlib.pyplot.text) command can be used to add text in an arbitrary location, and the [xlabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel), [ylabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel) and [title()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title) are used to add text in the indicated locations (see [Text in Matplotlib Plots](https://matplotlib.org/tutorials/text/text_intro.html) for a more detailed example)
+[text()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.text.html#matplotlib.pyplot.text) 命令可用于在任意位置添加文本，而[xlabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel), [ylabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel) 和 [title()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title) 用于在指定位置添加文本(有关更详细的示例，请参见Matplotlib图中的文本)
 
 ```python
 mu, sigma = 100, 15
@@ -247,27 +247,27 @@ plt.show()
 
 ![图例](/static/images/tutorials/sphx_glr_pyplot_008.png)
 
-All of the [text()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.text.html#matplotlib.pyplot.text) commands return an [matplotlib.text.Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text) instance. Just as with with lines above, you can customize the properties by passing keyword arguments into the text functions or using [setp()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp):
+所有[text()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.text.html#matplotlib.pyplot.text) 命令都返回一个[matplotlib.text.Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text)实例。与上面的行一样，您可以通过将关键字参数传递给文本函数或使用[setp()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp)来自定义属性：
 
 ```python
 t = plt.xlabel('my data', fontsize=14, color='red')
 ```
 
-These properties are covered in more detail in [Text properties and layout](https://matplotlib.org/tutorials/text/text_props.html).
+[文本属性和布局](https://matplotlib.org/tutorials/text/text_props.html)中更详细地介绍了这些属性。
 
-### Using mathematical expressions in text
+### 在文本中使用数学表达式
 
-matplotlib accepts TeX equation expressions in any text expression. For example to write the expression σi=15 in the title, you can write a TeX expression surrounded by dollar signs:
+matplotlib在任何文本表达式中接受TeX方程表达式。 例如，要在标题中写入表达式σi= 15，您可以编写由美元符号包围的TeX表达式：
 
 ```python
 plt.title(r'$\sigma_i=15$')
 ```
 
-The r preceding the title string is important -- it signifies that the string is a raw string and not to treat backslashes as python escapes. matplotlib has a built-in TeX expression parser and layout engine, and ships its own math fonts -- for details see [Writing mathematical expressions](https://matplotlib.org/tutorials/text/mathtext.html). Thus you can use mathematical text across platforms without requiring a TeX installation. For those who have LaTeX and dvipng installed, you can also use LaTeX to format your text and incorporate the output directly into your display figures or saved postscript -- see [Text rendering With LaTeX](https://matplotlib.org/tutorials/text/usetex.html).
+标题字符串前面的r很重要 - 它表示该字符串是一个原始字符串，而不是将反斜杠视为python转义。matplotlib有一个内置的TeX表达式解析器和布局引擎，并提供自己的数学字体 - 有关详细信息，请参阅编写[数学表达式](https://matplotlib.org/tutorials/text/mathtext.html)。因此，您可以跨平台使用数学文本，而无需安装TeX。 对于安装了LaTeX和dvipng的用户，您还可以使用LaTeX格式化文本并将输出直接合并到显示图或保存的postscript中 - 请参阅使用[LaTeX](https://matplotlib.org/tutorials/text/usetex.html)进行文本渲染。
 
-### Annotating text
+### 注释文本
 
-The uses of the basic [text()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.text.html#matplotlib.pyplot.text) command above place text at an arbitrary position on the Axes. A common use for text is to annotate some feature of the plot, and the [annotate()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.annotate.html#matplotlib.pyplot.annotate) method provides helper functionality to make annotations easy. In an annotation, there are two points to consider: the location being annotated represented by the argument xy and the location of the text xytext. Both of these arguments are (x,y) tuples.
+上面的基本[text()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.text.html#matplotlib.pyplot.text) 命令的使用将文本放在Axes上的任意位置。文本的常见用途是注释绘图的某些功能，而[annotate()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.annotate.html#matplotlib.pyplot.annotate)方法提供帮助功能以使注释变得容易。在注释中，有两点需要考虑：由参数xy表示的注释位置和文本xytext的位置。 这两个参数都是（x，y）元组。
 
 ```python
 ax = plt.subplot(111)
@@ -286,17 +286,17 @@ plt.show()
 
 ![图例](/static/images/tutorials/sphx_glr_pyplot_009.png)
 
-In this basic example, both the xy (arrow tip) and xytext locations (text location) are in data coordinates. There are a variety of other coordinate systems one can choose -- see [Basic annotation](https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial) and [Advanced Annotation](https://matplotlib.org/tutorials/text/annotations.html#plotting-guide-annotation) for details. More examples can be found in [Annotating Plots](https://matplotlib.org/gallery/text_labels_and_annotations/annotation_demo.html).
+在此基本示例中，xy（箭头提示）和xytext位置（文本位置）都在数据坐标中。 可以选择各种其他坐标系 - 有关详细信息，请参阅[基本注释](https://matplotlib.org/tutorials/text/annotations.html#annotations-tutorial)和[高级注释](https://matplotlib.org/tutorials/text/annotations.html#plotting-guide-annotation)。更多示例可以在[Annotating Plots](https://matplotlib.org/gallery/text_labels_and_annotations/annotation_demo.html)中找到。
 
-## Logarithmic and other nonlinear axes
+## 对数和其他非线性轴
 
-[matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) supports not only linear axis scales, but also logarithmic and logit scales. This is commonly used if data spans many orders of magnitude. Changing the scale of an axis is easy:
+[matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) 不仅支持线性轴刻度，还支持对数和logit刻度。 如果数据跨越许多数量级，则通常使用此方法。 更改轴的比例很容易：
 
 ```python
 plt.xscale('log')
 ```
 
-An example of four plots with the same data and different scales for the y axis is shown below.
+下面显示了具有相同数据和y轴不同比例的四个图的示例。
 
 ```python
 from matplotlib.ticker import NullFormatter  # useful for `logit` scale
@@ -355,7 +355,7 @@ plt.show()
 
 ![图例](/static/images/tutorials/sphx_glr_pyplot_010.png)
 
-It is also possible to add your own scale, see [Developer's guide for creating scales and transformations](https://matplotlib.org/devel/add_new_projection.html#adding-new-scales) for details.
+您也可以添加自己的比例，有关详细信息，请[参阅开发人员指南](https://matplotlib.org/devel/add_new_projection.html#adding-new-scales)以创建比例和转换。
 
 ## 下载本文的所有示例
 
