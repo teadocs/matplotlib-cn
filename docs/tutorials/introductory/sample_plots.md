@@ -1,10 +1,10 @@
 # Matplotlib中的示例图
 
-Here you'll find a host of example plots with the code that generated them.
+在这里，您将发现一系列带有生成它们的代码的示例图，在这里，您将发现一系列带有生成它们的代码的示例图。
 
 ## 线段图
 
-Here's how to create a line plot with text labels using [plot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot).
+以下是使用[plot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot)创建带有文本标签的折线图的方法。
 
 ![简单的线段图示例](/static/images/tutorials/sphx_glr_simple_plot_0011.png)
 
@@ -14,7 +14,7 @@ Here's how to create a line plot with text labels using [plot()](https://matplot
 
 ## 让一个图中有多个子图
 
-Multiple axes (i.e. subplots) are created with the [subplot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot) function:
+使用 [subplot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot) 函数创建多个轴（即子图）：
 
 ![简单子图示例](/static/images/tutorials/sphx_glr_subplot_0011.png)
 
@@ -24,7 +24,7 @@ Multiple axes (i.e. subplots) are created with the [subplot()](https://matplotli
 
 ## 显示图像
 
-Matplotlib can display images (assuming equally spaced horizontal dimensions) using the [imshow()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) function.
+Matplotlib可以使用[imshow()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) 函数显示图像（假设水平尺寸相等）。
 
 ![使用imshow()显示CT扫描的示例](/static/images/tutorials/sphx_glr_image_demo_0031.png)
 
@@ -34,7 +34,7 @@ Matplotlib can display images (assuming equally spaced horizontal dimensions) us
 
 ## 轮廓和伪彩色
 
-The [pcolormesh()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) function can make a colored representation of a two-dimensional array, even if the horizontal dimensions are unevenly spaced. The [contour()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour) function is another way to represent the same data:
+即使水平尺寸不均匀，[pcolormesh()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh)函数也可以制作二维数组的彩色表示。 [contour()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour)函数是表示相同数据的另一种方式：
 
 ![比较pcolormesh()和contour()以绘制二维数据的示例](/static/images/tutorials/sphx_glr_pcolormesh_levels_0011.png)
 
@@ -44,7 +44,7 @@ The [pcolormesh()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolorme
 
 ## 直方图
 
-The [hist()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist) function automatically generates histograms and returns the bin counts or probabilities:
+[hist()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist) 函数自动生成直方图并返回bin计数或概率：
 
 ![直方图特性演示](/static/images/tutorials/sphx_glr_histogram_features_0011.png)
 
@@ -54,7 +54,7 @@ The [hist()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matp
 
 ## 路径
 
-You can add arbitrary paths in Matplotlib using the [matplotlib.path](https://matplotlib.org/api/path_api.html#module-matplotlib.path) module:
+您可以使用[matplotlib.path](https://matplotlib.org/api/path_api.html#module-matplotlib.path) 模块在Matplotlib中添加任意路径：
 
 ![路径补丁](/static/images/tutorials/sphx_glr_path_patch_0011.png)
 
@@ -64,13 +64,13 @@ You can add arbitrary paths in Matplotlib using the [matplotlib.path](https://ma
 
 ## 三维绘图
 
-The mplot3d toolkit (see [Getting started](https://matplotlib.org/tutorials/toolkits/mplot3d.html#toolkit-mplot3d-tutorial) and [3D plotting](https://matplotlib.org/gallery/index.html#mplot3d-examples-index)) has support for simple 3d graphs including surface, wireframe, scatter, and bar charts.
+mplot3d工具包（参见[入门](https://matplotlib.org/tutorials/toolkits/mplot3d.html#toolkit-mplot3d-tutorial)和[3D绘图](https://matplotlib.org/gallery/index.html#mplot3d-examples-index)）支持简单的三维图形，包括曲面，线框，散点图和条形图。
 
 ![平面3d图](/static/images/tutorials/sphx_glr_surface3d_0011.png)
 
 平面3d图
 
-Thanks to John Porter, Jonathon Taylor, Reinier Heeres, and Ben Root for the mplot3d toolkit. This toolkit is included with all standard Matplotlib installs.
+感谢John Porter，Jonathon Taylor，Reinier Heeres和Ben Root的mplot3d工具包。 此工具包包含在所有标准Matplotlib安装中。
 
 [点此进入查看源码](https://matplotlib.org/gallery/mplot3d/surface3d.html)
 
