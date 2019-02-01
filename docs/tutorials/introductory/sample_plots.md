@@ -76,19 +76,19 @@ mplot3d工具包（参见[入门](https://matplotlib.org/tutorials/toolkits/mplo
 
 ## 流图
 
-The [streamplot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.streamplot.html#matplotlib.pyplot.streamplot) function plots the streamlines of a vector field. In addition to simply plotting the streamlines, it allows you to map the colors and/or line widths of streamlines to a separate parameter, such as the speed or local intensity of the vector field.
+[streamplot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.streamplot.html#matplotlib.pyplot.streamplot)函数绘制矢量场的流线。除了简单地绘制流线图之外，它还允许您将流线的颜色和/或线宽映射到单独的参数，例如矢量场的速度或局部强度。
 
 ![Streamplot有各种绘图选项](/static/images/tutorials/sphx_glr_plot_streamplot_0011.png)
 
 Streamplot有各种绘图选项
 
-This feature complements the [quiver()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver) function for plotting vector fields. Thanks to Tom Flannaghan and Tony Yu for adding the streamplot function.
+此功能补充了用于绘制矢量场的[quiver()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver) 函数。 感谢Tom Flannaghan和Tony Yu添加了streamplot功能。
 
 [点此进入查看源码](https://matplotlib.org/gallery/images_contours_and_fields/plot_streamplot.html)
 
 ## 椭圆
 
-In support of the [Phoenix](http://www.jpl.nasa.gov/news/phoenix/main.php) mission to Mars (which used Matplotlib to display ground tracking of spacecraft), Michael Droettboom built on work by Charlie Moad to provide an extremely accurate 8-spline approximation to elliptical arcs (see [Arc](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)), which are insensitive to zoom level.
+为了支持[菲尼克斯](http://www.jpl.nasa.gov/news/phoenix/main.php)火星任务（使用Matplotlib显示航天器的地面跟踪），Michael Droettboom建立在Charlie Moad的工作基础上，为椭圆弧（参见[Arc](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)）提供极其精确的8样条近似，这对缩放不敏感 水平。
 
 ![椭圆演示](/static/images/tutorials/sphx_glr_ellipse_demo_0011.png)
 
