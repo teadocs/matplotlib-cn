@@ -104,13 +104,13 @@ Use the [bar()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html#ma
 
 条形图演示
 
-You can also create stacked bars (bar_stacked.py), or horizontal bar charts (barh.py).
+您还可以创建堆叠条形（bar_stacked.py）或水平条形图（barh.py）。
 
 [点此进入查看源码](https://matplotlib.org/gallery/statistics/barchart_demo.html)
 
 ## 饼状图
 
-The [pie()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pie.html#matplotlib.pyplot.pie) function allows you to create pie charts. Optional features include auto-labeling the percentage of area, exploding one or more wedges from the center of the pie, and a shadow effect. Take a close look at the attached code, which generates this figure in just a few lines of code.
+[pie()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pie.html#matplotlib.pyplot.pie) 函数允许您创建饼图。可选功能包括自动标记区域的百分比，从饼图中心爆炸一个或多个楔形，以及阴影效果。 仔细查看附加的代码，只需几行代码即可生成此图。
 
 ![饼状图特性](/static/images/tutorials/sphx_glr_pie_features_0011.png)
 
@@ -120,7 +120,7 @@ The [pie()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pie.html#matplo
 
 ## 表格
 
-The [table()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.table.html#matplotlib.pyplot.table) function adds a text table to an axes.
+[table()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.table.html#matplotlib.pyplot.table) 函数将一个文本表添加到轴。
 
 ![表格演示](/static/images/tutorials/sphx_glr_table_demo_0011.png)
 
@@ -130,7 +130,7 @@ The [table()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.table.html#ma
 
 ## 散点图
 
-The [scatter()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter) function makes a scatter plot with (optional) size and color arguments. This example plots changes in Google's stock price, with marker sizes reflecting the trading volume and colors varying with time. Here, the alpha attribute is used to make semitransparent circle markers.
+[scatter()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter)函数使用（可选）大小和颜色参数创建散点图。此示例绘制了Google股票价格的变化，标记尺寸反映了交易量和颜色随时间变化。这里，alpha属性用于制作半透明圆圈标记。
 
 ![散点图演示](/static/images/tutorials/sphx_glr_scatter_demo2_0011.png)
 
@@ -140,7 +140,7 @@ The [scatter()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.htm
 
 ## GUI小部件
 
-Matplotlib has basic GUI widgets that are independent of the graphical user interface you are using, allowing you to write cross GUI figures and widgets. See [matplotlib.widgets](https://matplotlib.org/api/widgets_api.html#module-matplotlib.widgets) and the [widget examples](https://matplotlib.org/gallery/index.html).
+Matplotlib具有独立于您正在使用的图形用户界面的基本GUI小部件，允许您编写跨GUI图形和小部件。 请参阅[matplotlib.widgets](https://matplotlib.org/api/widgets_api.html#module-matplotlib.widgets)和[小部件示例](https://matplotlib.org/gallery/index.html).。
 
 ![滑块和单选按钮GUI](/static/images/tutorials/sphx_glr_slider_demo_0011.png)
 
@@ -150,13 +150,13 @@ Matplotlib has basic GUI widgets that are independent of the graphical user inte
 
 ## 填充曲线
 
-The [fill()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill.html#matplotlib.pyplot.fill) function lets you plot filled curves and polygons:
+[fill()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill.html#matplotlib.pyplot.fill) 函数可以绘制填充的曲线和多边形：
 
 ![填充曲线](/static/images/tutorials/sphx_glr_fill_0011.png)
 
 填充曲线
 
-Thanks to Andrew Straw for adding this function.
+感谢Andrew Straw添加此功能。
 
 [点此进入查看源码](https://matplotlib.org/gallery/lines_bars_and_markers/fill.html)
 
