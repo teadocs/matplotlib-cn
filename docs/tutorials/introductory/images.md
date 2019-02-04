@@ -8,15 +8,15 @@
 
 随着IPython的启动，我们现在需要连接到GUI事件循环。这告诉IPython在哪里（和如何）显示图像。要连接到GUI循环，请在IPython提示符下执行 **%matplotlib** magic。 关于它在[IPython的GUI事件循环](http://ipython.org/ipython-doc/2/interactive/reference.html#gui-event-loop-support)文档中的确切含义有更详细的说明。
 
-If you're using IPython Notebook, the same commands are available, but people commonly use a specific argument to the %matplotlib magic:
+如果您使用的是IPython Notebook，则可以使用相同的命令，但人们通常使用特定的参数来使用%matplotlib技法：
 
 ```python
 In [1]: %matplotlib inline
 ```
 
-This turns on inline plotting, where plot graphics will appear in your notebook. This has important implications for interactivity. For inline plotting, commands in cells below the cell that outputs a plot will not affect the plot. For example, changing the color map is not possible from cells below the cell that creates a plot. However, for other backends, such as Qt5, that open a separate window, cells below those that create the plot will change the plot - it is a live object in memory.
+这将打开内联打印，其中打印图形将显示在笔记本中。这对互动有重要的影响。对于内联打印，单元格下方输出打印的单元中的命令不会影响打印。例如，无法从创建打印的单元格下方的单元格更改颜色贴图。但是，对于打开单独窗口的其他后端(如Qt5)，创建打印的单元格将更改打印-它是内存中的活动对象。
 
-This tutorial will use matplotlib's imperative-style plotting interface, pyplot. This interface maintains global state, and is very useful for quickly and easily experimenting with various plot settings. The alternative is the object-oriented interface, which is also very powerful, and generally more suitable for large application development. If you'd like to learn about the object-oriented interface, a great place to start is our [Usage guide](https://matplotlib.org/tutorials/introductory/usage.html). For now, let's get on with the imperative-style approach:
+本教程将使用matplotlib的命令式打印界面pylot。此界面保持全局状态，对于快速轻松地尝试各种打印设置非常有用。另一种选择是面向对象的接口，它也非常强大，通常更适合大型应用程序开发。如果您想了解面向对象的接口，我们的[使用指南](https://matplotlib.org/tutorials/introductory/usage.html)是一个很好的起点。现在，让我们继续使用命令式方法：
 
 ```python
 import matplotlib.pyplot as plt
@@ -26,24 +26,24 @@ import numpy as np
 
 ## 将图像数据导入Numpy数组
 
-Loading image data is supported by the [Pillow](https://pillow.readthedocs.io/en/latest/) library. Natively, Matplotlib only supports PNG images. The commands shown below fall back on Pillow if the native read fails.
+枕形库支持加载图像数据。在本地，Matplotlib仅支持PNG图像。如果本机读取失败，下面显示的命令将返回[Pillow](https://pillow.readthedocs.io/en/latest/)。
 
-The image used in this example is a PNG file, but keep that Pillow requirement in mind for your own data.
+此示例中使用的图像是一个PNG文件，但请记住对您自己的数据的枕头要求。
 
-Here's the image we're going to play with:
+下面是我们要操作的图片：
 
 ![黑白图片](/static/images/tutorials/stinkbug.png)
 
-It's a 24-bit RGB PNG image (8 bits for each of R, G, B). Depending on where you get your data, the other kinds of image that you'll most likely encounter are RGBA images, which allow for transparency, or single-channel grayscale (luminosity) images. You can right click on it and choose "Save image as" to download it to your computer for the rest of this tutorial.
+这是一个24位的RGB PNG图像(R、G、B每个8位)。根据您获取数据的位置，您最可能遇到的其他类型的图像是RGBA图像(允许透明)或单通道灰度(亮度)图像。您可以右键单击它并选择“将图像另存为”，将其下载到您的计算机上，以便完成本教程的其余部分。
 
-And here we go...
+我们开始吧.。
 
 ```python
 img = mpimg.imread('../../doc/_static/stinkbug.png')
 print(img)
 ```
 
-Out:
+输出：
 
 ```python
 [[[0.40784314 0.40784314 0.40784314]
@@ -97,11 +97,11 @@ Out:
   [0.44313726 0.44313726 0.44313726]]]
 ```
 
-Note the dtype there - float32. Matplotlib has rescaled the 8 bit data from each channel to floating point data between 0.0 and 1.0. As a side note, the only datatype that Pillow can work with is uint8. Matplotlib plotting can handle float32 and uint8, but image reading/writing for any format other than PNG is limited to uint8 data. Why 8 bits? Most displays can only render 8 bits per channel worth of color gradation. Why can they only render 8 bits/channel? Because that's about all the human eye can see. More here (from a photography standpoint): [Luminous Landscape bit depth tutorial](https://luminous-landscape.com/bit-depth/).
+注意这里的dtype-Float32。Matplotlib已将每个通道的8位数据重新缩放为0.0到1.0之间的浮点数据。另外，Pillow可以使用的唯一数据类型是uint8。Matplotlib绘图可以处理Float32和uint8，但PNG以外的任何格式的图像读/写仅限于uint8数据。为什么是8位？大多数显示器只能渲染每通道8位的颜色渐变。为什么它们只能呈现8位/通道？因为这是人眼所能看到的。更多在这里(从摄影的角度)：[发光景观位深度教程](https://luminous-landscape.com/bit-depth/)。
 
-Each inner list represents a pixel. Here, with an RGB image, there are 3 values. Since it's a black and white image, R, G, and B are all similar. An RGBA (where A is alpha, or transparency), has 4 values per inner list, and a simple luminance image just has one value (and is thus only a 2-D array, not a 3-D array). For RGB and RGBA images, matplotlib supports float32 and uint8 data types. For grayscale, matplotlib supports only float32. If your array data does not meet one of these descriptions, you need to rescale it.
+每个内部列表代表一个像素。在这里，对于RGB图像，有3个值。由于是黑白图像，R、G和B都是相似的。RGBA(其中A是Alpha或透明度)，每个内部列表有4个值，一个简单的亮度图像只有一个值(因此只是一个2-D数组，而不是3-D数组)。对于RGB和RGBA图像，matplotlib支持Float32和uint8数据类型。对于灰度，matplotlib仅支持Float32。如果数组数据不符合这些描述之一，则需要重新缩放它。
 
-## Plotting numpy arrays as images
+## 将数字数组绘制为图像
 
 So, you have your data in a numpy array (either by importing it, or by generating it). Let's render it. In Matplotlib, this is performed using the [imshow()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) function. Here we'll grab the plot object. This object gives you an easy way to manipulate the plot from the prompt.
 
