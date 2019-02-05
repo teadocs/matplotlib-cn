@@ -103,7 +103,7 @@ print(img)
 
 ## 将数字数组绘制为图像
 
-So, you have your data in a numpy array (either by importing it, or by generating it). Let's render it. In Matplotlib, this is performed using the [imshow()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) function. Here we'll grab the plot object. This object gives you an easy way to manipulate the plot from the prompt.
+因此，您将数据放在一个numpy数组中（通过导入或生成它）。 让我们渲染吧。 在Matplotlib中，这是使用[imshow()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow)函数执行的。 在这里，我们将抓住绘图对象。 此对象为您提供了一种从提示中操作绘图的简便方法。
 
 ```python
 imgplot = plt.imshow(img)
@@ -111,13 +111,13 @@ imgplot = plt.imshow(img)
 
 ![使用matplotlib打印的图片](/static/images/tutorials/sphx_glr_images_001.png)
 
-You can also plot any numpy array.
+你也可以绘制任何numpy数组。
 
-### Applying pseudocolor schemes to image plots
+### 将伪彩色方案应用于图像图
 
-Pseudocolor can be a useful tool for enhancing contrast and visualizing your data more easily. This is especially useful when making presentations of your data using projectors - their contrast is typically quite poor.
+Pseudocolor可以成为增强对比度和更容易可视化数据的有用工具。这在使用投影仪进行数据演示时尤其有用 - 它们的对比度通常非常差。
 
-Pseudocolor is only relevant to single-channel, grayscale, luminosity images. We currently have an RGB image. Since R, G, and B are all similar (see for yourself above or in your data), we can just pick one channel of our data:
+伪彩色仅与单通道，灰度，亮度图像相关。 我们目前有一个RGB图像。由于R，G和B都是相似的（请参阅上面或您的数据），我们可以选择一个数据通道：
 
 ```python
 lum_img = img[:, :, 0]
@@ -130,7 +130,7 @@ plt.imshow(lum_img)
 
 ![伪彩色方案](/static/images/tutorials/sphx_glr_images_002.png)
 
-Now, with a luminosity (2D, no color) image, the default colormap (aka lookup table, LUT), is applied. The default is called viridis. There are plenty of others to choose from.
+现在，使用亮度（2D，无颜色）图像，应用默认色图（也称为查找表，LUT）。 默认名称为viridis。 还有很多其他选择。
 
 ```python
 plt.imshow(lum_img, cmap="hot")
@@ -138,7 +138,7 @@ plt.imshow(lum_img, cmap="hot")
 
 ![伪彩色方案2](/static/images/tutorials/sphx_glr_images_003.png)
 
-注意：that you can also change colormaps on existing plot objects using the set_cmap() method:
+注意：您还可以使用set_cmap()方法更改现有绘图对象上的颜色映射：
 
 ```python
 imgplot = plt.imshow(lum_img)
@@ -147,13 +147,13 @@ imgplot.set_cmap('nipy_spectral')
 
 ![伪彩色方案3](/static/images/tutorials/sphx_glr_images_004.png)
 
-注意：However, remember that in the IPython notebook with the inline backend, you can't make changes to plots that have already been rendered. If you create imgplot here in one cell, you cannot call set_cmap() on it in a later cell and expect the earlier plot to change. Make sure that you enter these commands together in one cell. plt commands will not change plots from earlier cells.
+注意：但是，请记住，在具有内联后端的IPython笔记本中，您无法更改已经呈现的绘图。 如果你在一个单元格中创建imgplot，则不能在稍后的单元格中调用set_cmap()并期望更早的绘图。 确保在一个单元格中一起输入这些命令。 plt命令不会更改早期单元格的图形。
 
-There are many other colormap schemes available. See the [list and images of the colormaps](https://matplotlib.org/tutorials/colors/colormaps.html).
+还有许多其他色彩方案可用。 查看[色彩映射的列表和图像](https://matplotlib.org/tutorials/colors/colormaps.html)。
 
-### Color scale reference
+### 颜色比例参考
 
-It's helpful to have an idea of what value a color represents. We can do that by adding color bars.
+了解颜色代表什么价值是有帮助的。 我们可以通过添加彩条来实现。
 
 ```python
 imgplot = plt.imshow(lum_img)
