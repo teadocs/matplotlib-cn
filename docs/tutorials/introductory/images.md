@@ -162,11 +162,11 @@ plt.colorbar()
 
 ![伪彩色方案4](/static/images/tutorials/sphx_glr_images_005.png)
 
-This adds a colorbar to your existing figure. This won't automatically change if you change you switch to a different colormap - you have to re-create your plot, and add in the colorbar again.
+这会为您现有的图形添加一个颜色条。 如果您更改切换到不同的色彩映射，则不会自动更改 - 您必须重新创建绘图，然后再次添加颜色栏。
 
-### Examining a specific data range
+### 检查特定数据范围
 
-Sometimes you want to enhance the contrast in your image, or expand the contrast in a particular region while sacrificing the detail in colors that don't vary much, or don't matter. A good tool to find interesting regions is the histogram. To create a histogram of our image data, we use the [hist()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist) function.
+有时，您希望增强图像的对比度，或者扩大特定区域的对比度，同时牺牲颜色的细节，这些颜色不会有太大变化，或者无关紧要。 找到有趣区域的好工具是直方图。要创建图像数据的直方图，我们使用[hist()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist)函数。
 
 ```python
 plt.hist(lum_img.ravel(), bins=256, range=(0.0, 1.0), fc='k', ec='k')
@@ -174,9 +174,9 @@ plt.hist(lum_img.ravel(), bins=256, range=(0.0, 1.0), fc='k', ec='k')
 
 ![直方图](/static/images/tutorials/sphx_glr_images_006.png)
 
-Most often, the "interesting" part of the image is around the peak, and you can get extra contrast by clipping the regions above and/or below the peak. In our histogram, it looks like there's not much useful information in the high end (not many white things in the image). Let's adjust the upper limit, so that we effectively "zoom in on" part of the histogram. We do this by passing the clim argument to imshow. You could also do this by calling the ``set_clim()`` method of the image plot object, but make sure that you do so in the same cell as your plot command when working with the IPython Notebook - it will not change plots from earlier cells.
+最常见的情况是，图像的“有趣”部分位于峰值附近，您可以通过剪裁峰值上方和/或下方的区域来获得额外的对比度。在我们的直方图中，看起来高端中没有太多有用的信息(图像中没有很多白色的东西)。让我们调整上限，以便有效地“放大”直方图的一部分。我们通过将clim参数传递给imshow来实现这一点。也可以通过调用图像打印对象的“set_clim()”方法来实现这一点，但是在使用IPython Notebook时，请确保在与PLOT命令相同的单元格中执行此操作-它不会更改以前单元格中的打印。
 
-You can specify the clim in the call to plot.
+可以在打印调用中指定客户端。
 
 ```python
 imgplot = plt.imshow(lum_img, clim=(0.0, 0.7))
@@ -184,7 +184,7 @@ imgplot = plt.imshow(lum_img, clim=(0.0, 0.7))
 
 ![伪彩色图](/static/images/tutorials/sphx_glr_images_007.png)
 
-You can also specify the clim using the returned object
+还可以使用返回的对象指定客户端。
 
 ```python
 fig = plt.figure()
@@ -201,7 +201,7 @@ plt.colorbar(ticks=[0.1, 0.3, 0.5, 0.7], orientation='horizontal')
 
 ![伪彩色图](/static/images/tutorials/sphx_glr_images_008.png)
 
-### Array Interpolation schemes
+### 数组插值方案
 
 Interpolation calculates what the color or value of a pixel "should" be, according to different mathematical schemes. One common place that this happens is when you resize an image. The number of pixels change, but you want the same information. Since pixels are discrete, there's missing space. Interpolation is how you fill that space. This is why your images sometimes come out looking pixelated when you blow them up. The effect is more pronounced when the difference between the original image and the expanded image is greater. Let's take our image and shrink it. We're effectively discarding pixels, only keeping a select few. Now when we plot it, that data gets blown up to the size on your screen. The old pixels aren't there anymore, and the computer has to draw in pixels to fill that space.
 
