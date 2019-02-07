@@ -1,6 +1,6 @@
 # Plot的生命周期
 
-This tutorial aims to show the beginning, middle, and end of a single visualization using Matplotlib. We'll begin with some raw data and end by saving a figure of a customized visualization. Along the way we'll try to highlight some neat features and best-practices using Matplotlib.
+本教程旨在使用Matplotlib显示单个可视化的开始，中间和结尾。 我们将从一些原始数据开始，最后保存一个自定义可视化图形。 在此过程中，我们将尝试使用Matplotlib突出一些简洁的功能和最佳实践。
 
 **Note**：This tutorial is based off of [this excellent blog post](http://pbpython.com/effective-matplotlib.html) by Chris Moffitt. It was transformed into this tutorial by Chris Holdgraf.
 

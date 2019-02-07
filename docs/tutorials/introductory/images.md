@@ -203,9 +203,9 @@ plt.colorbar(ticks=[0.1, 0.3, 0.5, 0.7], orientation='horizontal')
 
 ### 数组插值方案
 
-Interpolation calculates what the color or value of a pixel "should" be, according to different mathematical schemes. One common place that this happens is when you resize an image. The number of pixels change, but you want the same information. Since pixels are discrete, there's missing space. Interpolation is how you fill that space. This is why your images sometimes come out looking pixelated when you blow them up. The effect is more pronounced when the difference between the original image and the expanded image is greater. Let's take our image and shrink it. We're effectively discarding pixels, only keeping a select few. Now when we plot it, that data gets blown up to the size on your screen. The old pixels aren't there anymore, and the computer has to draw in pixels to fill that space.
+根据不同的数学方案，插值计算像素“应该”的颜色或值。 发生这种情况的一个常见地方是调整图像大小。 像素数会发生变化，但您需要相同的信息。 由于像素是离散的，因此缺少空间。 插值就是你填充那个空间的方式。 这就是为什么当你把它们炸掉时，你的图像有时看起来像是像素化的原因。 当原始图像和扩展图像之间的差异更大时，效果更明显。 让我们拍摄我们的照片并缩小它。 我们有效地丢弃像素，只保留少数像素。 现在，当我们绘制它时，数据会被炸成屏幕上的大小。 旧像素不再存在，计算机必须以像素绘制以填充该空间。
 
-We'll use the Pillow library that we used to load the image also to resize the image.
+我们将使用我们用于加载图像的Pillow库来调整图像大小。
 
 ```python
 from PIL import Image
@@ -217,10 +217,9 @@ imgplot = plt.imshow(img)
 
 ![伪彩色图子图](/static/images/tutorials/sphx_glr_images_009.png)
 
+这里我们有默认的插值，双线性，因为我们没有给imshow()任何插值参数。
 
-Here we have the default interpolation, bilinear, since we did not give imshow() any interpolation argument.
-
-Let's try some others. Here's "nearest", which does no interpolation.
+我们试试其他一些。 这里是“最近的”，没有插值。
 
 ```python
 imgplot = plt.imshow(img, interpolation="nearest")
@@ -228,7 +227,7 @@ imgplot = plt.imshow(img, interpolation="nearest")
 
 ![模糊图](/static/images/tutorials/sphx_glr_images_010.png)
 
-and bicubic:
+和双三次：
 
 ```python
 imgplot = plt.imshow(img, interpolation="bicubic")
@@ -236,7 +235,7 @@ imgplot = plt.imshow(img, interpolation="bicubic")
 
 ![模糊图2](/static/images/tutorials/sphx_glr_images_011.png)
 
-Bicubic interpolation is often used when blowing up photos - people tend to prefer blurry over pixelated.
+在吹制照片时经常使用双立方插值 - 人们往往更喜欢模糊而不是像素化。
 
 ## 下载本文的所有示例
 
