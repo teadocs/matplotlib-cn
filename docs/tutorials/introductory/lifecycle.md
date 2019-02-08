@@ -2,26 +2,26 @@
 
 本教程旨在使用Matplotlib显示单个可视化的开始，中间和结尾。 我们将从一些原始数据开始，最后保存一个自定义可视化图形。 在此过程中，我们将尝试使用Matplotlib突出一些简洁的功能和最佳实践。
 
-**Note**：This tutorial is based off of [this excellent blog post](http://pbpython.com/effective-matplotlib.html) by Chris Moffitt. It was transformed into this tutorial by Chris Holdgraf.
+**注意**：本教程基于Chris Moffitt撰写的[这篇优秀博客文章](http://pbpython.com/effective-matplotlib.html))。它由Chris Holdgraf转换成本教程。
 
-## A note on the Object-Oriented API vs Pyplot
+## 关于面向对象的API与Pyplot的说明
 
-Matplotlib has two interfaces. The first is an object-oriented (OO) interface. In this case, we utilize an instance of [axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) in order to render visualizations on an instance of [figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure).
+Matplotlib有两个接口。第一个是面向对象（OO）接口。在这种情况下，我们利用 [axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) 的实例，以便在[figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)的实例上呈现可视化。
 
-The second is based on MATLAB and uses a state-based interface. This is encapsulated in the pyplot module. See the [pyplot tutorials](https://matplotlib.org/tutorials/introductory/pyplot.html) for a more in-depth look at the pyplot interface.
+第二种是基于MATLAB并使用基于状态的接口。这封装在pyplot模块中。请参阅[pyplot教程](https://matplotlib.org/tutorials/introductory/pyplot.html)，以深入了解pyplot界面。
 
-Most of the terms are straightforward but the main thing to remember is that:
+大多数条款都很简单，但要记住的主要是：
 
-- The Figure is the final image that may contain 1 or more Axes.
-- The Axes represent an individual plot (don't confuse this with the word "axis", which refers to the x/y axis of a plot).
+- 该图是可能包含1个或更多轴的最终图像。
+- 轴代表一个单独的图（不要将其与“轴”这个词混淆，后者指的是图的x / y轴）。
 
-We call methods that do the plotting directly from the Axes, which gives us much more flexibility and power in customizing our plot.
+我们称之为直接从Axes进行绘图的方法，这使我们在定制绘图方面具有更大的灵活性和强大功能。
 
-**Note**：In general, try to use the object-oriented interface over the pyplot interface.
+**注意**：通常，尝试在pyplot接口上使用面向对象的接口。
 
-## Our data
+## 我们的数据
 
-We'll use the data from the post from which this tutorial was derived. It contains sales information for a number of companies.
+我们将使用本教程派生的帖子中的数据。它包含许多公司的销售信息。
 
 ```python
 # sphinx_gallery_thumbnail_number = 10
@@ -44,7 +44,7 @@ group_names = list(data.keys())
 group_mean = np.mean(group_data)
 ```
 
-## Getting started
+## 快速开始
 
 This data is naturally visualized as a barplot, with one bar per group. To do this with the object-oriented approach, we'll first generate an instance of [figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) and [axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes). The Figure is like a canvas, and the Axes is a part of that canvas on which we will make a particular visualization.
 
