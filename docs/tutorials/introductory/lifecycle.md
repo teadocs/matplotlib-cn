@@ -46,9 +46,9 @@ group_mean = np.mean(group_data)
 
 ## 快速开始
 
-This data is naturally visualized as a barplot, with one bar per group. To do this with the object-oriented approach, we'll first generate an instance of [figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) and [axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes). The Figure is like a canvas, and the Axes is a part of that canvas on which we will make a particular visualization.
+这些数据自然可视化为条形图，每组一个条形图。要使用面向对象的方法，我们将首先生成一个图形实例。[figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)和[axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)。图就像一个画布，Axes是画布的一部分，我们将在其上进行特定的可视化。
 
-**Note**：Figures can have multiple axes on them. For information on how to do this, see the [Tight Layout tutorial](https://matplotlib.org/tutorials/intermediate/tight_layout_guide.html).
+**注意**：图字上可以有多个轴。 有关如何执行此操作的信息，请参阅[“紧密布局”教程](https://matplotlib.org/tutorials/intermediate/tight_layout_guide.html)。
 
 ```python
 fig, ax = plt.subplots()
@@ -56,7 +56,7 @@ fig, ax = plt.subplots()
 
 ![生命周期示例](/static/images/tutorials/sphx_glr_lifecycle_001.png)
 
-Now that we have an Axes instance, we can plot on top of it.
+现在我们有了一个Axes实例，我们可以在它上面进行绘图。
 
 ```python
 fig, ax = plt.subplots()
@@ -65,27 +65,27 @@ ax.barh(group_names, group_data)
 
 ![生命周期示例2](/static/images/tutorials/sphx_glr_lifecycle_002.png)
 
-## Controlling the style
+## 控制风格
 
-There are many styles available in Matplotlib in order to let you tailor your visualization to your needs. To see a list of styles, we can use pyplot.style.
+Matplotlib中有许多样式可供您根据需要定制可视化。要查看样式列表，我们可以使用pyplot.style。
 
 ```python
 print(plt.style.available)
 ```
 
-Out:
+输出：
 
 ```python
 ['seaborn-dark', 'dark_background', 'seaborn-pastel', 'seaborn-colorblind', 'tableau-colorblind10', 'seaborn-notebook', 'seaborn-dark-palette', 'grayscale', 'seaborn-poster', 'seaborn', 'bmh', 'seaborn-talk', 'seaborn-ticks', '_classic_test', 'ggplot', 'seaborn-white', 'classic', 'Solarize_Light2', 'seaborn-paper', 'fast', 'fivethirtyeight', 'seaborn-muted', 'seaborn-whitegrid', 'seaborn-darkgrid', 'seaborn-bright', 'seaborn-deep']
 ```
 
-You can activate a style with the following:
+您可以使用以下内容激活样式：
 
 ```python
 plt.style.use('fivethirtyeight')
 ```
 
-Now let's remake the above plot to see how it looks:
+现在让我们重新制作上面的图像，看看它的样子：
 
 ```python
 fig, ax = plt.subplots()
@@ -94,9 +94,9 @@ ax.barh(group_names, group_data)
 
 ![生命周期示例2](/static/images/tutorials/sphx_glr_lifecycle_003.png)
 
-The style controls many things, such as color, linewidths, backgrounds, etc.
+样式控制很多东西，比如颜色，线宽，背景等。
 
-## Customizing the plot
+## 自定义绘制
 
 Now we've got a plot with the general look that we want, so let's fine-tune it so that it's ready for print. First let's rotate the labels on the x-axis so that they show up more clearly. We can gain access to these labels with the [axes.Axes.get_xticklabels()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.get_xticklabels.html#matplotlib.axes.Axes.get_xticklabels) method:
 
