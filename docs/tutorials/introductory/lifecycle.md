@@ -98,7 +98,7 @@ ax.barh(group_names, group_data)
 
 ## 自定义绘制
 
-Now we've got a plot with the general look that we want, so let's fine-tune it so that it's ready for print. First let's rotate the labels on the x-axis so that they show up more clearly. We can gain access to these labels with the [axes.Axes.get_xticklabels()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.get_xticklabels.html#matplotlib.axes.Axes.get_xticklabels) method:
+现在我们已经得到了一个我们想要的一般外观的情节，所以让我们对它进行微调，以便它可以打印出来。 首先让我们旋转x轴上的标签，使它们更清晰地显示出来。使用[axes.Axes.get_xticklabels()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.get_xticklabels.html#matplotlib.axes.Axes.get_xticklabels)方法将这些标签：
 
 ```python
 fig, ax = plt.subplots()
@@ -108,7 +108,7 @@ labels = ax.get_xticklabels()
 
 ![生命周期示例3](/static/images/tutorials/sphx_glr_lifecycle_004.png)
 
-If we'd like to set the property of many items at once, it's useful to use the [pyplot.setp()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp) function. This will take a list (or many lists) of Matplotlib objects, and attempt to set some style element of each one.
+如果我们想一次设置多个项的属性，那么使用[pyplot.setp()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.setp.html#matplotlib.pyplot.setp)函数会很有用。 这将获取Matplotlib对象的列表（或许多列表），并尝试设置每个对象的一些样式元素。
 
 ```python
 fig, ax = plt.subplots()
@@ -119,7 +119,7 @@ plt.setp(labels, rotation=45, horizontalalignment='right')
 
 ![生命周期示例4](/static/images/tutorials/sphx_glr_lifecycle_005.png)
 
-It looks like this cut off some of the labels on the bottom. We can tell Matplotlib to automatically make room for elements in the figures that we create. To do this we'll set the autolayout value of our rcParams. For more information on controlling the style, layout, and other features of plots with rcParams, see [Customizing Matplotlib with style sheets and rcParams](https://matplotlib.org/tutorials/introductory/customizing.html).
+看起来这样会切断底部的一些标签。我们可以告诉Matplotlib自动为我们创建的图中的元素腾出空间。为此，我们将设置rcParams的autolayout值。有关使用rcParams控制图的样式，布局和其他功能的更多信息，请参阅[使用样式表和rcParams自定义Matplotlib](https://matplotlib.org/tutorials/introductory/customizing.html)。
 
 ```python
 plt.rcParams.update({'figure.autolayout': True})
@@ -132,7 +132,7 @@ plt.setp(labels, rotation=45, horizontalalignment='right')
 
 ![生命周期示例5](/static/images/tutorials/sphx_glr_lifecycle_006.png)
 
-Next, we'll add labels to the plot. To do this with the OO interface, we can use the [axes.Axes.set()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set.html#matplotlib.axes.Axes.set) method to set properties of this Axes object.
+接下来，我们将为图添加标签。 要使用OO接口执行此操作，我们可以使用[axes.Axes.set()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set.html#matplotlib.axes.Axes.set)方法设置此Axes对象的属性。
 
 ```python
 fig, ax = plt.subplots()
