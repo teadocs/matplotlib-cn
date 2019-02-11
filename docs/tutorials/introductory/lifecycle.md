@@ -145,9 +145,9 @@ ax.set(xlim=[-10000, 140000], xlabel='Total Revenue', ylabel='Company',
 
 ![生命周期示例6](/static/images/tutorials/sphx_glr_lifecycle_007.png)
 
-We can also adjust the size of this plot using the [pyplot.subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots) function. We can do this with the figsize kwarg.
+我们还可以使用[pyplot.subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots) 函数调整此图的大小。我们可以用figsize kwarg做到这一点。
 
-**Note**：While indexing in NumPy follows the form (row, column), the figsize kwarg follows the form (width, height). This follows conventions in visualization, which unfortunately are different from those of linear algebra.
+**注意**：虽然NumPy中的索引遵循形式（行，列），但figsize kwarg遵循形式（宽度，高度）。这遵循可视化中的惯例，遗憾的是它们与线性代数的惯例不同。
 
 ```python
 fig, ax = plt.subplots(figsize=(8, 4))
@@ -160,7 +160,7 @@ ax.set(xlim=[-10000, 140000], xlabel='Total Revenue', ylabel='Company',
 
 ![生命周期示例7](/static/images/tutorials/sphx_glr_lifecycle_008.png)
 
-For labels, we can specify custom formatting guidelines in the form of functions by using the [ticker.FuncFormatter](https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.FuncFormatter) class. Below we'll define a function that takes an integer as input, and returns a string as an output.
+对于标签，我们可以使用[ticker.FuncFormatter](https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.FuncFormatter)类以函数的形式指定自定义格式指南。 下面我们将定义一个以整数作为输入的函数，并返回一个字符串作为输出。
 
 ```python
 def currency(x, pos):
@@ -174,7 +174,7 @@ def currency(x, pos):
 formatter = FuncFormatter(currency)
 ```
 
-We can then apply this formatter to the labels on our plot. To do this, we'll use the xaxis attribute of our axis. This lets you perform actions on a specific axis on our plot.
+然后我们可以将此格式化程序应用于我们的绘图上的标签。为此，我们将使用轴的xaxis属性。这使您可以在我们的绘图上对特定轴执行操作。
 
 ```python
 fig, ax = plt.subplots(figsize=(6, 8))
@@ -189,9 +189,9 @@ ax.xaxis.set_major_formatter(formatter)
 
 ![生命周期示例8](/static/images/tutorials/sphx_glr_lifecycle_009.png)
 
-## Combining multiple visualizations
+## 结合多个可视化
 
-It is possible to draw multiple plot elements on the same instance of [axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes). To do this we simply need to call another one of the plot methods on that axes object.
+可以在[axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)的同一个实例上绘制多个绘图元素。为此，我们只需要在该轴对象上调用另一个绘图方法。
 
 ```python
 fig, ax = plt.subplots(figsize=(8, 8))
