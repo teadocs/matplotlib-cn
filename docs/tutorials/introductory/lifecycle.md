@@ -98,7 +98,7 @@ ax.barh(group_names, group_data)
 
 ## 自定义绘制
 
-现在我们已经得到了一个我们想要的一般外观的情节，所以让我们对它进行微调，以便它可以打印出来。 首先让我们旋转x轴上的标签，使它们更清晰地显示出来。使用[axes.Axes.get_xticklabels()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.get_xticklabels.html#matplotlib.axes.Axes.get_xticklabels)方法将这些标签：
+现在我们已经得到了一个我们想要的一般外观的绘制，所以让我们对它进行微调，以便它可以打印出来。 首先让我们旋转x轴上的标签，使它们更清晰地显示出来。使用[axes.Axes.get_xticklabels()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.get_xticklabels.html#matplotlib.axes.Axes.get_xticklabels)方法将这些标签：
 
 ```python
 fig, ax = plt.subplots()
@@ -221,25 +221,25 @@ plt.show()
 
 ![生命周期示例9](/static/images/tutorials/sphx_glr_lifecycle_010.png)
 
-## Saving our plot
+## 保存我们的绘制
 
-Now that we're happy with the outcome of our plot, we want to save it to disk. There are many file formats we can save to in Matplotlib. To see a list of available options, use:
+现在我们对我们的绘制结果感到满意，我们希望将其保存到磁盘。我们可以在Matplotlib中保存许多文件格式。要查看可用选项列表，请使用：
 
 ```python
 print(fig.canvas.get_supported_filetypes())
 ```
 
-Out:
+输出：
 
 ```python
 {'ps': 'Postscript', 'eps': 'Encapsulated Postscript', 'pdf': 'Portable Document Format', 'pgf': 'PGF code for LaTeX', 'png': 'Portable Network Graphics', 'raw': 'Raw RGBA bitmap', 'rgba': 'Raw RGBA bitmap', 'svg': 'Scalable Vector Graphics', 'svgz': 'Scalable Vector Graphics', 'jpg': 'Joint Photographic Experts Group', 'jpeg': 'Joint Photographic Experts Group', 'tif': 'Tagged Image File Format', 'tiff': 'Tagged Image File Format'}
 ```
 
-We can then use the [figure.Figure.savefig()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.savefig) in order to save the figure to disk. Note that there are several useful flags we'll show below:
+然后我们可以使用[figure.Figure.savefig()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.savefig)来将数字保存到磁盘。请注意，我们将在下面显示几个有用的标志：
 
-- transparent=True makes the background of the saved figure transparent if the format supports it.
-- dpi=80 controls the resolution (dots per square inch) of the output.
-- bbox_inches="tight" fits the bounds of the figure to our plot.
+- transparent = True 如果格式支持，则使保存的图形的背景透明。
+- dpi = 80 控制输出的分辨率（每平方英寸的点数）。
+- bbox_inches = "tight" 符合图中我们绘制的界限。
 
 ```python
 # Uncomment this line to save the figure.

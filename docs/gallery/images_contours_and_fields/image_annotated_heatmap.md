@@ -174,7 +174,7 @@ def annotate_heatmap(im, data=None, valfmt="{x:.2f}",
     return texts
 ```
 
-以上所述使我们能够保持实际的情节创作非常紧凑。
+以上所述使我们能够保持实际的绘制创作非常紧凑。
 
 ```python
 fig, ax = plt.subplots()

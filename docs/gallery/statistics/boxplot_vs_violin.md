@@ -8,7 +8,7 @@
 
 小提琴图需要 matplotlib >= 1.4。
 
-有关小提琴情节的更多信息，scikit-learn文档有一个很棒的部分：http://scikit-learn.org/stable/modules/density.html
+有关小提琴绘制的更多信息，scikit-learn文档有一个很棒的部分：http://scikit-learn.org/stable/modules/density.html
 
 ![箱形图与小提琴图对比示例](/static/images/gallery/sphx_glr_boxplot_vs_violin_001.png)
 

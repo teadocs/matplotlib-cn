@@ -27,7 +27,7 @@ fig1.colorbar(cs)
 
 ![Contourf 影线法](/static/images/gallery/sphx_glr_contourf_hatching_001.png)
 
-情节2：没有带图例的颜色的阴影图
+绘制2：没有带图例的颜色的阴影图
 
 ```python
 fig2, ax2 = plt.subplots()
