@@ -1,12 +1,12 @@
 # 使用样式表和rcparams自定义Matplotlib
 
-Tips for customizing the properties and default styles of Matplotlib.
+自定义Matplotlib的属性和默认样式的提示。
 
-## Using style sheets
+## 使用样式表
 
-The ``style`` package adds support for easy-to-switch plotting "styles" with the same parameters as a [matplotlib rc](https://matplotlib.org/tutorials/introductory/customizing.html#customizing-with-matplotlibrc-files) file (which is read at startup to configure matplotlib).
+``样式``包添加了对易于切换绘制“样式”的支持，其具有与[matplotlib rc](https://matplotlib.org/tutorials/introductory/customizing.html#customizing-with-matplotlibrc-files)文件相同的参数（在启动时读取以配置matplotlib）。
 
-There are a number of pre-defined styles [provided by Matplotlib](https://github.com/matplotlib/matplotlib/tree/master/lib/matplotlib/mpl-data/stylelib). For example, there's a pre-defined style called "ggplot", which emulates the aesthetics of [ggplot](http://ggplot2.org/) (a popular plotting package for [R](https://www.r-project.org/)). To use this style, just add:
+Matplotlib提供了许多[预定义的样式](https://github.com/matplotlib/matplotlib/tree/master/lib/matplotlib/mpl-data/stylelib)。例如，有一种名为“gglot”的预定义样式，它模拟了[ggplot](http://ggplot2.org/)（一种流行的[R](https://www.r-project.org/)绘图软件包）的美感。要使用此样式，只需添加：
 
 ```python
 import numpy as np
@@ -16,25 +16,25 @@ plt.style.use('ggplot')
 data = np.random.randn(50)
 ```
 
-To list all available styles, use:
+要列出所有可用的样式，请使用：
 
 ```python
 print(plt.style.available)
 ```
 
-Out:
+输出：
 
 ```python
 ['seaborn-dark', 'dark_background', 'seaborn-pastel', 'seaborn-colorblind', 'tableau-colorblind10', 'seaborn-notebook', 'seaborn-dark-palette', 'grayscale', 'seaborn-poster', 'seaborn', 'bmh', 'seaborn-talk', 'seaborn-ticks', '_classic_test', 'ggplot', 'seaborn-white', 'classic', 'Solarize_Light2', 'seaborn-paper', 'fast', 'fivethirtyeight', 'seaborn-muted', 'seaborn-whitegrid', 'seaborn-darkgrid', 'seaborn-bright', 'seaborn-deep']
 ```
 
-## Defining your own style
+## 定义自己的风格
 
-You can create custom styles and use them by calling ``style.use`` with the path or URL to the style sheet. Additionally, if you add your ``<style-name>.mplstyle`` file to mpl_configdir/stylelib, you can reuse your custom style sheet with a call to ``style.use(<style-name>)``. By default ``mpl_configdir`` should be ``~/.config/matplotlib``, but you can check where yours is with matplotlib.get_configdir(); you may need to create this directory. You also can change the directory where matplotlib looks for the stylelib/ folder by setting the MPLCONFIGDIR environment variable, see [matplotlib configuration and cache directory locations](https://matplotlib.org/faq/troubleshooting_faq.html#locating-matplotlib-config-dir).
+您可以通过调用 `style.use`` 以及样式表的路径或URL来创建自定义样式并使用它们。此外，如果将``<style-name>.mplstyle``文件添加到mpl_configdir / stylelib，则可以通过调用 ``style.use(<style-name>)`` 重用自定义样式表。 默认情况下，``mpl_configdir`` 应为 ``~/.config/matplotlib`` ，但您可以使用matplotlib.get_configdir()来检查您的位置。您可能需要创建此目录。您还可以通过设置 MPLCONFIGDIR环境变量 来更改matplotlib查找 stylelib/ 文件夹的目录，请参阅[matplotlib配置和缓存目录位置](https://matplotlib.org/faq/troubleshooting_faq.html#locating-matplotlib-config-dir)。
 
-Note that a custom style sheet in ``mpl_configdir/stylelib`` will override a style sheet defined by matplotlib if the styles have the same name.
+请注意，如果样式具有相同的名称，``mpl_configdir / stylelib`` 中的自定义样式表将覆盖matplotlib定义的样式表。
 
-For example, you might want to create ``mpl_configdir/stylelib/presentation.mplstyle`` with the following:
+例如，您可能希望使用以下命令创建 ``mpl_configdir/stylelib/presentation.mplstyle``：
 
 ```python
 axes.titlesize : 24
@@ -45,16 +45,16 @@ xtick.labelsize : 16
 ytick.labelsize : 16
 ```
 
-Then, when you want to adapt a plot designed for a paper to one that looks good in a presentation, you can just add:
+然后，当您想要将针对纸张设计的绘图调整为在演示文稿中看起来很好的绘图时，您可以添加：
 
 ```python
 >>> import matplotlib.pyplot as plt
 >>> plt.style.use('presentation')
 ```
 
-## Composing styles
+## 构图风格
 
-Style sheets are designed to be composed together. So you can have a style sheet that customizes colors and a separate style sheet that alters element sizes for presentations. These styles can easily be combined by passing a list of styles:
+样式表旨在组合在一起。因此，您可以拥有一个自定义颜色的样式表和一个可以改变演示文稿元素大小的单独样式表。通过传递样式列表可以轻松组合这些样式：
 
 ```python
 >>> import matplotlib.pyplot as plt
