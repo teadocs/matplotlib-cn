@@ -61,11 +61,11 @@ ytick.labelsize : 16
 >>> plt.style.use(['dark_background', 'presentation'])
 ```
 
-Note that styles further to the right will overwrite values that are already defined by styles on the left.
+请注意，右侧的样式将覆盖左侧样式已定义的值。
 
-## Temporary styling
+## 临时样式
 
-If you only want to use a style for a specific block of code but don't want to change the global styling, the style package provides a context manager for limiting your changes to a specific scope. To isolate your styling changes, you can write something like the following:
+如果您只想为特定代码块使用样式但不想更改全局样式，则样式包提供上下文管理器，用于将更改限制为特定范围。要隔离样式更改，可以编写如下内容：
 
 ```python
 with plt.style.context(('dark_background')):
@@ -77,9 +77,9 @@ plt.show()
 
 # matplotlib rcParams
 
-## Dynamic rc settings
+## 动态rc设置
 
-You can also dynamically change the default rc settings in a python script or interactively from the python shell. All of the rc settings are stored in a dictionary-like variable called [matplotlib.rcParams](https://matplotlib.org/api/matplotlib_configuration_api.html#matplotlib.rcParams), which is global to the matplotlib package. rcParams can be modified directly, for example:
+您还可以在python脚本中动态更改默认的rc设置，或者从python shell以交互方式更改。 所有rc设置都存储在一个名为[matplotlib.rcParams](https://matplotlib.org/api/matplotlib_configuration_api.html#matplotlib.rcParams)的类字典变量中，该变量对于matplotlib包是全局的。rcParams可以直接修改，例如：
 
 ```python
 mpl.rcParams['lines.linewidth'] = 2
@@ -89,7 +89,7 @@ plt.plot(data)
 
 ![折线图](/static/images/tutorials/sphx_glr_customizing_002.png)
 
-Matplotlib also provides a couple of convenience functions for modifying rc settings. The [matplotlib.rc()](https://matplotlib.org/api/matplotlib_configuration_api.html#matplotlib.rc) command can be used to modify multiple settings in a single group at once, using keyword arguments:
+Matplotlib还提供了一些用于修改rc设置的便捷功能。[matplotlib.rc()](https://matplotlib.org/api/matplotlib_configuration_api.html#matplotlib.rc)命令可用于使用关键字参数一次修改单个组中的多个设置：
 
 ```python
 mpl.rc('lines', linewidth=4, color='g')
@@ -98,25 +98,25 @@ plt.plot(data)
 
 ![折线图2](/static/images/tutorials/sphx_glr_customizing_003.png)
 
-The [matplotlib.rcdefaults()](https://matplotlib.org/api/matplotlib_configuration_api.html#matplotlib.rcdefaults) command will restore the standard matplotlib default settings.
+[matplotlib.rcdefaults()](https://matplotlib.org/api/matplotlib_configuration_api.html#matplotlib.rcdefaults) 命令将恢复标准的matplotlib默认设置。
 
-There is some degree of validation when setting the values of rcParams, see [matplotlib.rcsetup](https://matplotlib.org/api/rcsetup_api.html#module-matplotlib.rcsetup) for details.
+设置rcParams的值时有一定程度的验证，有关详细信息，请参阅[matplotlib.rcsetup](https://matplotlib.org/api/rcsetup_api.html#module-matplotlib.rcsetup)。
 
-## The matplotlibrc file
+## matplotlibrc文件
 
-matplotlib uses ``matplotlibrc`` configuration files to customize all kinds of properties, which we call ``rc settings or rc parameters``. You can control the defaults of almost every property in matplotlib: figure size and dpi, line width, color and style, axes, axis and grid properties, text and font properties and so on. matplotlib looks for ``matplotlibrc`` in four locations, in the following order:
+matplotlib使用``matplotlibrc``配置文件来自定义各种属性，我们称之为 ``rc设置或rc参数``。您可以控制matplotlib中几乎每个属性的默认值：图形大小和dpi，线宽，颜色和样式，轴，轴和网格属性，文本和字体属性等。matplotlib按以下顺序在四个位置查找``matplotlibrc``：
 
-1. ``matplotlibrc`` in the current working directory, usually used for specific customizations that you do not want to apply elsewhere.
-1. ``$MATPLOTLIBRC`` if it is a file, else ``$MATPLOTLIBRC/matplotlibrc``.
-1. It next looks in a user-specific place, depending on your platform:
-    - On Linux and FreeBSD, it looks in .config/matplotlib/matplotlibrc (or $XDG_CONFIG_HOME/matplotlib/matplotlibrc) if you've customized your environment.
-    - On other platforms, it looks in .matplotlib/matplotlibrc.
-    See [matplotlib configuration and cache directory locations](https://matplotlib.org/faq/troubleshooting_faq.html#locating-matplotlib-config-dir).
-1. ``INSTALL/matplotlib/mpl-data/matplotlibrc``, where *INSTALL* is something like ``/usr/lib/python3.5/site-packages`` on Linux, and maybe ``C:\Python35\Lib\site-packages`` on Windows. Every time you install matplotlib, this file will be overwritten, so if you want your customizations to be saved, please move this file to your user-specific matplotlib directory.
+1. 当前工作目录中的``matplotlibrc``，通常用于您不希望在其他地方应用的特定自定义。
+1. ``$ MATPLOTLIBRC``如果是文件，否则 ``$MATPLOTLIBRC/matplotlibrc``。
+1. 它接下来是在特定于用户的位置，具体取决于您的平台：
+    - 在Linux和FreeBSD上，如果您已经自定义环境，它会查看.config/matplotlib/matplotlibrc（或$ XDG_CONFIG_HOME/matplotlib/matplotlibrc）。On Linux and FreeBSD, it looks in .config/matplotlib/matplotlibrc (or $XDG_CONFIG_HOME/matplotlib/matplotlibrc) if you've customized your environment.
+    - 在其他平台上，它查找.matplotlib/matplotlibrc。
+    请参阅[matplotlib配置和缓存目录位置](https://matplotlib.org/faq/troubleshooting_faq.html#locating-matplotlib-config-dir)。
+1. ``INSTALL/matplotlib/mpl-data/matplotlibrc``，其中 *INSTALL* 类似于Linux上的``/usr/lib/python3.5/site-packages``，可能是Windows上的 ``C:\Python35\Lib\site-packages``。每次安装matplotlib时，都会覆盖此文件，因此如果要保存自定义项，请将此文件移动到特定于用户的matplotlib目录。
 
-Once a ``matplotlibrc`` file has been found, it will not search any of the other paths.
+一旦找到 ``matplotlibrc`` 文件，它就不会搜索任何其他路径。
 
-To display where the currently active matplotlibrc file was loaded from, one can do the following:
+要显示当前活动的matplotlibrc文件的加载位置，可以执行以下操作：
 
 ```python
 >>> import matplotlib
@@ -124,9 +124,9 @@ To display where the currently active matplotlibrc file was loaded from, one can
 '/home/foo/.config/matplotlib/matplotlibrc'
 ```
 
-See below for a sample [matplotlibrc file](https://matplotlib.org/tutorials/introductory/customizing.html#matplotlibrc-sample). Although all parameters are optional, you should almost always set the backend or else matplotlib will choose Agg, a non-interactive backend. This can lead to unexpected behavior, since if you do not have a ``matplotlibrc`` file, it would normally fall back to ``INSTALL/matplotlib/mpl-data/matplotlibrc``, which is often set to an interactive backend by the package maintainer.
+请参阅下面的示例[matplotlibrc文件](https://matplotlib.org/tutorials/introductory/customizing.html#matplotlibrc-sample)。虽然所有参数都是可选的，但您应该几乎总是设置后端，否则matplotlib将选择Agg，一个非交互式后端。 这可能会导致意外行为，因为如果您没有 ``matplotlibrc`` 文件，它通常会回退到``INSTALL/matplotlib/mpl-data/matplotlibrc``，它通常由软件包维护者设置为交互式后端。
 
-### A sample matplotlibrc file
+### 一个示例matplotlibrc文件
 
 ```python
 #### MATPLOTLIBRC FORMAT
