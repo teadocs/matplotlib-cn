@@ -1,16 +1,16 @@
-# Artist tutorial
+# 艺术家对象教程
 
-Using Artist objects to render on the canvas.
+使用Artist对象在画布上渲染。
 
-There are three layers to the matplotlib API.
+matplotlib API有三层。
 
-- the ``matplotlib.backend_bases.FigureCanvas`` is the area onto which the figure is drawn
-- the ``matplotlib.backend_bases.Renderer`` is the object which knows how to draw on the FigureCanvas
-- and the [matplotlib.artist.Artist](https://matplotlib.org/api/artist_api.html#matplotlib.artist.Artist) is the object that knows how to use a renderer to paint onto the canvas.
+- ``matplotlib.backend_bases.FigureCanvas`` 是绘制图形的区域。
+- ``matplotlib.backend_bases.Renderer`` 是知道如何在FigureCanvas上绘制的对象。
+- [matplotlib.artist.Artist](https://matplotlib.org/api/artist_api.html#matplotlib.artist.Artist) 是知道如何使用渲染器绘制到画布上的对象。
 
-The ``FigureCanvas`` and Renderer handle all the details of talking to user interface toolkits like [wxPython](https://www.wxpython.org/) or drawing languages like PostScript®, and the ``Artist`` handles all the high level constructs like representing and laying out the figure, text, and lines. The typical user will spend 95% of their time working with the ``Artists``.
+``FigureCanvas``和Renderer处理与[wxPython](https://www.wxpython.org/)等用户界面工具包或PostScript®等绘图语言交谈的所有细节，而``Artist``处理所有高级构造，如表示和布置图形，文本和线条。典型的用户将花费95％的时间与``Artists``合作。
 
-There are two types of ``Artists``: primitives and containers. The primitives represent the standard graphical objects we want to paint onto our canvas: [Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D), [Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle), [Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text), [AxesImage](https://matplotlib.org/api/image_api.html#matplotlib.image.AxesImage), etc., and the containers are places to put them ([Axis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis), [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) and [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)). The standard use is to create a [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) instance, use the Figure to create one or more [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) or Subplot instances, and use the Axes instance helper methods to create the primitives. In the example below, we create a [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) instance using [matplotlib.pyplot.figure()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure), which is a convenience method for instantiating Figure instances and connecting them with your user interface or drawing toolkit FigureCanvas. As we will discuss below, this is not necessary -- you can work directly with PostScript, PDF Gtk+, or wxPython FigureCanvas instances, instantiate your Figures directly and connect them yourselves -- but since we are focusing here on the Artist API we'll let [pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) handle some of those details for us:
+``Artists``有两种类型：基元和容器。基元代表我们想要在画布上绘制的标准图形对象：[Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D), [Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle), [Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text), [AxesImage](https://matplotlib.org/api/image_api.html#matplotlib.image.AxesImage)等，容器是放置它们的位置（[Axis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis), [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)和[Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)）。 标准用法是创建一个[Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) 实例，使用Figure创建一个或多个[Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)或Subplot实例，并使用Axes实例辅助方法创建基元。 在下面的示例中，我们使用[matplotlib.pyplot.figure()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure)创建一个[Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)实例，这是一个方便的方法，用于实例化图实例并将它们与您的用户界面或绘图工具包FigureCanvas连接。正如我们将在下面讨论的那样，这不是必需的 - 你可以直接使用PostScript，PDF Gtk +或wxPython FigureCanvas实例，直接实例化你的数字并自己连接它们 - 但是因为我们专注于Artist API我们将会 让[pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)为我们处理一些细节：
 
 ```python
 import matplotlib.pyplot as plt
@@ -18,14 +18,14 @@ fig = plt.figure()
 ax = fig.add_subplot(2,1,1) # two rows, one column, first plot
 ```
 
-The [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) is probably the most important class in the matplotlib API, and the one you will be working with most of the time. This is because the Axes is the plotting area into which most of the objects go, and the Axes has many special helper methods ([plot()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot), [text()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.text.html#matplotlib.axes.Axes.text), [hist()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist), [imshow()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.imshow.html#matplotlib.axes.Axes.imshow)) to create the most common graphics primitives ([Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D), [Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text), [Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle), Image, respectively). These helper methods will take your data (e.g., numpy arrays and strings) and create primitive Artist instances as needed (e.g., Line2D), add them to the relevant containers, and draw them when requested. Most of you are probably familiar with the Subplot, which is just a special case of an Axes that lives on a regular rows by columns grid of Subplot instances. If you want to create an Axes at an arbitrary location, simply use the [add_axes()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes) method which takes a list of [left, bottom, width, height] values in 0-1 relative figure coordinates:
+[Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)可能是matplotlib API中最重要的类，也是您大部分时间都在使用的类。 这是因为Axes是大多数对象所在的绘图区域，Axes有许多特殊的辅助方法（[plot()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot), [text()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.text.html#matplotlib.axes.Axes.text), [hist()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist), [imshow()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.imshow.html#matplotlib.axes.Axes.imshow)）来创建最常见的图形基元（[Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D), [Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text), [Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle)，Image，分别）。这些辅助方法将获取您的数据（例如，numpy数组和字符串）并根据需要创建原始Artist实例（例如，Line2D），将它们添加到相关容器，并在请求时绘制它们。 你们大多数人可能都熟悉Subplot，这只是一个Axe的一个特例，它存在于Subplot实例的逐行列网格中。 如果要在任意位置创建Axes，只需使用[add_axes()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes)方法，该方法采用0-1相对图形坐标中的[left，bottom，width，height]值列表：
 
 ```python
 fig2 = plt.figure()
 ax2 = fig2.add_axes([0.15, 0.1, 0.7, 0.3])
 ```
 
-Continuing with our example:
+继续我们的例子：
 
 ```python
 import numpy as np
@@ -34,7 +34,7 @@ s = np.sin(2*np.pi*t)
 line, = ax.plot(t, s, color='blue', lw=2)
 ```
 
-In this example, ``ax`` is the Axes instance created by the ``fig.add_subplot`` call above (remember Subplot is just a subclass of Axes) and when you call ``ax.plot``, it creates a ``Line2D`` instance and adds it to the Axes.lines list. In the interactive [ipython](http://ipython.org/) session below, you can see that the ``Axes.lines`` list is length one and contains the same line that was returned by the ``line, = ax.plot...`` call:
+在这个例子中，``ax`` 是上面的 ``fig.add_subplot`` 调用创建的Axes实例（记住Subplot只是Axes的子类），当你调用 ``ax.plot``时，它会创建一个 ``Line2D`` 实例并将其添加到Axes.lines列表中。在下面的交互式[ipython](http://ipython.org/)会话中，您可以看到 ``Axes.lines`` 列表的长度为1，并且包含该行返回的 ``line, = ax.plot...``，调用：
 
 ```python
 In [101]: ax.lines[0]
@@ -44,7 +44,7 @@ In [102]: line
 Out[102]: <matplotlib.lines.Line2D instance at 0x19a95710>
 ```
 
-If you make subsequent calls to ax.plot (and the hold state is "on" which is the default) then additional lines will be added to the list. You can remove lines later simply by calling the list methods; either of these will work:
+如果您对ax.plot进行后续调用（并且保持状态为“on”，这是默认值），则会向列表中添加其他行。您可以稍后通过调用list方法删除行; 其中任何一个都可行：
 
 ```python
 del ax.lines[0]
