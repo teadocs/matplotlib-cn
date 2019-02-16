@@ -51,16 +51,16 @@ del ax.lines[0]
 ax.lines.remove(line)  # one or the other, not both!
 ```
 
-The Axes also has helper methods to configure and decorate the x-axis and y-axis tick, tick labels and axis labels:
+Axes还有辅助方法来配置和装饰x轴和y轴刻度线，刻度标签和轴标签：
 
 ```python
 xtext = ax.set_xlabel('my xdata') # returns a Text instance
 ytext = ax.set_ylabel('my ydata')
 ```
 
-When you call [ax.set_xlabel](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel), it passes the information on the [Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text) instance of the [XAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.XAxis). Each Axes instance contains an [XAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.XAxis) and a [YAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.YAxis) instance, which handle the layout and drawing of the ticks, tick labels and axis labels.
+当您调用[ax.set_xlabel](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel)时，它会传递[XAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.XAxis)的[Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text) 实例上的信息。每个Axes实例都包含一个[XAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.XAxis)和一个[YAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.YAxis) 实例，用于处理刻度，刻度标签和轴标签的布局和绘图。
 
-Try creating the figure below.
+尝试创建下图。
 
 ```python
 import numpy as np
@@ -89,35 +89,35 @@ plt.show()
 
 ![艺术家对象教程示例](/static/images/tutorials/sphx_glr_artists_001.png)
 
-## Customizing your objects
+## 自定义对象
 
-Every element in the figure is represented by a matplotlib [Artist](https://matplotlib.org/api/artist_api.html#matplotlib.artist.Artist), and each has an extensive list of properties to configure its appearance. The figure itself contains a [Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle) exactly the size of the figure, which you can use to set the background color and transparency of the figures. Likewise, each [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) bounding box (the standard white box with black edges in the typical matplotlib plot, has a Rectangle instance that determines the color, transparency, and other properties of the Axes. These instances are stored as member variables Figure.patch and Axes.patch ("Patch" is a name inherited from MATLAB, and is a 2D "patch" of color on the figure, e.g., rectangles, circles and polygons). Every matplotlib Artist has the following properties
+图中的每个元素都由matplotlib [Artist](https://matplotlib.org/api/artist_api.html#matplotlib.artist.Artist)表示，每个元素都有一个广泛的属性列表来配置它的外观。 图形本身包含一个与图形大小完全相同的矩形，您可以使用它来设置图形的背景颜色和透明度。同样，每个[Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)边界框（典型matplotlib图中带有黑色边的标准白色框，都有一个[Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle)实例，用于确定Axes的颜色，透明度和其他属性。这些实例存储为成员变量Figure.patch和Axes.patch（“Patch”是一个继承自MATLAB的名称，是图中颜色的2D“补丁”，例如矩形，圆形和多边形）。每个matplotlib Artist都具有以下属性
 
-Property | Description
+属性 | 描述
 ---|---
-alpha | The transparency - a scalar from 0-1
-animated | A boolean that is used to facilitate animated drawing
-axes | The axes that the Artist lives in, possibly None
-clip_box | The bounding box that clips the Artist
-clip_on | Whether clipping is enabled
-clip_path | The path the artist is clipped to
-contains | A picking function to test whether the artist contains the pick point
-figure | The figure instance the artist lives in, possibly None
-label | A text label (e.g., for auto-labeling)
-picker | A python object that controls object picking
-transform | The transformation
-visible | A boolean whether the artist should be drawn
-zorder | A number which determines the drawing order
-rasterized | Boolean; Turns vectors into rastergraphics: (for compression & eps transparency)
+alpha | 透明度 - 0-1的标量
+animated | 一种用于促进动画绘制的布尔值。
+axes | Artist对象载体轴，可能是None。
+clip_box | 一种裁剪Artist对象的边界边框。
+clip_on | 是否启用剪裁
+clip_path | Artist剪辑的路径
+contains | 用于测试Artist是否包含拾取点的拾取功能
+figure | Artist对象实例的载体，可能是None。
+label | 文本标签（例如，用于自动标记）。
+picker | 控制对象拾取的python对象
+transform | 转化
+visible | 一个布尔值是否应该绘制Artist
+zorder | 确定绘图顺序的数字
+rasterized | 布尔; 将矢量转换为栅格图形:(用于压缩和eps透明度）
 
-Each of the properties is accessed with an old-fashioned setter or getter (yes we know this irritates Pythonistas and we plan to support direct access via properties or traits but it hasn't been done yet). For example, to multiply the current alpha by a half:
+每个属性都使用老式的setter或getter访问（是的，我们知道这会激怒Pythonistas，我们计划通过属性或特性支持直接访问，但尚未完成）。例如，要将当前的alpha乘以一半：
 
 ```python
 a = o.get_alpha()
 o.set_alpha(0.5*a)
 ```
 
-If you want to set a number of properties at once, you can also use the set method with keyword arguments. For example:
+如果要一次设置多个属性，还可以将set方法与关键字参数一起使用。例如：
 
 ```python
 o.set(alpha=0.5, zorder=2)
