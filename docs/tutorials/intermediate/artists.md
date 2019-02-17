@@ -123,7 +123,7 @@ o.set_alpha(0.5*a)
 o.set(alpha=0.5, zorder=2)
 ```
 
-If you are working interactively at the python shell, a handy way to inspect the Artist properties is to use the [matplotlib.artist.getp()](https://matplotlib.org/api/_as_gen/matplotlib.artist.getp.html#matplotlib.artist.getp) function (simply getp() in pyplot), which lists the properties and their values. This works for classes derived from Artist as well, e.g., Figure and Rectangle. Here are the Figure rectangle properties mentioned above:
+如果你在python shell上以交互方式工作，检查Artist属性的一种方便方法是使用[matplotlib.artist.getp()](https://matplotlib.org/api/_as_gen/matplotlib.artist.getp.html#matplotlib.artist.getp)函数（简单地在pyplot中使用getp()），它列出了属性及其值。从Artist派生的类，例如，图和矩形。以下是上面提到的图形矩形属性：
 
 ```python
 In [149]: matplotlib.artist.getp(fig.patch)
@@ -154,13 +154,13 @@ In [149]: matplotlib.artist.getp(fig.patch)
     zorder = 1
 ```
 
-The docstrings for all of the classes also contain the Artist properties, so you can consult the interactive "help" or the [artist](https://matplotlib.org/api/artist_api.html#artist-api) for a listing of properties for a given object.
+所有类的文档字符串也包含Artist属性，因此您可以查看交互式“帮助”或[artist](https://matplotlib.org/api/artist_api.html#artist-api)以获取给定对象的属性列表。
 
-## Object containers
+## 对象容器
 
-Now that we know how to inspect and set the properties of a given object we want to configure, we need to know how to get at that object. As mentioned in the introduction, there are two kinds of objects: primitives and containers. The primitives are usually the things you want to configure (the font of a [Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text) instance, the width of a [Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)) although the containers also have some properties as well -- for example the [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) [Artist](https://matplotlib.org/api/artist_api.html#matplotlib.artist.Artist) is a container that contains many of the primitives in your plot, but it also has properties like the xscale to control whether the xaxis is 'linear' or 'log'. In this section we'll review where the various container objects store the ``Artists`` that you want to get at.
+现在我们知道如何检查和设置我们想要配置的给定对象的属性，我们需要知道如何获取该对象。 如介绍中所述，有两种对象：基元和容器。 基元通常是你想要配置的东西（[Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text)实例的字体，[Line2D](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)的宽度），虽然容器也有一些属性 - 例如[Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) [Artist](https://matplotlib.org/api/artist_api.html#matplotlib.artist.Artist)是一个包含许多基元的容器 你的情节，但它也有像xscale这样的属性来控制x轴是“线性”还是“日志”。 在本节中，我们将回顾各种容器对象存储您想要获得的艺术家的位置。
 
-### Figure container
+### 图容器
 
 The top level container Artist is the [matplotlib.figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure), and it contains everything in the figure. The background of the figure is a [Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle) which is stored in Figure.patch. As you add subplots ([add_subplot()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_subplot)) and axes ([add_axes()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes)) to the figure these will be appended to the [Figure.axes](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.axes  ). These are also returned by the methods that create them:
 
