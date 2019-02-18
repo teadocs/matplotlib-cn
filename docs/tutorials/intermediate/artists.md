@@ -162,7 +162,7 @@ In [149]: matplotlib.artist.getp(fig.patch)
 
 ### 图容器
 
-The top level container Artist is the [matplotlib.figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure), and it contains everything in the figure. The background of the figure is a [Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle) which is stored in Figure.patch. As you add subplots ([add_subplot()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_subplot)) and axes ([add_axes()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes)) to the figure these will be appended to the [Figure.axes](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.axes  ). These are also returned by the methods that create them:
+顶级容器Artist是[matplotlib.figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)，它包含图中的所有内容。图的背景是一个存储在Figure.patch中的[Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle)。在向图中添加子图（[add_subplot()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_subplot)）和轴（[add_axes()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes)）时，这些将附加到[Figure.axes](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.axes)。 这些也由创建它们的方法返回：
 
 ```python
 In [156]: fig = plt.figure()
@@ -178,16 +178,16 @@ In [160]: print(fig.axes)
 [<matplotlib.axes.Subplot instance at 0xd54b26c>, <matplotlib.axes.Axes instance at 0xd3f0b2c>]
 ```
 
-Because the figure maintains the concept of the "current axes" (see [Figure.gca](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.gca) and [Figure.sca](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.sca)) to support the pylab/pyplot state machine, you should not insert or remove axes directly from the axes list, but rather use the [add_subplot()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_subplot) and [add_axes()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes) methods to insert, and the [delaxes()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.delaxes) method to delete. You are free however, to iterate over the list of axes or index into it to get access to Axes instances you want to customize. Here is an example which turns all the axes grids on:
+因为该图保持了“当前轴”的概念（参见[Figure.gca](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.gca)和[Figure.sca](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.sca)）以支持pylab/pyplot状态机，所以不应直接从轴列表中插入或删除轴，而应使用[add_subplot()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_subplot)和[add_axes()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.add_axes)方法插入，以及[delaxes()](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.delaxes)方法删除。但是，您可以自由地遍历轴列表或索引到其中以访问要自定义的Axes实例。这是一个打开所有轴网格的示例：
 
 ```python
 for ax in fig.axes:
     ax.grid(True)
 ```
 
-The figure also has its own text, lines, patches and images, which you can use to add primitives directly. The default coordinate system for the ``Figure`` will simply be in pixels (which is not usually what you want) but you can control this by setting the transform property of the ``Artist`` you are adding to the figure.
+该图还有自己的文本，线条，面片和图像，您可以使用它们直接添加图元。``Figure``的默认坐标系统将以像素为单位（通常不是您想要的），但您可以通过设置要添加到图中的``Artist``的transform属性来控制它。
 
-More useful is "figure coordinates" where (0, 0) is the bottom-left of the figure and (1, 1) is the top-right of the figure which you can obtain by setting the ``Artist`` transform to ``fig.transFigure``:
+更有用的是“图形坐标”，其中(0, 0)是图的左下角， (1, 1) 是图的右上角，您可以通过将``Artist``变换设置为``fig.transFigure``来获得：
 
 ```python
 import matplotlib.lines as lines
@@ -203,19 +203,19 @@ plt.show()
 
 ![艺术家对象教程示例2](/static/images/tutorials/sphx_glr_artists_002.png)
 
-Here is a summary of the Artists the figure contains
+以下是该图所包含的Artists的摘要。
 
-Figure attribute | Description
+图属性 | 描述
 ---|---
-axes | A list of Axes instances (includes Subplot)
-patch | The Rectangle background
-images | A list of FigureImages patches - useful for raw pixel display
-legends | A list of Figure Legend instances (different from Axes.legends)
-lines | A list of Figure Line2D instances (rarely used, see Axes.lines)
-patches | A list of Figure patches (rarely used, see Axes.patches)
-texts | A list Figure Text instances
+axes | Axes实例列表（包括Subplot）
+patch | 矩形背景
+images | ImageImages补丁列表 - 对原始像素显示很有用
+legends | 图例实例列表（与Axes.legends不同）
+lines | 图Line2D实例列表（很少使用，请参阅Axes.lines）
+patches | 图补丁列表（很少使用，请参阅Axes.patches）
+texts | 列表图文本实例
 
-### Axes container
+### 轴容器
 
 The [matplotlib.axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) is the center of the matplotlib universe -- it contains the vast majority of all the Artists used in a figure with many helper methods to create and add these Artists to itself, as well as helper methods to access and customize the Artists it contains. Like the [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure), it contains a [Patch](https://matplotlib.org/api/_as_gen/matplotlib.patches.Patch.html#matplotlib.patches.Patch) patch which is a [Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle) for Cartesian coordinates and a [Circle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Circle.html#matplotlib.patches.Circle) for polar coordinates; this patch determines the shape, background and border of the plotting region:
 
