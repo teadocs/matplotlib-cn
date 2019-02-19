@@ -217,7 +217,7 @@ texts | 列表图文本实例
 
 ### 轴容器
 
-The [matplotlib.axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) is the center of the matplotlib universe -- it contains the vast majority of all the Artists used in a figure with many helper methods to create and add these Artists to itself, as well as helper methods to access and customize the Artists it contains. Like the [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure), it contains a [Patch](https://matplotlib.org/api/_as_gen/matplotlib.patches.Patch.html#matplotlib.patches.Patch) patch which is a [Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle) for Cartesian coordinates and a [Circle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Circle.html#matplotlib.patches.Circle) for polar coordinates; this patch determines the shape, background and border of the plotting region:
+[matplotlib.axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)是matplotlib宇宙的中心 - 它包含绝大多数在图中使用的艺术家，其中包含许多辅助方法来创建和添加这些艺术家，以及帮助方法来访问和自定义 它包含的艺术家。 与[Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)一样，它包含一个[Patch](https://matplotlib.org/api/_as_gen/matplotlib.patches.Patch.html#matplotlib.patches.Patch)补丁，它是一个用于笛卡尔坐标的[Rectangle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle)和一个用于极坐标的[Circle](https://matplotlib.org/api/_as_gen/matplotlib.patches.Circle.html#matplotlib.patches.Circle); 此补丁确定绘图区域的形状，背景和边框：
 
 ```python
 ax = fig.add_subplot(111)
@@ -225,7 +225,7 @@ rect = ax.patch  # a Rectangle instance
 rect.set_facecolor('green')
 ```
 
-When you call a plotting method, e.g., the canonical [plot()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot) and pass in arrays or lists of values, the method will create a [matplotlib.lines.Line2D()](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) instance, update the line with all the Line2D properties passed as keyword arguments, add the line to the Axes.lines container, and returns it to you:
+当您调用绘图方法（例如，规范[plot()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot)并传入数组或值列表）时，该方法将创建一个[matplotlib.lines.Line2D()](https://matplotlib.org/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)实例，使用作为关键字参数传递的所有Line2D属性更新该行， 将该行添加到Axes.lines容器中，并将其返回给您：
 
 ```python
 In [213]: x, y = np.random.rand(2, 100)
@@ -233,14 +233,14 @@ In [213]: x, y = np.random.rand(2, 100)
 In [214]: line, = ax.plot(x, y, '-', color='blue', linewidth=2)
 ```
 
-plot returns a list of lines because you can pass in multiple x, y pairs to plot, and we are unpacking the first element of the length one list into the line variable. The line has been added to the Axes.lines list:
+plot返回一个行列表，因为你可以传递多个x，y对来绘图，我们将长度为一个列表的第一个元素解压缩到行变量中。 该行已添加到Axes.lines列表中：
 
 ```python
 In [229]: print(ax.lines)
 [<matplotlib.lines.Line2D instance at 0xd378b0c>]
 ```
 
-Similarly, methods that create patches, like [bar()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.bar.html#matplotlib.axes.Axes.bar) creates a list of rectangles, will add the patches to the Axes.patches list:
+类似地，创建补丁的方法（如[bar()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.bar.html#matplotlib.axes.Axes.bar)）会创建一个矩形列表，将补丁添加到Axes.patches列表中：
 
 ```python
 In [233]: n, bins, rectangles = ax.hist(np.random.randn(1000), 50, facecolor='yellow')
@@ -251,7 +251,7 @@ Out[234]: <a list of 50 Patch objects>
 In [235]: print(len(ax.patches))
 ```
 
-You should not add objects directly to the ``Axes.lines`` or ``Axes.patches`` lists unless you know exactly what you are doing, because the Axes needs to do a few things when it creates and adds an object. It sets the figure and axes property of the ``Artist``, as well as the default Axes transformation (unless a transformation is set). It also inspects the data contained in the Artist to update the data structures controlling auto-scaling, so that the view limits can be adjusted to contain the plotted data. You can, nonetheless, create objects yourself and add them directly to the Axes using helper methods like [add_line()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.add_line.html#matplotlib.axes.Axes.add_line) [and add_patch()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.add_patch.html#matplotlib.axes.Axes.add_patch). Here is an annotated interactive session illustrating what is going on:
+除非您确切知道自己在做什么，否则不应将对象直接添加到``Axes.lines``或``Axes.patches``列表中，因为Axes在创建和添加对象时需要执行一些操作。它设置``Artist``的figure和axes属性，以及默认的Axes转换（除非设置了转换）。它还检查Artist中包含的数据以更新控制自动缩放的数据结构，以便可以调整视图限制以包含绘制的数据。 尽管如此，您可以自己创建对象，并使用[add_line()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.add_line.html#matplotlib.axes.Axes.add_line)和[and add_patch()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.add_patch.html#matplotlib.axes.Axes.add_patch)等辅助方法将它们直接添加到Axes中。 这是一个带注释的交互式会话，说明了正在发生的事情：
 
 ```python
 In [262]: fig, ax = plt.subplots()
@@ -302,9 +302,9 @@ In [273]: print(ax.get_xlim())
 In [274]: ax.figure.canvas.draw()
 ```
 
-There are many, many ``Axes`` helper methods for creating primitive ``Artists`` and adding them to their respective containers. The table below summarizes a small sampling of them, the kinds of ``Artist`` they create, and where they store them
+有许多``Axes`` 辅助方法可用于创建原始``Artists``并将它们添加到各自的容器中。下表总结了一小部分样本，他们创建的``Artist``种类以及他们存储的位置
 
-Helper method | Artist | Container
+辅助方法| Artist（艺术家对象） | 容器
 ---|---|----
 ax.annotate - text annotations | Annotate | ax.texts
 ax.bar - bar charts | Rectangle | ax.patches
