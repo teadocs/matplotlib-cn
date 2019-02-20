@@ -306,44 +306,44 @@ In [274]: ax.figure.canvas.draw()
 
 辅助方法| Artist（艺术家对象） | 容器
 ---|---|----
-ax.annotate - text annotations | Annotate | ax.texts
-ax.bar - bar charts | Rectangle | ax.patches
-ax.errorbar - error bar plots | Line2D and Rectangle | ax.lines and ax.patches
-ax.fill - shared area | Polygon | ax.patches
-ax.hist - histograms | Rectangle | ax.patches
-ax.imshow - image data | AxesImage | ax.images
-ax.legend - axes legends | Legend | ax.legends
-ax.plot - xy plots | Line2D | ax.lines
-ax.scatter - scatter charts | PolygonCollection | ax.collections
-ax.text - text | Text | ax.texts
+ax.annotate - 文字注释 | 注视 | ax.texts
+ax.bar - 条形图 | Rectangle | ax.patches
+ax.errorbar - 误差条形图 | Line2D and Rectangle | ax.lines and ax.patches
+ax.fill - 共享区域 | Polygon | ax.patches
+ax.hist - 直方图 | Rectangle | ax.patches
+ax.imshow - 图像数据 | AxesImage | ax.images
+ax.legend - 轴图例 | Legend | ax.legends
+ax.plot - xy图 | Line2D | ax.lines
+ax.scatter - 散点图 | PolygonCollection | ax.collections
+ax.text - 文本 | Text | ax.texts
 
-In addition to all of these ``Artists``, the Axes contains two important ``Artist`` containers: the [XAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.XAxis) and [YAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.YAxis), which handle the drawing of the ticks and labels. These are stored as instance variables ``xaxis`` and ``yaxis``. The XAxis and YAxis containers will be detailed below, but note that the Axes contains many helper methods which forward calls on to the [Axis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis) instances so you often do not need to work with them directly unless you want to. For example, you can set the font color of the XAxis ticklabels using the Axes helper method:
+除了所有这些``Artists``之外，Axes还包含两个重要的``Artist``容器：[XAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.XAxis)和[YAxis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.YAxis)，用于处理刻度和标签的绘制。它们存储为实例变量``xaxis``和``yaxis``。下面将详细介绍``xaxis``和``yaxis``容器，但请注意，Axes包含许多帮助方法，这些方法将调用转发到[Axis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis)实例，因此除非您愿意，否则通常不需要直接使用它们。例如，您可以使用Axes辅助方法设置XAxis ticklabels的字体颜色：
 
 ```python
 for label in ax.get_xticklabels():
     label.set_color('orange')
 ```
 
-Below is a summary of the Artists that the Axes contains
+以下是Axes包含的Artists的摘要
 
-Axes attribute | Description
+轴属性 | 描述
 ---|---
-artists | A list of Artist instances
-patch | Rectangle instance for Axes background
-collections | A list of Collection instances
-images | A list of AxesImage
-legends | A list of Legend instances
-lines | A list of Line2D instances
-patches | A list of Patch instances
-texts | A list of Text instances
-xaxis | matplotlib.axis.XAxis instance
-yaxis | matplotlib.axis.YAxis instance
+artists | Artist实例列表
+patch | 轴背景的矩形实例
+collections | Collection实例列表
+images | AxesImage列表
+legends | Legend实例列表
+lines | Line2D实例列表
+patches | 补丁实例列表
+texts | 文本实例列表
+xaxis | matplotlib.axis.XAxis 实例
+yaxis | matplotlib.axis.YAxis 实例
 
-### Axis containers
+### 轴容器
 
-The [matplotlib.axis.Axis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis) instances handle the drawing of the tick lines, the grid lines, the tick labels and the axis label. You can configure the left and right ticks separately for the y-axis, and the upper and lower ticks separately for the x-axis. The Axis also stores the data and view intervals used in auto-scaling, panning and zooming, as well as the [Locator](https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.Locator) and [Formatter](https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.Formatter) instances which control where the ticks are placed and how they are represented as strings.
+[matplotlib.axis.Axis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis)实例处理刻度线，网格线，刻度标签和轴标签的绘制。您可以分别为y轴配置左和右刻度，为x轴分别配置上下刻度。Axis还存储用于自动缩放，平移和缩放的数据和视图间隔，以及[Locator](https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.Locator)和[Formatter](https://matplotlib.org/api/ticker_api.html#matplotlib.ticker.Formatter)实例，它们控制刻度线的放置位置以及它们如何表示为字符串。
 
-Each Axis object contains a label attribute (this is what [pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) modifies in calls to [xlabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel) and [ylabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel) ) as well as a list of major and minor ticks. The ticks are [XTick](https://matplotlib.org/api/axis_api.html#matplotlib.axis.XTick) and [YTick](https://matplotlib.org/api/axis_api.html#matplotlib.axis.YTick) instances, which contain the actual line and text primitives that render the ticks and ticklabels. Because the ticks are dynamically created as needed (e.g., when panning and zooming), you should access the lists of major and minor ticks through their accessor methods [get_major_ticks()](https://matplotlib.org/api/_as_gen/matplotlib.axis.Axis.get_major_ticks.html#matplotlib.axis.Axis.get_major_ticks) and [get_minor_ticks()](https://matplotlib.org/api/_as_gen/matplotlib.axis.Axis.get_minor_ticks.html#matplotlib.axis.Axis.get_minor_ticks). Although the ticks contain all the primitives and will be covered below, Axis instances have accessor methods that return the tick lines, tick labels, tick locations etc.:
+每个Axis对象都包含一个label属性（这是[pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)在调用[xlabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel)和[ylabel()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel)时修改的内容）以及主要和次要刻度列表。刻度线是[XTick](https://matplotlib.org/api/axis_api.html#matplotlib.axis.XTick)和[YTick](https://matplotlib.org/api/axis_api.html#matplotlib.axis.YTick)实例，它们包含渲染刻度线和刻度线标签的实际线和文本基元。 因为滴答是根据需要动态创建的（例如，在平移和缩放时），您应该通过其访问器方法[get_major_ticks()](https://matplotlib.org/api/_as_gen/matplotlib.axis.Axis.get_major_ticks.html#matplotlib.axis.Axis.get_major_ticks)和[get_minor_ticks()](https://matplotlib.org/api/_as_gen/matplotlib.axis.Axis.get_minor_ticks.html#matplotlib.axis.Axis.get_minor_ticks)访问主要和次要刻度的列表。 尽管ticks包含所有原语并将在下面介绍，但是Axis实例具有访问方法，这些方法返回刻度线，刻度标签，刻度位置等：
 
 ```python
 fig, ax = plt.subplots()
@@ -357,20 +357,19 @@ axis.get_ticklocs()
 axis.get_ticklabels()
 ```
 
-note there are twice as many ticklines as labels because by
-default there are tick lines at the top and bottom but only tick labels below the xaxis; this can be customized
+请注意，标签的间距是标签的两倍，因为默认情况下，顶部和底部有刻度线，但只有x轴下方的刻度标签; 这可以定制：
 
 ```python
 axis.get_ticklines()
 ```
 
-by default you get the major ticks back
+默认情况下，你可以得到主要刻度。
 
 ```python
 axis.get_ticklines()
 ```
 
-but you can also ask for the minor ticks
+但是你也可以获取次要刻度。
 
 ```python
 axis.get_ticklines(minor=True)
@@ -429,23 +428,24 @@ plt.show()
 
 ![艺术家对象教程示例4](/static/images/tutorials/sphx_glr_artists_004.png)
 
-### Tick containers
-The [matplotlib.axis.Tick](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick) is the final container object in our descent from the [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) to the [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) to the [Axis](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis) to the [Tick](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick). The Tick contains the tick and grid line instances, as well as the label instances for the upper and lower ticks. Each of these is accessible directly as an attribute of the Tick. In addition, there are boolean variables that determine whether the upper labels and ticks are on for the x-axis and whether the right labels and ticks are on for the y-axis.
+### 刻度容器
 
-Tick attribute | Description
+[matplotlib.axis.Tick](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick)是我们从[Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)到[Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)到[Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)到[Tick](https://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick)的下降的最终容器对象。Tick包含刻度线和网格线实例，以及上部和下部刻度的标签实例。 其中每个都可以直接作为Tick的属性访问。 此外，还有一些布尔变量可确定x轴上的上标签和刻度是否打开，y轴的右标签和刻度是否打开。
+
+刻度属性 | 描述
 ---|---
-tick1line | Line2D instance
-tick2line | Line2D instance
-gridline | Line2D instance
-label1 | Text instance
-label2 | Text instance
-gridOn | boolean which determines whether to draw the gridline
-tick1On | boolean which determines whether to draw the 1st tickline
-tick2On | boolean which determines whether to draw the 2nd tickline
-label1On | boolean which determines whether to draw the 1st tick label
-label2On | boolean which determines whether to draw the 2nd tick label
+tick1line | Line2D 实例
+tick2line | Line2D 实例
+gridline | Line2D 实例
+label1 | Text 实例
+label2 | Text 实例
+gridOn | boolean，决定是否绘制网格线
+tick1On | boolean决定是否绘制第一个刻度线
+tick2On | boolean决定是否绘制第二个刻度线
+label1On | boolean，决定是否绘制第一个刻度标签
+label2On | boolean，决定是否绘制第二个刻度标签
 
-Here is an example which sets the formatter for the right side ticks with dollar signs and colors them green on the right side of the yaxis
+下面是一个示例，它设置右侧刻度的格式化程序，带有美元符号，颜色为y轴右侧的绿色。
 
 ```python
 import matplotlib.ticker as ticker
