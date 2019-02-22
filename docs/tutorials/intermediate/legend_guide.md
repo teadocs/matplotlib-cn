@@ -54,9 +54,9 @@ plt.legend(handles=[red_patch])
 plt.show()
 ```
 
-../../_images/sphx_glr_legend_guide_001.png
+![图例指南示例](/static/images/tutorials/sphx_glr_legend_guide_001.png)
 
-There are many supported legend handles, instead of creating a patch of color we could have created a line with a marker:
+有许多支持的图例句柄，而不是创建一个颜色的补丁我们可以创建一个带标记的行：
 
 ```python
 import matplotlib.lines as mlines
@@ -68,7 +68,7 @@ plt.legend(handles=[blue_line])
 plt.show()
 ```
 
-../../_images/sphx_glr_legend_guide_002.png
+![图例指南示例2](/static/images/tutorials/sphx_glr_legend_guide_002.png)
 
 ## Legend location
 
@@ -102,11 +102,11 @@ plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
 plt.show()
 ```
 
-../../_images/sphx_glr_legend_guide_003.png
+![图例指南示例3](/static/images/tutorials/sphx_glr_legend_guide_003.png)
 
-## Multiple legends on the same Axes
+## 同一轴上的多个图例
 
-Sometimes it is more clear to split legend entries across multiple legends. Whilst the instinctive approach to doing this might be to call the legend() function multiple times, you will find that only one legend ever exists on the Axes. This has been done so that it is possible to call legend() repeatedly to update the legend to the latest handles on the Axes, so to persist old legend instances, we must add them manually to the Axes:
+有时，在多个图例中拆分图例条目更为明确。虽然这样做的本能方法可能是多次调用 legend() 函数，但您会发现Axes上只存在一个图例。 这样做是为了可以反复调用 legend() 来将图例更新为Axes上的最新句柄，因此为了保留旧的图例实例，我们必须手动将它们添加到Axes：
 
 ```python
 line1, = plt.plot([1, 2, 3], label="Line 1", linestyle='--')
@@ -124,9 +124,9 @@ plt.legend(handles=[line2], loc='lower right')
 plt.show()
 ```
 
-../../_images/sphx_glr_legend_guide_004.png
+![图例指南示例4](/static/images/tutorials/sphx_glr_legend_guide_004.png)
 
-## Legend Handlers
+## 图例处理程序
 
 In order to create legend entries, handles are given as an argument to an appropriate HandlerBase subclass. The choice of handler subclass is determined by the following rules:
 
@@ -150,7 +150,7 @@ line2, = plt.plot([1, 2, 3], marker='o', label='Line 2')
 plt.legend(handler_map={line1: HandlerLine2D(numpoints=4)})
 ```
 
-../../_images/sphx_glr_legend_guide_005.png
+![图例指南示例5](/static/images/tutorials/sphx_glr_legend_guide_005.png)
 
 As you can see, "Line 1" now has 4 marker points, where "Line 2" has 2 (the default). Try the above code, only change the map's key from line1 to type(line1). Notice how now both Line2D instances get 4 markers.
 
@@ -168,7 +168,7 @@ white_cross, = plt.plot(z[:5], "w+", markeredgewidth=3, markersize=15)
 plt.legend([red_dot, (red_dot, white_cross)], ["Attr A", "Attr A+B"])
 ```
 
-../../_images/sphx_glr_legend_guide_006.png
+![图例指南示例6](/static/images/tutorials/sphx_glr_legend_guide_006.png)
 
 The HandlerTuple class can also be used to assign several legend keys to the same entry:
 
@@ -182,7 +182,7 @@ l = plt.legend([(p1, p2)], ['Two keys'], numpoints=1,
                handler_map={tuple: HandlerTuple(ndivide=None)})
 ```
 
-../../_images/sphx_glr_legend_guide_007.png
+![图例指南示例7](/static/images/tutorials/sphx_glr_legend_guide_007.png)
 
 ### Implementing a custom legend handler
 
@@ -211,7 +211,7 @@ plt.legend([AnyObject()], ['My first handler'],
            handler_map={AnyObject: AnyObjectHandler()})
 ```
 
-../../_images/sphx_glr_legend_guide_008.png
+![图例指南示例8](/static/images/tutorials/sphx_glr_legend_guide_008.png)
 
 Alternatively, had we wanted to globally accept AnyObject instances without needing to manually set the handler_map keyword all the time, we could have registered the new handler with:
 
@@ -245,7 +245,7 @@ plt.legend([c], ["An ellipse, not a rectangle"],
            handler_map={mpatches.Circle: HandlerEllipse()})
 ```
 
-../../_images/sphx_glr_legend_guide_009.png
+![图例指南示例9](/static/images/tutorials/sphx_glr_legend_guide_009.png)
 
 ## 下载本文的所有示例
 
