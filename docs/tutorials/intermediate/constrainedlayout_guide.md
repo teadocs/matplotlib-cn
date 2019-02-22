@@ -1,8 +1,8 @@
-# Constrained Layout Guide
+# 约束布局指南
 
 How to use constrained-layout to fit plots within your figure cleanly.
 
-constrained_layout automatically adjusts subplots and decorations like legends and colorbars so that they fit in the figure window while still preserving, as best they can, the logical layout requested by the user.
+``constrained_layout`` automatically adjusts subplots and decorations like legends and colorbars so that they fit in the figure window while still preserving, as best they can, the logical layout requested by the user.
 
 constrained_layout is similar to tight_layout, but uses a constraint solver to determine the size of axes that allows them to fit.
 
@@ -10,10 +10,16 @@ constrained_layout needs to be activated before any axes are added to a figure. 
 
 using the respective argument to subplots() or figure(), e.g.:
 
+```python
 plt.subplots(constrained_layout=True)
+```
+
 activate it via rcParams, like:
 
+```python
 plt.rcParams['figure.constrained_layout.use'] = True
+```
+
 Those are described in detail throughout the following sections.
 
 Warning
