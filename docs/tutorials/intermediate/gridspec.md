@@ -1,38 +1,48 @@
-# Customizing Figure Layouts Using GridSpec and Other Functions
+# 使用GridSpec和其他功能自定义图布局
 
-How to create grid-shaped combinations of axes.
+如何创建网格的轴组合。
 
-subplots()
-Perhaps the primary function used to create figures and axes. It's also similar to matplotlib.pyplot.subplot(), but creates and places all axes on the figure at once. See also matplotlib.Figure.subplots.
-GridSpec
-Specifies the geometry of the grid that a subplot will be placed. The number of rows and number of columns of the grid need to be set. Optionally, the subplot layout parameters (e.g., left, right, etc.) can be tuned.
-SubplotSpec
-Specifies the location of the subplot in the given GridSpec.
-subplot2grid()
-A helper function that is similar to subplot(), but uses 0-based indexing and let subplot to occupy multiple cells. This function is not covered in this tutorial.
+- [subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots): Perhaps the primary function used to create figures and axes. It's also similar to matplotlib.pyplot.subplot(), but creates and places all axes on the figure at once. See also matplotlib.Figure.subplots.
+- [GridSpec()](https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec): Specifies the geometry of the grid that a subplot will be placed. The number of rows and number of columns of the grid need to be set. Optionally, the subplot layout parameters (e.g., left, right, etc.) can be tuned.
+- [SubplotSpec()](https://matplotlib.org/api/_as_gen/matplotlib.gridspec.SubplotSpec.html#matplotlib.gridspec.SubplotSpec): Specifies the location of the subplot in the given GridSpec.
+- [subplot2grid()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot2grid.html#matplotlib.pyplot.subplot2grid): A helper function that is similar to subplot(), but uses 0-based indexing and let subplot to occupy multiple cells. This function is not covered in this tutorial.
+
+```python
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
-Basic Quickstart Guide
-These first two examples show how to create a basic 2-by-2 grid using both subplots() and gridspec.
+```
 
-Using subplots() is quite simple. It returns a Figure instance and an array of Axes objects.
+## Basic Quickstart Guide
 
+These first two examples show how to create a basic 2-by-2 grid using both [subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots) and [gridspec](https://matplotlib.org/api/gridspec_api.html#module-matplotlib.gridspec).
+
+Using [subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots) is quite simple. It returns a [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) instance and an array of [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) objects.
+
+```python
 fig1, f1_axes = plt.subplots(ncols=2, nrows=2, constrained_layout=True)
-../../_images/sphx_glr_gridspec_001.png
+```
+
+![用cycler定型示例](/static/images/tutorials/sphx_glr_gridspec_001.png)
+
 For a simple use case such as this, gridspec is perhaps overly verbose. You have to create the figure and GridSpec instance separately, then pass elements of gridspec instance to the add_subplot() method to create the axes objects. The elements of the gridspec are accessed in generally the same manner as numpy arrays.
 
+```python
 fig2 = plt.figure(constrained_layout=True)
 spec2 = gridspec.GridSpec(ncols=2, nrows=2, figure=fig2)
 f2_ax1 = fig2.add_subplot(spec2[0, 0])
 f2_ax2 = fig2.add_subplot(spec2[0, 1])
 f2_ax3 = fig2.add_subplot(spec2[1, 0])
 f2_ax4 = fig2.add_subplot(spec2[1, 1])
-../../_images/sphx_glr_gridspec_002.png
+```
+
+![用cycler定型示例2](/static/images/tutorials/sphx_glr_gridspec_002.png)
+
 The power of gridspec comes in being able to create subplots that span rows and columns. Note the Numpy slice syntax for selecing the part of the gridspec each subplot will occupy.
 
 Note that we have also used the convenience method Figure.add_gridspec instead of gridspec.GridSpec, potentially saving the user an import, and keeping the namespace cleaner.
 
+```python
 fig3 = plt.figure(constrained_layout=True)
 gs = fig3.add_gridspec(3, 3)
 f3_ax1 = fig3.add_subplot(gs[0, :])
@@ -45,11 +55,15 @@ f3_ax4 = fig3.add_subplot(gs[-1, 0])
 f3_ax4.set_title('gs[-1, 0]')
 f3_ax5 = fig3.add_subplot(gs[-1, -2])
 f3_ax5.set_title('gs[-1, -2]')
-../../_images/sphx_glr_gridspec_003.png
+```
+
+![用cycler定型示例3](/static/images/tutorials/sphx_glr_gridspec_003.png)
+
 gridspec is also indispensable for creating subplots of different widths via a couple of methods.
 
 The method shown here is similar to the one above and initializes a uniform grid specification, and then uses numpy indexing and slices to allocate multiple "cells" for a given subplot.
 
+```python
 fig4 = plt.figure(constrained_layout=True)
 spec4 = fig4.add_gridspec(ncols=2, nrows=2)
 anno_opts = dict(xy=(0.5, 0.5), xycoords='axes fraction',
@@ -60,9 +74,13 @@ f4_ax1.annotate('GridSpec[0, 0]', **anno_opts)
 fig4.add_subplot(spec4[0, 1]).annotate('GridSpec[0, 1:]', **anno_opts)
 fig4.add_subplot(spec4[1, 0]).annotate('GridSpec[1:, 0]', **anno_opts)
 fig4.add_subplot(spec4[1, 1]).annotate('GridSpec[1:, 1:]', **anno_opts)
-../../_images/sphx_glr_gridspec_004.png
-Another option is to use the width_ratios and height_ratios parameters. These keyword arguments are lists of numbers. Note that absolute values are meaningless, only their relative ratios matter. That means that width_ratios=[2, 4, 8] is equivalent to width_ratios=[1, 2, 4] within equally wide figures. For the sake of demonstration, we'll blindly create the axes within for loops since we won't need them later.
+```
 
+![用cycler定型示例4](/static/images/tutorials/sphx_glr_gridspec_004.png)
+
+Another option is to use the ``width_ratios`` and ``height_ratios`` parameters. These keyword arguments are lists of numbers. Note that absolute values are meaningless, only their relative ratios matter. That means that ``width_ratios=[2, 4, 8]`` is equivalent to ``width_ratios=[1, 2, 4]`` within equally wide figures. For the sake of demonstration, we'll blindly create the axes within for loops since we won't need them later.
+
+```python
 fig5 = plt.figure(constrained_layout=True)
 widths = [2, 3, 1.5]
 heights = [1, 3, 2]
@@ -73,9 +91,13 @@ for row in range(3):
         ax = fig5.add_subplot(spec5[row, col])
         label = 'Width: {}\nHeight: {}'.format(widths[col], heights[row])
         ax.annotate(label, (0.1, 0.5), xycoords='axes fraction', va='center')
-../../_images/sphx_glr_gridspec_005.png
+```
+
+![用cycler定型示例5](/static/images/tutorials/sphx_glr_gridspec_005.png)
+
 Learning to use width_ratios and height_ratios is particularly useful since the top-level function subplots() accepts them within the gridspec_kw parameter. For that matter, any parameter accepted by GridSpec can be passed to subplots() via the gridspec_kw parameter. This example recreates the previous figure without directly using a gridspec instance.
 
+```python
 gs_kw = dict(width_ratios=widths, height_ratios=heights)
 fig6, f6_axes = plt.subplots(ncols=3, nrows=3, constrained_layout=True,
         gridspec_kw=gs_kw)
@@ -83,9 +105,13 @@ for r, row in enumerate(f6_axes):
     for c, ax in enumerate(row):
         label = 'Width: {}\nHeight: {}'.format(widths[c], heights[r])
         ax.annotate(label, (0.1, 0.5), xycoords='axes fraction', va='center')
-../../_images/sphx_glr_gridspec_006.png
+```
+
+![用cycler定型示例6](/static/images/tutorials/sphx_glr_gridspec_006.png)
+
 The subplots and gridspec methods can be combined since it is sometimes more convenient to make most of the subplots using subplots and then remove some and combine them. Here we create a layout with the bottom two axes in the last column combined.
 
+```python
 fig7, f7_axs = plt.subplots(ncols=3, nrows=3)
 gs = f7_axs[1, 2].get_gridspec()
 # remove the underlying axes
@@ -96,20 +122,29 @@ axbig.annotate('Big Axes \nGridSpec[1:, -1]', (0.1, 0.5),
                xycoords='axes fraction', va='center')
 
 fig7.tight_layout()
-../../_images/sphx_glr_gridspec_007.png
-Fine Adjustments to a Gridspec Layout
-When a GridSpec is explicitly used, you can adjust the layout parameters of subplots that are created from the GridSpec. Note this option is not compatible with constrained_layout or Figure.tight_layout which both adjust subplot sizes to fill the figure.
+```
 
+![用cycler定型示例7](/static/images/tutorials/sphx_glr_gridspec_007.png)
+
+## Fine Adjustments to a Gridspec Layout
+
+When a GridSpec is explicitly used, you can adjust the layout parameters of subplots that are created from the GridSpec. Note this option is not compatible with constrained_layout or [Figure.tight_layout](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.tight_layout) which both adjust subplot sizes to fill the figure.
+
+```python
 fig8 = plt.figure(constrained_layout=False)
 gs1 = fig8.add_gridspec(nrows=3, ncols=3, left=0.05, right=0.48, wspace=0.05)
 f8_ax1 = fig8.add_subplot(gs1[:-1, :])
 f8_ax2 = fig8.add_subplot(gs1[-1, :-1])
 f8_ax3 = fig8.add_subplot(gs1[-1, -1])
-../../_images/sphx_glr_gridspec_008.png
-This is similar to subplots_adjust(), but it only affects the subplots that are created from the given GridSpec.
+```
+
+![用cycler定型示例8](/static/images/tutorials/sphx_glr_gridspec_008.png)
+
+This is similar to [subplots_adjust()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots_adjust.html#matplotlib.pyplot.subplots_adjust), but it only affects the subplots that are created from the given GridSpec.
 
 For example, compare the left and right sides of this figure:
 
+```python
 fig9 = plt.figure(constrained_layout=False)
 gs1 = fig9.add_gridspec(nrows=3, ncols=3, left=0.05, right=0.48,
                         wspace=0.05)
@@ -122,12 +157,17 @@ gs2 = fig9.add_gridspec(nrows=3, ncols=3, left=0.55, right=0.98,
 f9_ax4 = fig9.add_subplot(gs2[:, :-1])
 f9_ax5 = fig9.add_subplot(gs2[:-1, -1])
 f9_ax6 = fig9.add_subplot(gs2[-1, -1])
-../../_images/sphx_glr_gridspec_009.png
-GridSpec using SubplotSpec
+```
+
+![用cycler定型示例9](/static/images/tutorials/sphx_glr_gridspec_009.png)
+
+## GridSpec using SubplotSpec
+
 You can create GridSpec from the SubplotSpec, in which case its layout parameters are set to that of the location of the given SubplotSpec.
 
 Note this is also available from the more verbose gridspec.GridSpecFromSubplotSpec.
 
+```python
 fig10 = plt.figure(constrained_layout=True)
 gs0 = fig10.add_gridspec(1, 2)
 
@@ -138,10 +178,15 @@ for a in range(2):
     for b in range(3):
         fig10.add_subplot(gs00[a, b])
         fig10.add_subplot(gs01[b, a])
-../../_images/sphx_glr_gridspec_010.png
-A Complex Nested GridSpec using SubplotSpec
+```
+
+![用cycler定型示例10](/static/images/tutorials/sphx_glr_gridspec_010.png)
+
+## A Complex Nested GridSpec using SubplotSpec
+
 Here's a more sophisticated example of nested GridSpec where we put a box around each cell of the outer 4x4 grid, by hiding appropriate spines in each of the inner 3x3 grids.
 
+```python
 import numpy as np
 from itertools import product
 
@@ -181,10 +226,15 @@ for ax in all_axes:
         ax.spines['right'].set_visible(True)
 
 plt.show()
-../../_images/sphx_glr_gridspec_011.png
-References
+```
+
+![用cycler定型示例11](/static/images/tutorials/sphx_glr_gridspec_011.png)
+
+## References
+
 The usage of the following functions and methods is shown in this example:
 
+```python
 matplotlib.pyplot.subplots
 matplotlib.figure.Figure.add_gridspec
 matplotlib.figure.Figure.add_subplot
@@ -192,6 +242,9 @@ matplotlib.gridspec.GridSpec
 matplotlib.gridspec.SubplotSpec.subgridspec
 matplotlib.gridspec.GridSpecFromSubplotSpec
 Total running time of the script: ( 0 minutes 2.021 seconds)
+```
 
-Download Python source code: gridspec.py
-Download Jupyter notebook: gridspec.ipynb
+## 下载本文的所有示例
+
+- [下载python源码: gridspec.py](https://matplotlib.org/_downloads/5aea78076d1b3ba51b5a13044817cd04/gridspec.py)
+- [下载Jupyter notebook: gridspec.ipynb](https://matplotlib.org/_downloads/cb455b5079acdd92ddab8dd664046d2d/gridspec.ipynb)
