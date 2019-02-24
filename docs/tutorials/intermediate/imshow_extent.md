@@ -2,14 +2,11 @@
 
 imshow() allows you to render an image (either a 2D array which will be color-mapped (based on norm and cmap) or and 3D RGB(A) array which will be used as-is) to a rectangular region in dataspace. The orientation of the image in the final rendering is controlled by the origin and extent kwargs (and attributes on the resulting AxesImage instance) and the data limits of the axes.
 
-The extent kwarg controls the bounding box in data coordinates that the image will fill specified as (left, right, bottom, top) in data coordinates, the origin kwarg controls how the image fills that bounding box, and the orientation in the final rendered image is also affected by the axes limits.
+The extent kwarg controls the bounding box in **data coordinates** that the image will fill specified as (left, right, bottom, top) in data coordinates, the origin kwarg controls how the image fills that bounding box, and the orientation in the final rendered image is also affected by the axes limits.
 
-Hint
+**Hint:** Most of the code below is used for adding labels and informative text to the plots. The described effects of origin and extent can be seen in the plots without the need to follow all code details. For a quick understanding, you may want to skip the code details below and directly continue with the discussion of the results.
 
-Most of the code below is used for adding labels and informative text to the plots. The described effects of origin and extent can be seen in the plots without the need to follow all code details.
-
-For a quick understanding, you may want to skip the code details below and directly continue with the discussion of the results.
-
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
@@ -153,37 +150,50 @@ def generate_imshow_demo_grid(extents, xlim=None, ylim=None):
             ax.annotate(text, **text_kwargs)
         ax.axis('off')
     return columns
-Default extent
+```
+
+## Default extent
+
 First, let's have a look at the default extent=None
 
+```python
 generate_imshow_demo_grid(extents=[None])
-../../_images/sphx_glr_imshow_extent_001.png
+```
+
+![imshow中的原点和范围示例](/static/images/tutorials/sphx_glr_imshow_extent_001.png)
+
 Generally, for an array of shape (M, N), the first index runs along the vertical, the second index runs along the horizontal. The pixel centers are at integer positions ranging from 0 to N' = N - 1 horizontally and from 0 to M' = M - 1 vertically. origin determines how to the data is filled in the bounding box.
 
-For origin='lower':
+For ``origin='lower'``:
 
-[0, 0] is at (left, bottom)
-[M', 0] is at (left, top)
-[0, N'] is at (right, bottom)
-[M', N'] is at (right, top)
-origin='upper' reverses the vertical axes direction and filling:
+- [0, 0] is at (left, bottom)
+- [M', 0] is at (left, top)
+- [0, N'] is at (right, bottom)
+- [M', N'] is at (right, top)
 
-[0, 0] is at (left, top)
-[M', 0] is at (left, bottom)
-[0, N'] is at (right, top)
-[M', N'] is at (right, bottom)
+``origin='upper'`` reverses the vertical axes direction and filling:
+
+- [0, 0] is at (left, top)
+- [M', 0] is at (left, bottom)
+- [0, N'] is at (right, top)
+- [M', N'] is at (right, bottom)
+
 In summary, the position of the [0, 0] index as well as the extent are influenced by origin:
 
-origin	[0, 0] position	extent
-upper	top left	(-0.5, numcols-0.5, numrows-0.5, -0.5)
-lower	bottom left	(-0.5, numcols-0.5, -0.5, numrows-0.5)
+origin | [0, 0] position | extent
+---|---|---
+upper | top left | (-0.5, numcols-0.5, numrows-0.5, -0.5)
+lower | bottom left | (-0.5, numcols-0.5, -0.5, numrows-0.5)
+
 The default value of origin is set by rcParams["image.origin"] which defaults to 'upper' to match the matrix indexing conventions in math and computer graphics image indexing conventions.
 
-Explicit extent
+## Explicit extent
+
 By setting extent we define the coordinates of the image area. The underlying image data is interpolated/resampled to fill that area.
 
 If the axes is set to autoscale, then the view limits of the axes are set to match the extent which ensures that the coordinate set by (left, bottom) is at the bottom left of the axes! However, this may invert the axis so they do not increase in the 'natural' direction.
 
+```python
 extents = [(-0.5, 6.5, -0.5, 5.5),
            (-0.5, 6.5, 5.5, -0.5),
            (6.5, -0.5, -0.5, 5.5),
@@ -192,21 +202,32 @@ extents = [(-0.5, 6.5, -0.5, 5.5),
 columns = generate_imshow_demo_grid(extents)
 set_extent_None_text(columns['upper'][1])
 set_extent_None_text(columns['lower'][0])
-../../_images/sphx_glr_imshow_extent_002.png
-Explicit extent and axes limits
+```
+
+![imshow中的原点和范围示例2](/static/images/tutorials/sphx_glr_imshow_extent_002.png)
+
+## Explicit extent and axes limits
+
 If we fix the axes limits by explicitly setting set_xlim / set_ylim, we force a certain size and orientation of the axes. This can decouple the 'left-right' and 'top-bottom' sense of the image from the orientation on the screen.
 
 In the example below we have chosen the limits slightly larger than the extent (note the white areas within the Axes).
 
 While we keep the extents as in the examples before, the coordinate (0, 0) is now explicitly put at the bottom left and values increase to up and to the right (from the viewer point of view). We can see that:
 
-The coordinate (left, bottom) anchors the image which then fills the box going towards the (right, top) point in data space.
-The first column is always closest to the 'left'.
-origin controls if the first row is closest to 'top' or 'bottom'.
-The image may be inverted along either direction.
-The 'left-right' and 'top-bottom' sense of the image may be uncoupled from the orientation on the screen.
+- The coordinate (left, bottom) anchors the image which then fills the box going towards the (right, top) point in data space.
+- The first column is always closest to the 'left'.
+- ``origin`` controls if the first row is closest to 'top' or 'bottom'.
+- The image may be inverted along either direction.
+- The 'left-right' and 'top-bottom' sense of the image may be uncoupled from the orientation on the screen.
+
+```python
 generate_imshow_demo_grid(extents=[None] + extents,
                           xlim=(-2, 8), ylim=(-1, 6))
-../../_images/sphx_glr_imshow_extent_003.png
-Download Python source code: imshow_extent.py
-Download Jupyter notebook: imshow_extent.ipynb
+```
+
+![imshow中的原点和范围示例3](/static/images/tutorials/sphx_glr_imshow_extent_003.png)
+
+## 下载本文的所有示例
+
+- [下载python源码: imshow_extent.py](https://matplotlib.org/_downloads/eb4cd32a0f7bd5e00a30ca9decc64f60/imshow_extent.py)
+- [下载Jupyter notebook: imshow_extent.ipynb](https://matplotlib.org/_downloads/76c1fb0d8dc7670dbc315aadde7a45c3/imshow_extent.ipynb)

@@ -1,12 +1,12 @@
-# Tight Layout guide
+# 紧密布局指南
 
 How to use tight-layout to fit plots within your figure cleanly.
 
 tight_layout automatically adjusts subplot params so that the subplot(s) fits in to the figure area. This is an experimental feature and may not work for some cases. It only checks the extents of ticklabels, axis labels, and titles.
 
-An alternative to tight_layout is constrained_layout.
+An alternative to ``tight_layout`` is constrained_layout.
 
-## Simple Example
+## 简单例子
 
 In matplotlib, the location of axes (including subplots) are specified in normalized figure coordinates. It can happen that your axis labels or titles (or sometimes even ticklabels) go outside the figure area, and are thus clipped.
 
@@ -32,18 +32,23 @@ fig, ax = plt.subplots()
 example_plot(ax, fontsize=24)
 ```
 
-../../_images/sphx_glr_tight_layout_guide_001.png
+![紧密布局指南示例](/static/images/tutorials/sphx_glr_tight_layout_guide_001.png)
 
 To prevent this, the location of axes needs to be adjusted. For subplots, this can be done by adjusting the subplot params (Move the edge of an axes to make room for tick labels). Matplotlib v1.1 introduces a new command tight_layout() that does this automatically for you.
 
+```python
 fig, ax = plt.subplots()
 example_plot(ax, fontsize=24)
 plt.tight_layout()
-../../_images/sphx_glr_tight_layout_guide_002.png
+```
+
+![紧密布局指南示例2](/static/images/tutorials/sphx_glr_tight_layout_guide_002.png)
+
 Note that matplotlib.pyplot.tight_layout() will only adjust the subplot params when it is called. In order to perform this adjustment each time the figure is redrawn, you can call fig.set_tight_layout(True), or, equivalently, set the figure.autolayout rcParam to True.
 
 When you have multiple subplots, often you see labels of different axes overlapping each other.
 
+```python
 plt.close('all')
 
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2)
@@ -51,27 +56,39 @@ example_plot(ax1)
 example_plot(ax2)
 example_plot(ax3)
 example_plot(ax4)
-../../_images/sphx_glr_tight_layout_guide_003.png
+```
+
+![紧密布局指南示例3](/static/images/tutorials/sphx_glr_tight_layout_guide_003.png)
+
 tight_layout() will also adjust spacing between subplots to minimize the overlaps.
 
+```python
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2)
 example_plot(ax1)
 example_plot(ax2)
 example_plot(ax3)
 example_plot(ax4)
 plt.tight_layout()
-../../_images/sphx_glr_tight_layout_guide_004.png
+```
+
+![紧密布局指南示例4](/static/images/tutorials/sphx_glr_tight_layout_guide_004.png)
+
 tight_layout() can take keyword arguments of pad, w_pad and h_pad. These control the extra padding around the figure border and between subplots. The pads are specified in fraction of fontsize.
 
+```python
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2)
 example_plot(ax1)
 example_plot(ax2)
 example_plot(ax3)
 example_plot(ax4)
 plt.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
-../../_images/sphx_glr_tight_layout_guide_005.png
+```
+
+![紧密布局指南示例5](/static/images/tutorials/sphx_glr_tight_layout_guide_005.png)
+
 tight_layout() will work even if the sizes of subplots are different as far as their grid specification is compatible. In the example below, ax1 and ax2 are subplots of a 2x2 grid, while ax3 is of a 1x2 grid.
 
+```python
 plt.close('all')
 fig = plt.figure()
 
@@ -84,9 +101,13 @@ example_plot(ax2)
 example_plot(ax3)
 
 plt.tight_layout()
-../../_images/sphx_glr_tight_layout_guide_006.png
+```
+
+![紧密布局指南示例6](/static/images/tutorials/sphx_glr_tight_layout_guide_006.png)
+
 It works with subplots created with subplot2grid(). In general, subplots created from the gridspec (Customizing Figure Layouts Using GridSpec and Other Functions) will work.
 
+```python
 plt.close('all')
 fig = plt.figure()
 
@@ -101,9 +122,13 @@ example_plot(ax3)
 example_plot(ax4)
 
 plt.tight_layout()
-../../_images/sphx_glr_tight_layout_guide_007.png
+```
+
+![紧密布局指南示例7](/static/images/tutorials/sphx_glr_tight_layout_guide_007.png)
+
 Although not thoroughly tested, it seems to work for subplots with aspect != "auto" (e.g., axes with images).
 
+```python
 arr = np.arange(100).reshape((10, 10))
 
 plt.close('all')
@@ -113,14 +138,21 @@ ax = plt.subplot(111)
 im = ax.imshow(arr, interpolation="none")
 
 plt.tight_layout()
-../../_images/sphx_glr_tight_layout_guide_008.png
-Caveats
-tight_layout() only considers ticklabels, axis labels, and titles. Thus, other artists may be clipped and also may overlap.
-It assumes that the extra space needed for ticklabels, axis labels, and titles is independent of original location of axes. This is often true, but there are rare cases where it is not.
-pad=0 clips some of the texts by a few pixels. This may be a bug or a limitation of the current algorithm and it is not clear why it happens. Meanwhile, use of pad at least larger than 0.3 is recommended.
-Use with GridSpec
+```
+
+![紧密布局指南示例8](/static/images/tutorials/sphx_glr_tight_layout_guide_008.png)
+
+## Caveats
+
+- tight_layout() only considers ticklabels, axis labels, and titles. Thus, other artists may be clipped and also may overlap.
+- It assumes that the extra space needed for ticklabels, axis labels, and titles is independent of original location of axes. This is often true, but there are rare cases where it is not.
+- pad=0 clips some of the texts by a few pixels. This may be a bug or a limitation of the current algorithm and it is not clear why it happens. Meanwhile, use of pad at least larger than 0.3 is recommended.
+
+## Use with GridSpec
+
 GridSpec has its own tight_layout() method (the pyplot api tight_layout() also works).
 
+```python
 import matplotlib.gridspec as gridspec
 
 plt.close('all')
@@ -134,9 +166,13 @@ example_plot(ax1)
 example_plot(ax2)
 
 gs1.tight_layout(fig)
-../../_images/sphx_glr_tight_layout_guide_009.png
+```
+
+![紧密布局指南示例9](/static/images/tutorials/sphx_glr_tight_layout_guide_009.png)
+
 You may provide an optional rect parameter, which specifies the bounding box that the subplots will be fit inside. The coordinates must be in normalized figure coordinates and the default is (0, 0, 1, 1).
 
+```python
 fig = plt.figure()
 
 gs1 = gridspec.GridSpec(2, 1)
@@ -147,9 +183,13 @@ example_plot(ax1)
 example_plot(ax2)
 
 gs1.tight_layout(fig, rect=[0, 0, 0.5, 1])
-../../_images/sphx_glr_tight_layout_guide_010.png
+```
+
+![紧密布局指南示例10](/static/images/tutorials/sphx_glr_tight_layout_guide_010.png)
+
 For example, this can be used for a figure with multiple gridspecs.
 
+```python
 fig = plt.figure()
 
 gs1 = gridspec.GridSpec(2, 1)
@@ -180,9 +220,13 @@ bottom = max(gs1.bottom, gs2.bottom)
 gs1.update(top=top, bottom=bottom)
 gs2.update(top=top, bottom=bottom)
 plt.show()
-../../_images/sphx_glr_tight_layout_guide_011.png
+```
+
+![紧密布局指南示例11](/static/images/tutorials/sphx_glr_tight_layout_guide_011.png)
+
 While this should be mostly good enough, adjusting top and bottom may require adjustment of hspace also. To update hspace & vspace, we call tight_layout() again with updated rect argument. Note that the rect argument specifies the area including the ticklabels, etc. Thus, we will increase the bottom (which is 0 for the normal case) by the difference between the bottom from above and the bottom of each gridspec. Same thing for the top.
 
+```python
 fig = plt.gcf()
 
 gs1 = gridspec.GridSpec(2, 1)
@@ -220,28 +264,42 @@ gs1.tight_layout(fig, rect=[None, 0 + (bottom-gs1.bottom),
 gs2.tight_layout(fig, rect=[0.5, 0 + (bottom-gs2.bottom),
                             None, 1 - (gs2.top-top)],
                  h_pad=0.5)
-../../_images/sphx_glr_tight_layout_guide_012.png
-Legends and Annotations
+```
+
+![紧密布局指南示例12](/static/images/tutorials/sphx_glr_tight_layout_guide_012.png)
+
+## Legends and Annotations
+
 Pre Matplotlih 2.2, legends and annotations were excluded from the bounding box calculations that decide the layout. Subsequently these artists were added to the calculation, but sometimes it is undesirable to include them. For instance in this case it might be good to have the axes shring a bit to make room for the legend:
 
+```python
 fig, ax = plt.subplots(figsize=(4, 3))
 lines = ax.plot(range(10), label='A simple plot')
 ax.legend(bbox_to_anchor=(0.7, 0.5), loc='center left',)
 fig.tight_layout()
 plt.show()
-../../_images/sphx_glr_tight_layout_guide_013.png
+```
+
+![紧密布局指南示例13](/static/images/tutorials/sphx_glr_tight_layout_guide_013.png)
+
 However, sometimes this is not desired (quite often when using fig.savefig('outname.png', bbox_inches='tight')). In order to remove the legend from the bounding box calculation, we simply set its bounding leg.set_in_layout(False) and the legend will be ignored.
 
+```python
 fig, ax = plt.subplots(figsize=(4, 3))
 lines = ax.plot(range(10), label='B simple plot')
 leg = ax.legend(bbox_to_anchor=(0.7, 0.5), loc='center left',)
 leg.set_in_layout(False)
 fig.tight_layout()
 plt.show()
-../../_images/sphx_glr_tight_layout_guide_014.png
-Use with AxesGrid1
+```
+
+![紧密布局指南示例14](/static/images/tutorials/sphx_glr_tight_layout_guide_014.png)
+
+## Use with AxesGrid1
+
 While limited, the axes_grid1 toolkit is also supported.
 
+```python
 from mpl_toolkits.axes_grid1 import Grid
 
 plt.close('all')
@@ -255,10 +313,15 @@ for ax in grid:
 ax.title.set_visible(False)
 
 plt.tight_layout()
-../../_images/sphx_glr_tight_layout_guide_015.png
-Colorbar
+```
+
+![紧密布局指南示例15](/static/images/tutorials/sphx_glr_tight_layout_guide_015.png)
+
+## Colorbar
+
 If you create a colorbar with the colorbar() command, the created colorbar is an instance of Axes, not Subplot, so tight_layout does not work. With Matplotlib v1.1, you may create a colorbar as a subplot using the gridspec.
 
+```python
 plt.close('all')
 arr = np.arange(100).reshape((10, 10))
 fig = plt.figure(figsize=(4, 4))
@@ -267,9 +330,13 @@ im = plt.imshow(arr, interpolation="none")
 plt.colorbar(im, use_gridspec=True)
 
 plt.tight_layout()
-../../_images/sphx_glr_tight_layout_guide_016.png
+```
+
+![紧密布局指南示例16](/static/images/tutorials/sphx_glr_tight_layout_guide_016.png)
+
 Another option is to use AxesGrid1 toolkit to explicitly create an axes for colorbar.
 
+```python
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 plt.close('all')
@@ -282,8 +349,13 @@ cax = divider.append_axes("right", "5%", pad="3%")
 plt.colorbar(im, cax=cax)
 
 plt.tight_layout()
-../../_images/sphx_glr_tight_layout_guide_017.png
-Total running time of the script: ( 0 minutes 1.488 seconds)
+```
 
-Download Python source code: tight_layout_guide.py
-Download Jupyter notebook: tight_layout_guide.ipynb
+![紧密布局指南示例17](/static/images/tutorials/sphx_glr_tight_layout_guide_017.png)
+
+**Total running time of the script:** ( 0 minutes 1.488 seconds)
+
+## 下载本文的所有示例
+
+- [下载python源码: tight_layout_guide.py](https://matplotlib.org/_downloads/8f377735e7030ccd0f0d6b5470271837/tight_layout_guide.py)
+- [下载Jupyter notebook: tight_layout_guide.ipynb](https://matplotlib.org/_downloads/06823cf7a9df096bd906c5c19f77f1dc/tight_layout_guide.ipynb)
