@@ -1,3 +1,3 @@
 # matplotlib 高级
 
-These tutorials cover advanced topics for experienced Matplotlib users and developers.
+这些教程涵盖了经验丰富的Matplotlib用户和开发人员的高级主题。
