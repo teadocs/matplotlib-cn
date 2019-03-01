@@ -1,4 +1,4 @@
-# Colormap Normalization
+# 色彩映射规范化
 
 Objects that use colormaps by default linearly map the colors in the colormap from data values vmin to vmax. For example:
 
@@ -54,7 +54,7 @@ fig.colorbar(pcm, ax=ax[1], extend='max')
 fig.show()
 ```
 
-../../_images/sphx_glr_colormapnorms_001.png
+![色彩映射规范化示例](/static/images/tutorials/sphx_glr_colormapnorms_001.png)
 
 ## Symmetric logarithmic
 
@@ -62,6 +62,7 @@ Similarly, it sometimes happens that there is data that is positive and negative
 
 Since the logarithm of values close to zero tends toward infinity, a small range around zero needs to be mapped linearly. The parameter linthresh allows the user to specify the size of this range (-linthresh, linthresh). The size of this range in the colormap is set by linscale. When linscale == 1.0 (the default), the space used for the positive and negative halves of the linear range will be equal to one decade in the logarithmic range.
 
+```python
 N = 100
 X, Y = np.mgrid[-3:3:complex(0, N), -2:2:complex(0, N)]
 Z1 = np.exp(-X**2 - Y**2)
@@ -79,14 +80,17 @@ fig.colorbar(pcm, ax=ax[0], extend='both')
 pcm = ax[1].pcolormesh(X, Y, Z, cmap='RdBu_r', vmin=-np.max(Z))
 fig.colorbar(pcm, ax=ax[1], extend='both')
 fig.show()
-../../_images/sphx_glr_colormapnorms_002.png
-Power-law
+```
+
+![色彩映射规范化示例2](/static/images/tutorials/sphx_glr_colormapnorms_002.png)
+
+## Power-law
+
 Sometimes it is useful to remap the colors onto a power-law relationship (i.e. y=xγ, where γ is the power). For this we use the colors.PowerNorm(). It takes as an argument gamma (gamma == 1.0 will just yield the default linear normalization):
 
-Note
+**Note:** There should probably be a good reason for plotting the data using this type of transformation. Technical viewers are used to linear and logarithmic axes and data transformations. Power laws are less common, and viewers should explicitly be made aware that they have been used.
 
-There should probably be a good reason for plotting the data using this type of transformation. Technical viewers are used to linear and logarithmic axes and data transformations. Power laws are less common, and viewers should explicitly be made aware that they have been used.
-
+```python
 N = 100
 X, Y = np.mgrid[0:3:complex(0, N), 0:2:complex(0, N)]
 Z1 = (1 + np.sin(Y * 10.)) * X**(2.)
@@ -100,10 +104,15 @@ fig.colorbar(pcm, ax=ax[0], extend='max')
 pcm = ax[1].pcolormesh(X, Y, Z1, cmap='PuBu_r')
 fig.colorbar(pcm, ax=ax[1], extend='max')
 fig.show()
-../../_images/sphx_glr_colormapnorms_003.png
-Discrete bounds
+```
+
+![色彩映射规范化示例3](/static/images/tutorials/sphx_glr_colormapnorms_003.png)
+
+## Discrete bounds
+
 Another normaization that comes with matplolib is colors.BoundaryNorm(). In addition to vmin and vmax, this takes as arguments boundaries between which data is to be mapped. The colors are then linearly distributed between these "bounds". For instance:
 
+```python
 In [4]: import matplotlib.colors as colors
 
 In [5]: bounds = np.array([-0.25, -0.125, 0, 0.5, 1])
@@ -112,8 +121,11 @@ In [6]: norm = colors.BoundaryNorm(boundaries=bounds, ncolors=4)
 
 In [7]: print(norm([-0.2,-0.15,-0.02, 0.3, 0.8, 0.99]))
 [0 0 1 2 3 3]
+```
+
 Note unlike the other norms, this norm returns values from 0 to ncolors-1.
 
+```python
 N = 100
 X, Y = np.mgrid[-3:3:complex(0, N), -2:2:complex(0, N)]
 Z1 = np.exp(-X**2 - Y**2)
@@ -139,16 +151,17 @@ fig.colorbar(pcm, ax=ax[1], extend='both', orientation='vertical')
 pcm = ax[2].pcolormesh(X, Y, Z, cmap='RdBu_r', vmin=-np.max(Z))
 fig.colorbar(pcm, ax=ax[2], extend='both', orientation='vertical')
 fig.show()
-../../_images/sphx_glr_colormapnorms_004.png
-Custom normalization: Two linear ranges
+```
+
+![色彩映射规范化示例4](/static/images/tutorials/sphx_glr_colormapnorms_004.png)
+
+## Custom normalization: Two linear ranges
+
 It is possible to define your own normalization. In the following example, we modify colors:SymLogNorm() to use different linear maps for the negative data values and the positive. (Note that this example is simple, and does not validate inputs or account for complex cases such as masked data)
 
-Note
+**Note:** This may appear soon as colors.OffsetNorm().As above, non-symmetric mapping of data to color is non-standard practice for quantitative data, and should only be used advisedly. A practical example is having an ocean/land colormap where the land and ocean data span different ranges.
 
-This may appear soon as colors.OffsetNorm().
-
-As above, non-symmetric mapping of data to color is non-standard practice for quantitative data, and should only be used advisedly. A practical example is having an ocean/land colormap where the land and ocean data span different ranges.
-
+```python
 N = 100
 X, Y = np.mgrid[-3:3:complex(0, N), -2:2:complex(0, N)]
 Z1 = np.exp(-X**2 - Y**2)
@@ -178,6 +191,11 @@ fig.colorbar(pcm, ax=ax[0], extend='both')
 pcm = ax[1].pcolormesh(X, Y, Z, cmap='RdBu_r', vmin=-np.max(Z))
 fig.colorbar(pcm, ax=ax[1], extend='both')
 fig.show()
-../../_images/sphx_glr_colormapnorms_005.png
-Download Python source code: colormapnorms.py
-Download Jupyter notebook: colormapnorms.ipynb
+```
+
+![色彩映射规范化示例5](/static/images/tutorials/sphx_glr_colormapnorms_005.png)
+
+## 下载本文的所有示例
+
+- [下载python源码: colormapnorms.py](https://matplotlib.org/_downloads/e653226d3d5879459481b99e968da303/colormapnorms.py)
+- [下载Jupyter notebook: colormapnorms.ipynb](https://matplotlib.org/_downloads/e88438d950c9b2ddc23d7c19068b3c3c/colormapnorms.ipynb)

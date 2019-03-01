@@ -1,227 +1,351 @@
-# Colormaps in Matplotlib
+# 在Matplotlib中选择色彩映射
 
-Matplotlib has a number of built-in colormaps accessible via [matplotlib.cm.get_cmap](https://matplotlib.org/api/cm_api.html#matplotlib.cm.get_cmap). There are also external libraries like [palettable](https://jiffyclub.github.io/palettable/) that have many extra colormaps.
+Matplotlib has a number of built-in colormaps accessible via matplotlib.cm.get_cmap. There are also external libraries like [palettable] that have many extra colormaps. Here we briefly discuss how to choose between the many options. For help on creating your own colormaps, see Creating Colormaps in Matplotlib.
 
-However, we often want to create or manipulate colormaps in Matplotlib. This can be done using the class [ListedColormap](https://matplotlib.org/api/_as_gen/matplotlib.colors.ListedColormap.html#matplotlib.colors.ListedColormap) and a Nx4 numpy array of values between 0 and 1 to represent the RGBA values of the colormap. There is also a [LinearSegmentedColormap](https://matplotlib.org/api/_as_gen/matplotlib.colors.LinearSegmentedColormap.html#matplotlib.colors.LinearSegmentedColormap) class that allows colormaps to be specified with a few anchor points defining segments, and linearly interpolating between the anchor points.
+## Overview
 
-## Getting colormaps and accessing their values
+The idea behind choosing a good colormap is to find a good representation in 3D colorspace for your data set. The best colormap for any given data set depends on many things including:
 
-First, getting a named colormap, most of which are listed in [Choosing Colormaps in Matplotlib](https://matplotlib.org/tutorials/colors/colormaps.html) requires the use of [matplotlib.cm.get_cmap](https://matplotlib.org/api/cm_api.html#matplotlib.cm.get_cmap), which returns a [matplotlib.colors.ListedColormap](https://matplotlib.org/api/_as_gen/matplotlib.colors.ListedColormap.html#matplotlib.colors.ListedColormap) object. The second argument gives the size of the list of colors used to define the colormap, and below we use a modest value of 12 so there are not a lot of values to look at.
+- Whether representing form or metric data ([[Ware]](https://matplotlib.org/tutorials/colors/colormaps.html#ware))
+- Your knowledge of the data set (e.g., is there a critical value from which the other values deviate?)
+- If there is an intuitive color scheme for the parameter you are plotting
+- If there is a standard in the field the audience may be expecting
+
+For many applications, a perceptually uniform colormap is the best choice --- one in which equal steps in data are perceived as equal steps in the color space. Researchers have found that the human brain perceives changes in the lightness parameter as changes in the data much better than, for example, changes in hue. Therefore, colormaps which have monotonically increasing lightness through the colormap will be better interpreted by the viewer. A wonderful example of perceptually uniform colormaps is [[colorcet]](https://matplotlib.org/tutorials/colors/colormaps.html#colorcet).
+
+Color can be represented in 3D space in various ways. One way to represent color is using CIELAB. In CIELAB, color space is represented by lightness, L∗; red-green, a∗; and yellow-blue, b∗. The lightness parameter L∗ can then be used to learn more about how the matplotlib colormaps will be perceived by viewers.
+
+An excellent starting resource for learning about human perception of colormaps is from [IBM].
+
+## Classes of colormaps
+
+Colormaps are often split into several categories based on their function (see, e.g., [Moreland]):
+
+1. Sequential: change in lightness and often saturation of color incrementally, often using a single hue; should be used for representing information that has ordering.
+2. Diverging: change in lightness and possibly saturation of two different colors that meet in the middle at an unsaturated color; should be used when the information being plotted has a critical middle value, such as topography or when the data deviates around zero.
+3. Cyclic: change in lightness of two different colors that meet in the middle and beginning/end at an unsaturated color; should be used for values that wrap around at the endpoints, such as phase angle, wind direction, or time of day.
+4. Qualitative: often are miscellaneous colors; should be used to represent information which does not have ordering or relationships.
 
 ```python
+# sphinx_gallery_thumbnail_number = 2
+
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib import cm
-from matplotlib.colors import ListedColormap, LinearSegmentedColormap
+from colorspacious import cspace_converter
 from collections import OrderedDict
 
-viridis = cm.get_cmap('viridis', 12)
-print(viridis)
+cmaps = OrderedDict()
 ```
 
-Out:
+### Sequential
+
+For the Sequential plots, the lightness value increases monotonically through the colormaps. This is good. Some of the L∗ values in the colormaps span from 0 to 100 (binary and the other grayscale), and others start around L∗=20. Those that have a smaller range of L∗ will accordingly have a smaller perceptual range. Note also that the L∗ function varies amongst the colormaps: some are approximately linear in L∗ and others are more curved.
 
 ```python
-<matplotlib.colors.ListedColormap object at 0x7f64513bfba8>
+cmaps['Perceptually Uniform Sequential'] = [
+            'viridis', 'plasma', 'inferno', 'magma', 'cividis']
+
+cmaps['Sequential'] = [
+            'Greys', 'Purples', 'Blues', 'Greens', 'Oranges', 'Reds',
+            'YlOrBr', 'YlOrRd', 'OrRd', 'PuRd', 'RdPu', 'BuPu',
+            'GnBu', 'PuBu', 'YlGnBu', 'PuBuGn', 'BuGn', 'YlGn']
 ```
 
-The object viridis is a callable, that when passed a float between 0 and 1 returns an RGBA value from the colormap:
+### Sequential2
+
+Many of the L∗ values from the Sequential2 plots are monotonically increasing, but some (autumn, cool, spring, and winter) plateau or even go both up and down in L∗ space. Others (afmhot, copper, gist_heat, and hot) have kinks in the L∗ functions. Data that is being represented in a region of the colormap that is at a plateau or kink will lead to a perception of banding of the data in those values in the colormap (see [mycarta-banding] for an excellent example of this).
 
 ```python
-print(viridis(0.56))
+cmaps['Sequential (2)'] = [
+            'binary', 'gist_yarg', 'gist_gray', 'gray', 'bone', 'pink',
+            'spring', 'summer', 'autumn', 'winter', 'cool', 'Wistia',
+            'hot', 'afmhot', 'gist_heat', 'copper']
 ```
 
-Out:
+### Diverging
+
+For the Diverging maps, we want to have monotonically increasing L∗ values up to a maximum, which should be close to L∗=100, followed by monotonically decreasing L∗ values. We are looking for approximately equal minimum L∗ values at opposite ends of the colormap. By these measures, BrBG and RdBu are good options. coolwarm is a good option, but it doesn't span a wide range of L∗ values (see grayscale section below).
 
 ```python
-(0.119512, 0.607464, 0.540218, 1.0)
+cmaps['Diverging'] = [
+            'PiYG', 'PRGn', 'BrBG', 'PuOr', 'RdGy', 'RdBu',
+            'RdYlBu', 'RdYlGn', 'Spectral', 'coolwarm', 'bwr', 'seismic']
 ```
 
-The list of colors that comprise the colormap can be directly accessed using the colors property, or it can be acccessed indirectly by calling viridis with an array of values matching the length of the colormap. Note that the returned list is in the form of an RGBA Nx4 array, where N is the length of the colormap.
+### Cyclic
+
+For Cyclic maps, we want to start and end on the same color, and meet a symmetric center point in the middle. L∗ should change monotonically from start to middle, and inversely from middle to end. It should be symmetric on the increasing and decreasing side, and only differ in hue. At the ends and middle, L∗ will reverse direction, which should be smoothed in L∗ space to reduce artifacts. See [kovesi-colormaps] for more information on the design of cyclic maps.
+
+The often-used HSV colormap is included in this set of colormaps, although it is not symmetric to a center point. Additionally, the L∗ values vary widely throughout the colormap, making it a poor choice for representing data for viewers to see perceptually. See an extension on this idea at [mycarta-jet].
 
 ```python
-print('viridis.colors', viridis.colors)
-print('viridis(range(12))', viridis(range(12)))
-print('viridis(np.linspace(0, 1, 12))', viridis(np.linspace(0, 1, 12)))
+cmaps['Cyclic'] = ['twilight', 'twilight_shifted', 'hsv']
 ```
 
-Out:
+### Qualitative
+
+Qualitative colormaps are not aimed at being perceptual maps, but looking at the lightness parameter can verify that for us. The L∗ values move all over the place throughout the colormap, and are clearly not monotonically increasing. These would not be good options for use as perceptual colormaps.
 
 ```python
-viridis.colors [[0.267004 0.004874 0.329415 1.      ]
- [0.283072 0.130895 0.449241 1.      ]
- [0.262138 0.242286 0.520837 1.      ]
- [0.220057 0.343307 0.549413 1.      ]
- [0.177423 0.437527 0.557565 1.      ]
- [0.143343 0.522773 0.556295 1.      ]
- [0.119512 0.607464 0.540218 1.      ]
- [0.166383 0.690856 0.496502 1.      ]
- [0.319809 0.770914 0.411152 1.      ]
- [0.525776 0.833491 0.288127 1.      ]
- [0.762373 0.876424 0.137064 1.      ]
- [0.993248 0.906157 0.143936 1.      ]]
-viridis(range(12)) [[0.267004 0.004874 0.329415 1.      ]
- [0.283072 0.130895 0.449241 1.      ]
- [0.262138 0.242286 0.520837 1.      ]
- [0.220057 0.343307 0.549413 1.      ]
- [0.177423 0.437527 0.557565 1.      ]
- [0.143343 0.522773 0.556295 1.      ]
- [0.119512 0.607464 0.540218 1.      ]
- [0.166383 0.690856 0.496502 1.      ]
- [0.319809 0.770914 0.411152 1.      ]
- [0.525776 0.833491 0.288127 1.      ]
- [0.762373 0.876424 0.137064 1.      ]
- [0.993248 0.906157 0.143936 1.      ]]
-viridis(np.linspace(0, 1, 12)) [[0.267004 0.004874 0.329415 1.      ]
- [0.283072 0.130895 0.449241 1.      ]
- [0.262138 0.242286 0.520837 1.      ]
- [0.220057 0.343307 0.549413 1.      ]
- [0.177423 0.437527 0.557565 1.      ]
- [0.143343 0.522773 0.556295 1.      ]
- [0.119512 0.607464 0.540218 1.      ]
- [0.166383 0.690856 0.496502 1.      ]
- [0.319809 0.770914 0.411152 1.      ]
- [0.525776 0.833491 0.288127 1.      ]
- [0.762373 0.876424 0.137064 1.      ]
- [0.993248 0.906157 0.143936 1.      ]]
+cmaps['Qualitative'] = ['Pastel1', 'Pastel2', 'Paired', 'Accent',
+                        'Dark2', 'Set1', 'Set2', 'Set3',
+                        'tab10', 'tab20', 'tab20b', 'tab20c']
 ```
 
-The colormap is a lookup table, so "oversampling" the colormap returns nearest-neighbor interpolation (note the repeated colors in the list below)
+### Miscellaneous
+
+Some of the miscellaneous colormaps have particular uses for which they have been created. For example, gist_earth, ocean, and terrain all seem to be created for plotting topography (green/brown) and water depths (blue) together. We would expect to see a divergence in these colormaps, then, but multiple kinks may not be ideal, such as in gist_earth and terrain. CMRmap was created to convert well to grayscale, though it does appear to have some small kinks in L∗. cubehelix was created to vary smoothly in both lightness and hue, but appears to have a small hump in the green hue area.
+
+The often-used jet colormap is included in this set of colormaps. We can see that the L∗ values vary widely throughout the colormap, making it a poor choice for representing data for viewers to see perceptually. See an extension on this idea at [mycarta-jet].
 
 ```python
-print('viridis(np.linspace(0, 1, 15))', viridis(np.linspace(0, 1, 15)))
+cmaps['Miscellaneous'] = [
+            'flag', 'prism', 'ocean', 'gist_earth', 'terrain', 'gist_stern',
+            'gnuplot', 'gnuplot2', 'CMRmap', 'cubehelix', 'brg',
+            'gist_rainbow', 'rainbow', 'jet', 'nipy_spectral', 'gist_ncar']
 ```
 
-Out:
+First, we'll show the range of each colormap. Note that some seem to change more "quickly" than others.
 
-viridis(np.linspace(0, 1, 15)) [[0.267004 0.004874 0.329415 1.      ]
- [0.267004 0.004874 0.329415 1.      ]
- [0.283072 0.130895 0.449241 1.      ]
- [0.262138 0.242286 0.520837 1.      ]
- [0.220057 0.343307 0.549413 1.      ]
- [0.177423 0.437527 0.557565 1.      ]
- [0.143343 0.522773 0.556295 1.      ]
- [0.119512 0.607464 0.540218 1.      ]
- [0.119512 0.607464 0.540218 1.      ]
- [0.166383 0.690856 0.496502 1.      ]
- [0.319809 0.770914 0.411152 1.      ]
- [0.525776 0.833491 0.288127 1.      ]
- [0.762373 0.876424 0.137064 1.      ]
- [0.993248 0.906157 0.143936 1.      ]
- [0.993248 0.906157 0.143936 1.      ]]
-Creating listed colormaps
-This is essential the inverse operation of the above where we supply a Nx4 numpy array with all values between 0 and 1, to ListedColormap to make a new colormap. This means that any numpy operations that we can do on a Nx4 array make carpentry of new colormaps from existing colormaps quite straight forward.
-
-Suppose we want to make the first 25 entries of a 256-length "viridis" colormap pink for some reason:
-
-viridis = cm.get_cmap('viridis', 256)
-newcolors = viridis(np.linspace(0, 1, 256))
-pink = np.array([248/256, 24/256, 148/256, 1])
-newcolors[:25, :] = pink
-newcmp = ListedColormap(newcolors)
+```python
+nrows = max(len(cmap_list) for cmap_category, cmap_list in cmaps.items())
+gradient = np.linspace(0, 1, 256)
+gradient = np.vstack((gradient, gradient))
 
 
-def plot_examples(cms):
-    """
-    helper function to plot two colormaps
-    """
-    np.random.seed(19680801)
-    data = np.random.randn(30, 30)
+def plot_color_gradients(cmap_category, cmap_list, nrows):
+    fig, axes = plt.subplots(nrows=nrows)
+    fig.subplots_adjust(top=0.95, bottom=0.01, left=0.2, right=0.99)
+    axes[0].set_title(cmap_category + ' colormaps', fontsize=14)
 
-    fig, axs = plt.subplots(1, 2, figsize=(6, 3), constrained_layout=True)
-    for [ax, cmap] in zip(axs, cms):
-        psm = ax.pcolormesh(data, cmap=cmap, rasterized=True, vmin=-4, vmax=4)
-        fig.colorbar(psm, ax=ax)
+    for ax, name in zip(axes, cmap_list):
+        ax.imshow(gradient, aspect='auto', cmap=plt.get_cmap(name))
+        pos = list(ax.get_position().bounds)
+        x_text = pos[0] - 0.01
+        y_text = pos[1] + pos[3]/2.
+        fig.text(x_text, y_text, name, va='center', ha='right', fontsize=10)
+
+    # Turn off *all* ticks & spines, not just the ones with colormaps.
+    for ax in axes:
+        ax.set_axis_off()
+
+
+for cmap_category, cmap_list in cmaps.items():
+    plot_color_gradients(cmap_category, cmap_list, nrows)
+
+plt.show()
+```
+
+![在Matplotlib中选择色彩映射示例](/static/images/tutorials/sphx_glr_colormaps_001.png)
+
+![在Matplotlib中选择色彩映射示例2](/static/images/tutorials/sphx_glr_colormaps_002.png)
+
+![在Matplotlib中选择色彩映射示例3](/static/images/tutorials/sphx_glr_colormaps_003.png)
+
+![在Matplotlib中选择色彩映射示例4](/static/images/tutorials/sphx_glr_colormaps_004.png)
+
+![在Matplotlib中选择色彩映射示例5](/static/images/tutorials/sphx_glr_colormaps_005.png)
+
+![在Matplotlib中选择色彩映射示例6](/static/images/tutorials/sphx_glr_colormaps_006.png)
+
+![在Matplotlib中选择色彩映射示例7](/static/images/tutorials/sphx_glr_colormaps_007.png)
+
+## Lightness of matplotlib colormaps
+
+Here we examine the lightness values of the matplotlib colormaps. Note that some documentation on the colormaps is available ([list-colormaps]).
+
+```python
+mpl.rcParams.update({'font.size': 12})
+
+# Number of colormap per subplot for particular cmap categories
+_DSUBS = {'Perceptually Uniform Sequential': 5, 'Sequential': 6,
+          'Sequential (2)': 6, 'Diverging': 6, 'Cyclic': 3,
+          'Qualitative': 4, 'Miscellaneous': 6}
+
+# Spacing between the colormaps of a subplot
+_DC = {'Perceptually Uniform Sequential': 1.4, 'Sequential': 0.7,
+       'Sequential (2)': 1.4, 'Diverging': 1.4, 'Cyclic': 1.4,
+       'Qualitative': 1.4, 'Miscellaneous': 1.4}
+
+# Indices to step through colormap
+x = np.linspace(0.0, 1.0, 100)
+
+# Do plot
+for cmap_category, cmap_list in cmaps.items():
+
+    # Do subplots so that colormaps have enough space.
+    # Default is 6 colormaps per subplot.
+    dsub = _DSUBS.get(cmap_category, 6)
+    nsubplots = int(np.ceil(len(cmap_list) / dsub))
+
+    # squeeze=False to handle similarly the case of a single subplot
+    fig, axes = plt.subplots(nrows=nsubplots, squeeze=False,
+                             figsize=(7, 2.6*nsubplots))
+
+    for i, ax in enumerate(axes.flat):
+
+        locs = []  # locations for text labels
+
+        for j, cmap in enumerate(cmap_list[i*dsub:(i+1)*dsub]):
+
+            # Get RGB values for colormap and convert the colormap in
+            # CAM02-UCS colorspace.  lab[0, :, 0] is the lightness.
+            rgb = cm.get_cmap(cmap)(x)[np.newaxis, :, :3]
+            lab = cspace_converter("sRGB1", "CAM02-UCS")(rgb)
+
+            # Plot colormap L values.  Do separately for each category
+            # so each plot can be pretty.  To make scatter markers change
+            # color along plot:
+            # http://stackoverflow.com/questions/8202605/
+
+            if cmap_category == 'Sequential':
+                # These colormaps all start at high lightness but we want them
+                # reversed to look nice in the plot, so reverse the order.
+                y_ = lab[0, ::-1, 0]
+                c_ = x[::-1]
+            else:
+                y_ = lab[0, :, 0]
+                c_ = x
+
+            dc = _DC.get(cmap_category, 1.4)  # cmaps horizontal spacing
+            ax.scatter(x + j*dc, y_, c=c_, cmap=cmap, s=300, linewidths=0.0)
+
+            # Store locations for colormap labels
+            if cmap_category in ('Perceptually Uniform Sequential',
+                                 'Sequential'):
+                locs.append(x[-1] + j*dc)
+            elif cmap_category in ('Diverging', 'Qualitative', 'Cyclic',
+                                   'Miscellaneous', 'Sequential (2)'):
+                locs.append(x[int(x.size/2.)] + j*dc)
+
+        # Set up the axis limits:
+        #   * the 1st subplot is used as a reference for the x-axis limits
+        #   * lightness values goes from 0 to 100 (y-axis limits)
+        ax.set_xlim(axes[0, 0].get_xlim())
+        ax.set_ylim(0.0, 100.0)
+
+        # Set up labels for colormaps
+        ax.xaxis.set_ticks_position('top')
+        ticker = mpl.ticker.FixedLocator(locs)
+        ax.xaxis.set_major_locator(ticker)
+        formatter = mpl.ticker.FixedFormatter(cmap_list[i*dsub:(i+1)*dsub])
+        ax.xaxis.set_major_formatter(formatter)
+        ax.xaxis.set_tick_params(rotation=50)
+
+    ax.set_xlabel(cmap_category + ' colormaps', fontsize=14)
+    fig.text(0.0, 0.55, 'Lightness $L^*$', fontsize=12,
+             transform=fig.transFigure, rotation=90)
+
+    fig.tight_layout(h_pad=0.0, pad=1.5)
+    plt.show()
+```
+
+![在Matplotlib中选择色彩映射示例8](/static/images/tutorials/sphx_glr_colormaps_008.png)
+
+![在Matplotlib中选择色彩映射示例9](/static/images/tutorials/sphx_glr_colormaps_009.png)
+
+![在Matplotlib中选择色彩映射示例10](/static/images/tutorials/sphx_glr_colormaps_010.png)
+
+![在Matplotlib中选择色彩映射示例11](/static/images/tutorials/sphx_glr_colormaps_010.png)
+
+![在Matplotlib中选择色彩映射示例12](/static/images/tutorials/sphx_glr_colormaps_010.png)
+
+![在Matplotlib中选择色彩映射示例13](/static/images/tutorials/sphx_glr_colormaps_013.png)
+
+![在Matplotlib中选择色彩映射示例14](/static/images/tutorials/sphx_glr_colormaps_014.png)
+
+## Grayscale conversion
+
+It is important to pay attention to conversion to grayscale for color plots, since they may be printed on black and white printers. If not carefully considered, your readers may end up with indecipherable plots because the grayscale changes unpredictably through the colormap.
+
+Conversion to grayscale is done in many different ways [bw]. Some of the better ones use a linear combination of the rgb values of a pixel, but weighted according to how we perceive color intensity. A nonlinear method of conversion to grayscale is to use the L∗ values of the pixels. In general, similar principles apply for this question as they do for presenting one's information perceptually; that is, if a colormap is chosen that is monotonically increasing in L∗ values, it will print in a reasonable manner to grayscale.
+
+With this in mind, we see that the Sequential colormaps have reasonable representations in grayscale. Some of the Sequential2 colormaps have decent enough grayscale representations, though some (autumn, spring, summer, winter) have very little grayscale change. If a colormap like this was used in a plot and then the plot was printed to grayscale, a lot of the information may map to the same gray values. The Diverging colormaps mostly vary from darker gray on the outer edges to white in the middle. Some (PuOr and seismic) have noticeably darker gray on one side than the other and therefore are not very symmetric. coolwarm has little range of gray scale and would print to a more uniform plot, losing a lot of detail. Note that overlaid, labeled contours could help differentiate between one side of the colormap vs. the other since color cannot be used once a plot is printed to grayscale. Many of the Qualitative and Miscellaneous colormaps, such as Accent, hsv, and jet, change from darker to lighter and back to darker gray throughout the colormap. This would make it impossible for a viewer to interpret the information in a plot once it is printed in grayscale.
+
+```python
+mpl.rcParams.update({'font.size': 14})
+
+# Indices to step through colormap.
+x = np.linspace(0.0, 1.0, 100)
+
+gradient = np.linspace(0, 1, 256)
+gradient = np.vstack((gradient, gradient))
+
+
+def plot_color_gradients(cmap_category, cmap_list):
+    fig, axes = plt.subplots(nrows=len(cmap_list), ncols=2)
+    fig.subplots_adjust(top=0.95, bottom=0.01, left=0.2, right=0.99,
+                        wspace=0.05)
+    fig.suptitle(cmap_category + ' colormaps', fontsize=14, y=1.0, x=0.6)
+
+    for ax, name in zip(axes, cmap_list):
+
+        # Get RGB values for colormap.
+        rgb = cm.get_cmap(plt.get_cmap(name))(x)[np.newaxis, :, :3]
+
+        # Get colormap in CAM02-UCS colorspace. We want the lightness.
+        lab = cspace_converter("sRGB1", "CAM02-UCS")(rgb)
+        L = lab[0, :, 0]
+        L = np.float32(np.vstack((L, L, L)))
+
+        ax[0].imshow(gradient, aspect='auto', cmap=plt.get_cmap(name))
+        ax[1].imshow(L, aspect='auto', cmap='binary_r', vmin=0., vmax=100.)
+        pos = list(ax[0].get_position().bounds)
+        x_text = pos[0] - 0.01
+        y_text = pos[1] + pos[3]/2.
+        fig.text(x_text, y_text, name, va='center', ha='right', fontsize=10)
+
+    # Turn off *all* ticks & spines, not just the ones with colormaps.
+    for ax in axes.flat:
+        ax.set_axis_off()
+
     plt.show()
 
-plot_examples([viridis, newcmp])
-../../_images/sphx_glr_colormap-manipulation_001.png
-We can easily reduce the dynamic range of a colormap; here we choose the middle 0.5 of the colormap. However, we need to interpolate from a larger colormap, otherwise the new colormap will have repeated values.
 
-viridisBig = cm.get_cmap('viridis', 512)
-newcmp = ListedColormap(viridisBig(np.linspace(0.25, 0.75, 256)))
-plot_examples([viridis, newcmp])
-../../_images/sphx_glr_colormap-manipulation_002.png
-and we can easily concatenate two colormaps:
+for cmap_category, cmap_list in cmaps.items():
 
-top = cm.get_cmap('Oranges_r', 128)
-bottom = cm.get_cmap('Blues', 128)
+    plot_color_gradients(cmap_category, cmap_list)
+```
 
-newcolors = np.vstack((top(np.linspace(0, 1, 128)),
-                       bottom(np.linspace(0, 1, 128))))
-newcmp = ListedColormap(newcolors, name='OrangeBlue')
-plot_examples([viridis, newcmp])
-../../_images/sphx_glr_colormap-manipulation_003.png
-Of course we need not start from a named colormap, we just need to create the Nx4 array to pass to ListedColormap. Here we create a brown colormap that goes to white....
+![在Matplotlib中选择色彩映射示例15](/static/images/tutorials/sphx_glr_colormaps_015.png)
 
-N = 256
-vals = np.ones((N, 4))
-vals[:, 0] = np.linspace(90/256, 1, N)
-vals[:, 1] = np.linspace(39/256, 1, N)
-vals[:, 2] = np.linspace(41/256, 1, N)
-newcmp = ListedColormap(vals)
-plot_examples([viridis, newcmp])
-../../_images/sphx_glr_colormap-manipulation_004.png
-Creating linear segmented colormaps
-LinearSegmentedColormap class specifies colormaps using anchor points between which RGB(A) values are interpolated.
+![在Matplotlib中选择色彩映射示例16](/static/images/tutorials/sphx_glr_colormaps_016.png)
 
-The format to specify these colormaps allows discontinuities at the anchor points. Each anchor point is specified as a row in a matrix of the form [x[i] yleft[i] yright[i]], where x[i] is the anchor, and yleft[i] and yright[i] are the values of the color on either side of the anchor point.
+![在Matplotlib中选择色彩映射示例17](/static/images/tutorials/sphx_glr_colormaps_017.png)
 
-If there are no discontinuities, then yleft[i]=yright[i]:
+![在Matplotlib中选择色彩映射示例18](/static/images/tutorials/sphx_glr_colormaps_018.png)
 
-cdict = {'red':   [[0.0,  0.0, 0.0],
-                   [0.5,  1.0, 1.0],
-                   [1.0,  1.0, 1.0]],
-         'green': [[0.0,  0.0, 0.0],
-                   [0.25, 0.0, 0.0],
-                   [0.75, 1.0, 1.0],
-                   [1.0,  1.0, 1.0]],
-         'blue':  [[0.0,  0.0, 0.0],
-                   [0.5,  0.0, 0.0],
-                   [1.0,  1.0, 1.0]]}
+![在Matplotlib中选择色彩映射示例19](/static/images/tutorials/sphx_glr_colormaps_019.png)
 
+![在Matplotlib中选择色彩映射示例20](/static/images/tutorials/sphx_glr_colormaps_020.png)
 
-def plot_linearmap(cdict):
-    newcmp = LinearSegmentedColormap('testCmap', segmentdata=cdict, N=256)
-    rgba = newcmp(np.linspace(0, 1, 256))
-    fig, ax = plt.subplots(figsize=(4, 3), constrained_layout=True)
-    col = ['r', 'g', 'b']
-    for xx in [0.25, 0.5, 0.75]:
-        ax.axvline(xx, color='0.7', linestyle='--')
-    for i in range(3):
-        ax.plot(np.arange(256)/256, rgba[:, i], color=col[i])
-    ax.set_xlabel('index')
-    ax.set_ylabel('RGB')
-    plt.show()
+![在Matplotlib中选择色彩映射示例21](/static/images/tutorials/sphx_glr_colormaps_021.png)
 
-plot_linearmap(cdict)
-../../_images/sphx_glr_colormap-manipulation_005.png
-In order to make a discontinuity at an anchor point, the third column is different than the second. The matrix for each of "red", "green", "blue", and optionally "alpha" is set up as:
+## Color vision deficiencies
 
-cdict['red'] = [...
-                [x[i]      yleft[i]     yright[i]],
-                [x[i+1]    yleft[i+1]   yright[i+1]],
-               ...]
-and for values passed to the colormap between x[i] and x[i+1], the interpolation is between yright[i] and yleft[i+1].
+There is a lot of information available about color blindness (e.g., [colorblindness]). Additionally, there are tools available to convert images to how they look for different types of color vision deficiencies (e.g., [vischeck]).
 
-In the example below there is a discontiuity in red at 0.5. The interpolation between 0 and 0.5 goes from 0.3 to 1, and between 0.5 and 1 it goes from 0.9 to 1. Note that red[0, 1], and red[2, 2] are both superfluous to the interpolation because red[0, 1] is the value to the left of 0, and red[2, 2] is the value to the right of 1.0.
+The most common form of color vision deficiency involves differentiating between red and green. Thus, avoiding colormaps with both red and green will avoid many problems in general.
 
-cdict['red'] = [[0.0,  0.0, 0.3],
-                [0.5,  1.0, 0.9],
-                [1.0,  1.0, 1.0]]
-plot_linearmap(cdict)
-../../_images/sphx_glr_colormap-manipulation_006.png
-References
-The use of the following functions, methods, classes and modules is shown in this example:
+## References
 
-import matplotlib
-matplotlib.axes.Axes.pcolormesh
-matplotlib.figure.Figure.colorbar
-matplotlib.colors
-matplotlib.colors.LinearSegmentedColormap
-matplotlib.colors.ListedColormap
-matplotlib.cm
-matplotlib.cm.get_cmap
-Download Python source code: colormap-manipulation.py
-Download Jupyter notebook: colormap-manipulation.ipynb
+[colorcet]	https://github.com/bokeh/colorcet
+[Ware]	http://ccom.unh.edu/sites/default/files/publications/Ware_1988_CGA_Color_sequences_univariate_maps.pdf
+[Moreland]	http://www.kennethmoreland.com/color-maps/ColorMapsExpanded.pdf
+[list-colormaps]	https://gist.github.com/endolith/2719900#id7
+[mycarta-banding]	https://mycarta.wordpress.com/2012/10/14/the-rainbow-is-deadlong-live-the-rainbow-part-4-cie-lab-heated-body/
+[mycarta-jet]	(1, 2) https://mycarta.wordpress.com/2012/10/06/the-rainbow-is-deadlong-live-the-rainbow-part-3/
+[kovesi-colormaps]	https://arxiv.org/abs/1509.03700
+[bw]	http://www.tannerhelland.com/3643/grayscale-image-algorithm-vb6/
+[colorblindness]	http://www.color-blindness.com/
+[vischeck]	http://www.vischeck.com/vischeck/
+[IBM]	https://doi.org/10.1109/VISUAL.1995.480803
+[palettable]	https://jiffyclub.github.io/palettable/
+Total running time of the script: ( 0 minutes 3.769 seconds)
+
+## 下载本文的所有示例
+
+- [下载python源码: colormaps.py](https://matplotlib.org/_downloads/1c6b1fbe33b9aa34a09e5efacc9c6fcb/colormaps.py)
+- [下载Jupyter notebook: colormaps.ipynb](https://matplotlib.org/_downloads/bbbece85102c8f1d3acc24acf859b2ca/colormaps.ipynb)
