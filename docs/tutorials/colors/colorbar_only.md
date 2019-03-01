@@ -1,4 +1,4 @@
-# Customized Colorbars Tutorial
+# 自定义Colorbars教程
 
 This tutorial shows how to build colorbars without an attached plot.
 
@@ -27,7 +27,7 @@ cb1.set_label('Some Units')
 fig.show()
 ```
 
-../../_images/sphx_glr_colorbar_only_001.png
+![自定义Colorbars教程示例](/static/images/tutorials/sphx_glr_colorbar_only_001.png)
 
 ### Discrete intervals colorbar
 
@@ -58,7 +58,7 @@ cb2.set_label('Discrete intervals, some other units')
 fig.show()
 ```
 
-../../_images/sphx_glr_colorbar_only_002.png
+![自定义Colorbars教程示例2](/static/images/tutorials/sphx_glr_colorbar_only_002.png)
 
 ### Colorbar with custom extension lengths
 
@@ -87,7 +87,7 @@ cb3.set_label('Custom extension lengths, some other units')
 fig.show()
 ```
 
-../../_images/sphx_glr_colorbar_only_003.png
+![自定义Colorbars教程示例3](/static/images/tutorials/sphx_glr_colorbar_only_003.png)
 
 ## 下载本文的所有示例
 
