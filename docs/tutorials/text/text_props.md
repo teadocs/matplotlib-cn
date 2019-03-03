@@ -1,40 +1,43 @@
-# Text properties and layout
+# 文本属性和布局
 
 Controlling properties of text and its layout with Matplotlib.
 
 The [matplotlib.text.Text](https://matplotlib.org/api/text_api.html#matplotlib.text.Text) instances have a variety of properties which can be configured via keyword arguments to the text commands (e.g., title(), xlabel() and text()).
 
-Property	Value Type
-alpha	float
-backgroundcolor	any matplotlib color
-bbox	Rectangle prop dict plus key 'pad' which is a pad in points
-clip_box	a matplotlib.transform.Bbox instance
-clip_on	bool
-clip_path	a Path instance and a Transform instance, a Patch
-color	any matplotlib color
-family	[ 'serif' | 'sans-serif' | 'cursive' | 'fantasy' | 'monospace' ]
-fontproperties	a FontProperties instance
-horizontalalignment or ha	[ 'center' | 'right' | 'left' ]
-label	any string
-linespacing	float
-multialignment	['left' | 'right' | 'center' ]
-name or fontname	string e.g., ['Sans' | 'Courier' | 'Helvetica' ...]
-picker	[None|float|boolean|callable]
-position	(x, y)
-rotation	[ angle in degrees | 'vertical' | 'horizontal' ]
-size or fontsize	[ size in points | relative size, e.g., 'smaller', 'x-large' ]
-style or fontstyle	[ 'normal' | 'italic' | 'oblique' ]
-text	string or anything printable with '%s' conversion
-transform	a Transform instance
-variant	[ 'normal' | 'small-caps' ]
-verticalalignment or va	[ 'center' | 'top' | 'bottom' | 'baseline' ]
-visible	bool
-weight or fontweight	[ 'normal' | 'bold' | 'heavy' | 'light' | 'ultrabold' | 'ultralight']
-x	float
-y	float
-zorder	any number
+Property | Value Type
+---|---
+alpha | float
+backgroundcolor | any matplotlib color
+bbox | Rectangle prop dict plus key 'pad' which is a pad in points
+clip_box | a matplotlib.transform.Bbox instance
+clip_on | bool
+clip_path | a Path instance and a Transform instance, a Patch
+color | any matplotlib color
+family | [ 'serif' | 'sans-serif' | 'cursive' | 'fantasy' | 'monospace' ]
+fontproperties | a FontProperties instance
+horizontalalignment or ha | [ 'center' | 'right' | 'left' ]
+label | any string
+linespacing | float
+multialignment | ['left' | 'right' | 'center' ]
+name or fontname | string e.g., ['Sans' | 'Courier' | 'Helvetica' ...]
+picker | [None|float|boolean|callable]
+position | (x, y)
+rotation | [ angle in degrees | 'vertical' | 'horizontal' ]
+size or fontsize | [ size in points | relative size, e.g., 'smaller', 'x-large' ]
+style or fontstyle | [ 'normal' | 'italic' | 'oblique' ]
+text | string or anything printable with '%s' conversion
+transform | a Transform instance
+variant | [ 'normal' | 'small-caps' ]
+verticalalignment or va | [ 'center' | 'top' | 'bottom' | 'baseline' ]
+visible | bool
+weight or fontweight | [ 'normal' | 'bold' | 'heavy' | 'light' | 'ultrabold' | 'ultralight']
+x | float
+y | float
+zorder | any number
+
 You can lay out text with the alignment arguments horizontalalignment, verticalalignment, and multialignment. horizontalalignment controls whether the x positional argument for the text indicates the left, center or right side of the text bounding box. verticalalignment controls whether the y positional argument for the text indicates the bottom, center or top side of the text bounding box. multialignment, for newline separated strings only, controls whether the different lines are left, center or right justified. Here is an example which uses the text() command to show the various alignment possibilities. The use of transform=ax.transAxes throughout the code indicates that the coordinates are given relative to the axes bounding box, with 0,0 being the lower left of the axes and 1,1 the upper right.
 
+```python
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
@@ -112,40 +115,55 @@ ax.text(left, top, 'rotated\nwith newlines',
 
 ax.set_axis_off()
 plt.show()
-../../_images/sphx_glr_text_props_001.png
-Default Font
+```
+
+![文本属性和布局示例](/static/images/tutorials/sphx_glr_text_props_001.png)
+
+## Default Font
+
 The base default font is controlled by a set of rcParams. To set the font for mathematical expressions, use the rcParams beginning with mathtext (see mathtext).
 
-rcParam	usage
-'font.family'	List of either names of font or {'cursive', 'fantasy', 'monospace', 'sans', 'sans serif', 'sans-serif', 'serif'}.
-'font.style'	The default style, ex 'normal', 'italic'.
-'font.variant'	Default variant, ex 'normal', 'small-caps' (untested)
-'font.stretch'	Default stretch, ex 'normal', 'condensed' (incomplete)
-'font.weight'	Default weight. Either string or integer
-'font.size'	Default font size in points. Relative font sizes ('large', 'x-small') are computed against this size.
+rcParam | usage
+---|---
+'font.family' | List of either names of font or {'cursive', 'fantasy', 'monospace', 'sans', 'sans serif', 'sans-serif', 'serif'}.
+'font.style' | The default style, ex 'normal', 'italic'.
+'font.variant' | Default variant, ex 'normal', 'small-caps' (untested)
+'font.stretch' | Default stretch, ex 'normal', 'condensed' (incomplete)
+'font.weight' | Default weight. Either string or integer
+'font.size' | Default font size in points. Relative font sizes ('large', 'x-small') are computed against this size.
+
 The mapping between the family aliases ({'cursive', 'fantasy', 'monospace', 'sans', 'sans serif', 'sans-serif', 'serif'}) and actual font names is controlled by the following rcParams:
 
-family alias	rcParam with mappings
-'serif'	'font.serif'
-'monospace'	'font.monospace'
-'fantasy'	'font.fantasy'
-'cursive'	'font.cursive'
-{'sans', 'sans serif', 'sans-serif'}	'font.sans-serif'
+family alias | rcParam with mappings
+---|---
+'serif' | 'font.serif'
+'monospace' | 'font.monospace'
+'fantasy' | 'font.fantasy'
+'cursive' | 'font.cursive'
+{'sans', 'sans serif', 'sans-serif'} | 'font.sans-serif'
 which are lists of font names.
 
-Text with non-latin glyphs
+## Text with non-latin glyphs
+
 As of v2.0 the default font contains glyphs for many western alphabets, but still does not cover all of the glyphs that may be required by mpl users. For example, DejaVu has no coverage of Chinese, Korean, or Japanese.
 
 To set the default font to be one that supports the code points you need, prepend the font name to 'font.family' or the desired alias lists
 
+```python
 matplotlib.rcParams['font.sans-serif'] = ['Source Han Sans TW', 'sans-serif']
+```
+
 or set it in your .matplotlibrc file:
 
+```python
 font.sans-serif: Source Han Sans TW, Arial, sans-serif
+```
+
 To control the font used on per-artist basis use the 'name', 'fontname' or 'fontproperties' kwargs documented above.
 
 On linux, fc-list can be a useful tool to discover the font name; for example
 
+```python
 $ fc-list :lang=zh family
 Noto to Sans Mono CJK TC,Noto Sans Mono CJK TC Bold
 Noto Sans CJK TC,Noto Sans CJK TC Medium
@@ -154,7 +172,11 @@ Noto Sans CJK KR,Noto Sans CJK KR Black
 Noto Sans CJK TC,Noto Sans CJK TC Black
 Noto Sans Mono CJK TC,Noto Sans Mono CJK TC Regular
 Noto Sans CJK SC,Noto Sans CJK SC Light
+```
+
 lists all of the fonts that support Chinese.
 
-Download Python source code: text_props.py
-Download Jupyter notebook: text_props.ipynb
+## 下载本文的所有示例
+
+- [下载python源码: text_props.py](https://matplotlib.org/_downloads/751a0fe74e346ea8cdc4131c830e041b/text_props.py)
+- [下载Jupyter notebook: text_props.ipynb](https://matplotlib.org/_downloads/259756dde590db0cbeb5b975d5139de6/text_props.ipynb)
