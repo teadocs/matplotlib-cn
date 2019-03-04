@@ -2,158 +2,203 @@
 
 Annotating text with Matplotlib.
 
-Table of Contents
+## Table of Contents
 
-Annotations
-Basic annotation
-Advanced Annotation
-Annotating with Text with Box
-Annotating with Arrow
-Placing Artist at the anchored location of the Axes
-Using Complex Coordinates with Annotations
-Using ConnectionPatch
-Advanced Topics
-Zoom effect between Axes
-Define Custom BoxStyle
-Basic annotation
+- Annotations
+- Basic annotation
+- Advanced Annotation
+  - Annotating with Text with Box
+  - Annotating with Arrow
+  - Placing Artist at the anchored location of the Axes
+  - Using Complex Coordinates with Annotations
+  - Using ConnectionPatch
+    - Advanced Topics
+  - Zoom effect between Axes
+  - Define Custom BoxStyle
+
+# Basic annotation
+
 The uses of the basic text() will place text at an arbitrary position on the Axes. A common use case of text is to annotate some feature of the plot, and the annotate() method provides helper functionality to make annotations easy. In an annotation, there are two points to consider: the location being annotated represented by the argument xy and the location of the text xytext. Both of these arguments are (x,y) tuples.
 
 ../../_images/sphx_glr_annotation_basic_0011.png
+
 Annotation Basic
 
 In this example, both the xy (arrow tip) and xytext locations (text location) are in data coordinates. There are a variety of other coordinate systems one can choose -- you can specify the coordinate system of xy and xytext with one of the following strings for xycoords and textcoords (default is 'data')
 
-argument	coordinate system
-'figure points'	points from the lower left corner of the figure
-'figure pixels'	pixels from the lower left corner of the figure
-'figure fraction'	0,0 is lower left of figure and 1,1 is upper right
-'axes points'	points from lower left corner of axes
-'axes pixels'	pixels from lower left corner of axes
-'axes fraction'	0,0 is lower left of axes and 1,1 is upper right
-'data'	use the axes data coordinate system
+argument | coordinate system
+---|---
+'figure points' | points from the lower left corner of the figure
+'figure pixels' | pixels from the lower left corner of the figure
+'figure fraction' | 0,0 is lower left of figure and 1,1 is upper right
+'axes points' | points from lower left corner of axes
+'axes pixels' | pixels from lower left corner of axes
+'axes fraction' | 0,0 is lower left of axes and 1,1 is upper right
+'data' | use the axes data coordinate system
+
 For example to place the text coordinates in fractional axes coordinates, one could do:
 
+```python
 ax.annotate('local max', xy=(3, 1),  xycoords='data',
             xytext=(0.8, 0.95), textcoords='axes fraction',
             arrowprops=dict(facecolor='black', shrink=0.05),
             horizontalalignment='right', verticalalignment='top',
             )
+```
+
 For physical coordinate systems (points or pixels) the origin is the bottom-left of the figure or axes.
 
 Optionally, you can enable drawing of an arrow from the text to the annotated point by giving a dictionary of arrow properties in the optional keyword argument arrowprops.
 
-arrowprops key	description
-width	the width of the arrow in points
-frac	the fraction of the arrow length occupied by the head
-headwidth	the width of the base of the arrow head in points
-shrink	move the tip and base some percent away from the annotated point and text
-**kwargs	any key for matplotlib.patches.Polygon, e.g., facecolor
+arrowprops key | description
+---|---
+width | the width of the arrow in points
+frac | the fraction of the arrow length occupied by the head
+headwidth | the width of the base of the arrow head in points
+shrink | move the tip and base some percent away from the annotated point and text
+**kwargs | any key for matplotlib.patches.Polygon, e.g., facecolor
+
 In the example below, the xy point is in native coordinates (xycoords defaults to 'data'). For a polar axes, this is in (theta, radius) space. The text in this example is placed in the fractional figure coordinate system. matplotlib.text.Text keyword args like horizontalalignment, verticalalignment and fontsize are passed from annotate to the Text instance.
 
 ../../_images/sphx_glr_annotation_polar_0011.png
+
 Annotation Polar
 
 For more on all the wild and wonderful things you can do with annotations, including fancy arrows, see Advanced Annotation and Annotating Plots.
 
 Do not proceed unless you have already read Basic annotation, text() and annotate()!
 
-Advanced Annotation
-Annotating with Text with Box
+# Advanced Annotation
+
+## Annotating with Text with Box
+
 Let's start with a simple example.
 
 ../../_images/sphx_glr_annotate_text_arrow_0011.png
+
 Annotate Text Arrow
 
 The text() function in the pyplot module (or text method of the Axes class) takes bbox keyword argument, and when given, a box around the text is drawn.
 
+```python
 bbox_props = dict(boxstyle="rarrow,pad=0.3", fc="cyan", ec="b", lw=2)
 t = ax.text(0, 0, "Direction", ha="center", va="center", rotation=45,
             size=15,
             bbox=bbox_props)
+```
+
 The patch object associated with the text can be accessed by:
 
+```python
 bb = t.get_bbox_patch()
+```
+
 The return value is an instance of FancyBboxPatch and the patch properties like facecolor, edgewidth, etc. can be accessed and modified as usual. To change the shape of the box, use the set_boxstyle method.
 
+```python
 bb.set_boxstyle("rarrow", pad=0.6)
+```
+
 The arguments are the name of the box style with its attributes as keyword arguments. Currently, following box styles are implemented.
 
-Class	Name	Attrs
-Circle	circle	pad=0.3
-DArrow	darrow	pad=0.3
-LArrow	larrow	pad=0.3
-RArrow	rarrow	pad=0.3
-Round	round	pad=0.3,rounding_size=None
-Round4	round4	pad=0.3,rounding_size=None
-Roundtooth	roundtooth	pad=0.3,tooth_size=None
-Sawtooth	sawtooth	pad=0.3,tooth_size=None
-Square	square	pad=0.3
+Class | Name | Attrs
+---|---|---
+Circle | circle | pad=0.3
+DArrow | darrow | pad=0.3
+LArrow | larrow | pad=0.3
+RArrow | rarrow | pad=0.3
+Round | round | pad=0.3,rounding_size=None
+Round4 | round4 | pad=0.3,rounding_size=None
+Roundtooth | roundtooth | pad=0.3,tooth_size=None
+Sawtooth | sawtooth | pad=0.3,tooth_size=None
+Square | square | pad=0.3
+
 ../../_images/sphx_glr_fancybox_demo_0011.png
+
 Fancybox Demo
 
 Note that the attribute arguments can be specified within the style name with separating comma (this form can be used as "boxstyle" value of bbox argument when initializing the text instance)
 
+```python
 bb.set_boxstyle("rarrow,pad=0.6")
-Annotating with Arrow
+```
+
+## Annotating with Arrow
+
 The annotate() function in the pyplot module (or annotate method of the Axes class) is used to draw an arrow connecting two points on the plot.
 
+```python
 ax.annotate("Annotation",
             xy=(x1, y1), xycoords='data',
             xytext=(x2, y2), textcoords='offset points',
             )
+```
+
 This annotates a point at xy in the given coordinate (xycoords) with the text at xytext given in textcoords. Often, the annotated point is specified in the data coordinate and the annotating text in offset points. See annotate() for available coordinate systems.
 
 An arrow connecting two points (xy & xytext) can be optionally drawn by specifying the arrowprops argument. To draw only an arrow, use empty string as the first argument.
 
+```python
 ax.annotate("",
             xy=(0.2, 0.2), xycoords='data',
             xytext=(0.8, 0.8), textcoords='data',
             arrowprops=dict(arrowstyle="->",
                             connectionstyle="arc3"),
             )
+```
+
 ../../_images/sphx_glr_annotate_simple01_0011.png
+
 Annotate Simple01
 
 The arrow drawing takes a few steps.
 
-a connecting path between two points are created. This is controlled by connectionstyle key value.
-If patch object is given (patchA & patchB), the path is clipped to avoid the patch.
-The path is further shrunk by given amount of pixels (shrinkA & shrinkB)
-The path is transmuted to arrow patch, which is controlled by the arrowstyle key value.
+1. a connecting path between two points are created. This is controlled by connectionstyle key value.
+2. If patch object is given (patchA & patchB), the path is clipped to avoid the patch.
+3. The path is further shrunk by given amount of pixels (shrinkA & shrinkB)
+4. The path is transmuted to arrow patch, which is controlled by the arrowstyle key value.
+
 ../../_images/sphx_glr_annotate_explain_0011.png
+
 Annotate Explain
 
 The creation of the connecting path between two points is controlled by connectionstyle key and the following styles are available.
 
-Name	Attrs
-angle	angleA=90,angleB=0,rad=0.0
-angle3	angleA=90,angleB=0
-arc	angleA=0,angleB=0,armA=None,armB=None,rad=0.0
-arc3	rad=0.0
-bar	armA=0.0,armB=0.0,fraction=0.3,angle=None
-Note that "3" in angle3 and arc3 is meant to indicate that the resulting path is a quadratic spline segment (three control points). As will be discussed below, some arrow style options can only be used when the connecting path is a quadratic spline.
+Name | Attrs
+---|---
+angle | angleA=90,angleB=0,rad=0.0
+angle3 | angleA=90,angleB=0
+arc | angleA=0,angleB=0,armA=None,armB=None,rad=0.0
+arc3 | rad=0.0
+bar | armA=0.0,armB=0.0,fraction=0.3,angle=None
+
+Note that "3" in ``angle3`` and ``arc3`` is meant to indicate that the resulting path is a quadratic spline segment (three control points). As will be discussed below, some arrow style options can only be used when the connecting path is a quadratic spline.
 
 The behavior of each connection style is (limitedly) demonstrated in the example below. (Warning : The behavior of the bar style is currently not well defined, it may be changed in the future).
 
 ../../_images/sphx_glr_connectionstyle_demo_0011.png
+
 Connectionstyle Demo
 
 The connecting path (after clipping and shrinking) is then mutated to an arrow patch, according to the given arrowstyle.
 
-Name	Attrs
--	None
-->	head_length=0.4,head_width=0.2
--[	widthB=1.0,lengthB=0.2,angleB=None
-|-|	widthA=1.0,widthB=1.0
--|>	head_length=0.4,head_width=0.2
-<-	head_length=0.4,head_width=0.2
-<->	head_length=0.4,head_width=0.2
-<|-	head_length=0.4,head_width=0.2
-<|-|>	head_length=0.4,head_width=0.2
-fancy	head_length=0.4,head_width=0.4,tail_width=0.4
-simple	head_length=0.5,head_width=0.5,tail_width=0.2
-wedge	tail_width=0.3,shrink_factor=0.5
+Name | Attrs
+---|---
+- | None
+-> | head_length=0.4,head_width=0.2
+-[ | widthB=1.0,lengthB=0.2,angleB=None
+|-| | widthA=1.0,widthB=1.0
+-|> | head_length=0.4,head_width=0.2
+<- | head_length=0.4,head_width=0.2
+<-> | head_length=0.4,head_width=0.2
+<|- | head_length=0.4,head_width=0.2
+<|-|> | head_length=0.4,head_width=0.2
+fancy | head_length=0.4,head_width=0.4,tail_width=0.4
+simple | head_length=0.5,head_width=0.5,tail_width=0.2
+wedge | tail_width=0.3,shrink_factor=0.5
+
 ../../_images/sphx_glr_fancyarrow_demo_0011.png
+
 Fancyarrow Demo
 
 Some arrowstyles only work with connection styles that generate a quadratic-spline segment. They are fancy, simple, and wedge. For these arrow styles, you must use the "angle3" or "arc3" connection style.
