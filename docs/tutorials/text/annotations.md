@@ -1,4 +1,4 @@
-# Annotations
+# 注释
 
 Annotating text with Matplotlib.
 
@@ -20,9 +20,9 @@ Annotating text with Matplotlib.
 
 The uses of the basic text() will place text at an arbitrary position on the Axes. A common use case of text is to annotate some feature of the plot, and the annotate() method provides helper functionality to make annotations easy. In an annotation, there are two points to consider: the location being annotated represented by the argument xy and the location of the text xytext. Both of these arguments are (x,y) tuples.
 
-../../_images/sphx_glr_annotation_basic_0011.png
+![注释示例](/static/images/tutorials/sphx_glr_annotation_basic_0011.png)
 
-Annotation Basic
+**[Annotation Basic](https://matplotlib.org/gallery/pyplots/annotation_basic.html)**
 
 In this example, both the xy (arrow tip) and xytext locations (text location) are in data coordinates. There are a variety of other coordinate systems one can choose -- you can specify the coordinate system of xy and xytext with one of the following strings for xycoords and textcoords (default is 'data')
 
@@ -60,9 +60,9 @@ shrink | move the tip and base some percent away from the annotated point and te
 
 In the example below, the xy point is in native coordinates (xycoords defaults to 'data'). For a polar axes, this is in (theta, radius) space. The text in this example is placed in the fractional figure coordinate system. matplotlib.text.Text keyword args like horizontalalignment, verticalalignment and fontsize are passed from annotate to the Text instance.
 
-../../_images/sphx_glr_annotation_polar_0011.png
+![Annotation Polar](/static/images/tutorials/sphx_glr_annotation_polar_0011.png)
 
-Annotation Polar
+**[Annotation Polar](https://matplotlib.org/gallery/pyplots/annotation_polar.html)**
 
 For more on all the wild and wonderful things you can do with annotations, including fancy arrows, see Advanced Annotation and Annotating Plots.
 
@@ -74,9 +74,9 @@ Do not proceed unless you have already read Basic annotation, text() and annotat
 
 Let's start with a simple example.
 
-../../_images/sphx_glr_annotate_text_arrow_0011.png
+![Annotate Text Arrow](/static/images/tutorials/sphx_glr_annotate_text_arrow_0011.png)
 
-Annotate Text Arrow
+**[Annotate Text Arrow](https://matplotlib.org/gallery/userdemo/annotate_text_arrow.html)**
 
 The text() function in the pyplot module (or text method of the Axes class) takes bbox keyword argument, and when given, a box around the text is drawn.
 
@@ -113,9 +113,9 @@ Roundtooth | roundtooth | pad=0.3,tooth_size=None
 Sawtooth | sawtooth | pad=0.3,tooth_size=None
 Square | square | pad=0.3
 
-../../_images/sphx_glr_fancybox_demo_0011.png
+![Fancybox Demo](/static/images/tutorials/sphx_glr_fancybox_demo_0011.png)
 
-Fancybox Demo
+**[Fancybox Demo](https://matplotlib.org/gallery/shapes_and_collections/fancybox_demo.html)**
 
 Note that the attribute arguments can be specified within the style name with separating comma (this form can be used as "boxstyle" value of bbox argument when initializing the text instance)
 
@@ -147,9 +147,9 @@ ax.annotate("",
             )
 ```
 
-../../_images/sphx_glr_annotate_simple01_0011.png
+![Annotate Simple01](/static/images/tutorials/sphx_glr_annotate_simple01_0011.png)
 
-Annotate Simple01
+**[Annotate Simple01](https://matplotlib.org/gallery/userdemo/annotate_simple01.html)**
 
 The arrow drawing takes a few steps.
 
@@ -158,9 +158,9 @@ The arrow drawing takes a few steps.
 3. The path is further shrunk by given amount of pixels (shrinkA & shrinkB)
 4. The path is transmuted to arrow patch, which is controlled by the arrowstyle key value.
 
-../../_images/sphx_glr_annotate_explain_0011.png
+![Annotate Explain](/static/images/tutorials/sphx_glr_annotate_explain_0011.png)
 
-Annotate Explain
+**[Annotate Explain](https://matplotlib.org/gallery/userdemo/annotate_explain.html)**
 
 The creation of the connecting path between two points is controlled by connectionstyle key and the following styles are available.
 
@@ -176,9 +176,9 @@ Note that "3" in ``angle3`` and ``arc3`` is meant to indicate that the resulting
 
 The behavior of each connection style is (limitedly) demonstrated in the example below. (Warning : The behavior of the bar style is currently not well defined, it may be changed in the future).
 
-../../_images/sphx_glr_connectionstyle_demo_0011.png
+![Connectionstyle Demo](/static/images/tutorials/sphx_glr_connectionstyle_demo_0011.png)
 
-Connectionstyle Demo
+**[Connectionstyle Demo](https://matplotlib.org/gallery/userdemo/connectionstyle_demo.html)**
 
 The connecting path (after clipping and shrinking) is then mutated to an arrow patch, according to the given arrowstyle.
 
@@ -197,30 +197,34 @@ fancy | head_length=0.4,head_width=0.4,tail_width=0.4
 simple | head_length=0.5,head_width=0.5,tail_width=0.2
 wedge | tail_width=0.3,shrink_factor=0.5
 
-../../_images/sphx_glr_fancyarrow_demo_0011.png
+![Fancyarrow Demo](/static/images/tutorials/sphx_glr_fancyarrow_demo_0011.png)
 
-Fancyarrow Demo
+**[Fancyarrow Demo](https://matplotlib.org/gallery/text_labels_and_annotations/fancyarrow_demo.html)**
 
 Some arrowstyles only work with connection styles that generate a quadratic-spline segment. They are fancy, simple, and wedge. For these arrow styles, you must use the "angle3" or "arc3" connection style.
 
 If the annotation string is given, the patchA is set to the bbox patch of the text by default.
 
-../../_images/sphx_glr_annotate_simple02_0011.png
-Annotate Simple02
+![Annotate Simple02](/static/images/tutorials/sphx_glr_annotate_simple02_0011.png)
+
+**[Annotate Simple02](https://matplotlib.org/gallery/userdemo/annotate_simple02.html)**
 
 As in the text command, a box around the text can be drawn using the bbox argument.
 
-../../_images/sphx_glr_annotate_simple03_0011.png
-Annotate Simple03
+![Annotate Simple03](/static/images/tutorials/sphx_glr_annotate_simple03_0011.png)
+
+**[Annotate Simple03](https://matplotlib.org/gallery/userdemo/annotate_simple03.html)**
 
 By default, the starting point is set to the center of the text extent. This can be adjusted with relpos key value. The values are normalized to the extent of the text. For example, (0,0) means lower-left corner and (1,1) means top-right.
 
-../../_images/sphx_glr_annotate_simple04_0011.png
-Annotate Simple04
+![注释示例](/static/images/tutorials/sphx_glr_annotate_simple04_0011.png)
+
+**[Annotate Simple04](https://matplotlib.org/gallery/userdemo/annotate_simple04.html)**
 
 Placing Artist at the anchored location of the Axes
 There are classes of artists that can be placed at an anchored location in the Axes. A common example is the legend. This type of artist can be created by using the OffsetBox class. A few predefined classes are available in mpl_toolkits.axes_grid1.anchored_artists others in matplotlib.offsetbox
 
+```python
 from matplotlib.offsetbox import AnchoredText
 at = AnchoredText("Figure 1a",
                   prop=dict(size=15), frameon=True,
@@ -228,13 +232,17 @@ at = AnchoredText("Figure 1a",
                   )
 at.patch.set_boxstyle("round,pad=0.,rounding_size=0.2")
 ax.add_artist(at)
-../../_images/sphx_glr_anchored_box01_0011.png
-Anchored Box01
+```
+
+![Anchored Box01](/static/images/tutorials/sphx_glr_anchored_box01_0011.png)
+
+**[Anchored Box01](https://matplotlib.org/gallery/userdemo/anchored_box01.html)**
 
 The loc keyword has same meaning as in the legend command.
 
 A simple application is when the size of the artist (or collection of artists) is known in pixel size during the time of creation. For example, If you want to draw a circle with fixed size of 20 pixel x 20 pixel (radius = 10 pixel), you can utilize AnchoredDrawingArea. The instance is created with a size of the drawing area (in pixels), and arbitrary artists can added to the drawing area. Note that the extents of the artists that are added to the drawing area are not related to the placement of the drawing area itself. Only the initial size matters.
 
+```python
 from mpl_toolkits.axes_grid1.anchored_artists import AnchoredDrawingArea
 
 ada = AnchoredDrawingArea(20, 20, 0, 0,
@@ -243,47 +251,66 @@ p1 = Circle((10, 10), 10)
 ada.drawing_area.add_artist(p1)
 p2 = Circle((30, 10), 5, fc="r")
 ada.drawing_area.add_artist(p2)
+```
+
 The artists that are added to the drawing area should not have a transform set (it will be overridden) and the dimensions of those artists are interpreted as a pixel coordinate, i.e., the radius of the circles in above example are 10 pixels and 5 pixels, respectively.
 
-../../_images/sphx_glr_anchored_box02_0011.png
-Anchored Box02
+![Anchored Box02](/static/images/tutorials/sphx_glr_anchored_box02_0011.png)
+
+**[Anchored Box02](https://matplotlib.org/gallery/userdemo/anchored_box02.html)**
 
 Sometimes, you want your artists to scale with the data coordinate (or coordinates other than canvas pixels). You can use AnchoredAuxTransformBox class. This is similar to AnchoredDrawingArea except that the extent of the artist is determined during the drawing time respecting the specified transform.
 
+```python
 from mpl_toolkits.axes_grid1.anchored_artists import AnchoredAuxTransformBox
 
 box = AnchoredAuxTransformBox(ax.transData, loc='upper left')
 el = Ellipse((0,0), width=0.1, height=0.4, angle=30)  # in data coordinates!
 box.drawing_area.add_artist(el)
+```
+
 The ellipse in the above example will have width and height corresponding to 0.1 and 0.4 in data coordinateing and will be automatically scaled when the view limits of the axes change.
 
-../../_images/sphx_glr_anchored_box03_0011.png
-Anchored Box03
+![Anchored Box03](/static/images/tutorials/sphx_glr_anchored_box03_0011.png)
+
+**[Anchored Box03](https://matplotlib.org/gallery/userdemo/anchored_box03.html)**
 
 As in the legend, the bbox_to_anchor argument can be set. Using the HPacker and VPacker, you can have an arrangement(?) of artist as in the legend (as a matter of fact, this is how the legend is created).
 
-../../_images/sphx_glr_anchored_box04_0011.png
-Anchored Box04
+![Anchored Box04](/static/images/tutorials/sphx_glr_anchored_box04_0011.png)
+
+**[Anchored Box04](https://matplotlib.org/gallery/userdemo/anchored_box04.html)**
 
 Note that unlike the legend, the bbox_transform is set to IdentityTransform by default.
 
-Using Complex Coordinates with Annotations
+## Using Complex Coordinates with Annotations
+
 The Annotation in matplotlib supports several types of coordinates as described in Basic annotation. For an advanced user who wants more control, it supports a few other options.
 
-Transform instance. For example,
+1. Transform instance. For example,
 
+```python
 ax.annotate("Test", xy=(0.5, 0.5), xycoords=ax.transAxes)
+```
+
 is identical to
 
+```python
 ax.annotate("Test", xy=(0.5, 0.5), xycoords="axes fraction")
+```
+
 With this, you can annotate a point in other axes.
 
+```python
 ax1, ax2 = subplot(121), subplot(122)
 ax2.annotate("Test", xy=(0.5, 0.5), xycoords=ax1.transData,
              xytext=(0.5, 0.5), textcoords=ax2.transData,
              arrowprops=dict(arrowstyle="->"))
-Artist instance. The xy value (or xytext) is interpreted as a fractional coordinate of the bbox (return value of get_window_extent) of the artist.
+```
 
+2. Artist instance. The xy value (or xytext) is interpreted as a fractional coordinate of the bbox (return value of get_window_extent) of the artist.
+
+```python
 an1 = ax.annotate("Test 1", xy=(0.5, 0.5), xycoords="data",
                   va="center", ha="center",
                   bbox=dict(boxstyle="round", fc="w"))
@@ -292,57 +319,78 @@ an2 = ax.annotate("Test 2", xy=(1, 0.5), xycoords=an1, # (1,0.5) of the an1's bb
                   va="center", ha="left",
                   bbox=dict(boxstyle="round", fc="w"),
                   arrowprops=dict(arrowstyle="->"))
-../../_images/sphx_glr_annotate_simple_coord01_0011.png
-Annotation with Simple Coordinates
+```
+
+![Annotation with Simple Coordinates](/static/images/tutorials/sphx_glr_annotate_simple_coord01_0011.png)
+
+**[Annotation with Simple Coordinates](https://matplotlib.org/gallery/userdemo/annotate_simple_coord01.html)**
 
 Note that it is your responsibility that the extent of the coordinate artist (an1 in above example) is determined before an2 gets drawn. In most cases, it means that an2 needs to be drawn later than an1.
 
-A callable object that returns an instance of either BboxBase or Transform. If a transform is returned, it is the same as 1 and if a bbox is returned, it is the same as 2. The callable object should take a single argument of the renderer instance. For example, the following two commands give identical results
+3. A callable object that returns an instance of either BboxBase or Transform. If a transform is returned, it is the same as 1 and if a bbox is returned, it is the same as 2. The callable object should take a single argument of the renderer instance. For example, the following two commands give identical results
 
+```python
 an2 = ax.annotate("Test 2", xy=(1, 0.5), xycoords=an1,
                   xytext=(30,0), textcoords="offset points")
 an2 = ax.annotate("Test 2", xy=(1, 0.5), xycoords=an1.get_window_extent,
                   xytext=(30,0), textcoords="offset points")
-A tuple of two coordinate specifications. The first item is for the x-coordinate and the second is for the y-coordinate. For example,
+```
 
+4. A tuple of two coordinate specifications. The first item is for the x-coordinate and the second is for the y-coordinate. For example,
+
+```python
 annotate("Test", xy=(0.5, 1), xycoords=("data", "axes fraction"))
+```
+
 0.5 is in data coordinates, and 1 is in normalized axes coordinates. You may use an artist or transform as with a tuple. For example,
 
-../../_images/sphx_glr_annotate_simple_coord02_0011.png
-Annotation with Simple Coordinates 2
+![Annotation with Simple Coordinates 2](/static/images/tutorials/sphx_glr_annotate_simple_coord02_0011.png)
 
-Sometimes, you want your annotation with some "offset points", not from the annotated point but from some other point. OffsetFrom is a helper class for such cases.
+**[Annotation with Simple Coordinates 2]()**
 
-../../_images/sphx_glr_annotate_simple_coord03_0011.png
-Annotation with Simple Coordinates 3
+5. Sometimes, you want your annotation with some "offset points", not from the annotated point but from some other point. OffsetFrom is a helper class for such cases.
+
+![注释示例](/static/images/tutorials/sphx_glr_annotate_simple_coord03_0011.png)
+
+**[Annotation with Simple Coordinates 3](https://matplotlib.org/gallery/userdemo/annotate_simple_coord03.html)**
 
 You may take a look at this example Annotating Plots.
 
-Using ConnectionPatch
+## Using ConnectionPatch
+
 The ConnectionPatch is like an annotation without text. While the annotate function is recommended in most situations, the ConnectionPatch is useful when you want to connect points in different axes.
 
+```python
 from matplotlib.patches import ConnectionPatch
 xy = (0.2, 0.2)
 con = ConnectionPatch(xyA=xy, xyB=xy, coordsA="data", coordsB="data",
                       axesA=ax1, axesB=ax2)
 ax2.add_artist(con)
+```
+
 The above code connects point xy in the data coordinates of ax1 to point xy in the data coordinates of ax2. Here is a simple example.
 
-../../_images/sphx_glr_connect_simple01_0011.png
-Connect Simple01
+![Connect Simple01](/static/images/tutorials/sphx_glr_connect_simple01_0011.png)
+
+**[Connect Simple01](https://matplotlib.org/gallery/userdemo/connect_simple01.html)**
 
 While the ConnectionPatch instance can be added to any axes, you may want to add it to the axes that is latest in drawing order to prevent overlap by other axes.
 
-Advanced Topics
-Zoom effect between Axes
-mpl_toolkits.axes_grid1.inset_locator defines some patch classes useful for interconnecting two axes. Understanding the code requires some knowledge of how mpl's transform works. But, utilizing it will be straight forward.
+### Advanced Topics
 
-../../_images/sphx_glr_axes_zoom_effect_0011.png
-Axes Zoom Effect
+## Zoom effect between Axes
 
-Define Custom BoxStyle
+``mpl_toolkits.axes_grid1.inset_locator`` defines some patch classes useful for interconnecting two axes. Understanding the code requires some knowledge of how mpl's transform works. But, utilizing it will be straight forward.
+
+![Axes Zoom Effect](/static/images/tutorials/sphx_glr_axes_zoom_effect_0011.png)
+
+**[Axes Zoom Effect](https://matplotlib.org/gallery/subplots_axes_and_figures/axes_zoom_effect.html)**
+
+## Define Custom BoxStyle
+
 You can use a custom box style. The value for the boxstyle can be a callable object in the following forms.:
 
+```python
 def __call__(self, x0, y0, width, height, mutation_size,
              aspect_ratio=1.):
     '''
@@ -355,17 +403,23 @@ def __call__(self, x0, y0, width, height, mutation_size,
     '''
     path = ...
     return path
+```
+
 Here is a complete example.
 
-../../_images/sphx_glr_custom_boxstyle01_0011.png
-Custom Boxstyle01
+![Custom Boxstyle01](/static/images/tutorials/sphx_glr_custom_boxstyle01_0011.png)
+
+**[Custom Boxstyle01](https://matplotlib.org/gallery/userdemo/custom_boxstyle01.html)**
 
 However, it is recommended that you derive from the matplotlib.patches.BoxStyle._Base as demonstrated below.
 
-../../_images/sphx_glr_custom_boxstyle02_0011.png
-Custom Boxstyle02
+![Custom Boxstyle02](/static/images/tutorials/sphx_glr_custom_boxstyle02_0011.png)
+
+**[Custom Boxstyle02](https://matplotlib.org/gallery/userdemo/custom_boxstyle02.html)**
 
 Similarly, you can define a custom ConnectionStyle and a custom ArrowStyle. See the source code of lib/matplotlib/patches.py and check how each style class is defined.
 
-Download Python source code: annotations.py
-Download Jupyter notebook: annotations.ipynb
+## 下载本文的所有示例
+
+- [下载python源码: annotations.py](https://matplotlib.org/_downloads/c4ffdc5a5ec4701904e9e7fe39d8defa/annotations.py)
+- [下载Jupyter notebook: annotations.ipynb](https://matplotlib.org/_downloads/2188391ac7210589a47609de0499ae3f/annotations.ipynb)
