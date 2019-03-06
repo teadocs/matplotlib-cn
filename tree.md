@@ -585,7 +585,7 @@
         - [Matplotlib图中的文本](/tutorials/text/text_intro) 
         - [文本属性和布局](/tutorials/text/text_props)
         - [注释](/tutorials/text/annotations)
-        - [编写数学表达式](/tutorials/text/mathtext)
+        - [书写数学表达式](/tutorials/text/mathtext)
         - [XeLaTeX/LuaLaTeX排版](/tutorials/text/pgf)
         - [使用LaTeX进行文本渲染](/tutorials/text/usetex)
     - [matplotlib 工具包](/tutorials/toolkits/index)
