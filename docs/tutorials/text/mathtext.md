@@ -34,3 +34,5 @@ produces "α > β".
 ```
 
 have special meaning outside of math mode in TeX. Therefore, these characters will behave differently depending on the rcParam text.usetex flag. See the [usetex tutorial](https://matplotlib.org/tutorials/text/usetex.html) for more information.
+
+剩余请参看：https://matplotlib.org/tutorials/text/mathtext.html#sphx-glr-tutorials-text-mathtext-py
