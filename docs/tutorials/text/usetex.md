@@ -14,7 +14,7 @@ Matplotlib's LaTeX support requires a working LaTeX installation, dvipng (which 
 
 There are a couple of options to mention, which can be changed using rc settings. Here is an example matplotlibrc file:
 
-```text
+```
 font.family        : serif
 font.serif         : Times, Palatino, New Century Schoolbook, Bookman, Computer Modern Roman
 font.sans-serif    : Helvetica, Avant Garde, Computer Modern Sans serif
