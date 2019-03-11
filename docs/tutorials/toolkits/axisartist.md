@@ -1,58 +1,79 @@
-# Overview of axisartist toolkit
+# axisart工具包概述
 
-The axisartist toolkit tutorial.
+Axisart工具包教程。
 
-Warning
-
-axisartist uses a custom Axes class (derived from the mpl's original Axes class). As a side effect, some commands (mostly tick-related) do not work.
+**Warning:** axisartist uses a custom Axes class (derived from the mpl's original Axes class). As a side effect, some commands (mostly tick-related) do not work.
 
 The axisartist contains a custom Axes class that is meant to support curvilinear grids (e.g., the world coordinate system in astronomy). Unlike mpl's original Axes class which uses Axes.xaxis and Axes.yaxis to draw ticks, ticklines, etc., axisartist uses a special artist (AxisArtist) that can handle ticks, ticklines, etc. for curved coordinate systems.
 
-../../_images/sphx_glr_demo_floating_axis_0011.png
-Demo Floating Axis
+![Demo Floating Axis](/static/images/tutorials/sphx_glr_demo_floating_axis_0011.png)
+
+[Demo Floating Axis](https://matplotlib.org/gallery/axisartist/demo_floating_axis.html)
 
 Since it uses special artists, some Matplotlib commands that work on Axes.xaxis and Axes.yaxis may not work.
 
-axisartist
+## axisartist
+
 The axisartist module provides a custom (and very experimental) Axes class, where each axis (left, right, top, and bottom) have a separate associated artist which is responsible for drawing the axis-line, ticks, ticklabels, and labels. You can also create your own axis, which can pass through a fixed position in the axes coordinate, or a fixed position in the data coordinate (i.e., the axis floats around when viewlimit changes).
 
 The axes class, by default, has its xaxis and yaxis invisible, and has 4 additional artists which are responsible for drawing the 4 axis spines in "left", "right", "bottom", and "top". They are accessed as ax.axis["left"], ax.axis["right"], and so on, i.e., ax.axis is a dictionary that contains artists (note that ax.axis is still a callable method and it behaves as an original Axes.axis method in Matplotlib).
 
 To create an axes,
 
+```python
 import mpl_toolkits.axisartist as AA
 fig = plt.figure(1)
 ax = AA.Axes(fig, [0.1, 0.1, 0.8, 0.8])
 fig.add_axes(ax)
+```
+
 or to create a subplot
 
+```python
 ax = AA.Subplot(fig, 111)
 fig.add_subplot(ax)
+```
+
 For example, you can hide the right and top spines using:
 
+```python
 ax.axis["right"].set_visible(False)
 ax.axis["top"].set_visible(False)
-../../_images/sphx_glr_simple_axisline3_0011.png
-Simple Axisline3
+```
+
+![Simple Axisline3](/static/images/tutorials/sphx_glr_simple_axisline3_0011.png)
+
+[Simple Axisline3](https://matplotlib.org/gallery/axisartist/simple_axisline3.html)
 
 It is also possible to add a horizontal axis. For example, you may have an horizontal axis at y=0 (in data coordinate).
 
+```python
 ax.axis["y=0"] = ax.new_floating_axis(nth_coord=0, value=0)
-../../_images/sphx_glr_simple_axisartist1_0011.png
-Simple Axisartist1
+```
+
+![Simple Axisartist1](/static/images/tutorials/sphx_glr_simple_axisartist1_0011.png)
+
+[Simple Axisartist1](https://matplotlib.org/gallery/axisartist/simple_axisartist1.html)
 
 Or a fixed axis with some offset
 
+```python
 # make new (right-side) yaxis, but with some offset
 ax.axis["right2"] = ax.new_fixed_axis(loc="right",
               offset=(20, 0))
-axisartist with ParasiteAxes
+```
+
+### axisartist with ParasiteAxes
+
 Most commands in the axes_grid1 toolkit can take an axes_class keyword argument, and the commands create an axes of the given class. For example, to create a host subplot with axisartist.Axes,
 
+```python
 import mpl_toolkits.axisartist as AA
 from mpl_toolkits.axes_grid1 import host_subplot
 
 host = host_subplot(111, axes_class=AA.Axes)
+```
+
 Here is an example that uses ParasiteAxes.
 
 ../../_images/sphx_glr_demo_parasite_axes2_0011.png
