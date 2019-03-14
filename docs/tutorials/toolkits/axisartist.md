@@ -266,97 +266,131 @@ You must understand some underlying concept of directions.
 
 1. There is a reference direction which is defined as the direction of the axis line with increasing coordinate. For example, the reference direction of the left x-axis is from bottom to top.
 
-../../_images/sphx_glr_axis_direction_demo_step01_0011.png
-Axis Direction Demo - Step 01
+![Axis Direction Demo - Step 01](/static/images/tutorials/sphx_glr_axis_direction_demo_step01_0011.png)
+
+[Axis Direction Demo - Step 01](https://matplotlib.org/gallery/axisartist/axis_direction_demo_step01.html)
 
 The direction, text angle, and alignments of the ticks, ticklabels and axis-label is determined with respect to the reference direction
-ticklabel_direction is either the right-hand side (+) of the reference direction or the left-hand side (-).
 
-../../_images/sphx_glr_axis_direction_demo_step02_0011.png
-Axis Direction Demo - Step 02
+2. ticklabel_direction is either the right-hand side (+) of the reference direction or the left-hand side (-).
 
-same for the label_direction
+![Axis Direction Demo - Step 02](/static/images/tutorials/sphx_glr_axis_direction_demo_step02_0011.png)
 
-../../_images/sphx_glr_axis_direction_demo_step03_0011.png
-Axis Direction Demo - Step 03
+[Axis Direction Demo - Step 02](https://matplotlib.org/gallery/axisartist/axis_direction_demo_step02.html)
 
-ticks are by default drawn toward the opposite direction of the ticklabels.
+3. same for the label_direction
 
-text rotation of ticklabels and label is determined in reference to the ticklabel_direction or label_direction, respectively. The rotation of ticklabels and label is anchored.
+![Axis Direction Demo - Step 03](/static/images/tutorials/sphx_glr_axis_direction_demo_step03_0011.png)
 
-../../_images/sphx_glr_axis_direction_demo_step04_0011.png
-Axis Direction Demo - Step 04
+[Axis Direction Demo - Step 03](https://matplotlib.org/gallery/axisartist/axis_direction_demo_step03.html)
+
+4. ticks are by default drawn toward the opposite direction of the ticklabels.
+
+5. text rotation of ticklabels and label is determined in reference to the ticklabel_direction or label_direction, respectively. The rotation of ticklabels and label is anchored.
+
+![Axis Direction Demo - Step 04](/static/images/tutorials/sphx_glr_axis_direction_demo_step04_0011.png)
+
+[Axis Direction Demo - Step 04](https://matplotlib.org/gallery/axisartist/axis_direction_demo_step04.html)
 
 On the other hand, there is a concept of "axis_direction". This is a default setting of above properties for each, "bottom", "left", "top", and "right" axis.
 
-?	?	left	bottom	right	top
-axislabel	direction	'-'	'+'	'+'	'-'
-axislabel	rotation	180	0	0	180
-axislabel	va	center	top	center	bottom
-axislabel	ha	right	center	right	center
-ticklabel	direction	'-'	'+'	'+'	'-'
-ticklabels	rotation	90	0	-90	180
-ticklabel	ha	right	center	right	center
-ticklabel	va	center	baseline	center	baseline
+? | ? | left | bottom | right | top
+---|---|---|---|---|---
+axislabel | direction | '-' | '+' | '+' | '-'
+axislabel | rotation | 180 | 0 | 0 | 180
+axislabel | va | center | top | center | bottom
+axislabel | ha | right | center | right | center
+ticklabel | direction | '-' | '+' | '+' | '-'
+ticklabels | rotation | 90 | 0 | -90 | 180
+ticklabel | ha | right | center | right | center
+ticklabel | va | center | baseline | center | baseline
+
 And, 'set_axis_direction("top")' means to adjust the text rotation etc, for settings suitable for "top" axis. The concept of axis direction can be more clear with curved axis.
 
-../../_images/sphx_glr_demo_axis_direction_0011.png
-Demo Axis Direction
+![Demo Axis Direction](/static/images/tutorials/sphx_glr_demo_axis_direction_0011.png)
+
+[Demo Axis Direction](https://matplotlib.org/gallery/axisartist/demo_axis_direction.html)
 
 The axis_direction can be adjusted in the AxisArtist level, or in the level of its child arists, i.e., ticks, ticklabels, and axis-label.
 
+```python
 ax1.axis["left"].set_axis_direction("top")
+```
+
 changes axis_direction of all the associated artist with the "left" axis, while
 
+```python
 ax1.axis["left"].major_ticklabels.set_axis_direction("top")
+```
+
 changes the axis_direction of only the major_ticklabels. Note that set_axis_direction in the AxisArtist level changes the ticklabel_direction and label_direction, while changing the axis_direction of ticks, ticklabels, and axis-label does not affect them.
 
 If you want to make ticks outward and ticklabels inside the axes, use invert_ticklabel_direction method.
 
+```python
 ax.axis[:].invert_ticklabel_direction()
+```
+
 A related method is "set_tick_out". It makes ticks outward (as a matter of fact, it makes ticks toward the opposite direction of the default direction).
 
+```python
 ax.axis[:].major_ticks.set_tick_out(True)
-../../_images/sphx_glr_simple_axis_direction03_0011.png
-Simple Axis Direction03
+```
+
+![Simple Axis Direction03](/static/images/tutorials/sphx_glr_simple_axis_direction03_0011.png)
+
+[Simple Axis Direction03](https://matplotlib.org/gallery/axisartist/simple_axis_direction03.html)
 
 So, in summary,
 
-AxisArtist's methods
-set_axis_direction : "left", "right", "bottom", or "top"
-set_ticklabel_direction : "+" or "-"
-set_axislabel_direction : "+" or "-"
-invert_ticklabel_direction
-Ticks' methods (major_ticks and minor_ticks)
-set_tick_out : True or False
-set_ticksize : size in points
-TickLabels' methods (major_ticklabels and minor_ticklabels)
-set_axis_direction : "left", "right", "bottom", or "top"
-set_rotation : angle with respect to the reference direction
-set_ha and set_va : see below
-AxisLabels' methods (label)
-set_axis_direction : "left", "right", "bottom", or "top"
-set_rotation : angle with respect to the reference direction
-set_ha and set_va
-Adjusting ticklabels alignment
+- AxisArtist's methods
+  - set_axis_direction : "left", "right", "bottom", or "top"
+  - set_ticklabel_direction : "+" or "-"
+  - set_axislabel_direction : "+" or "-"
+  - invert_ticklabel_direction
+- Ticks' methods (major_ticks and minor_ticks)
+  - set_tick_out : True or False
+  - set_ticksize : size in points
+- TickLabels' methods (major_ticklabels and minor_ticklabels)
+  - set_axis_direction : "left", "right", "bottom", or "top"
+  - set_rotation : angle with respect to the reference direction
+  - set_ha and set_va : see below
+- AxisLabels' methods (label)
+  - set_axis_direction : "left", "right", "bottom", or "top"
+  - set_rotation : angle with respect to the reference direction
+  - set_ha and set_va
+
+### Adjusting ticklabels alignment
+
 Alignment of TickLabels are treated specially. See below
 
-../../_images/sphx_glr_demo_ticklabel_alignment_0011.png
-Demo Ticklabel Alignment
+![Demo Ticklabel Alignment](/static/images/tutorials/sphx_glr_demo_ticklabel_alignment_0011.png)
 
-Adjusting pad
+[Demo Ticklabel Alignment](https://matplotlib.org/gallery/axisartist/demo_ticklabel_alignment.html)
+
+### Adjusting pad
+
 To change the pad between ticks and ticklabels
 
+```python
 ax.axis["left"].major_ticklabels.set_pad(10)
+```
+
 Or ticklabels and axis-label
 
+```python
 ax.axis["left"].label.set_pad(10)
-../../_images/sphx_glr_simple_axis_pad_0011.png
-Simple Axis Pad
+```
 
-GridHelper
+![Simple Axis Pad](/static/images/tutorials/sphx_glr_simple_axis_pad_0011.png)
+
+[Simple Axis Pad](https://matplotlib.org/gallery/axisartist/simple_axis_pad.html)
+
+## GridHelper
+
 To actually define a curvilinear coordinate, you have to use your own grid helper. A generalised version of grid helper class is supplied and this class should suffice in most of cases. A user may provide two functions which defines a transformation (and its inverse pair) from the curved coordinate to (rectilinear) image coordinate. Note that while ticks and grids are drawn for curved coordinate, the data transform of the axes itself (ax.transData) is still rectilinear (image) coordinate.
 
+```python
 from mpl_toolkits.axisartist.grid_helper_curvelinear \
      import GridHelperCurveLinear
 from mpl_toolkits.axisartist import Subplot
@@ -376,8 +410,11 @@ grid_helper = GridHelperCurveLinear((tr, inv_tr))
 ax1 = Subplot(fig, 1, 1, 1, grid_helper=grid_helper)
 
 fig.add_subplot(ax1)
+```
+
 You may use matplotlib's Transform instance instead (but a inverse transformation must be defined). Often, coordinate range in a curved coordinate system may have a limited range, or may have cycles. In those cases, a more customized version of grid helper is required.
 
+```python
 import mpl_toolkits.axisartist.angle_helper as angle_helper
 
 # PolarAxes.PolarTransform takes radian. However, we want our coordinate
@@ -411,8 +448,11 @@ grid_helper = GridHelperCurveLinear(tr,
                                     grid_locator1=grid_locator1,
                                     tick_formatter1=tick_formatter1
                                     )
+```
+
 Again, the transData of the axes is still a rectilinear coordinate (image coordinate). You may manually do conversion between two coordinates, or you may use Parasite Axes for convenience.:
 
+```python
 ax1 = SubplotHost(fig, 1, 2, 2, grid_helper=grid_helper)
 
 # A parasite axes with given transform
@@ -420,25 +460,36 @@ ax2 = ParasiteAxesAuxTrans(ax1, tr, "equal")
 # note that ax2.transData == tr + ax1.transData
 # Anthing you draw in ax2 will match the ticks and grids of ax1.
 ax1.parasites.append(ax2)
-../../_images/sphx_glr_demo_curvelinear_grid_0012.png
-Demo Curvelinear Grid
+```
 
-FloatingAxis
+![Demo Curvelinear Grid](/static/images/tutorials/sphx_glr_demo_curvelinear_grid_0012.png)
+
+[Demo Curvelinear Grid](https://matplotlib.org/gallery/axisartist/demo_curvelinear_grid.html)
+
+## FloatingAxis
+
 A floating axis is an axis one of whose data coordinate is fixed, i.e, its location is not fixed in Axes coordinate but changes as axes data limits changes. A floating axis can be created using new_floating_axis method. However, it is your responsibility that the resulting AxisArtist is properly added to the axes. A recommended way is to add it as an item of Axes's axis attribute.:
 
+```python
 # floating axis whose first (index starts from 0) coordinate
 # (theta) is fixed at 60
 
 ax1.axis["lat"] = axis = ax1.new_floating_axis(0, 60)
 axis.label.set_text(r"$\theta = 60^{\circ}$")
 axis.label.set_visible(True)
+```
+
 See the first example of this page.
 
-Current Limitations and TODO's
+## Current Limitations and TODO's
+
 The code need more refinement. Here is a incomplete list of issues and TODO's
 
-No easy way to support a user customized tick location (for curvilinear grid). A new Locator class needs to be created.
-FloatingAxis may have coordinate limits, e.g., a floating axis of x = 0, but y only spans from 0 to 1.
-The location of axislabel of FloatingAxis needs to be optionally given as a coordinate value. ex, a floating axis of x=0 with label at y=1
-Download Python source code: axisartist.py
-Download Jupyter notebook: axisartist.ipynb
+- No easy way to support a user customized tick location (for curvilinear grid). A new Locator class needs to be created.
+- FloatingAxis may have coordinate limits, e.g., a floating axis of x = 0, but y only spans from 0 to 1.
+- The location of axislabel of FloatingAxis needs to be optionally given as a coordinate value. ex, a floating axis of x=0 with label at y=1
+
+## 下载本文的所有示例
+
+- [下载python源码: axisartist.py](https://matplotlib.org/_downloads/bfdd4a9d03b8cd591117eab7d9e3bb0d/axisartist.py)
+- [下载Jupyter notebook: axisartist.ipynb](https://matplotlib.org/_downloads/6864c692b37e2cb068cfdea4555cb213/axisartist.ipynb)
