@@ -582,7 +582,7 @@
         - [色彩映射规范化](/tutorials/colors/colormapnorms)
         - [在Matplotlib中选择色彩映射](/tutorials/colors/colormaps)
     - [matplotlib 文本](/tutorials/text/index)
-        - [Matplotlib图中的文本](/tutorials/text/text_intro) 
+        - [Matplotlib图中的文本](/tutorials/text/text_intro)
         - [文本属性和布局](/tutorials/text/text_props)
         - [注释](/tutorials/text/annotations)
         - [书写数学表达式](/tutorials/text/mathtext)
