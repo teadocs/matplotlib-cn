@@ -91,3 +91,34 @@ The marker size in points**2. Either an array of the same length as xs and ys or
 
 - paths : PathCollection
 
+![Scatter3d](/static/images/tutorials/sphx_glr_scatter3d_0011.png)
+
+[Scatter3d](https://matplotlib.org/gallery/mplot3d/scatter3d.html)
+
+### Wireframe plots
+
+[source](https://matplotlib.org/_modules/mpl_toolkits/mplot3d/axes3d.html#Axes3D.plot_wireframe)
+
+```python
+Axes3D.plot_wireframe(X, Y, Z, *args, **kwargs)
+```
+
+**note:** The rcount and ccount kwargs, which both default to 50, determine the maximum number of samples used in each direction. If the input data is larger, it will be downsampled (by slicing) to these numbers of points.
+
+#### Parameters:
+
+- X, Y, Z : 2d arrays. 
+    Data values.
+- rcount, ccount : int. 
+    Maximum number of samples used in each direction. If the input data is larger, it will be downsampled (by slicing) to these numbers of points. Setting a count to zero causes the data to be not sampled in the corresponding direction, producing a 3D line plot rather than a wireframe plot. Defaults to 50.
+    New in version 2.0.
+- rstride, cstride : int
+    Downsampling stride in each direction. These arguments are mutually exclusive with rcount and ccount. If only one of rstride or cstride is set, the other defaults to 1. Setting a stride to zero causes the data to be not sampled in the corresponding direction, producing a 3D line plot rather than a wireframe plot.
+
+    'classic' mode uses a default of rstride = cstride = 1 instead of the new default of rcount = ccount = 50.
+- **kwargs :
+    Other arguments are forwarded to Line3DCollection.
+
+![Wire3d](/static/images/tutorials/sphx_glr_wire3d_0011.png)
+
+[Wire3d](https://matplotlib.org/gallery/mplot3d/wire3d.html)
