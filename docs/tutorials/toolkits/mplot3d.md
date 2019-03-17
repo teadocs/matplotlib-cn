@@ -122,3 +122,48 @@ Axes3D.plot_wireframe(X, Y, Z, *args, **kwargs)
 ![Wire3d](/static/images/tutorials/sphx_glr_wire3d_0011.png)
 
 [Wire3d](https://matplotlib.org/gallery/mplot3d/wire3d.html)
+
+### Surface plots
+
+Create a surface plot.
+
+By default it will be colored in shades of a solid color, but it also supports color mapping by supplying the cmap argument.
+
+[source](https://matplotlib.org/_modules/mpl_toolkits/mplot3d/axes3d.html#Axes3D.plot_surface)
+
+```python
+Axes3D.plot_surface(X, Y, Z, *args, norm=None, vmin=None, vmax=None, lightsource=None, **kwargs)
+```
+
+**Note:** The rcount and ccount kwargs, which both default to 50, determine the maximum number of samples used in each direction. If the input data is larger, it will be downsampled (by slicing) to these numbers of points.
+
+#### Parameters:	
+
+- X, Y, Z : 2d arrays.
+    Data values.
+- rcount, ccount : int
+    Maximum number of samples used in each direction. If the input data is larger, it will be downsampled (by slicing) to these numbers of points. Defaults to 50.
+
+    New in version 2.0.
+- rstride, cstride : int
+    Downsampling stride in each direction. These arguments are mutually exclusive with rcount and ccount. If only one of rstride or cstride is set, the other defaults to 10.
+
+    'classic' mode uses a default of rstride = cstride = 10 instead of the new default of rcount = ccount = 50.
+- color : color-like
+    Color of the surface patches.
+- cmap : Colormap
+    Colormap of the surface patches.
+- facecolors : array-like of colors.
+    Colors of each individual patch.
+- norm : Normalize
+    Normalization for the colormap.
+- vmin, vmax : float
+    Bounds for the normalization.
+- shade : bool
+    Whether to shade the face colors.
+- **kwargs :
+    Other arguments are forwarded to Poly3DCollection.
+
+![Surface3d](/static/images/tutorials/sphx_glr_surface3d_0012.png)
+
+[Surface3d](https://matplotlib.org/gallery/mplot3d/surface3d.html)
