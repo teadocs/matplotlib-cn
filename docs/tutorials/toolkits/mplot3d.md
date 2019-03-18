@@ -69,7 +69,7 @@ Axes3D.scatter(xs, ys, zs=0, zdir='z', s=20, c=None, depthshade=True, *args, **k
 
 Create a scatter plot.
 
-#### Parameters:	
+#### Parameters: | 
 
 - xs, ys : array-like The data positions.
 - zs : float or array-like, optional, default: 0 The z-positions. Either an array of the same length as xs and ys or a single value to place all points in the same plane.
@@ -87,7 +87,7 @@ The marker size in points**2. Either an array of the same length as xs and ys or
 - depthshade : bool, optional, default: True. Whether to shade the scatter markers to give the appearance of depth.
 - **kwargs. All other arguments are passed on to scatter.
 
-#### Returns:	
+#### Returns: | 
 
 - paths : PathCollection
 
@@ -137,7 +137,7 @@ Axes3D.plot_surface(X, Y, Z, *args, norm=None, vmin=None, vmax=None, lightsource
 
 **Note:** The rcount and ccount kwargs, which both default to 50, determine the maximum number of samples used in each direction. If the input data is larger, it will be downsampled (by slicing) to these numbers of points.
 
-#### Parameters:	
+#### Parameters: | 
 
 - X, Y, Z : 2d arrays.
     Data values.
@@ -167,3 +167,63 @@ Axes3D.plot_surface(X, Y, Z, *args, norm=None, vmin=None, vmax=None, lightsource
 ![Surface3d](/static/images/tutorials/sphx_glr_surface3d_0012.png)
 
 [Surface3d](https://matplotlib.org/gallery/mplot3d/surface3d.html)
+
+### Tri-Surface plots
+
+[source](https://matplotlib.org/_modules/mpl_toolkits/mplot3d/axes3d.html#Axes3D.plot_trisurf)
+
+```python
+Axes3D.plot_trisurf(*args, color=None, norm=None, vmin=None, vmax=None, lightsource=None, **kwargs)
+```
+
+Argument | Description
+---|---
+X, Y, Z | Data values as 1D arrays
+color | Color of the surface patches
+cmap | A colormap for the surface patches.
+norm | An instance of Normalize to map values to colors
+vmin | Minimum value to map
+vmax | Maximum value to map
+shade | Whether to shade the facecolors
+
+The (optional) triangulation can be specified in one of two ways; either:
+
+```python
+plot_trisurf(triangulation, ...)
+```
+
+where triangulation is a Triangulation object, or:
+
+```python
+plot_trisurf(X, Y, ...)
+plot_trisurf(X, Y, triangles, ...)
+plot_trisurf(X, Y, triangles=triangles, ...)
+```
+
+in which case a Triangulation object will be created. See Triangulation for a explanation of these possibilities.
+
+The remaining arguments are:
+
+```python
+plot_trisurf(..., Z)
+```
+
+where Z is the array of values to contour, one per point in the triangulation.
+
+Other arguments are passed on to Poly3DCollection
+
+**Examples**:
+
+(Source code, png, pdf)
+
+![trisurf3d](/static/images/tutorials/trisurf3d.png)
+
+
+![trisurf3d_2](/static/images/tutorials/trisurf3d_2.png)
+
+New in version 1.2.0: This plotting function was added for the v1.2.0 release.
+
+![Trisurf3d](/static/images/tutorials/sphx_glr_trisurf3d_0011.png)
+
+[Trisurf3d](https://matplotlib.org/gallery/mplot3d/trisurf3d.html)
+
