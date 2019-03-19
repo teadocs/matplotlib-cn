@@ -227,3 +227,30 @@ New in version 1.2.0: This plotting function was added for the v1.2.0 release.
 
 [Trisurf3d](https://matplotlib.org/gallery/mplot3d/trisurf3d.html)
 
+### Contour plots
+
+Create a 3D contour plot.
+
+[source](https://matplotlib.org/_modules/mpl_toolkits/mplot3d/axes3d.html#Axes3D.contour)
+
+```python
+Axes3D.contour(X, Y, Z, *args, extend3d=False, stride=5, zdir='z', offset=None, **kwargs)
+```
+
+Argument | Description
+---|---
+X, Y, | Data values as numpy.arrays
+Z |  
+extend3d | Whether to extend contour in 3D (default: False)
+stride | Stride (step size) for extending contour
+zdir | The direction to use: x, y or z (default)
+offset | If specified plot a projection of the contour lines on this position in plane normal to zdir
+
+The positional and other keyword arguments are passed on to contour()
+
+Returns a contour
+
+![Contour3d](/static/images/tutorials/sphx_glr_trisurf3d_0011.png)
+
+[Contour3d](https://matplotlib.org/gallery/mplot3d/contour3d.html)
+
