@@ -237,11 +237,10 @@ Create a 3D contour plot.
 Axes3D.contour(X, Y, Z, *args, extend3d=False, stride=5, zdir='z', offset=None, **kwargs)
 ```
 
-
 Argument | Description
 ---|---
 X, Y, | Data values as numpy.arrays
-Z | 
+Z |  
 extend3d | Whether to extend contour in 3D (default: False)
 stride | Stride (step size) for extending contour
 zdir | The direction to use: x, y or z (default)
@@ -251,8 +250,31 @@ The positional and other keyword arguments are passed on to contour()
 
 Returns a contour
 
-
-![Contour3d](/static/images/tutorials/sphx_glr_contour3d_001.png)
+![Contour3d](/static/images/tutorials/sphx_glr_trisurf3d_0011.png)
 
 [Contour3d](https://matplotlib.org/gallery/mplot3d/contour3d.html)
 
+### Filled contour plots
+
+Create a 3D contourf plot.
+
+[source](https://matplotlib.org/_modules/mpl_toolkits/mplot3d/axes3d.html#Axes3D.contourf)
+
+```python
+Axes3D.contourf(X, Y, Z, *args, zdir='z', offset=None, **kwargs)
+```
+
+Argument | Description
+---|---
+X, Y, | Data values as numpy.arrays
+Z |  
+zdir | The direction to use: x, y or z (default)
+offset | If specified plot a projection of the filled contour on this position in plane normal to zdir
+
+Changed in version 1.1.0: The zdir and offset kwargs were added.
+
+![Contourf3d](/static/images/tutorials/sphx_glr_contourf3d_001.png)
+
+[Contourf3d](https://matplotlib.org/_images/sphx_glr_contourf3d_001.png)
+
+New in version 1.1.0: The feature demoed in the second contourf3d example was enabled as a result of a bugfix for version 1.1.0.
