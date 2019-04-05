@@ -70,18 +70,18 @@ plt.show()
 
 ![图例指南示例2](/static/images/tutorials/sphx_glr_legend_guide_002.png)
 
-## Legend location
+## 图例位置
 
-The location of the legend can be specified by the keyword argument loc. Please see the documentation at [legend()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend) for more details.
+可以通过关键字参数loc指定图例的位置。有关更多详细信息，请参见[legend()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend)上的文档。
 
-The ``bbox_to_anchor`` keyword gives a great degree of control for manual legend placement. For example, if you want your axes legend located at the figure's top right-hand corner instead of the axes' corner, simply specify the corner's location, and the coordinate system of that location:
+``bbox_to_anchor`` 关键字为手动图例放置提供了很大程度的控制。 例如，如果您希望轴图例位于图的右上角而不是轴的角，只需指定角的位置以及该位置的坐标系：
 
 ```python
 plt.legend(bbox_to_anchor=(1, 1),
            bbox_transform=plt.gcf().transFigure)
 ```
 
-More examples of custom legend placement:
+自定义图例展示的更多示例：
 
 ```python
 plt.subplot(211)
@@ -128,18 +128,18 @@ plt.show()
 
 ## 图例处理程序
 
-In order to create legend entries, handles are given as an argument to an appropriate HandlerBase subclass. The choice of handler subclass is determined by the following rules:
+为了创建图例条目，句柄作为适当的HandlerBase子类的参数给出。处理程序子类的选择由以下规则确定：
 
-1. Update get_legend_handler_map() with the value in the handler_map keyword.
-1. Check if the handle is in the newly created handler_map.
-1. Check if the type of handle is in the newly created handler_map.
-1. Check if any of the types in the handle's mro is in the newly created handler_map.
+1. 使用handler_map关键字中的值更新get_legend_handler_map()。
+1. 检查句柄是否在新创建的handler_map中。
+1. 检查句柄的类型是否在新创建的handler_map中。
+1. 检查句柄的mro中的任何类型是否在新创建的handler_map中。
 
-For completeness, this logic is mostly implemented in get_legend_handler().
+为了完整起见，此逻辑主要在get_legend_handler()中实现。
 
-All of this flexibility means that we have the necessary hooks to implement custom handlers for our own type of legend key.
+所有这些灵活性意味着我们拥有必要的钩子来为我们自己的图例键实现自定义处理程序。
 
-The simplest example of using custom handlers is to instantiate one of the existing HandlerBase subclasses. For the sake of simplicity, let's choose matplotlib.legend_handler.HandlerLine2D which accepts a numpoints argument (note numpoints is a keyword on the legend() function for convenience). We can then pass the mapping of instance to Handler as a keyword to legend.
+使用自定义处理程序的最简单示例是实例化一个现有的HandlerBase子类。为简单起见，让我们选择接受numpoints参数的matplotlib.legend_handler.HandlerLine2D（为方便起见，注意numpoints是legend()函数的关键字）。然后，我们可以将实例的映射作为关键字传递给Handler。
 
 ```python
 from matplotlib.legend_handler import HandlerLine2D
@@ -152,9 +152,9 @@ plt.legend(handler_map={line1: HandlerLine2D(numpoints=4)})
 
 ![图例指南示例5](/static/images/tutorials/sphx_glr_legend_guide_005.png)
 
-As you can see, "Line 1" now has 4 marker points, where "Line 2" has 2 (the default). Try the above code, only change the map's key from line1 to type(line1). Notice how now both Line2D instances get 4 markers.
+如您所见，“Line 1”现在有4个标记点，其中“Line 2”有2个（默认值）。 尝试上面的代码，只将map的键从line1更改为type（line1）。注意现在两个Line2D实例如何获得4个标记。
 
-Along with handlers for complex plot types such as errorbars, stem plots and histograms, the default handler_map has a special tuple handler (HandlerTuple) which simply plots the handles on top of one another for each item in the given tuple. The following example demonstrates combining two legend keys on top of one another:
+除了处理复杂绘图类型（如误差条形图，词干图和直方图）的处理程序外，默认的handler_map还有一个特殊的元组处理程序（HandlerTuple），它只是为给定元组中的每个项目绘制彼此重叠的句柄。以下示例演示了将两个图例键组合在一起：
 
 ```python
 from numpy.random import randn
@@ -170,7 +170,7 @@ plt.legend([red_dot, (red_dot, white_cross)], ["Attr A", "Attr A+B"])
 
 ![图例指南示例6](/static/images/tutorials/sphx_glr_legend_guide_006.png)
 
-The HandlerTuple class can also be used to assign several legend keys to the same entry:
+HandlerTuple类还可用于将多个图例键分配给同一条目：
 
 ```python
 from matplotlib.legend_handler import HandlerLine2D, HandlerTuple
@@ -184,9 +184,9 @@ l = plt.legend([(p1, p2)], ['Two keys'], numpoints=1,
 
 ![图例指南示例7](/static/images/tutorials/sphx_glr_legend_guide_007.png)
 
-### Implementing a custom legend handler
+### 实现自定义图例处理程序
 
-A custom handler can be implemented to turn any handle into a legend key (handles don't necessarily need to be matplotlib artists). The handler must implement a "legend_artist" method which returns a single artist for the legend to use. Signature details about the "legend_artist" are documented at legend_artist().
+可以实现自定义处理程序将任何句柄转换为图例键（句柄不一定需要是matplotlib艺术家对象）。处理程序必须实现“legend_artist”方法，该方法返回单个艺术家以供图例使用。 有关“legend_artist”的签名详细信息记录在legend_artist()中。
 
 ```python
 import matplotlib.patches as mpatches
@@ -213,14 +213,14 @@ plt.legend([AnyObject()], ['My first handler'],
 
 ![图例指南示例8](/static/images/tutorials/sphx_glr_legend_guide_008.png)
 
-Alternatively, had we wanted to globally accept AnyObject instances without needing to manually set the handler_map keyword all the time, we could have registered the new handler with:
+或者，如果我们想要全局接受AnyObject实例而不需要一直手动设置handler_map关键字，我们可以使用以下命令注册新的处理程序：
 
 ```python
 from matplotlib.legend import Legend
 Legend.update_default_handler_map({AnyObject: AnyObjectHandler()})
 ```
 
-Whilst the power here is clear, remember that there are already many handlers implemented and what you want to achieve may already be easily possible with existing classes. For example, to produce elliptical legend keys, rather than rectangular ones:
+虽然这里的功能很明确，但请记住，已经实现了许多处理程序，并且现有类可能已经很容易实现您想要实现的功能。例如，要生成椭圆图例键，而不是矩形图例：
 
 ```python
 from matplotlib.legend_handler import HandlerPatch
