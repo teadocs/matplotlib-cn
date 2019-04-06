@@ -273,8 +273,29 @@ offset | If specified plot a projection of the filled contour on this position i
 
 Changed in version 1.1.0: The zdir and offset kwargs were added.
 
-![Contourf3d](/static/images/tutorials/sphx_glr_contourf3d_001.png)
+![Contourf3d](/static/images/tutorials/sphx_glr_contourf3d_0011.png)
 
-[Contourf3d](https://matplotlib.org/_images/sphx_glr_contourf3d_001.png)
+[Contourf3d](https://matplotlib.org/gallery/mplot3d/contourf3d.html)
 
 New in version 1.1.0: The feature demoed in the second contourf3d example was enabled as a result of a bugfix for version 1.1.0.
+
+### Polygon plots
+
+Add a 3D collection object to the plot.
+
+2D collection types are converted to a 3D version by modifying the object and adding z coordinate information.
+
+Supported are:
+
+- PolyCollection
+- LineCollection
+- PatchCollection
+
+```python
+Axes3D.add_collection3d(col, zs=0, zdir='z')
+```
+
+![Polys3d](/static/images/tutorials/sphx_glr_polys3d_0011.png)
+
+[Polys3d](https://matplotlib.org/gallery/mplot3d/polys3d.html)
+

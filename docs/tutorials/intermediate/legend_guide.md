@@ -40,9 +40,9 @@ plt.legend([line_up, line_down], ['Line Up', 'Line Down'])
 
 ## 创建专门用于添加到图例的artists（也叫 Proxy artists）
 
-Not all handles can be turned into legend entries automatically, so it is often necessary to create an artist which can. Legend handles don't have to exists on the Figure or Axes in order to be used.
+并非所有句柄都可以自动转换为图例条目，因此通常需要创建一个可以的艺术家对象。图或轴上不必存在图例句柄以便使用。
 
-Suppose we wanted to create a legend which has an entry for some data which is represented by a red color:
+假设我们想要创建一个图例，其中包含一些由红色表示的数据条目：
 
 ```python
 import matplotlib.patches as mpatches
