@@ -299,3 +299,28 @@ Axes3D.add_collection3d(col, zs=0, zdir='z')
 
 [Polys3d](https://matplotlib.org/gallery/mplot3d/polys3d.html)
 
+
+### Bar plots
+
+Add 2D bar(s).
+
+[source](https://matplotlib.org/_modules/mpl_toolkits/mplot3d/axes3d.html#Axes3D.bar)
+
+```python
+Axes3D.bar(left, height, zs=0, zdir='z', *args, **kwargs)
+```
+
+Argument | Description
+---|---
+left | The x coordinates of the left sides of the bars.
+height | The height of the bars.
+zs | Z coordinate of bars, if one value is specified they will all be placed at the same z.
+zdir | Which direction to use as z ('x', 'y' or 'z') when plotting a 2D set.
+
+Keyword arguments are passed onto [bar()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.bar.html#matplotlib.axes.Axes.bar).
+
+Returns a [Patch3DCollection](https://matplotlib.org/api/_as_gen/mpl_toolkits.mplot3d.art3d.Patch3DCollection.html#mpl_toolkits.mplot3d.art3d.Patch3DCollection)
+
+![Bars3d](/static/images/tutorials/sphx_glr_bars3d_0011.png)
+
+[Bars3d](https://matplotlib.org/gallery/mplot3d/bars3d.html)
