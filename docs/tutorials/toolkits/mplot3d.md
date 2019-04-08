@@ -324,3 +324,41 @@ Returns a [Patch3DCollection](https://matplotlib.org/api/_as_gen/mpl_toolkits.mp
 ![Bars3d](/static/images/tutorials/sphx_glr_bars3d_0011.png)
 
 [Bars3d](https://matplotlib.org/gallery/mplot3d/bars3d.html)
+
+### Quiver
+
+Plot a 3D field of arrows.
+
+call signatures:
+
+[source](https://matplotlib.org/_modules/mpl_toolkits/mplot3d/axes3d.html#Axes3D.quiver)
+
+```python
+Axes3D.quiver(*args, length=1, arrow_length_ratio=0.3, pivot='tail', normalize=False, **kwargs)
+```
+
+- Arguments:
+    - X, Y, Z:
+        - The x, y and z coordinates of the arrow locations (default is tail of arrow; see pivot kwarg)
+    - U, V, W:
+        - The x, y and z components of the arrow vectors
+
+The arguments could be array-like or scalars, so long as they they can be broadcast together. The arguments can also be masked arrays. If an element in any of argument is masked, then that corresponding quiver element will not be plotted.
+
+Keyword arguments:
+
+- length: [1.0 | float]
+    - The length of each quiver, default to 1.0, the unit is the same with the axes
+
+- arrow_length_ratio: [0.3 | float]
+    - The ratio of the arrow head with respect to the quiver, default to 0.3
+- pivot: [ 'tail' | 'middle' | 'tip' ]
+    - The part of the arrow that is at the grid point; the arrow rotates about this point, hence the name pivot. Default is 'tail'
+- normalize: bool
+    - When True, all of the arrows will be the same length. This defaults to False, where the arrows will be different lengths depending on the values of u,v,w.
+
+Any additional keyword arguments are delegated to [LineCollection](https://matplotlib.org/api/collections_api.html#matplotlib.collections.LineCollection)
+
+![Quiver3d](/static/images/tutorials/sphx_glr_quiver3d_0011.png)
+
+[Quiver3d](https://matplotlib.org/gallery/mplot3d/quiver3d.html)
