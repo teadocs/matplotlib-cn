@@ -362,3 +362,38 @@ Any additional keyword arguments are delegated to [LineCollection](https://matpl
 ![Quiver3d](/static/images/tutorials/sphx_glr_quiver3d_0011.png)
 
 [Quiver3d](https://matplotlib.org/gallery/mplot3d/quiver3d.html)
+
+### 2D plots in 3D
+
+![2dcollections3d](/static/images/tutorials/sphx_glr_2dcollections3d_0011.png)
+
+[2dcollections3d](https://matplotlib.org/gallery/mplot3d/2dcollections3d.html)
+
+### Text
+
+Add text to the plot. kwargs will be passed on to Axes.text, except for the zdir keyword, which sets the direction to be used as the z direction.
+
+[source](https://matplotlib.org/_modules/mpl_toolkits/mplot3d/axes3d.html#Axes3D.text)
+
+```python
+Axes3D.text(x, y, z, s, zdir=None, **kwargs)
+```
+
+![Text3d](/static/images/tutorials/sphx_glr_text3d_0011.png)
+
+[Text3d](https://matplotlib.org/gallery/mplot3d/text3d.html)
+
+### Subplotting
+
+Having multiple 3D plots in a single figure is the same as it is for 2D plots. Also, you can have both 2D and 3D plots in the same figure.
+
+*New in version 1.0.0:* Subplotting 3D plots was added in v1.0.0. Earlier version can not do this.
+
+![Subplotting](/static/images/tutorials/sphx_glr_subplot3d_0011.png)
+
+[Subplotting](https://matplotlib.org/gallery/mplot3d/subplot3d.html)
+
+## 下载本文的所有示例
+
+- [下载python源码: mplot3d.py](https://matplotlib.org/_downloads/fcbf2e7c5f17b03b09f59e2301953e79/mplot3d.py)
+- [下载Jupyter notebook: mplot3d.ipynb](https://matplotlib.org/_downloads/dab62ecca1b2e7cf760fb5853ccf7f1b/mplot3d.ipynb)
