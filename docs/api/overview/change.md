@@ -1,34 +1,42 @@
-# MatplotlibAPI 更新日志
+# Matplotlib API 更新日志
 
-A log of changes to the most recent version of Matplotlib that affect the outward-facing API. If updating Matplotlib breaks your scripts, this list may help you figure out what caused the breakage and how to fix it by updating your code. For API changes in older versions see Old API Changes.
+A log of changes to the most recent version of Matplotlib that affect the outward-facing API. If updating Matplotlib breaks your scripts, this list may help you figure out what caused the breakage and how to fix it by updating your code. For API changes in older versions see [Old API Changes](https://matplotlib.org/api/api_changes_old.html).
 
-For new features that were added to Matplotlib, see What's new in Matplotlib 3.0.
+For new features that were added to Matplotlib, see [What's new in Matplotlib 3.0](https://matplotlib.org/users/whats_new.html#whats-new).
 
 This pages lists API changes for the most recent version of Matplotlib.
 
-Old API Changes
-Note
+- [Old API Changes](https://matplotlib.org/api/api_changes_old.html)
 
-The list below is a table of contents of individual files from the 'next_api_changes' folder. When a release is made
+## Note
 
-The full text list below should be moved into its own file in 'prev_api_changes'
-All the files in 'next_api_changes' should be moved to the bottom of this page
-This note, and the toctree below should be commented out
-matplotlib.font_manager.win32InstalledFonts return value
-Matplotlib.use now has an ImportError for interactive backend
-Adding API change notes
+The list below is a table of contents of individual files from the 'next_api_changes' folder. When a release is made: 
+
+- The full text list below should be moved into its own file in 'prev_api_changes' for minor and major versions, add sections at the top for bug-fix releases.
+- All the files in 'next_api_changes' should be moved to the bottom of this page
+- This note, and the toctree below should be commented out
+
+[Adding API change notes](https://matplotlib.org/api/next_api_changes/README.html)
 
 ## API Changes for 3.0.1
 
-tight_layout.auto_adjust_subplotpars can return None now if the new subplotparams will collapse axes to zero width or height. This prevents tight_layout from being executed. Similarly tight_layout.get_tight_layout_figure will return None.
+### matplotlib.font_manager.win32InstalledFonts return value
+
+[matplotlib.font_manager.win32InstalledFonts](https://matplotlib.org/api/font_manager_api.html#matplotlib.font_manager.win32InstalledFonts) returns an empty list instead of None if no fonts are found.
+
+### Matplotlib.use now has an ImportError for interactive backend
+
+Switching backends via [matplotlib.use](https://matplotlib.org/api/matplotlib_configuration_api.html#matplotlib.use) is now allowed by default, regardless of whether [matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) has been imported. If the user tries to switch from an already-started interactive backend to a different interactive backend, an ImportError will be raised.
 
 ## API Changes for 3.0.0
 
-Drop support for python 2
+### Drop support for python 2
+
 Matplotlib 3 only supports python 3.5 and higher.
 
-Changes to backend loading
-Failure to load backend modules (macosx on non-framework builds and gtk3 when running headless) now raises ImportError (instead of RuntimeError and TypeError, respectively).
+### Changes to backend loading
+
+Failure to load backend modules (macosx on non-framework builds and gtk3 when running headless) now raises [ImportError](https://docs.python.org/3/library/exceptions.html#ImportError) (instead of [RuntimeError](https://docs.python.org/3/library/exceptions.html#RuntimeError) and [TypeError](https://docs.python.org/3/library/exceptions.html#TypeError), respectively).
 
 Third-party backends that integrate with an interactive framework are now encouraged to define the required_interactive_framework global value to one of the following values: "qt5", "qt4", "gtk3", "wx", "tk", or "macosx". This information will be used to determine whether it is possible to switch from a backend to another (specifically, whether they use the same interactive framework).
 
