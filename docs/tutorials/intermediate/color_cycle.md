@@ -4,10 +4,10 @@
 
 **注意：** 可以在[此处](http://matplotlib.org/cycler/)找到有关cycler API的更完整文档。
 
-This example demonstrates two different APIs:
+此示例演示了两种不同的API：
 
-1. Setting the default rc parameter specifying the property cycle. This affects all subsequent axes (but not axes already created).
-1. Setting the property cycle for a single pair of axes.
+1. 设置指定属性循环的默认rc参数。 这会影响所有后续轴（但不会影响已创建的轴）。
+1. 设置一对轴的属性循环。
 
 ```python
 from cycler import cycler
@@ -15,7 +15,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-First we'll generate some sample data, in this case, four offset sine curves.
+首先，我们将生成一些样本数据，在本例中为四条偏移正弦曲线。
 
 ```python
 x = np.linspace(0, 2 * np.pi, 50)
@@ -23,7 +23,7 @@ offsets = np.linspace(0, 2 * np.pi, 4, endpoint=False)
 yy = np.transpose([np.sin(x + phi) for phi in offsets])
 ```
 
-Now yy has shape
+现在你已经成型了
 
 ```python
 print(yy.shape)
