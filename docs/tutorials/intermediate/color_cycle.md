@@ -35,7 +35,7 @@ print(yy.shape)
 (50, 4)
 ```
 
-So yy[:, i] will give you the i-th offset sine curve. Let's set the default prop_cycle using [matplotlib.pyplot.rc()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.rc.html#matplotlib.pyplot.rc). We'll combine a color cycler and a linestyle cycler by adding (+) two cycler's together. See the bottom of this tutorial for more information about combining different cyclers.
+所以 yy[:, i] 会给你第i个偏移正弦曲线。让我们使用[matplotlib.pyplot.rc()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.rc.html#matplotlib.pyplot.rc)设置默认的prop_cycle。我们将通过添加(+)两个循环仪来组合颜色循环仪和线型循环仪。有关组合不同循环仪的更多信息，请参阅本教程的底部。
 
 ```python
 default_cycler = (cycler(color=['r', 'g', 'b', 'y']) +
@@ -45,7 +45,7 @@ plt.rc('lines', linewidth=4)
 plt.rc('axes', prop_cycle=default_cycler)
 ```
 
-Now we'll generate a figure with two axes, one on top of the other. On the first axis, we'll plot with the default cycler. On the second axis, we'll set the prop_cycler using matplotlib.axes.Axes.set_prop_cycle() which will only set the prop_cycle for this matplotlib.axes.Axes instance. We'll use a second cycler that combines a color cycler and a linewidth cycler.
+现在我们将生成一个有两个轴的图形，一个在另一个上面。在第一个轴上，我们将使用默认的循环器进行绘图。在第二个轴上，我们将使用[matplotlib.axes.Axes.set_prop_cycle()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_prop_cycle.html#matplotlib.axes.Axes.set_prop_cycle)设置prop_cycler，它只会为此[matplotlib.axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)实例设置prop_cycle。我们将使用第二台循环仪，它结合了色循环仪和线宽循环仪。
 
 ```python
 custom_cycler = (cycler(color=['c', 'm', 'y', 'k']) +
@@ -65,17 +65,17 @@ plt.show()
 
 ![用cycler定型示例](/static/images/tutorials/sphx_glr_color_cycle_001.png)
 
-## Setting prop_cycler in the matplotlibrc file or style files
+## 在matplotlibrc文件或样式文件中设置prop_cycler
 
-Remember, if you want to set a custom prop_cycler in your .matplotlibrc file or a style file (style.mplstyle), you can set the axes.prop_cycle property:
+请记住，如果要在.matplotlibrc文件或样式文件（style.mplstyle）中设置自定义prop_cycler，可以设置axes.prop_cycle属性：
 
 ```python
 axes.prop_cycle    : cycler(color='bgrcmyk')
 ```
 
-## Cycling through multiple properties
+## 循环访问多个属性
 
-You can add cyclers:
+您可以添加以下循环器：
 
 ```python
 from cycler import cycler
@@ -85,7 +85,7 @@ for d in cc:
     print(d)
 ```
 
-Results in:
+结果：
 
 ```python
 {'color': 'r', 'linestyle': '-'}
@@ -93,7 +93,7 @@ Results in:
 {'color': 'b', 'linestyle': '-.'}
 ```
 
-You can multiply cyclers:
+你可以使用多个循环器：
 
 ```python
 from cycler import cycler
@@ -103,7 +103,7 @@ for d in cc:
     print(d)
 ```
 
-Results in:
+结果：
 
 ```python
 {'color': 'r', 'linestyle': '-'}
