@@ -2,10 +2,10 @@
 
 如何创建网格的轴组合。
 
-- [subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots): Perhaps the primary function used to create figures and axes. It's also similar to matplotlib.pyplot.subplot(), but creates and places all axes on the figure at once. See also matplotlib.Figure.subplots.
-- [GridSpec()](https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec): Specifies the geometry of the grid that a subplot will be placed. The number of rows and number of columns of the grid need to be set. Optionally, the subplot layout parameters (e.g., left, right, etc.) can be tuned.
-- [SubplotSpec()](https://matplotlib.org/api/_as_gen/matplotlib.gridspec.SubplotSpec.html#matplotlib.gridspec.SubplotSpec): Specifies the location of the subplot in the given GridSpec.
-- [subplot2grid()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot2grid.html#matplotlib.pyplot.subplot2grid): A helper function that is similar to subplot(), but uses 0-based indexing and let subplot to occupy multiple cells. This function is not covered in this tutorial.
+- [subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots): 可能是用来创建图形和轴的主要函数。它也类似于matplotlib.pyplot.subplot()，但同时创建并放置地物上的所有轴。另请参见matplotlib.Figure.subplots。    
+- [GridSpec()](https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec): 指定将放置子图的网格的几何。需要设置网格的行数和列数。可选地，可以调整子图布局参数（例如，左，右等）。
+- [SubplotSpec()](https://matplotlib.org/api/_as_gen/matplotlib.gridspec.SubplotSpec.html#matplotlib.gridspec.SubplotSpec): 指定给定GridSpec中子图的位置。
+- [subplot2grid()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot2grid.html#matplotlib.pyplot.subplot2grid): 一个辅助函数，类似于subplot()，但使用基于0的索引并让子图占据多个单元格。本教程不涉及此功能。
 
 ```python
 import matplotlib
@@ -13,11 +13,11 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 ```
 
-## Basic Quickstart Guide
+## 基本快速入门指南
 
-These first two examples show how to create a basic 2-by-2 grid using both [subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots) and [gridspec](https://matplotlib.org/api/gridspec_api.html#module-matplotlib.gridspec).
+前两个示例显示了如何使用[subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots)和[gridspec](https://matplotlib.org/api/gridspec_api.html#module-matplotlib.gridspec)创建基本的2×2网格。
 
-Using [subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots) is quite simple. It returns a [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) instance and an array of [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) objects.
+使用[subplots()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots)非常简单。它返回一个[Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)实例和一个[Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)对象数组。
 
 ```python
 fig1, f1_axes = plt.subplots(ncols=2, nrows=2, constrained_layout=True)
@@ -25,7 +25,7 @@ fig1, f1_axes = plt.subplots(ncols=2, nrows=2, constrained_layout=True)
 
 ![用cycler定型示例](/static/images/tutorials/sphx_glr_gridspec_001.png)
 
-For a simple use case such as this, gridspec is perhaps overly verbose. You have to create the figure and GridSpec instance separately, then pass elements of gridspec instance to the add_subplot() method to create the axes objects. The elements of the gridspec are accessed in generally the same manner as numpy arrays.
+对于像这样的简单用例，gridspec可能过于冗长。您必须单独创建图形和GridSpec实例，然后将gridspec实例的元素传递给add_subplot()方法以创建轴对象。gridspec的元素通常以与numpy数组相同的方式访问。
 
 ```python
 fig2 = plt.figure(constrained_layout=True)
@@ -38,9 +38,9 @@ f2_ax4 = fig2.add_subplot(spec2[1, 1])
 
 ![用cycler定型示例2](/static/images/tutorials/sphx_glr_gridspec_002.png)
 
-The power of gridspec comes in being able to create subplots that span rows and columns. Note the Numpy slice syntax for selecing the part of the gridspec each subplot will occupy.
+gridspec的强大之处在于能够创建跨越行和列的子图。 注意Numpy切片语法用于选择每个子图将占用的gridspec部分。
 
-Note that we have also used the convenience method Figure.add_gridspec instead of gridspec.GridSpec, potentially saving the user an import, and keeping the namespace cleaner.
+请注意，我们还使用了方便方法Figure.add_gridspec而不是gridspec.GridSpec，可能会为用户保存导入，并保持名称空间更清晰。
 
 ```python
 fig3 = plt.figure(constrained_layout=True)
@@ -59,9 +59,9 @@ f3_ax5.set_title('gs[-1, -2]')
 
 ![用cycler定型示例3](/static/images/tutorials/sphx_glr_gridspec_003.png)
 
-gridspec is also indispensable for creating subplots of different widths via a couple of methods.
+gridspec对于通过几种方法创建不同宽度的子图也是必不可少的。
 
-The method shown here is similar to the one above and initializes a uniform grid specification, and then uses numpy indexing and slices to allocate multiple "cells" for a given subplot.
+此处显示的方法类似于上面的方法并初始化统一的网格规范，然后使用numpy索引和切片为给定的子图分配多个“单元”。
 
 ```python
 fig4 = plt.figure(constrained_layout=True)
@@ -78,7 +78,7 @@ fig4.add_subplot(spec4[1, 1]).annotate('GridSpec[1:, 1:]', **anno_opts)
 
 ![用cycler定型示例4](/static/images/tutorials/sphx_glr_gridspec_004.png)
 
-Another option is to use the ``width_ratios`` and ``height_ratios`` parameters. These keyword arguments are lists of numbers. Note that absolute values are meaningless, only their relative ratios matter. That means that ``width_ratios=[2, 4, 8]`` is equivalent to ``width_ratios=[1, 2, 4]`` within equally wide figures. For the sake of demonstration, we'll blindly create the axes within for loops since we won't need them later.
+另一种选择是使用``width_ratios``和``height_ratios``参数。这些关键字参数是数字列表。请注意，绝对值是没有意义的，只有它们的相对比率很重要。 这意味着``width_ratios = [2,4,8]``相当于``width_ratios = [1,2,4]``在同样宽的数字内。为了演示，我们将在for循环中盲目地创建轴，因为我们以后不再需要它们。
 
 ```python
 fig5 = plt.figure(constrained_layout=True)
@@ -95,7 +95,7 @@ for row in range(3):
 
 ![用cycler定型示例5](/static/images/tutorials/sphx_glr_gridspec_005.png)
 
-Learning to use width_ratios and height_ratios is particularly useful since the top-level function subplots() accepts them within the gridspec_kw parameter. For that matter, any parameter accepted by GridSpec can be passed to subplots() via the gridspec_kw parameter. This example recreates the previous figure without directly using a gridspec instance.
+学习使用width_ratios和height_ratios特别有用，因为顶级函数subplots()在gridspec_kw参数中接受它们。就此而言，GridSpec接受的任何参数都可以通过gridspec_kw参数传递给subplots()。此示例在不直接使用gridspec实例的情况下重新创建上一个图。
 
 ```python
 gs_kw = dict(width_ratios=widths, height_ratios=heights)
@@ -109,7 +109,7 @@ for r, row in enumerate(f6_axes):
 
 ![用cycler定型示例6](/static/images/tutorials/sphx_glr_gridspec_006.png)
 
-The subplots and gridspec methods can be combined since it is sometimes more convenient to make most of the subplots using subplots and then remove some and combine them. Here we create a layout with the bottom two axes in the last column combined.
+可以组合子图和gridspec方法，因为有时使用子图制作大多数子图更方便，然后删除一些子图并将它们组合起来。在这里，我们创建一个布局，其中最后一列中的底部两个轴组合在一起。
 
 ```python
 fig7, f7_axs = plt.subplots(ncols=3, nrows=3)
@@ -126,9 +126,9 @@ fig7.tight_layout()
 
 ![用cycler定型示例7](/static/images/tutorials/sphx_glr_gridspec_007.png)
 
-## Fine Adjustments to a Gridspec Layout
+## 对Gridspec布局的精细调整
 
-When a GridSpec is explicitly used, you can adjust the layout parameters of subplots that are created from the GridSpec. Note this option is not compatible with constrained_layout or [Figure.tight_layout](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.tight_layout) which both adjust subplot sizes to fill the figure.
+显式使用GridSpec时，可以调整从GridSpec创建的子图的布局参数。请注意，此选项与constrained_layout或[Figure.tight_layout](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure.tight_layout)不兼容，后者均调整子图大小以填充图形。
 
 ```python
 fig8 = plt.figure(constrained_layout=False)
@@ -139,6 +139,8 @@ f8_ax3 = fig8.add_subplot(gs1[-1, -1])
 ```
 
 ![用cycler定型示例8](/static/images/tutorials/sphx_glr_gridspec_008.png)
+
+这类似于[subplots_adjust()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots_adjust.html#matplotlib.pyplot.subplots_adjust)，但它只影响从给定GridSpec创建的子图。
 
 This is similar to [subplots_adjust()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots_adjust.html#matplotlib.pyplot.subplots_adjust), but it only affects the subplots that are created from the given GridSpec.
 
