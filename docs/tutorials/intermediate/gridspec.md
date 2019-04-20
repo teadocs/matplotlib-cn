@@ -142,9 +142,9 @@ f8_ax3 = fig8.add_subplot(gs1[-1, -1])
 
 这类似于[subplots_adjust()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots_adjust.html#matplotlib.pyplot.subplots_adjust)，但它只影响从给定GridSpec创建的子图。
 
-This is similar to [subplots_adjust()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots_adjust.html#matplotlib.pyplot.subplots_adjust), but it only affects the subplots that are created from the given GridSpec.
+这类似于[subplots_adjust()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots_adjust.html#matplotlib.pyplot.subplots_adjust)，但它只影响从给定的GridSpec创建的子图。
 
-For example, compare the left and right sides of this figure:
+例如，比较这个图像的左边和右侧：
 
 ```python
 fig9 = plt.figure(constrained_layout=False)
@@ -163,11 +163,11 @@ f9_ax6 = fig9.add_subplot(gs2[-1, -1])
 
 ![用cycler定型示例9](/static/images/tutorials/sphx_glr_gridspec_009.png)
 
-## GridSpec using SubplotSpec
+## 使用SubplotSpec的GridSpec
 
-You can create GridSpec from the SubplotSpec, in which case its layout parameters are set to that of the location of the given SubplotSpec.
+您可以从SubplotSpec创建GridSpec，在这种情况下，它的布局参数设置为给定SubplotSpec的位置。
 
-Note this is also available from the more verbose gridspec.GridSpecFromSubplotSpec.
+注意，这也可以从更详细的gridspec.GridspecFromSubplotSpec获得。
 
 ```python
 fig10 = plt.figure(constrained_layout=True)
@@ -184,9 +184,9 @@ for a in range(2):
 
 ![用cycler定型示例10](/static/images/tutorials/sphx_glr_gridspec_010.png)
 
-## A Complex Nested GridSpec using SubplotSpec
+## 基于SubplotSpec的复杂嵌套GridSpec
 
-Here's a more sophisticated example of nested GridSpec where we put a box around each cell of the outer 4x4 grid, by hiding appropriate spines in each of the inner 3x3 grids.
+这是一个更复杂的嵌套GridSpec示例，我们在外部4x4网格的每个单元格周围放置一个框，方法是在每个内部3x3网格中隐藏适当的数据区域边界。
 
 ```python
 import numpy as np
@@ -234,7 +234,7 @@ plt.show()
 
 ## References
 
-The usage of the following functions and methods is shown in this example:
+此示例中显示了以下函数和方法的用法：
 
 ```python
 matplotlib.pyplot.subplots
