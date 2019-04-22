@@ -20,13 +20,13 @@ plt.subplots(constrained_layout=True)
 plt.rcParams['figure.constrained_layout.use'] = True
 ```
 
-Those are described in detail throughout the following sections.
+以下各节将详细介绍这些内容。
 
-**Warning**： As of Matplotlib 2.2, Constrained Layout is experimental. The behaviour and API are subject to change, or the whole functionality may be removed without a deprecation period. If you require your plots to be absolutely reproducible, get the Axes positions after running Constrained Layout and use ax.set_position() in your code with constrained_layout=False.
+**警告**： 目前，约束布局是实验性的。 行为和API可能会发生变化，或者可以在没有弃用期的情况下删除整个功能。 如果您需要绘图绝对可重复，请在运行Constrained Layout后获取Axes位置，并在您的代码中使用axined_layout = False的ax.set_position()。
 
-## Simple Example
+## 简单的例子
 
-In Matplotlib, the location of axes (including subplots) are specified in normalized figure coordinates. It can happen that your axis labels or titles (or sometimes even ticklabels) go outside the figure area, and are thus clipped.
+在Matplotlib中，轴（包括子图）的位置在标准化的图形坐标中指定。您的轴标签或标题（有时甚至是标签标签）可能会超出图形区域，因此会被裁剪。
 
 ```python
 # sphinx_gallery_thumbnail_number = 18
@@ -64,10 +64,9 @@ fig, ax = plt.subplots(constrained_layout=False)
 example_plot(ax, fontsize=24)
 ```
 
-
 ![约束布局指南示例](/static/images/tutorials/sphx_glr_constrainedlayout_guide_001.png)
 
-To prevent this, the location of axes needs to be adjusted. For subplots, this can be done by adjusting the subplot params (Move the edge of an axes to make room for tick labels). However, specifying your figure with the constrained_layout=True kwarg will do the adjusting automatically.
+为防止这种情况，需要调整轴的位置。对于子图，可以通过调整子图参数（[移动轴的边缘以为刻度标签腾出空间](https://matplotlib.org/faq/howto_faq.html#howto-subplots-adjust)）来完成。 但是，使用constrained_layout = True kwarg指定您的图形将自动进行调整。
 
 ```python
 fig, ax = plt.subplots(constrained_layout=True)
@@ -76,7 +75,7 @@ example_plot(ax, fontsize=24)
 
 ![约束布局指南示例2](/static/images/tutorials/sphx_glr_constrainedlayout_guide_002.png)
 
-When you have multiple subplots, often you see labels of different axes overlapping each other.
+当您有多个子图时，通常会看到不同轴的标签彼此重叠。
 
 ```python
 fig, axs = plt.subplots(2, 2, constrained_layout=False)
