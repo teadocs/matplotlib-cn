@@ -5,7 +5,7 @@ module.exports = [
   },
   {
     text: '示例陈列馆',
-    link: '/about/'
+    link: '/gallery/'
   },
   {
     text: 'Matplotlib 教程',

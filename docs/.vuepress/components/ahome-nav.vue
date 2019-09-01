@@ -23,15 +23,11 @@
     <!-- 加入群聊 -->
     <div class="block" :class="{'show': navId === 2}">
       <div class>
-        <p>加入 <b>Pandas 中文社区</b> 微信交流群，群内有BAT公司大牛、常春藤校友、中国顶尖高校的各类学霸，以及众多事业有成者！</p>
+        <p>加入 <b>Matplotlib 中文社区</b> 微信交流群，群内有BAT公司大牛、常春藤校友、中国顶尖高校的各类学霸，以及众多事业有成者！</p>
       </div>
       <div class="qr-item">
         <img src="/home/wx-qr.jpg" alt />
         <span class="text">站长微信（可拉微信群，备注：pandas）</span>
-      </div>
-      <div class="qr-item">
-        <img src="/home/qqqun-qr.jpg" alt />
-        <span class="text">QQ群二维码（群号：325251421）</span>
       </div>
     </div>
 

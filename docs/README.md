@@ -37,15 +37,14 @@ $ pip install matplotlib
 # 2、进入python的交互式界面
 $ python -i
 
-# 3、使用Matplotlib
->>> import matplotlib as pd
->>> df = pd.DataFrame() 
->>> print(df)
+# 3、使用 matplotlib 的 scatter 方法绘制散点图
+>>> import matplotlib.pyplot as plt
+>>> x = [1, 2, 3, 4, 5]
+>>> y = [2.3, 3.4, 1.2, 6.6, 7.0]
+>>> plt.scatter(x, y, color='r', marker='+')
 
 # 4、输出结果
-Empty DataFrame
-Columns: []
-Index: []
+# 你的电脑随后会弹出一个最终图表效果的窗口。
 ```
 
 ::: warning 提醒

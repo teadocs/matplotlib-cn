@@ -102,6 +102,28 @@
           if (tempContent) {
             content = `\n\`\`\` ${langName}\n${tempContent}\n\`\`\`\n`;
           }
+        } else if (className.indexOf('sphx-glr-thumbcontainer') !== -1) {
+          let href = this.$(el).find('a').attr('href');
+          let text = this.$(el).find('.std.std-ref').text();
+          let imageUrl = this.$(el).find('img').attr('src');
+          imageUrl = imageUrl.replace('..', 'https://matplotlib.org');
+          let tpl1 = `
+            <div class="gallery-examples-list">
+              <ul>
+              </ul>
+            </div>
+          `;
+
+          let tpl = `
+<li>
+  <div class="poster">
+    <img src="${imageUrl}" />
+  </div>
+  <div class="text">
+    <a href="${href}">${text}</a>
+  </div>
+</li>`;
+          content = tpl;
         } else {
           content = this.getMarkdown(el);
         }
@@ -303,7 +325,7 @@
   window.c = new Convert({
     baseUrl: 'https://pandas.pydata.org/pandas-docs/stable',
     baseImgDir: '/static/images/',
-    el: `#comparison-with-stata`,
+    el: `.body`,
     $: window.$
   });
 
