@@ -122,7 +122,8 @@
   <div class="text">
     <a href="${href}">${text}</a>
   </div>
-</li>`;
+</li>
+`;
           content = tpl;
         } else {
           content = this.getMarkdown(el);

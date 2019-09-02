@@ -3,108 +3,116 @@ sidebarDepth: 3
 sidebar: auto
 ---
 
-# Python Data Analysis Library
+# Introduction to Matplotlib
 
-``pandas`` is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the [Python](https://www.python.org/) programming language.
+Matplotlib is a Python 2D plotting library which produces publication quality
+figures in a variety of hardcopy formats and interactive environments across
+platforms. Matplotlib can be used in Python scripts, the Python and [IPython](http://ipython.org)
+shells, the [Jupyter](http://jupyter.org) notebook, web application servers, and four graphical user
+interface toolkits.
 
-``pandas`` is a [NumFOCUS](https://www.numfocus.org/open-source-projects.html) sponsored project. This will help ensure the success of development of pandas as a world-class open-source project, and makes it possible to [donate](https://pandas.pydata.org/donate.html) to the project.
+<a href="tutorials/introductory/sample_plots.html">
+  <img align="middle" style="width: 160; height: 112px" src="https://matplotlib.org/_images/sphx_glr_membrane_thumb.png" border="0" alt="screenshots">
+  <img align="middle" style="width: 160; height: 112px" src="https://matplotlib.org/_images/sphx_glr_histogram_thumb.png" border="0" alt="screenshots">
+  <img align="middle" style="width: 160; height: 112px" src="https://matplotlib.org/_images/sphx_glr_contour_thumb.png" border="0" alt="screenshots">  
+  <img align="middle" style="width: 160; height: 112px" src="https://matplotlib.org/_images/sphx_glr_3D_thumb.png" border="0" alt="screenshots">
+</a>
 
-![NumFOCUS Logo](/static/images/SponsoredProjectStamp_300px.png)
+Matplotlib tries to make easy things easy and hard things possible. You
+can generate plots, histograms, power spectra, bar charts, errorcharts,
+scatterplots, etc., with just a few lines of code. For examples, see the
+[sample plots](https://matplotlib.org/tutorials/introductory/sample_plots.html) and [thumbnail gallery](https://matplotlib.org/gallery/index.html).
 
-## v0.25.0 Final (July 18, 2019)
+For simple plotting the ``pyplot`` module provides a MATLAB-like interface,
+particularly when combined with IPython. For the power user, you have full
+control of line styles, font properties, axes properties, etc, via an object
+oriented interface or via a set of functions familiar to MATLAB users.
 
-This is a major release from 0.24.2 and includes a number of API changes, new features, enhancements, and performance improvements along with a large number of bug fixes.
+# Installation
 
-Highlights include:
+Visit the [Matplotlib installation instructions](https://matplotlib.org/users/installing.html).
 
-- Dropped Python 2 support
-- [Groupby aggregation with relabeling](https://pandas.pydata.org/pandas-docs/version/0.25/whatsnew/v0.25.0.html#groupby-aggregation-with-relabeling)
-- [Better repr for MultiIndex](https://pandas.pydata.org/pandas-docs/version/0.25/whatsnew/v0.25.0.html#better-repr-for-multiindex)
-- [Better truncated repr for Series and DataFrame](https://pandas.pydata.org/pandas-docs/version/0.25/whatsnew/v0.25.0.html#shorter-truncated-repr-for-series-and-dataframe)
-- [Series.explode to split list-like values to rows MultiIndexes](https://pandas.pydata.org/pandas-docs/version/0.25/whatsnew/v0.25.0.html#series-explode-to-split-list-like-values-to-rows)
+# Documentation
 
-The release can be installed with conda from conda-forge or the default channel:
+This is the documentation for Matplotlib version 3.1.1.
 
-``` bash
-$ conda install pandas
-```
+To get started, read the [User's Guide](https://matplotlib.org/users/index.html).
 
-Or via PyPI:
+Other versions are available:
 
-``` bash
-python3 -m pip install --upgrade pandas
-```
+- [3.1.1](https://matplotlib.org/3.1.1/index.html) Stable version.
+- [2.2.4 LTS](https://matplotlib.org/2.2.4/index.html) LTS version.
+- [3.2.x](https://matplotlib.org/devdocs/index.html) Latest git master (unstable)
+- [3.0.3](https://matplotlib.org/3.0.3/index.html) Older stable version.
 
-See the full [whatsnew](/en/docs/whatsnew/v0.25.0.html) for a list of all the changes.
+Trying to learn how to do a particular kind of plot? Check out the
+[examples gallery](https://matplotlib.org/gallery/index.html) or the [list of plotting commands](https://matplotlib.org/api/pyplot_summary.html).
 
-## v0.24.2 Final (March 14, 2019)
+## Other learning resources
 
-This is a minor bug-fix release in the 0.24.x series and includes some regression fixes, bug fixes, and performance improvements. We recommend that all users upgrade to this version.
+There are many [external learning resources](https://matplotlib.org/resources/index.html) available
+including printed material, videos and tutorials.
 
-The release can be installed with conda from conda-forge or the default channel:
+## Need help?
 
-``` bash
-$ conda install Pandas
-```
+Matplotlib is a welcoming, inclusive project, and we follow the [Python Software Foundation Code of Conduct](http://www.python.org/psf/codeofconduct/) in everything we do.
 
-Or via PyPI:
+Check the [FAQ](faq/index.html) and the [API](api/index.html) docs.
 
-``` bash
-$ python3 -m pip install --upgrade Pandas
-```
+For help, join the [gitter channel](https://gitter.im/matplotlib/matplotlib) and the [matplotlib-users](https://mail.python.org/mailman/listinfo/matplotlib-users),
+[matplotlib-devel](https://mail.python.org/mailman/listinfo/matplotlib-devel), and [matplotlib-announce](https://mail.python.org/mailman/listinfo/matplotlib-announce) mailing lists, or check out the
+Matplotlib tag on [stackoverflow](http://stackoverflow.com/questions/tagged/matplotlib). The [search](search.html) tool searches
+all of the documentation, including full text search of over 350 complete
+examples which exercise almost every corner of Matplotlib.
 
-See the [full whatsnew](https://pandas.pydata.org/pandas-docs/version/0.24.2/whatsnew/v0.24.2.html) for a list of all the changes.
+You can file bugs, patches and feature requests on the [issue tracker](https://github.com/matplotlib/matplotlib/issues), but it
+is a good idea to ping us on the mailing list too.
 
-## Best way to Install
+To keep up to date with what's going on in Matplotlib, see the [what's new](users/whats_new.html) page or browse the [source code](https://github.com/matplotlib/matplotlib). Anything that could
+require changes to your existing code is logged in the [API changes](api/api_changes.html) file.
 
-The best way to get pandas is via [conda](http://pandas.pydata.org/pandas-docs/stable/install.html#installing-pandas-with-anaconda)
+### Toolkits
 
-``` bash
-$ conda install Pandas
-```
+Matplotlib ships with several add-on [toolkits](api/toolkits/index.html),
+including 3d plotting with ``mplot3d``, axes helpers in ``axes_grid1`` and axis
+helpers in ``axisartist``.
 
-Packages are available for [all supported python versions](http://pandas.pydata.org/pandas-docs/stable/install.html#python-version-support) on Windows, Linux, and MacOS.
+### Third party packages
 
-Wheels are also uploaded to [PyPI](https://pypi.org/project/pandas/) and can be installed with
+A large number of [third party packages](thirdpartypackages/index.html)
+extend and build on Matplotlib functionality, including several higher-level
+plotting interfaces ([seaborn](https://seaborn.github.io/), [holoviews](http://holoviews.org), [ggplot](http://ggplot.yhathq.com), ...), and two projection
+and mapping toolkits ([basemap](http://matplotlib.org/basemap) and [cartopy](http://scitools.org.uk/cartopy/docs/latest)).
 
-``` bash
-$ pip install Pandas
-```
+### Citing Matplotlib
 
-## Quick vignette
+Matplotlib is the brainchild of John Hunter (1968-2012), who, along with its
+many contributors, have put an immeasurable amount of time and effort into
+producing a piece of software utilized by thousands of scientists worldwide.
 
-<iframe src="https://player.vimeo.com/video/59324550" style="margin-top: 20px;" width="500" height="309" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+If Matplotlib contributes to a project that leads to a scientific publication,
+please acknowledge this work by citing the project. A [ready-made citation entry](citing.html) is available.
 
-[10-minute tour of pandas](https://vimeo.com/59324550) from [Wes McKinney](https://vimeo.com/user10077863) on [Vimeo](https://vimeo.com/).
+### Open source
 
-## What problem does pandas solve?
+Matplotlib is a Sponsored Project of NumFOCUS, a 501(c)(3) nonprofit
+charity in the United States. NumFOCUS provides Matplotlib with
+fiscal, legal, and administrative support to help ensure the health
+and sustainability of the project. Visit [numfocus.org](nf) for more
+information.
 
-Python has long been great for data munging and preparation, but less so for data analysis and modeling. pandas helps fill this gap, enabling you to carry out your entire data analysis workflow in Python without having to switch to a more domain specific language like R.
+Donations to Matplotlib are managed by NumFOCUS. For donors in the
+United States, your gift is tax-deductible to the extent provided by
+law. As with any donation, you should consult with your tax adviser
+about your particular tax situation.
 
-Combined with the excellent [IPython](https://ipython.org/) toolkit and other libraries, the environment for doing data analysis in Python excels in performance, productivity, and the ability to collaborate.
+Please consider [donating to the Matplotlib project](https://numfocus.salsalabs.org/donate-to-matplotlib/index.html) through
+the Numfocus organization or to the [John Hunter Technology Fellowship](https://www.numfocus.org/programs/john-hunter-technology-fellowship/).
 
-pandas does not implement significant modeling functionality outside of linear and panel regression; for this, look to [statsmodels](http://statsmodels.sf.net/) and [scikit-learn](http://scikit-learn.org/). More work is still needed to make Python a first class statistical modeling environment, but we are well on our way toward that goal.
+The [Matplotlib license](users/license.html) is based on the [Python Software Foundation (PSF) license](http://www.python.org/psf/license).
 
-## What do our users have to say?
+There is an active developer community and a long list of people who have made
+significant [contributions](users/credits.html).
 
-- **Roni Israelov，Phd**(Portfolio Manager [AQR Capital Management](https://www.aqr.com/)): “pandas allows us to focus more on research and less on programming. We have found pandas easy to learn, easy to use, and easy to maintain. The bottom line is that it has increased our productivity.”
-  - ![AQR Capital Management](/static/images/aqr_capital_management_logo.png)
-- **David Himrod**(Director of Optimization & Analytics [AppNexus](https://www.appnexus.com/)): “pandas is the perfect tool for bridging the gap between rapid iterations of ad-hoc analysis and production quality code. If you want one tool to be used across a multi-disciplined organization of engineers, mathematicians and analysts, look no further.”
-  - ![AppNexus Logo](/static/images/appnexus_logo.png)
-- **Olivier Pomel**(CEO [Datadog](https://www.datadoghq.com/)): “We use pandas to process time series data on our production servers. The simplicity and elegance of its API, and its high level of performance for high-volume datasets, made it a perfect choice for us.”
-  - ![Datadog Logo](/static/images/datadog_logo.png)
-
-## Library Highlights
-
-- A fast and efficient **DataFrame** object for data manipulation with integrated indexing;
-- Tools for **reading and writing data** between in-memory data structures and different formats: CSV and text files, Microsoft Excel, SQL databases, and the fast HDF5 format;
-- Intelligent **data alignment** and integrated handling of **missing data**: gain automatic label-based alignment in computations and easily manipulate messy data into an orderly form;
-- Flexible **reshaping** and pivoting of data sets;
-- Intelligent label-based **slicing, fancy indexing**, and **subsetting** of large data sets;
-- Columns can be inserted and deleted from data structures for **size mutability**;
-- Aggregating or transforming data with a powerful **group by** engine allowing split-apply-combine operations on data sets;
-- High performance **merging and joining** of data sets;
-- **Hierarchical axis indexing** provides an intuitive way of working with high-dimensional data in a lower-dimensional data structure;
-- **Time series**-functionality: date range generation and frequency conversion, moving window statistics, moving window linear regressions, date shifting and lagging. Even create domain-specific time offsets and join time series without losing data;
-- Highly **optimized for performance**, with critical code paths written in Cython or C.
-- Python with pandas is in use in a wide variety of **academic and commercial** domains, including Finance, Neuroscience, Economics, Statistics, Advertising, Web Analytics, and more.
+Matplotlib is hosted on [Github](https://github.com/matplotlib/matplotlib). [Issues](https://github.com/matplotlib/matplotlib/issues)
+and [Pull requests](https://github.com/matplotlib/matplotlib/pulls) are tracked at Github too.

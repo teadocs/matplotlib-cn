@@ -9,11 +9,15 @@ module.exports = [
   },
   {
     text: 'Matplotlib 教程',
-    link: '/get_pandas/'
+    link: '/tutorials/'
   },
   {
-    text: '文档索引',
-    link: '/docs/'
+    text: 'API概览',
+    link: '/API/'
+  },
+  {
+    text: '文档概览',
+    link: '/contents/'
   },
   {
     text: '精选资源',
