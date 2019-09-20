@@ -32,7 +32,7 @@
 
 ## 文档生成
 
-本文档自豪的使用 [Teadocs](https://github.com/teadocs/teadocs) 文档生成工具生成。
+本文档自豪地使用 [Teadocs](https://github.com/teadocs/teadocs) 文档生成工具生成。
 
 ## 版权信息
 
