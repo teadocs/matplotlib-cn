@@ -7,7 +7,7 @@ meta:
     content: Matplotlib中文网、Matplotlib官方中文文档。
 heroImage: /logo.svg
 actionText: 快速开始 →
-actionLink: /docs/
+actionLink: /intro/
 footer: 署名-非商业性使用-相同方式共享 3.0 中国大陆 (CC BY-NC-SA 3.0 CN) | Copyright © 2019-present Zhi Bing
 ---
 
