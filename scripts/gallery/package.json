@@ -10,6 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "flyio": "^0.6.14"
+    "flyio": "^0.6.14",
+    "jquery": "^3.4.1",
+    "jsdom": "^15.1.1",
+    "node-fetch": "^2.6.0"
   }
 }

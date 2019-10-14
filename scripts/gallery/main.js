@@ -9,11 +9,15 @@
  * 4、生成 gallery 的 README.md 首页文件
  */
 
-const c = require('./module/const');
+const request = require('./libs/request');
+const parsingHtml = require('./module/parsingHtml');
+
+const C = require('./module/const');
 
 async function main() {
-  console.log(c);
+  console.log('C.GALLERY_URL', C.GALLERY_URL);
+  let data = await request.get(C.GALLERY_URL);
+  console.log(parsingHtml(data.data));
 }
 
 main();
-

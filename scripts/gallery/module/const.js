@@ -1,8 +1,9 @@
 module.exports = {
   // gallery 网页 url
-  GALLERY_URL: 'https://matplotlib.org/gallery/index.html',
+  GALLERY_URL: 'http://www.matplotlib.org/gallery/index.html',
   // matplotlib 官网地址
-  DOMAIN: 'https://matplotlib.org',
+  DOMAIN: 'http://www.matplotlib.org',
   // matplotlib 图片基地址
-  IMAGE_BASE: 'https://matplotlib.org/_images/'
+  IMAGE_BASE: 'https://www.matplotlib.org/_images/',
+  // 
 }
