@@ -9,15 +9,37 @@
  * 4、生成 gallery 的 README.md 首页文件
  */
 
+const fs = require('fs-extra');
 const request = require('./libs/request');
 const parsingHtml = require('./module/parsingHtml');
+const translation = require('./module/translation');
+const uploadImage = require('./module/uploadImage');
+const sleep = require('./module/sleep');
+const outputMd = require('./module/outputMd');
 
 const C = require('./module/const');
 
 async function main() {
-  console.log('C.GALLERY_URL', C.GALLERY_URL);
   let data = await request.get(C.GALLERY_URL);
-  console.log(parsingHtml(data.data));
+  let jsonList = parsingHtml(data.data);
+  for (const block of jsonList) {
+    console.log(block.title);
+    block.title = await translation(block.title);
+    await sleep(1000);
+    console.log(block.title);
+    for (const item of block.list) {
+      item.poster = await uploadImage(item.poster);
+      item.text = await translation(item.text);
+      let data = await request.get(item.url);
+      let _url = item.url.split('.html')[0];
+      let url = _url.replace(C.GALLERY_BASE_URL, '');
+      // console.log('C.GALLERY_BASE_URL', C.GALLERY_BASE_URL);
+      outputMd(url, data.data);
+      // console.log('url', url);
+      await sleep(1000);
+    }
+  }
+  // console.log(JSON.stringify(jsonList));
 }
 
 main();

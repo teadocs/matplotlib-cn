@@ -12,16 +12,21 @@ const HEADERS = {
 
 module.exports = {
 
-  get(url, data) {
+  get(url, data, headers = {}) {
     return fly.request({
       url,
       method: 'get',
-      headers: HEADERS
+      headers: Object.assign(HEADERS, headers)
     });
   },
 
-  post(url, data) {
-
+  post(url, data, headers = {}) {
+    return fly.request({
+      url,
+      method: 'post',
+      headers: Object.assign(HEADERS, headers),
+      body: data
+    });
   }
 
 }
