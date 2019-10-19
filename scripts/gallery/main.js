@@ -16,16 +16,74 @@ const translation = require('./module/translation');
 const uploadImage = require('./module/uploadImage');
 const sleep = require('./module/sleep');
 const outputMd = require('./module/outputMd');
+const htmlToMd = require('./module/htmlToMd');
 
 const C = require('./module/const');
 
+/**
+ * 生成首页
+ * @param {*} params 
+ */
+function generateIndex(jsonList) {
+  let readmePath = 'README';
+  let readmeMd = `---
+sidebarDepth: 3
+sidebar: auto
+---
+
+# Gallery
+
+This gallery contains examples of the many things you can do with
+Matplotlib. Click on any image to see the full image and source code.
+
+For longer tutorials, see our [tutorials page](https://pandas.pydata.org/pandas-docs/stable/tutorials/index.html).
+You can also find [external resources](https://pandas.pydata.org/pandas-docs/stable/resources/index.html) and
+a [FAQ](https://pandas.pydata.org/pandas-docs/stable/faq/index.html) in our [user guide](https://pandas.pydata.org/pandas-docs/stable/contents.html).
+`;
+
+let readmeHtml = '';
+jsonList.forEach(block => {
+  let liContent = '';
+  block.list.forEach(item => {
+    liContent += `<li>
+      <div class="poster">
+        <img src="${item.poster}" />
+      </div>
+      <div class="text">
+        <a href="${item.url}">${item.text}</a>
+      </div>
+    </li>`;
+  });
+  let blockContent = `
+
+## ${block.title}
+
+${block.desc}
+
+<div class="gallery-examples-list">
+  <ul>
+    ${liContent}
+  </ul>
+</div>`;
+
+  readmeHtml += blockContent;
+  });
+  readmeHtml = readmeMd + readmeHtml;
+  outputMd(readmePath, readmeHtml);
+}
+
+/**
+ * 入口
+ */
 async function main() {
   let data = await request.get(C.GALLERY_URL);
   let jsonList = parsingHtml(data.data);
+  generateIndex(jsonList);
+  return false;
   for (const block of jsonList) {
     console.log(block.title);
     block.title = await translation(block.title);
-    await sleep(1000);
+    // await sleep(1000);
     console.log(block.title);
     for (const item of block.list) {
       item.poster = await uploadImage(item.poster);
@@ -34,7 +92,7 @@ async function main() {
       let _url = item.url.split('.html')[0];
       let url = _url.replace(C.GALLERY_BASE_URL, '');
       // console.log('C.GALLERY_BASE_URL', C.GALLERY_BASE_URL);
-      outputMd(url, data.data);
+      outputMd(url, htmlToMd(data.data));
       // console.log('url', url);
       await sleep(1000);
     }

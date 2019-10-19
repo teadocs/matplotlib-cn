@@ -37,8 +37,8 @@ const t = async function (englishText) {
 }
 
 module.exports = async function (englishText) {
-  let result = await t(englishText);
-  return result.TargetText;
-  // let chineseText = englishText;
-  // return chineseText;
+  // let result = await t(englishText);
+  // return result.TargetText;
+  let chineseText = englishText;
+  return chineseText;
 }

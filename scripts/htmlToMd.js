@@ -61,7 +61,7 @@
         break;
       case 'P': {
         let className = this.$(el).attr('class');
-        if (className !== 'first admonition-title') {
+        if (className !== 'first admonition-title' && className !== 'sphx-glr-signature') {
           content = this.getPcontent(this.$(el));
         }
       }
@@ -125,6 +125,23 @@
 </li>
 `;
           content = tpl;
+        } else if (className.indexOf('sphx-glr-footer-example') !== -1) {
+          let links = this.$(el).find('.sphx-glr-download.docutils.container');
+          let l1 = links.eq(0).find('a');
+          let l2 = links.eq(1).find('a');
+          let l1Url = $(l1).attr('href')
+          l1Url = l1Url.replace('../../', 'https://matplotlib.org/');
+          let l1Text = $(l1).text();
+          let l2Url = $(l2).attr('href')
+          l2Url = l2Url.replace('../../', 'https://matplotlib.org/');
+          let l2Text = $(l2).text();
+          content = `
+## Download
+
+- [${l1Text}](${l1Url})
+- [${l2Text}](${l2Url})
+          `;
+        } else if (className.indexOf('sphx-glr-download-link-note') !== -1){
         } else {
           content = this.getMarkdown(el);
         }
@@ -231,7 +248,9 @@
         as.each(function (index, el) {
           let outHtml = that.$(el).prop("outerHTML");
           let href = that.$(el).attr('href');
-          if (href.substring(0, 2) === '..') {
+          if (href.substring(0, 6) === '../../') {
+            href = that.baseUrl + href.substring(6, href.length);
+          } else if (href.substring(0, 2) === '..') {
             href = that.baseUrl + href.substring(2, href.length);
           }
           let text = that.$(el).text();
@@ -325,7 +344,7 @@
 
   window.c = new Convert({
     baseUrl: 'https://pandas.pydata.org/pandas-docs/stable',
-    baseImgDir: '/static/images/',
+    baseImgDir: 'https://matplotlib.org/_images/',
     el: `.body`,
     $: window.$
   });
