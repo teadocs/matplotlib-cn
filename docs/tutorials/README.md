@@ -3,21 +3,18 @@ sidebarDepth: 3
 sidebar: auto
 ---
 
-# Tutorials
+# 教程
 
-This page contains more in-depth guides for using Matplotlib.
-It is broken up into beginner, intermediate, and advanced sections,
-as well as sections covering specific topics.
+本页面包含有关使用Matplotlib的更深入的指南。
+它分为初学者、中级和高级部分，以及涵盖特定主题的部分。
 
-For shorter examples, see our [examples page](https://pandas.pydata.org/pandas-docs/stable/gallery/index.html).
-You can also find [external resources](https://pandas.pydata.org/pandas-docs/stable/resources/index.html) and
-a [FAQ](https://pandas.pydata.org/pandas-docs/stable/faq/index.html) in our [user guide](https://pandas.pydata.org/pandas-docs/stable/contents.html).
+有关更短的示例，请参阅我们的[示例页面](https://matplotlib.org/gallery/index.html)。
+您还可以在我们的[用户指南](https://matplotlib.org/contents.html)中找到[外部资源](https://matplotlib.org/resources/index.html)
+和[常见问题解答](https://matplotlib.org/faq/index.html)。
 
-## Introductory
+## 序言
 
-These tutorials cover the basics of creating visualizations with
-Matplotlib, as well as some best-practices in using the package
-effectively.
+这些教程涵盖了使用 Matplotlib 创建可视化的基础知识，以及有效使用软件包的一些最佳实践。
 
 <div class="gallery-examples-list">
 <ul>

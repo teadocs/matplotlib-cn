@@ -9,12 +9,7 @@ sidebarDepth: 3
 sidebar: auto
 ---
 
-<p></p>
-<p></p>
-<center>
-<img style="width: 180px" src="/logo_awesome.svg">
-<h1>Matplotlib 精选资源</h1>
-</center>
+# Matplotlib 精选资源
 
 精选的Matplotlib相关的资源、工具、文章、教程列表（均从互联网收集或转发）。
 
