@@ -2,7 +2,7 @@
 
 此示例演示了 “dark_background” 样式，该样式使用白色表示通常为黑色的元素（文本，边框等）。请注意，并非所有绘图元素都默认为由rc参数定义的颜色。
 
-![黑色的背景样式表示例](/static/images/gallery/sphx_glr_dark_background_001.png)
+![黑色的背景样式表示例](https://matplotlib.org/_images/sphx_glr_dark_background_001.png)
 
 ```python
 import numpy as np

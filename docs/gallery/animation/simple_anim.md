@@ -1,6 +1,6 @@
 # 动画线图
 
-![动画线图](/static/images/gallery/sphx_glr_simple_anim_001.png)
+![动画线图](https://matplotlib.org/_images/sphx_glr_simple_anim_001.png)
 
 ```python
 import numpy as np

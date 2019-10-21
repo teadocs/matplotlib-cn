@@ -282,7 +282,7 @@ if __name__ == '__main__':
     plt.show()
 ```
 
-![SkewT-logP图示例](/static/images/gallery/sphx_glr_skewt_001.png)
+![SkewT-logP图示例](https://matplotlib.org/_images/sphx_glr_skewt_001.png)
 
 ## 参考
 

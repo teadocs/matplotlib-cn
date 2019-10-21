@@ -20,7 +20,7 @@ plt.scatter(x, y, s=area, c=colors, alpha=0.5)
 plt.show()
 ```
 
-![散点图示例](/static/images/gallery/sphx_glr_scatter_001.png)
+![散点图示例](https://matplotlib.org/_images/sphx_glr_scatter_001.png)
 
 ## 参考
 

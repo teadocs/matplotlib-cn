@@ -15,7 +15,7 @@
 - 为条形图和堆积图创建Alpha值。 .33或.5
 - 应用布局规则
 
-![Solarized Light样式表示例](/static/images/gallery/sphx_glr_plot_solarizedlight2_001.png)
+![Solarized Light样式表示例](https://matplotlib.org/_images/sphx_glr_plot_solarizedlight2_001.png)
 
 ```python
 import matplotlib.pyplot as plt

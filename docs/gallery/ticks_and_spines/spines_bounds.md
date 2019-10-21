@@ -2,7 +2,7 @@
 
 使用自定义边界来限制脊椎范围的spine演示。
 
-![自定义spine边界示例](/static/images/gallery/sphx_glr_spines_bounds_001.png)
+![自定义spine边界示例](https://matplotlib.org/_images/sphx_glr_spines_bounds_001.png)
 
 ```python
 import numpy as np

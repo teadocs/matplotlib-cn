@@ -2,7 +2,7 @@
 
 使用 [subplots_adjust()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots_adjust.html#matplotlib.pyplot.subplots_adjust) 调整边距和子图的间距。
 
-![调整子图](/static/images/gallery/sphx_glr_subplots_adjust_001.png)
+![调整子图](https://matplotlib.org/_images/sphx_glr_subplots_adjust_001.png)
 
 ```python
 import matplotlib.pyplot as plt

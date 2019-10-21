@@ -1,6 +1,6 @@
 # 自定义Boxstyle02
 
-![自定义Boxstyle02示例](/static/images/gallery/sphx_glr_custom_boxstyle02_001.png)
+![自定义Boxstyle02示例](https://matplotlib.org/_images/sphx_glr_custom_boxstyle02_001.png)
 
 ```python
 from matplotlib.path import Path

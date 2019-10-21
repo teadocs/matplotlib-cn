@@ -16,7 +16,7 @@ ax3 = fig.add_subplot(223, sharex=ax1, sharey=ax1)
 ax3 = fig.add_subplot(224, sharex=ax1, sharey=ax1)
 ```
 
-![轻松创建子图示例](/static/images/gallery/sphx_glr_create_subplots_001.png)
+![轻松创建子图示例](https://matplotlib.org/_images/sphx_glr_create_subplots_001.png)
 
 费尔南多·佩雷斯提供了一个很好的方法来创建子图的一切 ``subplots()``（最后注意“s”），并为整个群体打开x和y共享。您可以单独打开轴...
 
@@ -26,7 +26,7 @@ fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, sharex=True, sharey=True)
 ax1.plot(x)
 ```
 
-![轻松创建子图示例2](/static/images/gallery/sphx_glr_create_subplots_002.png)
+![轻松创建子图示例2](https://matplotlib.org/_images/sphx_glr_create_subplots_002.png)
 
 或者将它们作为支持numpy索引的numrows x numcolumns对象数组返回
 
@@ -38,7 +38,7 @@ axs[0, 0].plot(x)
 plt.show()
 ```
 
-![轻松创建子图示例3](/static/images/gallery/sphx_glr_create_subplots_003.png)
+![轻松创建子图示例3](https://matplotlib.org/_images/sphx_glr_create_subplots_003.png)
 
 ## 下载这个示例
             

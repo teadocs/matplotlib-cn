@@ -2,7 +2,7 @@
 
 创建两个相同的面板。在右侧面板上放大将在第一个面板中显示一个矩形，表示缩放的区域。
 
-![Viewlims](/static/images/gallery/sphx_glr_viewlims_001.png)
+![Viewlims](https://matplotlib.org/_images/sphx_glr_viewlims_001.png)
 
 ```python
 import numpy as np

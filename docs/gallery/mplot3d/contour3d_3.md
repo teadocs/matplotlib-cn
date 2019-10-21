@@ -4,7 +4,7 @@
 
 有关填充版本，请参见contourf3d_demo2。
 
-![将轮廓轮廓投影到图形上](/static/images/gallery/sphx_glr_contour3d_3_001.png)
+![将轮廓轮廓投影到图形上](https://matplotlib.org/_images/sphx_glr_contour3d_3_001.png)
 
 ```python
 from mpl_toolkits.mplot3d import axes3d

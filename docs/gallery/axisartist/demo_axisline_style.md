@@ -2,7 +2,7 @@
 
 此示例显示了轴样式的一些配置。
 
-![轴线样式示例](/static/images/gallery/sphx_glr_demo_axisline_style_001.png)
+![轴线样式示例](https://matplotlib.org/_images/sphx_glr_demo_axisline_style_001.png)
 
 ```python
 from mpl_toolkits.axisartist.axislines import SubplotZero

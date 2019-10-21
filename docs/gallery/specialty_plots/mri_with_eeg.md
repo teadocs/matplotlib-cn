@@ -2,7 +2,7 @@
 
 显示一组带有MRI图像的子图，其强度直方图和一些EEG轨迹。
 
-![MRI与脑电图示例](/static/images/gallery/sphx_glr_mri_with_eeg_001.png)
+![MRI与脑电图示例](https://matplotlib.org/_images/sphx_glr_mri_with_eeg_001.png)
 
 ```python
 import numpy as np

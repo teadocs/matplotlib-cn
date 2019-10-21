@@ -1,6 +1,6 @@
 # 动画3D随机游走
 
-![动画3D随机游走](/static/images/gallery/sphx_glr_random_walk_001.png)
+![动画3D随机游走](https://matplotlib.org/_images/sphx_glr_random_walk_001.png)
 
 ```python
 import numpy as np

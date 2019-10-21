@@ -2,7 +2,7 @@
 
 还演示了如何通过给alpha值介于0和1之间来调整标记的透明度。
 
-![带有图例的散点图示例](/static/images/gallery/sphx_glr_scatter_with_legend_001.png)
+![带有图例的散点图示例](https://matplotlib.org/_images/sphx_glr_scatter_with_legend_001.png)
 
 ```python
 import matplotlib.pyplot as plt

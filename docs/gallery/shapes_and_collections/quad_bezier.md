@@ -22,7 +22,7 @@ ax.set_title('The red point should be on the path')
 plt.show()
 ```
 
-![Bezier曲线示例](/static/images/gallery/sphx_glr_quad_bezier_001.png)
+![Bezier曲线示例](https://matplotlib.org/_images/sphx_glr_quad_bezier_001.png)
 
 ## 参考
 

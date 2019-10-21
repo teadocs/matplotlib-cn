@@ -4,7 +4,7 @@
 
 此示例需要 [basic_units.py](https://matplotlib.org/_downloads/3a73b4cd6e12aa53ff277b1b80d631c1/basic_units.py)
 
-![与单位组合的条形图示例](/static/images/gallery/sphx_glr_bar_unit_demo_001.png)
+![与单位组合的条形图示例](https://matplotlib.org/_images/sphx_glr_bar_unit_demo_001.png)
 
 ```python
 import numpy as np

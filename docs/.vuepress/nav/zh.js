@@ -1,11 +1,16 @@
 module.exports = [
   {
-    text: 'Matplotlib 简介',
+    text: '简介',
     link: '/intro/'
   },
   {
     text: '示例陈列馆',
     link: '/gallery/'
+  },
+  {
+    text: '深度学习',
+    link: 'https://www.numpy.org.cn/deep/',
+    important: true
   },
   {
     text: 'Matplotlib 教程',

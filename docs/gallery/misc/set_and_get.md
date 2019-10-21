@@ -61,7 +61,7 @@ get返回给定属性的值。 您可以使用get来查询单个属性的值：
 
 为了减少交互模式中的击键，许多属性具有短的别名，例如，'linew'为'lw'，'markeredgecolor'为'mec'。 当调用set或get in introspection模式时，这些属性将被列为'fullname或aliasname'。
 
-![别名](/static/images/gallery/sphx_glr_set_and_get_001.png)
+![别名](https://matplotlib.org/_images/sphx_glr_set_and_get_001.png)
 
 输出：
 

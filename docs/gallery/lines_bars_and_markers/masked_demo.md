@@ -4,7 +4,7 @@
 
 这通常与gappy数据一起使用，以打破数据空白处的界限。
 
-![遮盖示例1](/static/images/gallery/sphx_glr_masked_demo_001.png)
+![遮盖示例1](https://matplotlib.org/_images/sphx_glr_masked_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -1,6 +1,6 @@
 # 演示带轴分割器的颜色条
 
-![演示带轴分割器的颜色条](/static/images/gallery/sphx_glr_demo_colorbar_with_axes_divider_001.png)
+![演示带轴分割器的颜色条](https://matplotlib.org/_images/sphx_glr_demo_colorbar_with_axes_divider_001.png)
 
 ```python
 import matplotlib.pyplot as plt

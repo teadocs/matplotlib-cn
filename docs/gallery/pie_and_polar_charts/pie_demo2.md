@@ -42,7 +42,7 @@ autotexts[0].set_color('white')
 plt.show()
 ```
 
-![Pie 绘制饼图演示](/static/images/gallery/sphx_glr_pie_demo2_001.png)
+![Pie 绘制饼图演示](https://matplotlib.org/_images/sphx_glr_pie_demo2_001.png)
 
 ## 参考
 

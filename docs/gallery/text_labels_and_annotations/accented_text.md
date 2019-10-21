@@ -4,9 +4,9 @@ Matplotlib通过tex、mathtext或unicode支持重音字符。
 
 使用mathtext，提供以下重音：hat，breve，grave，bar，acute，tilde，vec，dot，ddot。所有这些语法都具有相同的语法，例如，要创建一个overbar，你可以使用 bar{o} 或者使用 o 元音来执行 ddot{o}。 还提供了快捷方式，例如： "o 'e `e ~n .x ^y
 
-![绘制重音文本示例](/static/images/gallery/sphx_glr_accented_text_001.png)
+![绘制重音文本示例](https://matplotlib.org/_images/sphx_glr_accented_text_001.png)
 
-![绘制重音文本示例2](/static/images/gallery/sphx_glr_accented_text_002.png)
+![绘制重音文本示例2](https://matplotlib.org/_images/sphx_glr_accented_text_002.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -2,7 +2,7 @@
 
 Matplotlib can wrap text automatically, but if it's too long, the text will be displayed slightly outside of the boundaries of the axis anyways.
 
-![文本自动换行示例](/static/images/gallery/sphx_glr_autowrap_001.png)
+![文本自动换行示例](https://matplotlib.org/_images/sphx_glr_autowrap_001.png)
 
 ```python
 import matplotlib.pyplot as plt

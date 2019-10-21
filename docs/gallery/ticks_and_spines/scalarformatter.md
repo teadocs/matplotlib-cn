@@ -42,7 +42,7 @@ ax4.yaxis.set_major_formatter(ScalarFormatter())
 fig.subplots_adjust(wspace=0.7, hspace=0.6)
 ```
 
-![使用ScalarFormat标记格式示例](/static/images/gallery/sphx_glr_scalarformatter_001.png)
+![使用ScalarFormat标记格式示例](https://matplotlib.org/_images/sphx_glr_scalarformatter_001.png)
 
 例子2：
 
@@ -72,7 +72,7 @@ ax4.yaxis.set_major_formatter(ScalarFormatter(useOffset=False))
 fig.subplots_adjust(wspace=0.7, hspace=0.6)
 ```
 
-![使用ScalarFormat标记格式示例2](/static/images/gallery/sphx_glr_scalarformatter_002.png)
+![使用ScalarFormat标记格式示例2](https://matplotlib.org/_images/sphx_glr_scalarformatter_002.png)
 
 例子3：
 
@@ -104,7 +104,7 @@ fig.subplots_adjust(wspace=0.7, hspace=0.6)
 plt.show()
 ```
 
-![使用ScalarFormat标记格式示例3](/static/images/gallery/sphx_glr_scalarformatter_003.png)
+![使用ScalarFormat标记格式示例3](https://matplotlib.org/_images/sphx_glr_scalarformatter_003.png)
 
 ## 下载这个示例
             

@@ -1,6 +1,6 @@
 # 渐变条形图
 
-![渐变条形图](/static/images/gallery/sphx_glr_gradient_bar_001.png)
+![渐变条形图](https://matplotlib.org/_images/sphx_glr_gradient_bar_001.png)
 
 ```python
 import matplotlib.pyplot as plt

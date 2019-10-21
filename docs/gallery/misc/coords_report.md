@@ -2,7 +2,7 @@
 
 覆盖coords的默认报告。
 
-![坐标报告示例](/static/images/gallery/sphx_glr_coords_report_001.png)
+![坐标报告示例](https://matplotlib.org/_images/sphx_glr_coords_report_001.png)
 
 ```python
 import matplotlib.pyplot as plt

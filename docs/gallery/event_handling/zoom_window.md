@@ -6,7 +6,7 @@
 
 请注意，散点图中圆的直径以点**2定义，因此它们的大小与缩放无关。
 
-![缩放窗口示例](/static/images/gallery/sphx_glr_zoom_window_001.png)
+![缩放窗口示例](https://matplotlib.org/_images/sphx_glr_zoom_window_001.png)
 
 ```python
 import matplotlib.pyplot as plt

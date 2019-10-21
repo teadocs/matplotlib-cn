@@ -13,7 +13,7 @@
       <h4>👥兄弟文档</h4>
       <ul>
         <li>
-          <a href="https://www.paddlepaddle.org.cn">PaddlePaddle中文文档</a>
+          <a href="https://www.paddlepaddle.org.cn/?from=matplotlib-cn" target="_blank">PaddlePaddle中文文档</a>
         </li>
         <li>
           <a href="https://www.numpy.org.cn/" target="_blank">NumPy 中文网</a>

@@ -80,7 +80,7 @@ for diagram in diagrams:
 plt.show()
 ```
 
-![朗肯动力循环示例](/static/images/gallery/sphx_glr_sankey_rankine_001.png)
+![朗肯动力循环示例](https://matplotlib.org/_images/sphx_glr_sankey_rankine_001.png)
 
 ## 参考
 

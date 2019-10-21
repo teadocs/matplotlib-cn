@@ -75,7 +75,7 @@ ax.set_title("High-resolution tricontouring")
 plt.show()
 ```
 
-![Tricontour Smooth User](/static/images/gallery/sphx_glr_tricontour_smooth_user_001.png)
+![Tricontour Smooth User](https://matplotlib.org/_images/sphx_glr_tricontour_smooth_user_001.png)
 
 ## 参考
 

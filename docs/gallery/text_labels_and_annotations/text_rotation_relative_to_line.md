@@ -2,7 +2,7 @@
 
 matplotlib中的文本对象通常相对于屏幕坐标系旋转(即，无论轴如何更改，沿水平和垂直之间的直线旋转45度打印文本)。但是，有时需要围绕打印上的某个内容旋转文本。在这种情况下，正确的角度将不是该对象在打印坐标系中的角度，而是该对象在屏幕坐标系中显示的角度。此角度是通过将角度从打印转换为屏幕坐标系来找到的，如下面的示例所示。
 
-![相对线的文本旋转示例](/static/images/gallery/sphx_glr_text_rotation_relative_to_line_001.png)
+![相对线的文本旋转示例](https://matplotlib.org/_images/sphx_glr_text_rotation_relative_to_line_001.png)
 
 ```python
 import matplotlib.pyplot as plt

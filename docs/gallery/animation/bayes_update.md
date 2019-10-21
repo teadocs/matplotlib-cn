@@ -4,7 +4,7 @@
 
 垂直线表示绘制的分布应该收敛的理论值。
 
-![贝叶斯更新示例](/static/images/gallery/sphx_glr_bayes_update_001.png)
+![贝叶斯更新示例](https://matplotlib.org/_images/sphx_glr_bayes_update_001.png)
 
 ```python
 import math

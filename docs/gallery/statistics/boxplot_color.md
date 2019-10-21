@@ -4,7 +4,7 @@
 
 关于箱形图及其历史的一般参考可以在这里找到：http://vita.had.co.nz/papers/boxplots.pdf
 
-![自定义颜色箱形图示例](/static/images/gallery/sphx_glr_boxplot_color_001.png)
+![自定义颜色箱形图示例](https://matplotlib.org/_images/sphx_glr_boxplot_color_001.png)
 
 ```python
 import matplotlib.pyplot as plt

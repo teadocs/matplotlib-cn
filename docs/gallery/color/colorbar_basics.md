@@ -40,7 +40,7 @@ cbar.minorticks_on()
 plt.show()
 ```
 
-![颜色条示例](/static/images/gallery/sphx_glr_colorbar_basics_001.png)
+![颜色条示例](https://matplotlib.org/_images/sphx_glr_colorbar_basics_001.png)
 
 ## 参考
 

@@ -129,7 +129,7 @@ if plot_masked_tri:
 plt.show()
 ```
 
-![Tricontour 德洛内三角](/static/images/gallery/sphx_glr_tricontour_smooth_delaunay_001.png)
+![Tricontour 德洛内三角](https://matplotlib.org/_images/sphx_glr_tricontour_smooth_delaunay_001.png)
 
 ## 参考
 

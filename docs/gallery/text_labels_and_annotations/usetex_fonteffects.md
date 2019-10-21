@@ -2,7 +2,7 @@
 
 此脚本演示了pdf usetex现在支持pdftex.map中指定的字体效果。
 
-![Usetex 字体效果示例](/static/images/gallery/sphx_glr_usetex_fonteffects_001.png)
+![Usetex 字体效果示例](https://matplotlib.org/_images/sphx_glr_usetex_fonteffects_001.png)
 
 ```python
 import matplotlib

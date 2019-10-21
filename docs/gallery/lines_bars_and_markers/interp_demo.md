@@ -1,6 +1,6 @@
 # 插补示例
 
-![插补示例图](/static/images/gallery/sphx_glr_interp_demo_001.png)
+![插补示例图](https://matplotlib.org/_images/sphx_glr_interp_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

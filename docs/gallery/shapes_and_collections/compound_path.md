@@ -32,7 +32,7 @@ ax.autoscale_view()
 plt.show()
 ```
 
-![复合路径示例](/static/images/gallery/sphx_glr_compound_path_001.png)
+![复合路径示例](https://matplotlib.org/_images/sphx_glr_compound_path_001.png)
 
 ## 参考
 

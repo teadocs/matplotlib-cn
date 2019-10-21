@@ -55,7 +55,7 @@ else:
 ax.clabel(CS, CS.levels, inline=True, fmt=fmt, fontsize=10)
 ```
 
-![等高线标签演示示例](/static/images/gallery/sphx_glr_contour_label_demo_001.png)
+![等高线标签演示示例](https://matplotlib.org/_images/sphx_glr_contour_label_demo_001.png)
 
 使用字典用任意字符串标记等高线
 
@@ -74,7 +74,7 @@ for l, s in zip(CS1.levels, strs):
 ax1.clabel(CS1, CS1.levels[::2], inline=True, fmt=fmt, fontsize=10)
 ```
 
-![等高线标签演示示例2](/static/images/gallery/sphx_glr_contour_label_demo_002.png)
+![等高线标签演示示例2](https://matplotlib.org/_images/sphx_glr_contour_label_demo_002.png)
 
 使用Formatter来格式化
 
@@ -90,7 +90,7 @@ ax2.set_title("$100^Z$")
 plt.show()
 ```
 
-![等高线标签演示示例3](/static/images/gallery/sphx_glr_contour_label_demo_003.png)
+![等高线标签演示示例3](https://matplotlib.org/_images/sphx_glr_contour_label_demo_003.png)
 
 ## 参考
 

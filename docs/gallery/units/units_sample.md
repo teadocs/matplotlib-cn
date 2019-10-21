@@ -4,7 +4,7 @@
 
 此示例需要[basic_units.py](https://matplotlib.org/_downloads/3a73b4cd6e12aa53ff277b1b80d631c1/basic_units.py)
 
-![英寸和厘米示例](/static/images/gallery/sphx_glr_units_sample_001.png)
+![英寸和厘米示例](https://matplotlib.org/_images/sphx_glr_units_sample_001.png)
 
 ```python
 from basic_units import cm, inch

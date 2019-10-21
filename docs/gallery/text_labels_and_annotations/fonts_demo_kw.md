@@ -4,7 +4,7 @@
 
 请参阅[字体演示(面向对象样式)](/gallery/text_labels_and_annotations/fonts_demo.html)，以使用setter实现相同的效果。
 
-![字体演示](/static/images/gallery/sphx_glr_fonts_demo_kw_001.png)
+![字体演示](https://matplotlib.org/_images/sphx_glr_fonts_demo_kw_001.png)
 
 ```python
 import matplotlib.pyplot as plt

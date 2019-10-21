@@ -59,7 +59,7 @@ make_arrowstyles(ax2)
 plt.show()
 ```
 
-![新特性示例](/static/images/gallery/sphx_glr_whats_new_98_4_fancy_001.png)
+![新特性示例](https://matplotlib.org/_images/sphx_glr_whats_new_98_4_fancy_001.png)
 
 ## 参考
 

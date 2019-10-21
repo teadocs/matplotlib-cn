@@ -32,7 +32,7 @@ ax3.set_ylim((0, 2.5))
 plt.show()
 ```
 
-![Hatch演示](/static/images/gallery/sphx_glr_hatch_demo_001.png)
+![Hatch演示](https://matplotlib.org/_images/sphx_glr_hatch_demo_001.png)
 
 ## 参考
 

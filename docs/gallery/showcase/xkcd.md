@@ -37,7 +37,7 @@ with plt.xkcd():
         ha='center')
 ```
 
-![XKCD示例1](/static/images/gallery/sphx_glr_xkcd_001.png)
+![XKCD示例1](https://matplotlib.org/_images/sphx_glr_xkcd_001.png)
 
 ```python
 with plt.xkcd():
@@ -66,7 +66,7 @@ with plt.xkcd():
 plt.show()
 ```
 
-![XKCD示例2](/static/images/gallery/sphx_glr_xkcd_002.png)
+![XKCD示例2](https://matplotlib.org/_images/sphx_glr_xkcd_002.png)
 
 ## 下载这个示例
             

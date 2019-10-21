@@ -34,7 +34,7 @@ fig.tight_layout()  # otherwise the right y-label is slightly clipped
 plt.show()
 ```
 
-![绘制不同尺度示例](/static/images/gallery/sphx_glr_two_scales_001.png)
+![绘制不同尺度示例](https://matplotlib.org/_images/sphx_glr_two_scales_001.png)
 
 ## 参考
 

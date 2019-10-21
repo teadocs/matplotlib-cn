@@ -1,6 +1,6 @@
 # 演示日期转换
 
-![演示日期转换示例](/static/images/gallery/sphx_glr_date_demo_convert_001.png)
+![演示日期转换示例](https://matplotlib.org/_images/sphx_glr_date_demo_convert_001.png)
 
 ```python
 import datetime

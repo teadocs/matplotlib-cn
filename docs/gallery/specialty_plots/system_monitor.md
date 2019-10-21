@@ -1,6 +1,6 @@
 # 系统监视器
 
-![系统监视器示例](/static/images/gallery/sphx_glr_system_monitor_001.png)
+![系统监视器示例](https://matplotlib.org/_images/sphx_glr_system_monitor_001.png)
 
 输出：
 

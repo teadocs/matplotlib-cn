@@ -51,9 +51,9 @@ ax2.barbs(data['x'], data['y'], masked_u, data['v'], length=8, pivot='middle')
 plt.show()
 ```
 
-![倒勾图示例](/static/images/gallery/sphx_glr_barb_demo_001.png)
+![倒勾图示例](https://matplotlib.org/_images/sphx_glr_barb_demo_001.png)
 
-![倒勾图示例2](/static/images/gallery/sphx_glr_barb_demo_002.png)
+![倒勾图示例2](https://matplotlib.org/_images/sphx_glr_barb_demo_002.png)
 
 ## 参考
 

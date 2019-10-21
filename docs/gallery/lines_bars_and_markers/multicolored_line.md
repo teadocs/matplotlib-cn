@@ -2,7 +2,7 @@
 
 此示例显示如何制作多色线。 在此示例中，线条基于其衍生物着色。
 
-![五彩线条示例1](/static/images/gallery/sphx_glr_multicolored_line_001.png)
+![五彩线条示例1](https://matplotlib.org/_images/sphx_glr_multicolored_line_001.png)
 
 ```python
 import numpy as np

@@ -18,7 +18,7 @@ plt.ylabel("Today is cloudy.") How can I show "today" as red, "is" as green and 
 
 Paul Ivanov 的回答：
 
-![彩虹文本](/static/images/gallery/sphx_glr_rainbow_text_001.png)
+![彩虹文本](https://matplotlib.org/_images/sphx_glr_rainbow_text_001.png)
 
 ```python
 import matplotlib.pyplot as plt

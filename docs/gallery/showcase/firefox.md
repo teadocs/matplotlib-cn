@@ -2,7 +2,7 @@
 
 此示例显示如何使用路径和修补程序创建Firefox徽标。
 
-![绘制火狐浏览器logo示例](/static/images/gallery/sphx_glr_firefox_001.png)
+![绘制火狐浏览器logo示例](https://matplotlib.org/_images/sphx_glr_firefox_001.png)
 
 ```python
 import re

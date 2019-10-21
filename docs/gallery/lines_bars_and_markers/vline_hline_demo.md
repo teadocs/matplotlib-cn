@@ -2,7 +2,7 @@
 
 此示例展示了hlines和vlines的功能。
 
-![hlines和vlines图例](/static/images/gallery/sphx_glr_vline_hline_demo_001.png)
+![hlines和vlines图例](https://matplotlib.org/_images/sphx_glr_vline_hline_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

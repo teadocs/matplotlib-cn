@@ -31,7 +31,7 @@ lines = ax.plot(data)
 ax.legend(lines)
 ```
 
-![撰写自定义图例](/static/images/gallery/sphx_glr_custom_legends_001.png)
+![撰写自定义图例](https://matplotlib.org/_images/sphx_glr_custom_legends_001.png)
 
 请注意，每行创建一个图例项。在这种情况下，我们可以使用未明确绑定到绘制数据的Matplotlib对象组成图例。例如：
 
@@ -46,7 +46,7 @@ lines = ax.plot(data)
 ax.legend(custom_lines, ['Cold', 'Medium', 'Hot'])
 ```
 
-![撰写自定义图例2](/static/images/gallery/sphx_glr_custom_legends_002.png)
+![撰写自定义图例2](https://matplotlib.org/_images/sphx_glr_custom_legends_002.png)
 
 还有许多其他Matplotlib对象可以这种方式使用。 在下面的代码中，我们列出了一些常见的代码。
 
@@ -67,7 +67,7 @@ ax.legend(handles=legend_elements, loc='center')
 plt.show()
 ```
 
-![撰写自定义图例3](/static/images/gallery/sphx_glr_custom_legends_003.png)
+![撰写自定义图例3](https://matplotlib.org/_images/sphx_glr_custom_legends_003.png)
 
 ## 下载这个示例
             

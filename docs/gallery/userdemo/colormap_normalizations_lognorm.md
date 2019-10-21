@@ -2,7 +2,7 @@
 
 演示使用规范以非线性方式将颜色映射映射到数据上。
 
-![颜色映射规格化示例](/static/images/gallery/sphx_glr_colormap_normalizations_lognorm_001.png)
+![颜色映射规格化示例](https://matplotlib.org/_images/sphx_glr_colormap_normalizations_lognorm_001.png)
 
 ```python
 import numpy as np

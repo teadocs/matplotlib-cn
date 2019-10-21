@@ -18,7 +18,7 @@ plt.ylabel('volts (mV)')
 plt.show()
 ```
 
-![数学文本示例](/static/images/gallery/sphx_glr_pyplot_mathtext_001.png)
+![数学文本示例](https://matplotlib.org/_images/sphx_glr_pyplot_mathtext_001.png)
 
 ## 参考
 

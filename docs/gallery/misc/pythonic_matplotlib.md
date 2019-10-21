@@ -38,7 +38,7 @@ a.set_xticks([])
 a.set_yticks([])
 ```
 
-![Pythonic Matplotlib示例](/static/images/gallery/sphx_glr_pythonic_matplotlib_001.png)
+![Pythonic Matplotlib示例](https://matplotlib.org/_images/sphx_glr_pythonic_matplotlib_001.png)
 
 ```python
 import matplotlib.pyplot as plt

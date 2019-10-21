@@ -2,7 +2,7 @@
 
 使用Matplotlib的内部LaTeX解析器和布局引擎。 有关真正的LaTeX渲染，请参阅text.usetex选项。
 
-![数学文本演示](/static/images/gallery/sphx_glr_mathtext_demo_001.png)
+![数学文本演示](https://matplotlib.org/_images/sphx_glr_mathtext_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

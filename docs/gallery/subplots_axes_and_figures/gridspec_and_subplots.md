@@ -4,7 +4,7 @@
 
 请参阅：[使用GridSpec和其他功能自定义图布局](https://matplotlib.org/tutorials/intermediate/gridspec.html)。
 
-![使用子图和GridSpec组合两个子图示例](/static/images/gallery/sphx_glr_gridspec_and_subplots_001.png)
+![使用子图和GridSpec组合两个子图示例](https://matplotlib.org/_images/sphx_glr_gridspec_and_subplots_001.png)
 
 ```python
 import matplotlib.pyplot as plt

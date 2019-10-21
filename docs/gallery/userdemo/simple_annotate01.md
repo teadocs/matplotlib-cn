@@ -1,6 +1,6 @@
 # 简单的Annotate01
 
-![简单的Annotate01示例](/static/images/gallery/sphx_glr_simple_annotate01_001.png)
+![简单的Annotate01示例](https://matplotlib.org/_images/sphx_glr_simple_annotate01_001.png)
 
 ```python
 import matplotlib.pyplot as plt

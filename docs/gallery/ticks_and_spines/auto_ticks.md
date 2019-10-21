@@ -18,7 +18,7 @@ data = [x.ravel(), y.ravel()]
 ax.scatter(*data, c=data[1])
 ```
 
-![自动设置记号标签示例](/static/images/gallery/sphx_glr_auto_ticks_001.png)
+![自动设置记号标签示例](https://matplotlib.org/_images/sphx_glr_auto_ticks_001.png)
 
 有时选择均匀分布的刻度会产生奇怪的刻度数。 如果您希望Matplotlib保持位于圆形数字的刻度线，则可以使用以下rcParams值更改此行为：
 
@@ -31,7 +31,7 @@ with plt.rc_context({'axes.autolimit_mode': 'round_numbers'}):
     ax.scatter(*data, c=data[1])
 ```
 
-![自动设置记号标签示例2](/static/images/gallery/sphx_glr_auto_ticks_002.png)
+![自动设置记号标签示例2](https://matplotlib.org/_images/sphx_glr_auto_ticks_002.png)
 
 输出：
 
@@ -51,7 +51,7 @@ with plt.rc_context({'axes.autolimit_mode': 'round_numbers',
 plt.show()
 ```
 
-![自动设置记号标签示例3](/static/images/gallery/sphx_glr_auto_ticks_003.png)
+![自动设置记号标签示例3](https://matplotlib.org/_images/sphx_glr_auto_ticks_003.png)
 
 ## 下载这个示例
             

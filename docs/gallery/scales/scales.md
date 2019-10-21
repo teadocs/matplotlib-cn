@@ -2,7 +2,7 @@
 
 说明应用于轴的比例变换，例如： log，symlog，logit。
 
-![比例尺示例](/static/images/gallery/sphx_glr_scales_001.png)
+![比例尺示例](https://matplotlib.org/_images/sphx_glr_scales_001.png)
 
 ```python
 import numpy as np

@@ -4,7 +4,7 @@
 
 此示例使用华氏度和摄氏度量表。
 
-![同一轴上的不同比例示例](/static/images/gallery/sphx_glr_fahrenheit_celsius_scales_001.png)
+![同一轴上的不同比例示例](https://matplotlib.org/_images/sphx_glr_fahrenheit_celsius_scales_001.png)
 
 ```python
 import matplotlib.pyplot as plt

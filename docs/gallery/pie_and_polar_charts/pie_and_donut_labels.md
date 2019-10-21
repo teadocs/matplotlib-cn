@@ -45,7 +45,7 @@ ax.set_title("Matplotlib bakery: A pie")
 plt.show()
 ```
 
-![标记饼图和空心饼图示例](/static/images/gallery/sphx_glr_pie_and_donut_labels_001.png)
+![标记饼图和空心饼图示例](https://matplotlib.org/_images/sphx_glr_pie_and_donut_labels_001.png)
 
 现在是空心饼图（甜甜圈）。从空心饼图（甜甜圈）开始，我们将数据转录为数字（将1个鸡蛋转换为50克），并直接绘制馅饼。馅饼？等等......这将是甜甜圈，不是吗？ 好吧，正如我们在这里看到的，甜甜圈是一个馅饼，有一定的宽度设置到楔形，这与它的半径不同。 这很简单。这是通过wedgeprops参数完成的。
 
@@ -90,7 +90,7 @@ ax.set_title("Matplotlib bakery: A donut")
 plt.show()
 ```
 
-![标记饼图和空心饼图2](/static/images/gallery/sphx_glr_pie_and_donut_labels_002.png)
+![标记饼图和空心饼图2](https://matplotlib.org/_images/sphx_glr_pie_and_donut_labels_002.png)
 
 这就是空心饼图（甜甜圈）。然而，请注意，如果我们使用这个食谱，材料将足够大约6个甜甜圈-生产一个巨大的甜甜圈是未经测试的，并可能会导致烹饪失败。
 

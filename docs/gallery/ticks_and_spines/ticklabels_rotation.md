@@ -2,7 +2,7 @@
 
 使用用户定义的旋转演示自定义刻度标签。
 
-![旋转自定义刻度标签示例](/static/images/gallery/sphx_glr_ticklabels_rotation_001.png)
+![旋转自定义刻度标签示例](https://matplotlib.org/_images/sphx_glr_ticklabels_rotation_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -2,7 +2,7 @@
 
 这个使用没有辅助类的锚定对象的示例在[Matplotlib axes_grid1 Toolkit](https://matplotlib.org/api/toolkits/axes_grid1.html#toolkit-axesgrid1-index)中找到。此版本的图与Simple [Anchored Artists](https://matplotlib.org/gallery/axes_grid1/simple_anchored_artists.html)中的版本类似，但它仅使用matplotlib命名空间实现，没有其他工具包的帮助。
 
-![锚定艺术家对象示例](/static/images/gallery/sphx_glr_anchored_artists_001.png)
+![锚定艺术家对象示例](https://matplotlib.org/_images/sphx_glr_anchored_artists_001.png)
 
 ```python
 from matplotlib import pyplot as plt

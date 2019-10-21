@@ -2,7 +2,7 @@
 
 此示例演示“灰度”样式表，该样式表将定义为rc参数的所有颜色更改为灰度。 但请注意，并非所有绘图元素都默认为rc参数定义的颜色。
 
-![灰度样式表示例](/static/images/gallery/sphx_glr_grayscale_001.png)
+![灰度样式表示例](https://matplotlib.org/_images/sphx_glr_grayscale_001.png)
 
 ```python
 import numpy as np

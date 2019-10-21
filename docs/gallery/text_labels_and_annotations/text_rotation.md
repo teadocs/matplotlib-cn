@@ -8,7 +8,7 @@
 
 但是一张图片胜过千言万语！
 
-![默认文本旋转演示](/static/images/gallery/sphx_glr_text_rotation_001.png)
+![默认文本旋转演示](https://matplotlib.org/_images/sphx_glr_text_rotation_001.png)
 
 ```python
 import matplotlib.pyplot as plt

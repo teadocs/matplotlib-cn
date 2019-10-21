@@ -26,7 +26,7 @@ example_plot(ax)
 plt.tight_layout()
 ```
 
-![紧凑布局示例](/static/images/gallery/sphx_glr_demo_tight_layout_001.png)
+![紧凑布局示例](https://matplotlib.org/_images/sphx_glr_demo_tight_layout_001.png)
 
 ```python
 fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2)
@@ -37,7 +37,7 @@ example_plot(ax4)
 plt.tight_layout()
 ```
 
-![紧凑布局示例2](/static/images/gallery/sphx_glr_demo_tight_layout_002.png)
+![紧凑布局示例2](https://matplotlib.org/_images/sphx_glr_demo_tight_layout_002.png)
 
 ```python
 fig, (ax1, ax2) = plt.subplots(nrows=2, ncols=1)
@@ -46,7 +46,7 @@ example_plot(ax2)
 plt.tight_layout()
 ```
 
-![紧凑布局示例3](/static/images/gallery/sphx_glr_demo_tight_layout_003.png)
+![紧凑布局示例3](https://matplotlib.org/_images/sphx_glr_demo_tight_layout_003.png)
 
 ```python
 fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2)
@@ -55,7 +55,7 @@ example_plot(ax2)
 plt.tight_layout()
 ```
 
-![紧凑布局示例4](/static/images/gallery/sphx_glr_demo_tight_layout_004.png)
+![紧凑布局示例4](https://matplotlib.org/_images/sphx_glr_demo_tight_layout_004.png)
 
 ```python
 fig, axes = plt.subplots(nrows=3, ncols=3)
@@ -65,7 +65,7 @@ for row in axes:
 plt.tight_layout()
 ```
 
-![紧凑布局示例5](/static/images/gallery/sphx_glr_demo_tight_layout_005.png)
+![紧凑布局示例5](https://matplotlib.org/_images/sphx_glr_demo_tight_layout_005.png)
 
 ```python
 fig = plt.figure()
@@ -81,7 +81,7 @@ example_plot(ax3)
 plt.tight_layout()
 ```
 
-![紧凑布局示例6](/static/images/gallery/sphx_glr_demo_tight_layout_006.png)
+![紧凑布局示例6](https://matplotlib.org/_images/sphx_glr_demo_tight_layout_006.png)
 
 ```python
 fig = plt.figure()
@@ -101,7 +101,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![紧凑布局示例7](/static/images/gallery/sphx_glr_demo_tight_layout_007.png)
+![紧凑布局示例7](https://matplotlib.org/_images/sphx_glr_demo_tight_layout_007.png)
 
 ```python
 fig = plt.figure()
@@ -148,7 +148,7 @@ gs2.update(top=top, bottom=bottom)
 plt.show()
 ```
 
-![紧凑布局示例8](/static/images/gallery/sphx_glr_demo_tight_layout_008.png)
+![紧凑布局示例8](https://matplotlib.org/_images/sphx_glr_demo_tight_layout_008.png)
 
 ## 参考
 

@@ -2,7 +2,7 @@
 
 此示例说明如何将（MRI）图像读入NumPy阵列，并使用imshow以灰度显示。
 
-![MRI示例](/static/images/gallery/sphx_glr_mri_demo_001.png)
+![MRI示例](https://matplotlib.org/_images/sphx_glr_mri_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

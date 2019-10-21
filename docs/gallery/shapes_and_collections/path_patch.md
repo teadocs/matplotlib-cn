@@ -36,7 +36,7 @@ ax.axis('equal')
 plt.show()
 ```
 
-![PathPatch对象](/static/images/gallery/sphx_glr_path_patch_001.png)
+![PathPatch对象](https://matplotlib.org/_images/sphx_glr_path_patch_001.png)
 
 ## 参考
 

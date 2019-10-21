@@ -10,7 +10,7 @@
 选择不同的存储量和大小会显著影响直方图的形状。Astropy文档有很多关于如何选择这些参数的部分: http://docs.astropy.org/en/stable/visualization/histogram.html
 
 
-![多个数据集演示直方图](/static/images/gallery/sphx_glr_histogram_multihist_001.png)
+![多个数据集演示直方图](https://matplotlib.org/_images/sphx_glr_histogram_multihist_001.png)
 
 ```python
 import numpy as np

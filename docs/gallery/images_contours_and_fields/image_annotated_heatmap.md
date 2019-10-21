@@ -53,7 +53,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![热度图示例](/static/images/gallery/sphx_glr_image_annotated_heatmap_001.png)
+![热度图示例](https://matplotlib.org/_images/sphx_glr_image_annotated_heatmap_001.png)
 
 ## 使用辅助函数的编码风格
 
@@ -187,7 +187,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![热度图示例2](/static/images/gallery/sphx_glr_image_annotated_heatmap_002.png)
+![热度图示例2](https://matplotlib.org/_images/sphx_glr_image_annotated_heatmap_002.png)
 
 ## 一些更复杂的热度图示例
 
@@ -256,7 +256,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![热度图示例3](/static/images/gallery/sphx_glr_image_annotated_heatmap_003.png)
+![热度图示例3](https://matplotlib.org/_images/sphx_glr_image_annotated_heatmap_003.png)
 
 ## 参考
 

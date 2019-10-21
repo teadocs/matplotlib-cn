@@ -2,11 +2,11 @@
 
 用阴影图展示一些常见的技巧。
 
-![晕渲示例](/static/images/gallery/sphx_glr_advanced_hillshading_001.png)
+![晕渲示例](https://matplotlib.org/_images/sphx_glr_advanced_hillshading_001.png)
 
-![晕渲示例2](/static/images/gallery/sphx_glr_advanced_hillshading_002.png)
+![晕渲示例2](https://matplotlib.org/_images/sphx_glr_advanced_hillshading_002.png)
 
-![晕渲示例3](/static/images/gallery/sphx_glr_advanced_hillshading_003.png)
+![晕渲示例3](https://matplotlib.org/_images/sphx_glr_advanced_hillshading_003.png)
 
 ```python
 import numpy as np

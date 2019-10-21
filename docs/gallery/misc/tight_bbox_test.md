@@ -1,6 +1,6 @@
 # 严密的Bbox测试
 
-![严密的Bbox测试示例](/static/images/gallery/sphx_glr_tight_bbox_test_001.png)
+![严密的Bbox测试示例](https://matplotlib.org/_images/sphx_glr_tight_bbox_test_001.png)
 
 输出：
 

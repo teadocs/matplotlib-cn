@@ -30,7 +30,7 @@ oriented interface or via a set of functions familiar to MATLAB users.
 
 # Installation
 
-Visit the [Matplotlib installation instructions](https://matplotlib.org/users/installing.html).
+Visit the [Matplotlib installation instructions](/en/users/installing).
 
 # Documentation
 

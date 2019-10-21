@@ -4,7 +4,7 @@
 
 该程序显示了“检查按钮”的使用，类似于复选框。 显示了3种不同的正弦波，我们可以选择使用复选按钮显示哪些波形。
 
-![复选按钮示例](/static/images/gallery/sphx_glr_check_buttons_001.png)
+![复选按钮示例](https://matplotlib.org/_images/sphx_glr_check_buttons_001.png)
 
 ```python
 import numpy as np

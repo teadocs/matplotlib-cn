@@ -4,7 +4,7 @@
 
 此示例演示了使用Matplotlib事件处理与画布上的对象进行交互和修改对象的跨GUI应用程序。
 
-![路径编辑器示例](/static/images/gallery/sphx_glr_path_editor_001.png)
+![路径编辑器示例](https://matplotlib.org/_images/sphx_glr_path_editor_001.png)
 
 ```python
 import numpy as np

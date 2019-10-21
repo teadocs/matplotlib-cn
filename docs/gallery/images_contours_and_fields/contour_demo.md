@@ -29,7 +29,7 @@ ax.clabel(CS, inline=1, fontsize=10)
 ax.set_title('Simplest default with labels')
 ```
 
-![等高线演示示例](/static/images/gallery/sphx_glr_contour_demo_001.png)
+![等高线演示示例](https://matplotlib.org/_images/sphx_glr_contour_demo_001.png)
 
 等高线的标签可以手动放置，通过提供位置列表(在数据坐标中)。有关交互式布局，请参见ginput_book_clabel.py。
 
@@ -41,7 +41,7 @@ ax.clabel(CS, inline=1, fontsize=10, manual=manual_locations)
 ax.set_title('labels at selected locations')
 ```
 
-![等高线演示示例2](/static/images/gallery/sphx_glr_contour_demo_002.png)
+![等高线演示示例2](https://matplotlib.org/_images/sphx_glr_contour_demo_002.png)
 
 你可以强制所有的等高线是相同的颜色。
 
@@ -54,7 +54,7 @@ ax.clabel(CS, fontsize=9, inline=1)
 ax.set_title('Single color - negative contours dashed')
 ```
 
-![等高线演示示例3](/static/images/gallery/sphx_glr_contour_demo_003.png)
+![等高线演示示例3](https://matplotlib.org/_images/sphx_glr_contour_demo_003.png)
 
 你可以将负轮廓设置为实线而不是虚线：
 
@@ -68,7 +68,7 @@ ax.clabel(CS, fontsize=9, inline=1)
 ax.set_title('Single color - negative contours solid')
 ```
 
-![等高线演示示例4](/static/images/gallery/sphx_glr_contour_demo_004.png)
+![等高线演示示例4](https://matplotlib.org/_images/sphx_glr_contour_demo_004.png)
 
 并且你可以手动指定轮廓的颜色。
 
@@ -82,7 +82,7 @@ ax.clabel(CS, fontsize=9, inline=1)
 ax.set_title('Crazy lines')
 ```
 
-![等高线演示示例5](/static/images/gallery/sphx_glr_contour_demo_005.png)
+![等高线演示示例5](https://matplotlib.org/_images/sphx_glr_contour_demo_005.png)
 
 也可以使用颜色图来指定颜色；默认的颜色图将用于等高线。
 
@@ -119,7 +119,7 @@ CB.ax.set_position([ll, b + 0.1*h, ww, h*0.8])
 plt.show()
 ```
 
-![等高线演示示例6](/static/images/gallery/sphx_glr_contour_demo_006.png)
+![等高线演示示例6](https://matplotlib.org/_images/sphx_glr_contour_demo_006.png)
 
 ## 参考
 

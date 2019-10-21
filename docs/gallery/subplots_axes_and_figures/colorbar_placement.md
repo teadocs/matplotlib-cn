@@ -19,7 +19,7 @@ for col in range(2):
 plt.show()
 ```
 
-![放置色块示例](/static/images/gallery/sphx_glr_colorbar_placement_001.png)
+![放置色块示例](https://matplotlib.org/_images/sphx_glr_colorbar_placement_001.png)
 
 第一列在两行中都具有相同类型的数据，因此可能需要通过调用 ``Figure.colorbar`` 和轴列表而不是单个轴来组合我们所做的颜色栏。
 
@@ -35,7 +35,7 @@ for col in range(2):
 plt.show()
 ```
 
-![放置色块示例2](/static/images/gallery/sphx_glr_colorbar_placement_002.png)
+![放置色块示例2](https://matplotlib.org/_images/sphx_glr_colorbar_placement_002.png)
 
 使用此范例可以实现相对复杂的颜色条布局。请注意，此示例使用 ``constrained_layout = True`` 可以更好地工作
 
@@ -53,7 +53,7 @@ fig.colorbar(pcm, ax=[axs[2, 1]], location='left')
 plt.show()
 ```
 
-![放置色块示例3](/static/images/gallery/sphx_glr_colorbar_placement_003.png)
+![放置色块示例3](https://matplotlib.org/_images/sphx_glr_colorbar_placement_003.png)
 
 ## 下载这个示例
             

@@ -56,7 +56,7 @@ do_plot(ax4, Z, mtransforms.Affine2D().
 plt.show()
 ```
 
-![图像的仿射变换图示](/static/images/gallery/sphx_glr_affine_image_001.png)
+![图像的仿射变换图示](https://matplotlib.org/_images/sphx_glr_affine_image_001.png)
 
 ## 参考
 

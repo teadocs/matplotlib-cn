@@ -43,7 +43,7 @@ fig.align_ylabels(axs[:, 1])
 plt.show()
 ```
 
-![对齐y标签示例](/static/images/gallery/sphx_glr_align_ylabels_0011.png)
+![对齐y标签示例](https://matplotlib.org/_images/sphx_glr_align_ylabels_0011.png)
 
 > 另见 Figure.align_ylabels and Figure.align_labels for a direct method of doing the same thing. Also Aligning Labels
 
@@ -63,7 +63,7 @@ for j in range(2):
 plt.show()
 ```
 
-![对齐y标签示例2](/static/images/gallery/sphx_glr_align_ylabels_002.png)
+![对齐y标签示例2](https://matplotlib.org/_images/sphx_glr_align_ylabels_002.png)
 
 ## 参考
 

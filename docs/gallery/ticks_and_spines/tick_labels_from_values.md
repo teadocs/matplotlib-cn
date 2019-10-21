@@ -6,7 +6,7 @@
 
 注意：这里使用MaxNLocator来确保刻度值取整数值。
 
-![从值列表中设置刻度标签示例](/static/images/gallery/sphx_glr_tick_labels_from_values_001.png)
+![从值列表中设置刻度标签示例](https://matplotlib.org/_images/sphx_glr_tick_labels_from_values_001.png)
 
 ```python
 import matplotlib.pyplot as plt

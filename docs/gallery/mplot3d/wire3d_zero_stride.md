@@ -2,7 +2,7 @@
 
 证明将rstride或cstride设置为0会导致在相应方向上不生成导线。
 
-![三维线框在一个方向上绘制示例](/static/images/gallery/sphx_glr_wire3d_zero_stride_001.png)
+![三维线框在一个方向上绘制示例](https://matplotlib.org/_images/sphx_glr_wire3d_zero_stride_001.png)
 
 ```python
 from mpl_toolkits.mplot3d import axes3d

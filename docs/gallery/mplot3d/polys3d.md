@@ -2,7 +2,7 @@
 
 演示如何创建填充线图下空间的多边形。 在这个例子中，多边形是半透明的，产生一种“锯齿状的彩色玻璃”效果。
 
-![生成多边形以填充3D线图示例](/static/images/gallery/sphx_glr_polys3d_001.png)
+![生成多边形以填充3D线图示例](https://matplotlib.org/_images/sphx_glr_polys3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

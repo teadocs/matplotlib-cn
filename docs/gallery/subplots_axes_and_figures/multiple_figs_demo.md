@@ -21,7 +21,7 @@ plt.subplot(212)
 plt.plot(t, 2*s1)
 ```
 
-![多外形演示](/static/images/gallery/sphx_glr_multiple_figs_demo_001.png)
+![多外形演示](https://matplotlib.org/_images/sphx_glr_multiple_figs_demo_001.png)
 
 Create figure 2
 
@@ -30,7 +30,7 @@ plt.figure(2)
 plt.plot(t, s2)
 ```
 
-![多外形演示2](/static/images/gallery/sphx_glr_multiple_figs_demo_003.png)
+![多外形演示2](https://matplotlib.org/_images/sphx_glr_multiple_figs_demo_003.png)
 
 Now switch back to figure 1 and make some changes
 
@@ -44,7 +44,7 @@ ax.set_xticklabels([])
 plt.show()
 ```
 
-![多外形演示3](/static/images/gallery/sphx_glr_multiple_figs_demo_003.png)
+![多外形演示3](https://matplotlib.org/_images/sphx_glr_multiple_figs_demo_003.png)
 
 ## 下载这个示例
             

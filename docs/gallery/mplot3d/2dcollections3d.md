@@ -2,7 +2,7 @@
 
 演示使用ax.plot的zdir关键字在3D绘图的选择轴上绘制2D数据。
 
-![在3D绘图上绘制2D数据示例](/static/images/gallery/sphx_glr_2dcollections3d_001.png)
+![在3D绘图上绘制2D数据示例](https://matplotlib.org/_images/sphx_glr_2dcollections3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

@@ -20,7 +20,7 @@ ax.axis('off')
 plt.show()
 ```
 
-![使用补丁剪切图像示例](/static/images/gallery/sphx_glr_image_clip_path_001.png)
+![使用补丁剪切图像示例](https://matplotlib.org/_images/sphx_glr_image_clip_path_001.png)
 
 ## 参考
 

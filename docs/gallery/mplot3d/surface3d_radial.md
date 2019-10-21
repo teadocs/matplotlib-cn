@@ -4,7 +4,7 @@
 
 示例由Armin Moser提供。
 
-![极坐标下的三维曲面示例](/static/images/gallery/sphx_glr_surface3d_radial_001.png)
+![极坐标下的三维曲面示例](https://matplotlib.org/_images/sphx_glr_surface3d_radial_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

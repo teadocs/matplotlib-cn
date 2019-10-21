@@ -4,7 +4,7 @@
 
 在此示例中，用户定义的函数用于格式化y轴上数百万美元的刻度。
 
-![自定义Ticker1示例](/static/images/gallery/sphx_glr_custom_ticker1_001.png)
+![自定义Ticker1示例](https://matplotlib.org/_images/sphx_glr_custom_ticker1_001.png)
 
 ```python
 from matplotlib.ticker import FuncFormatter

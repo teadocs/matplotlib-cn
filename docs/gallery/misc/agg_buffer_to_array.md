@@ -2,9 +2,9 @@
 
 将渲染图形转换为其图像(NumPy数组)表示形式。
 
-![Agg缓冲区转换数组示例](/static/images/gallery/sphx_glr_agg_buffer_to_array_001.png)
+![Agg缓冲区转换数组示例](https://matplotlib.org/_images/sphx_glr_agg_buffer_to_array_001.png)
 
-![Agg缓冲区转换数组示例2](/static/images/gallery/sphx_glr_agg_buffer_to_array_002.png)
+![Agg缓冲区转换数组示例2](https://matplotlib.org/_images/sphx_glr_agg_buffer_to_array_002.png)
 
 ```python
 import matplotlib.pyplot as plt

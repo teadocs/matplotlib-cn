@@ -2,7 +2,7 @@
 
 用三角形网格绘制3D表面。
 
-![三角三维曲面示例](/static/images/gallery/sphx_glr_trisurf3d_001.png)
+![三角三维曲面示例](https://matplotlib.org/_images/sphx_glr_trisurf3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

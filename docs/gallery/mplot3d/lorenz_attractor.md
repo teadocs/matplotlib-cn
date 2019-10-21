@@ -4,7 +4,7 @@
 
 注意：因为这是一个简单的非线性ODE，使用SciPy的ode求解器会更容易完成，但这种方法仅取决于NumPy。
 
-![洛伦兹吸引力示例](/static/images/gallery/sphx_glr_lorenz_attractor_001.png)
+![洛伦兹吸引力示例](https://matplotlib.org/_images/sphx_glr_lorenz_attractor_001.png)
 
 ```python
 import numpy as np

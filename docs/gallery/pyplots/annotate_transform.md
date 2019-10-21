@@ -38,7 +38,7 @@ disp = ax.annotate('display = (%.1f, %.1f)'%(xdisplay, ydisplay),
 plt.show()
 ```
 
-![注释变换示例](/static/images/gallery/sphx_glr_annotate_transform_001.png)
+![注释变换示例](https://matplotlib.org/_images/sphx_glr_annotate_transform_001.png)
 
 ## 参考
 

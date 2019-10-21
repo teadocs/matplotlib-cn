@@ -98,7 +98,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![matplotlib艺术家对象的参考示例](/static/images/gallery/sphx_glr_artist_reference_001.png)
+![matplotlib艺术家对象的参考示例](https://matplotlib.org/_images/sphx_glr_artist_reference_001.png)
 
 ## 参考
 

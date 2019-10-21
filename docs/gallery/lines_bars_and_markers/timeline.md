@@ -66,7 +66,7 @@ plt.setp((ax.get_yticklabels() + ax.get_yticklines() +
 plt.show()
 ```
 
-![时间轴图图例](/static/images/gallery/sphx_glr_timeline_001.png)
+![时间轴图图例](https://matplotlib.org/_images/sphx_glr_timeline_001.png)
 
 ## 下载这个示例
 

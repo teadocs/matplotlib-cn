@@ -2,7 +2,7 @@
 
 contour3d_demo示例的这种修改使用extend3d = True将曲线垂直扩展为“ribbon”。
 
-![演示使用extend3d选项在3D中绘制轮廓（水平）曲线示例](/static/images/gallery/sphx_glr_contour3d_2_001.png)
+![演示使用extend3d选项在3D中绘制轮廓（水平）曲线示例](https://matplotlib.org/_images/sphx_glr_contour3d_2_001.png)
 
 ```python
 from mpl_toolkits.mplot3d import axes3d

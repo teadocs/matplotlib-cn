@@ -2,7 +2,7 @@
 
 例如，使用plt.axes在主绘图轴中创建嵌入轴。
 
-![轴线演示图示](/static/images/gallery/sphx_glr_axes_demo_001.png)
+![轴线演示图示](https://matplotlib.org/_images/sphx_glr_axes_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

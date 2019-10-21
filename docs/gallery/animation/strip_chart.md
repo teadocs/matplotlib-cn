@@ -2,7 +2,7 @@
 
 模拟示波器。
 
-![示波器示例](/static/images/gallery/sphx_glr_strip_chart_001.png)
+![示波器示例](https://matplotlib.org/_images/sphx_glr_strip_chart_001.png)
 
 ```python
 import numpy as np

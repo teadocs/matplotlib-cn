@@ -53,7 +53,7 @@ ax.imshow(weights, extent=(xmin, xmax, ymin, ymax), cmap=cmap)
 ax.set_axis_off()
 ```
 
-![在二维图像中混合透明和颜色](/static/images/gallery/sphx_glr_image_transparency_blend_001.png)
+![在二维图像中混合透明和颜色](https://matplotlib.org/_images/sphx_glr_image_transparency_blend_001.png)
 
 ## 混合透明度
 
@@ -79,7 +79,7 @@ ax.imshow(colors, extent=(xmin, xmax, ymin, ymax))
 ax.set_axis_off()
 ```
 
-![在二维图像中混合透明和颜色2](/static/images/gallery/sphx_glr_image_transparency_blend_002.png)
+![在二维图像中混合透明和颜色2](https://matplotlib.org/_images/sphx_glr_image_transparency_blend_002.png)
 
 ## 使用透明度高亮显示高振幅值
 
@@ -114,7 +114,7 @@ ax.set_axis_off()
 plt.show()
 ```
 
-![在二维图像中混合透明和颜色3](/static/images/gallery/sphx_glr_image_transparency_blend_003.png)
+![在二维图像中混合透明和颜色3](https://matplotlib.org/_images/sphx_glr_image_transparency_blend_003.png)
 
 ## 参考
 

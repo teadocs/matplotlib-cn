@@ -55,7 +55,7 @@ ax.plot(date, r.close)
 ax.set_title('Default date handling can cause overlapping labels')
 ```
 
-![修复常见的日期困扰示例](/static/images/gallery/sphx_glr_common_date_problems_001.png)
+![修复常见的日期困扰示例](https://matplotlib.org/_images/sphx_glr_common_date_problems_001.png)
 
 另一个烦恼是，如果您将鼠标悬停在窗口上并在x和y坐标处查看matplotlib工具栏（[交互式导航](https://matplotlib.org/users/navigation_toolbar.html#navigation-toolbar)）的右下角，您会看到x位置的格式与刻度标签的格式相同， 例如，“2004年12月”。
 
@@ -75,7 +75,7 @@ ax.fmt_xdata = mdates.DateFormatter('%Y-%m-%d')
 ax.set_title('fig.autofmt_xdate fixes the labels')
 ```
 
-![修复常见的日期困扰2](/static/images/gallery/sphx_glr_common_date_problems_002.png)
+![修复常见的日期困扰2](https://matplotlib.org/_images/sphx_glr_common_date_problems_002.png)
 
 现在，当您将鼠标悬停在绘制的数据上时，您将在工具栏中看到日期格式字符串，如2004-12-01。
 

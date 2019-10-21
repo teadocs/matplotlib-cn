@@ -70,7 +70,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![流图示例](/static/images/gallery/sphx_glr_plot_streamplot_001.png)
+![流图示例](https://matplotlib.org/_images/sphx_glr_plot_streamplot_001.png)
 
 ## 参考
 

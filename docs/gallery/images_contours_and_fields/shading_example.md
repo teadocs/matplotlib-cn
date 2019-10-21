@@ -57,9 +57,9 @@ if __name__ == '__main__':
     main()
 ```
 
-![着色示例](/static/images/gallery/sphx_glr_shading_example_001.png)
+![着色示例](https://matplotlib.org/_images/sphx_glr_shading_example_001.png)
 
-![着色示例2](/static/images/gallery/sphx_glr_shading_example_002.png) 
+![着色示例2](https://matplotlib.org/_images/sphx_glr_shading_example_002.png) 
 
 ## 参考
 

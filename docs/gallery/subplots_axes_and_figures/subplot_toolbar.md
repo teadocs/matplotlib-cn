@@ -2,9 +2,9 @@
 
 Matplotlib有一个工具栏可用于调整子图(suplot)间距。
 
-![子图工具栏示例](/static/images/gallery/sphx_glr_subplot_toolbar_001.png)
+![子图工具栏示例](https://matplotlib.org/_images/sphx_glr_subplot_toolbar_001.png)
 
-![子图工具栏示例2](/static/images/gallery/sphx_glr_subplot_toolbar_002.png)
+![子图工具栏示例2](https://matplotlib.org/_images/sphx_glr_subplot_toolbar_002.png)
 
 ```python
 import matplotlib.pyplot as plt

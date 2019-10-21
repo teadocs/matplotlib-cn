@@ -1,6 +1,6 @@
 # 简单的 Axisline4
 
-![简单的 Axisline4](/static/images/gallery/sphx_glr_simple_axisline4_001.png)
+![简单的 Axisline4](https://matplotlib.org/_images/sphx_glr_simple_axisline4_001.png)
 
 ```python
 import matplotlib.pyplot as plt

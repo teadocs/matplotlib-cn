@@ -21,7 +21,7 @@ fig.text(0.95, 0.05, 'Property of MPL',
 plt.show()
 ```
 
-![文字水印示例](/static/images/gallery/sphx_glr_watermark_text_001.png)
+![文字水印示例](https://matplotlib.org/_images/sphx_glr_watermark_text_001.png)
 
 ## 参考
 

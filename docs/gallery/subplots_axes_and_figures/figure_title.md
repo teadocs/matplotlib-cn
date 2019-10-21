@@ -2,7 +2,7 @@
 
 创建一个具有单独的子图标题和居中的图标题的图形。
 
-![为图像设置标题示例](/static/images/gallery/sphx_glr_figure_title_001.png)
+![为图像设置标题示例](https://matplotlib.org/_images/sphx_glr_figure_title_001.png)
 
 ```python
 import matplotlib.pyplot as plt

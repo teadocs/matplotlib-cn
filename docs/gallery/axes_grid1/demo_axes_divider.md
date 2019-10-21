@@ -2,7 +2,7 @@
 
 轴分割器用于计算轴的位置，并使用现有轴实例为它们创建分隔线。
 
-![演示Axes Divider示例](/static/images/gallery/sphx_glr_demo_axes_divider_001.png)
+![演示Axes Divider示例](https://matplotlib.org/_images/sphx_glr_demo_axes_divider_001.png)
 
 ```python
 import matplotlib.pyplot as plt

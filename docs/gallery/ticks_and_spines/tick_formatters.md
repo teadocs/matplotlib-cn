@@ -2,7 +2,7 @@
 
 显示不同的刻度格式化程序。
 
-![刻度格式化程序示例](/static/images/gallery/sphx_glr_tick-formatters_001.png)
+![刻度格式化程序示例](https://matplotlib.org/_images/sphx_glr_tick-formatters_001.png)
 
 ```python
 import numpy as np

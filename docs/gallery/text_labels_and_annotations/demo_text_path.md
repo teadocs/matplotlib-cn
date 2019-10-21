@@ -2,7 +2,7 @@
 
 使用文本作为路径。允许这种转换的工具是 [TextPath](https://matplotlib.org/api/textpath_api.html#matplotlib.textpath.TextPath)。可以采用所得的路径，例如，作为图像的剪辑路径。
 
-![文本路径演示](/static/images/gallery/sphx_glr_demo_text_path_001.png)
+![文本路径演示](https://matplotlib.org/_images/sphx_glr_demo_text_path_001.png)
 
 ```python
 import matplotlib.pyplot as plt

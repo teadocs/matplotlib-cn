@@ -27,7 +27,7 @@ for r, bar in zip(radii, bars):
 plt.show()
 ```
 
-![极轴上的饼图示例](/static/images/gallery/sphx_glr_polar_bar_001.png)
+![极轴上的饼图示例](https://matplotlib.org/_images/sphx_glr_polar_bar_001.png)
 
 ## 参考
 

@@ -8,7 +8,7 @@ ax.xaxis.set_tick_params(horizontalalignment='right')
 
 但这并没有帮助将标签置于刻度之间。一种解决方案是“伪造它”。 使用次要刻度在主要刻度之间放置一个刻度。这是一个标记月份的示例，以ticks为中心。
 
-![居中TickLabels示例](/static/images/gallery/sphx_glr_centered_ticklabels_001.png)
+![居中TickLabels示例](https://matplotlib.org/_images/sphx_glr_centered_ticklabels_001.png)
 
 ```python
 import numpy as np

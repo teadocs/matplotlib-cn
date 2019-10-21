@@ -2,7 +2,7 @@
 
 此示例再现Frontpage 绘图示例。
 
-![Frontpage 绘图示例](/static/images/gallery/sphx_glr_membrane_001.png)
+![Frontpage 绘图示例](https://matplotlib.org/_images/sphx_glr_membrane_001.png)
 
 ```python
 import matplotlib.pyplot as plt

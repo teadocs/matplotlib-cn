@@ -24,7 +24,7 @@ for tick in ax.yaxis.get_major_ticks():
 plt.show()
 ```
 
-![美元符号刻度示例](/static/images/gallery/sphx_glr_dollar_ticks_001.png)
+![美元符号刻度示例](https://matplotlib.org/_images/sphx_glr_dollar_ticks_001.png)
 
 ## 参考
 

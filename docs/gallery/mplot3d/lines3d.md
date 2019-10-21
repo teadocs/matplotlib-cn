@@ -2,7 +2,7 @@
 
 此示例演示了如何在3D中绘制参数曲线。
 
-![参数曲线示例](/static/images/gallery/sphx_glr_lines3d_001.png)
+![参数曲线示例](https://matplotlib.org/_images/sphx_glr_lines3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

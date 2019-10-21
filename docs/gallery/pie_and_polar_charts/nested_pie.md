@@ -33,7 +33,7 @@ ax.set(aspect="equal", title='Pie plot with `ax.pie`')
 plt.show()
 ```
 
-![嵌套饼图示例](/static/images/gallery/sphx_glr_nested_pie_001.png)
+![嵌套饼图示例](https://matplotlib.org/_images/sphx_glr_nested_pie_001.png)
 
 但是，您可以通过在具有极坐标系的轴上使用条形图来完成相同的输出。 这可以为绘图的精确设计提供更大的灵活性。
 
@@ -66,7 +66,7 @@ ax.set_axis_off()
 plt.show()
 ```
 
-![嵌套饼图示例2](/static/images/gallery/sphx_glr_nested_pie_002.png)
+![嵌套饼图示例2](https://matplotlib.org/_images/sphx_glr_nested_pie_002.png)
 
 ## 参考
 

@@ -18,7 +18,7 @@ axs[2].plot(names, values)
 fig.suptitle('Categorical Plotting')
 ```
 
-![分类变量图示1](/static/images/gallery/sphx_glr_categorical_variables_001.png);
+![分类变量图示1](https://matplotlib.org/_images/sphx_glr_categorical_variables_001.png);
 
 这在两个轴上都起作用：
 
@@ -35,7 +35,7 @@ ax.legend()
 plt.show()
 ```
 
-![分类变量图示2](/static/images/gallery/sphx_glr_categorical_variables_002.png);
+![分类变量图示2](https://matplotlib.org/_images/sphx_glr_categorical_variables_002.png);
 
 ## 下载这个示例
 

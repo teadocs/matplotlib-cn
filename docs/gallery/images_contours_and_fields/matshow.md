@@ -21,7 +21,7 @@ plt.matshow(samplemat((15, 15)))
 plt.show()
 ```
 
-![matshow示例](/static/images/gallery/sphx_glr_matshow_001.png)
+![matshow示例](https://matplotlib.org/_images/sphx_glr_matshow_001.png)
 
 ## 参考
 

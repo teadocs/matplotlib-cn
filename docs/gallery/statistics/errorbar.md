@@ -2,7 +2,7 @@
 
 这展示了误差条形图功能的最基本用法。在这种情况下，为x方向和y方向的误差提供常数值。
 
-![误差条形图示例](/static/images/gallery/sphx_glr_errorbar_001.png)
+![误差条形图示例](https://matplotlib.org/_images/sphx_glr_errorbar_001.png)
 
 ```python
 import numpy as np

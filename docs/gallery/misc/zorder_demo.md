@@ -45,7 +45,7 @@ plt.title('Dots on top of lines')
 plt.tight_layout()
 ```
 
-![Zorder演示](/static/images/gallery/sphx_glr_zorder_demo_001.png)
+![Zorder演示](https://matplotlib.org/_images/sphx_glr_zorder_demo_001.png)
 
 一个新的图像，带有单独订购的物品
 
@@ -63,7 +63,7 @@ l.set_zorder(20)  # put the legend on top
 plt.show()
 ```
 
-![Zorder演示2](/static/images/gallery/sphx_glr_zorder_demo_002.png)
+![Zorder演示2](https://matplotlib.org/_images/sphx_glr_zorder_demo_002.png)
 
 ## 下载这个示例
             

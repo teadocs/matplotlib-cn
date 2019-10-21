@@ -8,9 +8,9 @@ sidebar: auto
 本页面包含有关使用Matplotlib的更深入的指南。
 它分为初学者、中级和高级部分，以及涵盖特定主题的部分。
 
-有关更短的示例，请参阅我们的[示例页面](https://matplotlib.org/gallery/index.html)。
-您还可以在我们的[用户指南](https://matplotlib.org/contents.html)中找到[外部资源](https://matplotlib.org/resources/index.html)
-和[常见问题解答](https://matplotlib.org/faq/index.html)。
+有关更短的示例，请参阅我们的[示例页面](/gallery/index.html)。
+您还可以在我们的[用户指南](https://matplotlib.org/contents.html)中找到[外部资源](/resources/index.html)
+和[常见问题解答](/faq/index.html)。
 
 ## 序言
 
@@ -74,12 +74,9 @@ sidebar: auto
 </ul>
 </div>
 
-## Intermediate
+## 中级
 
-These tutorials cover some of the more complicated classes and functions
-in Matplotlib. They can be useful for particular custom and complex
-visualizations.
-
+这些教程涵盖了Matplotlib中一些更复杂的类和函数。它们对于特定的自定义和复杂的可视化很有用。
 
 <div class="gallery-examples-list">
 <ul>
@@ -148,10 +145,9 @@ visualizations.
 </ul>
 </div>
 
-## Advanced
+## 高级
 
-These tutorials cover advanced topics for experienced Matplotlib
-users and developers.
+这些教程涵盖了经验丰富的Matplotlib用户和开发人员的高级主题。
 
 <div class="gallery-examples-list">
 <ul>
@@ -184,14 +180,11 @@ users and developers.
 </ul>
 </div>
 
-## Colors
+## 颜色
 
-Matplotlib has support for visualizing information with a wide array
-of colors and colormaps. These tutorials cover the basics of how
-these colormaps look, how you can create your own, and how you can
-customize colormaps for your use case.
+Matplotlib支持使用多种颜色和颜色图可视化信息。 这些教程涵盖了这些颜色图的外观，如何创建自己的颜色图以及如何针对用例自定义颜色图的基础知识。
 
-For even more information see the [examples page](https://pandas.pydata.org/pandas-docs/stable/gallery/index.html#color-examples).
+有关更多信息，请参见[示例陈列馆](/gallery/index.htm)。
 
 <div class="gallery-examples-list">
 <ul>
@@ -242,13 +235,11 @@ For even more information see the [examples page](https://pandas.pydata.org/pand
 </ul>
 </div>
 
-## Text
+## 文本
 
-matplotlib has extensive text support, including support for
-mathematical expressions, truetype support for raster and
-vector outputs, newline separated text with arbitrary
-rotations, and unicode support. These tutorials cover
-the basics of working with text in Matplotlib.
+matplotlib具有广泛的文本支持，包括对数学表达式的支持，对栅格和矢量输出的truetype支持，
+任意旋转的换行符分隔文本以及unicode支持。
+这些教程涵盖了在Matplotlib中处理文本的基础知识。
 
 <div class="gallery-examples-list">
 <ul>
@@ -308,10 +299,9 @@ the basics of working with text in Matplotlib.
 </ul>
 </div>
 
-## Toolkits
+## 小工具
 
-These tutorials cover toolkits designed to extend the functionality
-of Matplotlib in order to accomplish specific goals.
+这些教程涵盖了旨在扩展 Matplotlib 功能以实现特定目标的工具包。
 
 <div class="gallery-examples-list">
 <ul>

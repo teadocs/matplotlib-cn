@@ -52,7 +52,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![pcolormesh示例](/static/images/gallery/sphx_glr_pcolormesh_levels_001.png)
+![pcolormesh示例](https://matplotlib.org/_images/sphx_glr_pcolormesh_levels_001.png)
 
 ## 参考
 

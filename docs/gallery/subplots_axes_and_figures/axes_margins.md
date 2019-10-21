@@ -30,7 +30,7 @@ ax3.set_title('Zoomed in')
 plt.show()
 ```
 
-![Axes.margins示例](/static/images/gallery/sphx_glr_axes_margins_001.png)
+![Axes.margins示例](https://matplotlib.org/_images/sphx_glr_axes_margins_001.png)
 
 ## 论某些绘图方法的“粘性”
 
@@ -63,7 +63,7 @@ for ax, status in zip((ax1, ax2), ('Is', 'Is Not')):
 plt.show()
 ```
 
-![Axes.margins示例2](/static/images/gallery/sphx_glr_axes_margins_002.png)
+![Axes.margins示例2](https://matplotlib.org/_images/sphx_glr_axes_margins_002.png)
 
 ## 参考
 

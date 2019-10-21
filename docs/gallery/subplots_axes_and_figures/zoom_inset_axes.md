@@ -42,7 +42,7 @@ ax.indicate_inset_zoom(axins)
 plt.show()
 ```
 
-![缩放区域嵌入轴示例](/static/images/gallery/sphx_glr_zoom_inset_axes_001.png)
+![缩放区域嵌入轴示例](https://matplotlib.org/_images/sphx_glr_zoom_inset_axes_001.png)
 
 ## 参考
 

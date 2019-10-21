@@ -2,7 +2,7 @@
 
 此示例再现Frontpage 轮廓示例。
 
-![Frontpage 轮廓示例](/static/images/gallery/sphx_glr_contour_001.png)
+![Frontpage 轮廓示例](https://matplotlib.org/_images/sphx_glr_contour_001.png)
 
 ```python
 import matplotlib.pyplot as plt

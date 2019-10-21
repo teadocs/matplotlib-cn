@@ -1,6 +1,6 @@
 # 填充螺旋
 
-![填充螺旋示例](/static/images/gallery/sphx_glr_fill_spiral_001.png)
+![填充螺旋示例](https://matplotlib.org/_images/sphx_glr_fill_spiral_001.png)
 
 ```python
 import matplotlib.pyplot as plt

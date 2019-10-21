@@ -60,7 +60,7 @@ plt.subplots_adjust(top=0.92, bottom=0.08, left=0.10, right=0.95, hspace=0.25,
 plt.show()
 ```
 
-![Pyplot 比例尺示例](/static/images/gallery/sphx_glr_pyplot_scales_001.png)
+![Pyplot 比例尺示例](https://matplotlib.org/_images/sphx_glr_pyplot_scales_001.png)
 
 ## 参考
 

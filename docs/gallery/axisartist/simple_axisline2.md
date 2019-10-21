@@ -1,6 +1,6 @@
 # 简单的轴线2
 
-![简单的轴线2](/static/images/gallery/sphx_glr_simple_axisline2_001.png)
+![简单的轴线2](https://matplotlib.org/_images/sphx_glr_simple_axisline2_001.png)
 
 ```python
 import matplotlib.pyplot as plt

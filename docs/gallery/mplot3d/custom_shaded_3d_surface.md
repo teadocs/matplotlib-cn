@@ -2,7 +2,7 @@
 
 演示在3D曲面图中使用自定义山体阴影。
 
-![3D表面图中的自定义山体的阴影示例](/static/images/gallery/sphx_glr_custom_shaded_3d_surface_001.png)
+![3D表面图中的自定义山体的阴影示例](https://matplotlib.org/_images/sphx_glr_custom_shaded_3d_surface_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

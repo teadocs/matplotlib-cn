@@ -64,19 +64,19 @@ for cmap_category, cmap_list in cmaps:
 plt.show()
 ```
 
-![Colormap参考示例](/static/images/gallery/sphx_glr_colormap_reference_001.png)
+![Colormap参考示例](https://matplotlib.org/_images/sphx_glr_colormap_reference_001.png)
 
-![Colormap参考示例2](/static/images/gallery/sphx_glr_colormap_reference_002.png)
+![Colormap参考示例2](https://matplotlib.org/_images/sphx_glr_colormap_reference_002.png)
 
-![Colormap参考示例3](/static/images/gallery/sphx_glr_colormap_reference_003.png)
+![Colormap参考示例3](https://matplotlib.org/_images/sphx_glr_colormap_reference_003.png)
 
-![Colormap参考示例4](/static/images/gallery/sphx_glr_colormap_reference_004.png)
+![Colormap参考示例4](https://matplotlib.org/_images/sphx_glr_colormap_reference_004.png)
 
-![Colormap参考示例5](/static/images/gallery/sphx_glr_colormap_reference_005.png)
+![Colormap参考示例5](https://matplotlib.org/_images/sphx_glr_colormap_reference_005.png)
 
-![Colormap参考示例6](/static/images/gallery/sphx_glr_colormap_reference_006.png)
+![Colormap参考示例6](https://matplotlib.org/_images/sphx_glr_colormap_reference_006.png)
 
-![Colormap参考示例7](/static/images/gallery/sphx_glr_colormap_reference_007.png)
+![Colormap参考示例7](https://matplotlib.org/_images/sphx_glr_colormap_reference_007.png)
 
 ## 参考
 

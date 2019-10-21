@@ -44,7 +44,7 @@ ax.set_ylim(bottom.min(), top.max())
 plt.show()
 ```
 
-![使用“矩形”和“多边形”构建直方图示例](/static/images/gallery/sphx_glr_histogram_path_001.png)
+![使用“矩形”和“多边形”构建直方图示例](https://matplotlib.org/_images/sphx_glr_histogram_path_001.png)
 
 应该注意的是，我们可以使用顶点和代码直接创建复合路径，而不是创建三维数组并使用[make_compound_path_from_polys](https://matplotlib.org/api/path_api.html#matplotlib.path.Path.make_compound_path_from_polys)，如下所示
 

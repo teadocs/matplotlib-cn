@@ -1,6 +1,6 @@
 # 多线(Multiline)
 
-![多线示例](/static/images/gallery/sphx_glr_multiline_001.png)
+![多线示例](https://matplotlib.org/_images/sphx_glr_multiline_001.png)
 
 ```python
 import matplotlib.pyplot as plt

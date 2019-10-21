@@ -1,6 +1,6 @@
 # 连接简单例子01
 
-![连接简单例子01示例](/static/images/gallery/sphx_glr_connect_simple01_001.png)
+![连接简单例子01示例](https://matplotlib.org/_images/sphx_glr_connect_simple01_001.png)
 
 ```python
 from matplotlib.patches import ConnectionPatch

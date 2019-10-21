@@ -1,6 +1,6 @@
 # 简单寄生示例
 
-![简单寄生示例](/static/images/gallery/sphx_glr_parasite_simple_001.png)
+![简单寄生示例](https://matplotlib.org/_images/sphx_glr_parasite_simple_001.png)
 
 ```python
 from mpl_toolkits.axes_grid1 import host_subplot

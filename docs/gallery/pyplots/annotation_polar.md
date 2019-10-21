@@ -28,7 +28,7 @@ ax.annotate('a polar annotation',
 plt.show()
 ```
 
-![注释极坐标](/static/images/gallery/sphx_glr_annotation_polar_001.png)
+![注释极坐标](https://matplotlib.org/_images/sphx_glr_annotation_polar_001.png)
 
 ## 参考
 

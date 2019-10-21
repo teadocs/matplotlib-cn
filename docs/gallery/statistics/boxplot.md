@@ -46,7 +46,7 @@ fig.subplots_adjust(hspace=0.4)
 plt.show()
 ```
 
-![箱形图示例](/static/images/gallery/sphx_glr_boxplot_001.png)
+![箱形图示例](https://matplotlib.org/_images/sphx_glr_boxplot_001.png)
 
 演示如何自定义显示不同的元素：
 
@@ -89,7 +89,7 @@ fig.subplots_adjust(hspace=0.4)
 plt.show()
 ```
 
-![箱型图示例2](/static/images/gallery/sphx_glr_boxplot_002.png)
+![箱型图示例2](https://matplotlib.org/_images/sphx_glr_boxplot_002.png)
 
 ## 下载这个示例
             

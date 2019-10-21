@@ -2,7 +2,7 @@
 
 制作共享轴的两个或更多个图是常见的，例如，两个子图以时间作为公共轴。 当您平移和缩放其中一个时，您希望另一个随身携带。 为此，matplotlib Axes支持sharex和sharey属性。创建[subplot()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot)或[axes()](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.axes.html#matplotlib.pyplot.axes)实例时，可以传入一个关键字，指示要与之共享的轴。
 
-![共享轴限制和视图示例](/static/images/gallery/sphx_glr_share_axis_lims_views_001.png)
+![共享轴限制和视图示例](https://matplotlib.org/_images/sphx_glr_share_axis_lims_views_001.png)
 
 ```python
 import numpy as np

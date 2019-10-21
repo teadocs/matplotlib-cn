@@ -9,7 +9,7 @@ Matplotlib是一个Python 2D绘图库，它以多种硬拷贝格式和跨平台�
 Matplotlib可用于Python脚本，Python和[IPython](http://ipython.org) 
 Shell、[Jupyter](http://jupyter.org)笔记本，Web应用程序服务器和四个图形用户界面工具包。
 
-<a href="https://matplotlib.org/tutorials/introductory/sample_plots.html">
+<a href="/tutorials/introductory/sample_plots.html">
   <img align="middle" style="width: 160; height: 112px" src="https://matplotlib.org/_images/sphx_glr_membrane_thumb.png" border="0" alt="screenshots">
   <img align="middle" style="width: 160; height: 112px" src="https://matplotlib.org/_images/sphx_glr_histogram_thumb.png" border="0" alt="screenshots">
   <img align="middle" style="width: 160; height: 112px" src="https://matplotlib.org/_images/sphx_glr_contour_thumb.png" border="0" alt="screenshots">  
@@ -17,21 +17,21 @@ Shell、[Jupyter](http://jupyter.org)笔记本，Web应用程序服务器和四�
 </a>
 
 Matplotlib 尝试使容易的事情变得更容易，使困难的事情变得可能。
-您只需几行代码就可以生成图表、直方图、功率谱、条形图、误差图、散点图等。更多的示例，请参见
-[示例图](https://matplotlib.org/tutorials/introductory/sample_plots.html)和[缩略图库](https://matplotlib.org/gallery/index.html)。
+您只需几行代码就可以生成图表、直方图、功率谱、条形图、误差图、散点图等。
+更多的示例，请参见[基础绘图例子](/tutorials/introductory/sample_plots.html)和[示例陈列馆](/gallery/index.html)。
 
 为了简单绘图，该 ``pyplot`` 模块提供了类似于MATLAB的界面，尤其是与IPython结合使用时。
 对于高级用户，您可以通过面向对象的界面或MATLAB用户熟悉的一组功能来完全控制线型，字体属性，轴属性等。
 
 # 安装
 
-访问[Matplotlib安装说明](https://matplotlib.org/users/installing.html)。
+访问[Matplotlib安装说明](/users/installing.html)。
 
 # 文档
 
 这是Matplotlib版本3.1.1的文档。
 
-首先，请阅读[《用户指南》](users/index.html)。
+首先，请阅读[《用户指南》](/users/index.html)。
 
 其他版本可用：
 
@@ -40,19 +40,19 @@ Matplotlib 尝试使容易的事情变得更容易，使困难的事情变得可
 - [3.2.x](https://matplotlib.org/devdocs/index.html) 最新的git master（不稳定）。
 - [3.0.3](https://matplotlib.org/3.0.3/index.html) 较旧的稳定版本。
 
-试图学习如何做某种图例？请查看[示例库](/gallery)或[绘图命令列表](https://matplotlib.org/api/pyplot_summary.html)。
+试图学习如何做某种图例？请查看[示例陈列馆](/gallery)或[绘图命令列表](https://matplotlib.org/api/pyplot_summary.html)。
 
 ## 其他学习资源
 
-有许多可用的[外部学习资源](https://matplotlib.org/resources/index.html)，包括印刷资料，视频和教程。
+有许多可用的[外部学习资源](/resources/index.html)，包括印刷资料，视频和教程。
 
 ## 加入我们的社区！
 
 Matplotlib是一个欢迎且包容的项目，我们在做的所有事情都遵循[Python软件基金会的行为准则](http://www.python.org/psf/codeofconduct/)。
 
 - 通过 [discourse.matplotlib.org](https://discourse.matplotlib.org) 加入我们的社区，以获取帮助，讨论贡献与发展并分享您的工作。
-- 如果您有疑问，请确保检查[FAQ](https://matplotlib.org/faq/index.html)，
- [API](https://matplotlib.org/api/index.html)文档以及[搜索](https://matplotlib.org/search.html)工具搜索所有文档，包括对350多个完整示例的全文搜索，这些示例几乎涵盖了Matplotlib的每个方面。
+- 如果您有疑问，请确保检查[FAQ](/faq/index.html)，
+ [API](/api/index.html)文档以及[搜索](https://matplotlib.org/search.html)工具搜索所有文档，包括对350多个完整示例的全文搜索，这些示例几乎涵盖了Matplotlib的每个方面。
 - 如果可以的话，快速加入[gitter频道](https://gitter.im/matplotlib/matplotlib)与社区聊天。
 - 如果您喜欢电子邮件，则有[matplotlib-users](https://mail.python.org/mailman/listinfo/matplotlib-users)，[matplotlib-devel](https://mail.python.org/mailman/listinfo/matplotlib-devel)和[matplotlib-announce](https://mail.python.org/mailman/listinfo/matplotlib-announce)邮件列表。
 - 在[stackoverflow](http://stackoverflow.com/questions/tagged/matplotlib)上检查Matplotlib标记。
@@ -91,11 +91,11 @@ NumFOCUS为Matplotlib提供财政，法律和行政支持，以帮助确保项�
 
 对 Matplotlib 的捐赠由 NumFOCUS 管理。对于美国的捐赠者，您的礼物可以在法律规定的范围内免税。与任何捐赠一样，您应咨询您的税务顾问以了解您的特殊税收情况。
 
-请考虑通过 Numfocus 组织[向Matplotlib项目](https://numfocus.salsalabs.org/donate-to-matplotlib/index.html)捐款或向[约翰·亨特技术奖学金](https://www.numfocus.org/programs/john-hunter-technology-fellowship/)[捐款](https://numfocus.salsalabs.org/donate-to-matplotlib/index.html)。
+请考虑通过 Numfocus 组织向[Matplotlib项目](https://numfocus.salsalabs.org/donate-to-matplotlib/index.html)捐款或向[约翰·亨特技术奖学金](https://www.numfocus.org/programs/john-hunter-technology-fellowship/)[捐款](https://numfocus.salsalabs.org/donate-to-matplotlib/index.html)。
 
-该[Matplotlib许可证](users/license.html)是基于[Python软件基金会（PSF）的许可](http://www.python.org/psf/license)。
+该[Matplotlib许可证](/users/license.html)是基于[Python软件基金会（PSF）的许可](http://www.python.org/psf/license)。
 
-这里有一个活跃了众多开发者的社区，他们做了很多重大的贡献[贡献](users/credits.html)。
+这里有一个活跃了众多开发者的社区，他们做了很多重大的贡献[贡献](/users/credits.html)。
 
 Matplotlib托管在[Github上](https://github.com/matplotlib/matplotlib)。[问题](https://github.com/matplotlib/matplotlib/issues) 
 和[拉取请求](https://github.com/matplotlib/matplotlib/pulls)在Github上被跟踪了。

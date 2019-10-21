@@ -4,7 +4,7 @@
 
 ``下一个``和``上一个``按钮小部件有助于以新频率显示波形。
 
-![按钮示例](/static/images/gallery/sphx_glr_buttons_001.png)
+![按钮示例](https://matplotlib.org/_images/sphx_glr_buttons_001.png)
 
 ```python
 import numpy as np

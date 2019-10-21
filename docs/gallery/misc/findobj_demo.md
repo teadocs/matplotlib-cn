@@ -2,7 +2,7 @@
 
 递归查找符合某些条件的所有对象
 
-![Findobj演示](/static/images/gallery/sphx_glr_findobj_demo_001.png)
+![Findobj演示](https://matplotlib.org/_images/sphx_glr_findobj_demo_001.png)
 
 ```python
 import numpy as np

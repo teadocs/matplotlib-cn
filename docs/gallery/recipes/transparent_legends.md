@@ -14,7 +14,7 @@ ax.legend()
 
 但是，您的图例可能会与您的数据重叠，在这些情况下，使图例框架透明是很好的。
 
-![透明、花式的图形示例](/static/images/gallery/sphx_glr_transparent_legends_001.png)
+![透明、花式的图形示例](https://matplotlib.org/_images/sphx_glr_transparent_legends_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -1,6 +1,6 @@
 # 演示丝带盒
 
-![演示丝带盒示例](/static/images/gallery/sphx_glr_demo_ribbon_box_001.png)
+![演示丝带盒示例](https://matplotlib.org/_images/sphx_glr_demo_ribbon_box_001.png)
 
 ```python
 import numpy as np

@@ -2,7 +2,7 @@
 
 你可以在数据或轴 (0, 1) 坐标中精确布局文本。此示例显示了文本布局的一些对齐和旋转规范。
 
-![精确文本布局示例](/static/images/gallery/sphx_glr_text_alignment_001.png)
+![精确文本布局示例](https://matplotlib.org/_images/sphx_glr_text_alignment_001.png)
 
 ```python
 import matplotlib.pyplot as plt

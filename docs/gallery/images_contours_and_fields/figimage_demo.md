@@ -18,7 +18,7 @@ im2 = fig.figimage(Z, xo=100, yo=100, alpha=.8, origin='lower')
 plt.show()
 ```
 
-![Figimage 演示](/static/images/gallery/sphx_glr_figimage_demo_001.png)
+![Figimage 演示](https://matplotlib.org/_images/sphx_glr_figimage_demo_001.png)
 
 ## 参考
 

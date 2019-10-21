@@ -2,7 +2,7 @@
 
 示例使用symlog（对称对数）轴缩放。
 
-![Symlog演示](/static/images/gallery/sphx_glr_symlog_demo_001.png)
+![Symlog演示](https://matplotlib.org/_images/sphx_glr_symlog_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

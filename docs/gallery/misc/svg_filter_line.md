@@ -4,7 +4,7 @@
 
 请注意，过滤效果仅在您的svg渲染器支持时才有效。
 
-![SVG过滤线示例](/static/images/gallery/sphx_glr_svg_filter_line_001.png)
+![SVG过滤线示例](https://matplotlib.org/_images/sphx_glr_svg_filter_line_001.png)
 
 输出：
 

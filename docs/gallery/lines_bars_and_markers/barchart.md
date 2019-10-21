@@ -2,7 +2,7 @@
 
 这是简单的条形图，在单个条形图上带有误差条形图和高度标签。
 
-![简单的条形图示](/static/images/gallery/sphx_glr_barchart_001.png);
+![简单的条形图示](https://matplotlib.org/_images/sphx_glr_barchart_001.png);
 
 ```python
 import numpy as np

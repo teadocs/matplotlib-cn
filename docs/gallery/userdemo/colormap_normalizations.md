@@ -34,7 +34,7 @@ pcm = ax[1].pcolor(X, Y, Z, cmap='PuBu_r')
 fig.colorbar(pcm, ax=ax[1], extend='max')
 ```
 
-![色彩映射规范化示例](/static/images/gallery/sphx_glr_colormap_normalizations_001.png)
+![色彩映射规范化示例](https://matplotlib.org/_images/sphx_glr_colormap_normalizations_001.png)
 
 PowerNorm：这是X中的幂律趋势，部分遮蔽了Y中的整流正弦波。我们可以使用PowerNorm来消除幂律。
 
@@ -52,7 +52,7 @@ pcm = ax[1].pcolormesh(X, Y, Z1, cmap='PuBu_r')
 fig.colorbar(pcm, ax=ax[1], extend='max')
 ```
 
-![色彩映射规范化示例2](/static/images/gallery/sphx_glr_colormap_normalizations_002.png)
+![色彩映射规范化示例2](https://matplotlib.org/_images/sphx_glr_colormap_normalizations_002.png)
 
 SymLogNorm：两个驼峰，一个正面和一个正面，正面具有5倍幅度。 线性地，你看不到负面的驼峰。 在这里，我们分别以对数方式对正负数据进行对数。
 
@@ -76,7 +76,7 @@ pcm = ax[1].pcolormesh(X, Y, Z1, cmap='RdBu_r', vmin=-np.max(Z1))
 fig.colorbar(pcm, ax=ax[1], extend='both')
 ```
 
-![色彩映射规范化示例3](/static/images/gallery/sphx_glr_colormap_normalizations_003.png)
+![色彩映射规范化示例3](https://matplotlib.org/_images/sphx_glr_colormap_normalizations_003.png)
 
 自定义范例：自定义规范化的示例。这个使用上面的例子，并从负数标准化负数据。
 
@@ -114,7 +114,7 @@ pcm = ax[1].pcolormesh(X, Y, Z, cmap='RdBu_r', vmin=-np.max(Z))
 fig.colorbar(pcm, ax=ax[1], extend='both')
 ```
 
-![色彩映射规范化示例4](/static/images/gallery/sphx_glr_colormap_normalizations_004.png)
+![色彩映射规范化示例4](https://matplotlib.org/_images/sphx_glr_colormap_normalizations_004.png)
 
 常规颜色：对于这一种颜色，您提供了颜色的边界，并且Norm将第一种颜色放在第一对之间，第二种颜色放在第二对之间，依此类推。
 
@@ -141,7 +141,7 @@ fig.colorbar(pcm, ax=ax[2], extend='both', orientation='vertical')
 plt.show()
 ```
 
-![色彩映射规范化示例5](/static/images/gallery/sphx_glr_colormap_normalizations_005.png)
+![色彩映射规范化示例5](https://matplotlib.org/_images/sphx_glr_colormap_normalizations_005.png)
 
 ## 下载这个示例
             

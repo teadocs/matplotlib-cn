@@ -87,7 +87,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![等高线图像示例](/static/images/gallery/sphx_glr_contour_image_001.png)
+![等高线图像示例](https://matplotlib.org/_images/sphx_glr_contour_image_001.png)
 
 ## 参考
 

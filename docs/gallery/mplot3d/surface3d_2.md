@@ -2,7 +2,7 @@
 
 使用纯色演示3D表面的基本图。
 
-![三维曲面(纯色)示例](/static/images/gallery/sphx_glr_surface3d_2_001.png)
+![三维曲面(纯色)示例](https://matplotlib.org/_images/sphx_glr_surface3d_2_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

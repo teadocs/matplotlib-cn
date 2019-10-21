@@ -58,7 +58,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![Triinterp 演示](/static/images/gallery/sphx_glr_triinterp_demo_001.png)
+![Triinterp 演示](https://matplotlib.org/_images/sphx_glr_triinterp_demo_001.png)
 
 ## 参考
 

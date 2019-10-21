@@ -2,7 +2,7 @@
 
 一个模型“Foo”单元类，它根据“单元”支持转换和不同的刻度格式。 这里的“单位”只是一个标量转换因子，但是这个例子表明Matplotlib完全不知道客户端软件包使用哪种单位。
 
-![Evans测试示例](/static/images/gallery/sphx_glr_evans_test_001.png)
+![Evans测试示例](https://matplotlib.org/_images/sphx_glr_evans_test_001.png)
 
 ```python
 from matplotlib.cbook import iterable

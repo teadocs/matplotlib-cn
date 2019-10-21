@@ -6,7 +6,7 @@
 
 用法:
 
-![箭头符号图示例](/static/images/gallery/sphx_glr_arrow_demo_001.png)
+![箭头符号图示例](https://matplotlib.org/_images/sphx_glr_arrow_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -1,6 +1,6 @@
 # 简单Coord02注释示例
 
-![简单Coord02注释示例](/static/images/gallery/sphx_glr_annotate_simple_coord02_001.png)
+![简单Coord02注释示例](https://matplotlib.org/_images/sphx_glr_annotate_simple_coord02_001.png)
 
 ```python
 import matplotlib.pyplot as plt

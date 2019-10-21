@@ -85,7 +85,7 @@ ax.annotate('pixel offset from axes fraction',
 ax.set(xlim=(-1, 5), ylim=(-3, 5))
 ```
 
-![注释图示例](/static/images/gallery/sphx_glr_annotation_demo_001.png)
+![注释图示例](https://matplotlib.org/_images/sphx_glr_annotation_demo_001.png)
 
 ## 使用多个坐标系和轴类型
 
@@ -132,9 +132,9 @@ ax.annotate('the top',
 ax.set(xlim=[-20, 20], ylim=[-20, 20])
 ```
 
-![注释图示例2](/static/images/gallery/sphx_glr_annotation_demo_002.png)
+![注释图示例2](https://matplotlib.org/_images/sphx_glr_annotation_demo_002.png)
 
-![注释图示例3](/static/images/gallery/sphx_glr_annotation_demo_003.png)
+![注释图示例3](https://matplotlib.org/_images/sphx_glr_annotation_demo_003.png)
 
 ## 自定义箭头和气泡样式
 
@@ -287,9 +287,9 @@ ann = ax.annotate('bubble',
 ax.set(xlim=(-1, 5), ylim=(-5, 3))
 ```
 
-![注释图示例4](/static/images/gallery/sphx_glr_annotation_demo_005.png)
+![注释图示例4](https://matplotlib.org/_images/sphx_glr_annotation_demo_005.png)
 
-![注释图示例5](/static/images/gallery/sphx_glr_annotation_demo_005.png)
+![注释图示例5](https://matplotlib.org/_images/sphx_glr_annotation_demo_005.png)
 
 ## 更多坐标系的例子
 
@@ -384,7 +384,7 @@ ax2.set(xlim=[-2, 2], ylim=[-2, 2])
 plt.show()
 ```
 
-![注释图示例6](/static/images/gallery/sphx_glr_annotation_demo_006.png)
+![注释图示例6](https://matplotlib.org/_images/sphx_glr_annotation_demo_006.png)
 
 ## 下载这个示例
             

@@ -36,7 +36,7 @@ ax.plot_wireframe(X, Y, Z, rstride=10, cstride=10)
 plt.show()
 ```
 
-![3d子图示例](/static/images/gallery/sphx_glr_whats_new_1_subplot3d_001.png)
+![3d子图示例](https://matplotlib.org/_images/sphx_glr_whats_new_1_subplot3d_001.png)
 
 ## 参考
 

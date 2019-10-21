@@ -2,7 +2,7 @@
 
 使用后端AGG以RGB字符串的形式访问地物画布，然后将其转换为数组并将其传递给Pillow进行渲染。
 
-![Agg缓冲区](/static/images/gallery/sphx_glr_agg_buffer_001.png)
+![Agg缓冲区](https://matplotlib.org/_images/sphx_glr_agg_buffer_001.png)
 
 ```python
 import numpy as np

@@ -2,7 +2,7 @@
 
 HBox Divider用于排列子图。
 
-![演示轴 Hbox Divider](/static/images/gallery/sphx_glr_demo_axes_hbox_divider_001.png)
+![演示轴 Hbox Divider](https://matplotlib.org/_images/sphx_glr_demo_axes_hbox_divider_001.png)
 
 ```python
 import numpy as np

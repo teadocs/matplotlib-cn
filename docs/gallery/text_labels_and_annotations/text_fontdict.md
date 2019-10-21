@@ -2,7 +2,7 @@
 
 此示例显示如何通过创建跨多个函数传递的选项字典来跨多个文本对象和标签共享参数。
 
-![使用字典控制文本和标签的样式示例](/static/images/gallery/sphx_glr_text_fontdict_001.png)
+![使用字典控制文本和标签的样式示例](https://matplotlib.org/_images/sphx_glr_text_fontdict_001.png)
 
 ```python
 import numpy as np

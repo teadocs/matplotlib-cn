@@ -2,7 +2,7 @@
 
 您可以传递一个自定义的图构造函数，以确定是否要从默认图中派生。 这个简单的例子创建了一个带有图标题的图形。
 
-![自定义图类示例](/static/images/gallery/sphx_glr_custom_figure_class_001.png)
+![自定义图类示例](https://matplotlib.org/_images/sphx_glr_custom_figure_class_001.png)
 
 ```python
 import matplotlib.pyplot as plt

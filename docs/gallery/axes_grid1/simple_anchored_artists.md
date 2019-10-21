@@ -2,7 +2,7 @@
 
 此示例说明如何使用在 [offsetbox](https://matplotlib.org/api/offsetbox_api.html#module-matplotlib.offsetbox) 和 [Matplotlib axes_grid1 Toolkit](https://matplotlib.org/api/toolkits/axes_grid1.html#toolkit-axesgrid1-index) 中找到的锚定辅助对象类。类似图形的实现，但不使用工具包，可以在[锚定的艺术家对象](https://matplotlib.org/gallery/misc/anchored_artists.html)中找到。
 
-![简单锚定艺术家对象示例](/static/images/gallery/sphx_glr_simple_anchored_artists_001.png)
+![简单锚定艺术家对象示例](https://matplotlib.org/_images/sphx_glr_simple_anchored_artists_001.png)
 
 ```python
 import matplotlib.pyplot as plt

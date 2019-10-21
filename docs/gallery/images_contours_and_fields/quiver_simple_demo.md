@@ -20,7 +20,7 @@ ax.quiverkey(q, X=0.3, Y=1.1, U=10,
 plt.show()
 ```
 
-![箭图简单演示](/static/images/gallery/sphx_glr_quiver_simple_demo_001.png)
+![箭图简单演示](https://matplotlib.org/_images/sphx_glr_quiver_simple_demo_001.png)
 
 ## 参考
 

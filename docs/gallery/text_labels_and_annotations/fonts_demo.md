@@ -4,7 +4,7 @@
 
 请参见字体演示(Kwargs)，以使用kwargs实现相同的效果。
 
-![字体演示](/static/images/gallery/sphx_glr_fonts_demo_001.png)
+![字体演示](https://matplotlib.org/_images/sphx_glr_fonts_demo_001.png)
 
 ```python
 from matplotlib.font_manager import FontProperties

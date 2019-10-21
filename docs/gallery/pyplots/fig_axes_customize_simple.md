@@ -33,7 +33,7 @@ for line in ax1.yaxis.get_ticklines():
 plt.show()
 ```
 
-![简单的图轴自定义示例](/static/images/gallery/sphx_glr_fig_axes_customize_simple_001.png)
+![简单的图轴自定义示例](https://matplotlib.org/_images/sphx_glr_fig_axes_customize_simple_001.png)
 
 ## 参考
 

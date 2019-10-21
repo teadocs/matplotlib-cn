@@ -21,7 +21,7 @@ plt.plot(t2, np.cos(2*np.pi*t2), 'r--')
 plt.show()
 ```
 
-![Pyplot 绘制两个子图示例](/static/images/gallery/sphx_glr_pyplot_two_subplots_001.png)
+![Pyplot 绘制两个子图示例](https://matplotlib.org/_images/sphx_glr_pyplot_two_subplots_001.png)
 
 ## 参考
 

@@ -36,7 +36,7 @@ ax1.set_title('Set axes color cycle to cmyk')
 plt.show()
 ```
 
-![cycler定型示例](/static/images/gallery/sphx_glr_color_cycler_001.png)
+![cycler定型示例](https://matplotlib.org/_images/sphx_glr_color_cycler_001.png)
 
 ## 参考
 

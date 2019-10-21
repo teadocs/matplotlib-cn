@@ -30,7 +30,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![探索规范化示例](/static/images/gallery/sphx_glr_power_norm_001.png)
+![探索规范化示例](https://matplotlib.org/_images/sphx_glr_power_norm_001.png)
 
 ## 参考
 

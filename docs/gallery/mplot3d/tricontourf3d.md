@@ -4,7 +4,7 @@
 
 使用的数据与trisurf3d_demo2的第二个图中的数据相同。 tricontour3d_demo显示此示例的未填充版本。
 
-![三角形三维填充等高线图示例](/static/images/gallery/sphx_glr_tricontourf3d_001.png)
+![三角形三维填充等高线图示例](https://matplotlib.org/_images/sphx_glr_tricontourf3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

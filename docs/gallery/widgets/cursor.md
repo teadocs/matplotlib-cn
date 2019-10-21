@@ -1,6 +1,6 @@
 # 光标
 
-![光标示例](/static/images/gallery/sphx_glr_cursor_001.png)
+![光标示例](https://matplotlib.org/_images/sphx_glr_cursor_001.png)
 
 ```python
 from matplotlib.widgets import Cursor

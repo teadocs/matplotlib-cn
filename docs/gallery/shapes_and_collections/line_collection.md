@@ -47,7 +47,7 @@ ax.set_title('Line collection with masked arrays')
 plt.show()
 ```
 
-![线段集合示例](/static/images/gallery/sphx_glr_line_collection_001.png)
+![线段集合示例](https://matplotlib.org/_images/sphx_glr_line_collection_001.png)
 
 为了在一组轴中有效地绘制多条线，Matplotlib能够一次性添加所有线。 这是一个简单的例子，展示了它是如何完成的。
 
@@ -82,7 +82,7 @@ plt.sci(line_segments)  # This allows interactive changing of the colormap.
 plt.show()
 ```
 
-![线段集合示例2](/static/images/gallery/sphx_glr_line_collection_002.png)
+![线段集合示例2](https://matplotlib.org/_images/sphx_glr_line_collection_002.png)
 
 ## 参考
 

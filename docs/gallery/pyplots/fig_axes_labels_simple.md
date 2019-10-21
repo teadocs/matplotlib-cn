@@ -27,7 +27,7 @@ ax2.set_xlabel('time (s)')
 plt.show()
 ```
 
-![简单的图轴标记示例](/static/images/gallery/sphx_glr_fig_axes_labels_simple_001.png)
+![简单的图轴标记示例](https://matplotlib.org/_images/sphx_glr_fig_axes_labels_simple_001.png)
 
 ## 参考
 

@@ -75,7 +75,7 @@ plt.subplots_adjust(hspace=0.5)
 plt.show()
 ```
 
-![不规则空间数据的等高线图例](/static/images/gallery/sphx_glr_irregulardatagrid_001.png)
+![不规则空间数据的等高线图例](https://matplotlib.org/_images/sphx_glr_irregulardatagrid_001.png)
 
 ## 参考
 

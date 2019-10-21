@@ -6,8 +6,10 @@ meta:
   - name: description
     content: Matplotlib中文网、Matplotlib官方中文文档。
 heroImage: /logo.svg
-actionText: 快速开始 →
+actionText: 快速了解 →
 actionLink: /intro/
+action2Text: 学习深度学习 →
+action2Link: https://www.numpy.org.cn/deep/
 footer: 署名-非商业性使用-相同方式共享 3.0 中国大陆 (CC BY-NC-SA 3.0 CN) | Copyright © 2019-present Zhi Bing
 ---
 

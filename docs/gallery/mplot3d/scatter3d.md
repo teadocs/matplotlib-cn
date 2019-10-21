@@ -2,7 +2,7 @@
 
 演示3D中的基本散点图。
 
-![3D散点图示例](/static/images/gallery/sphx_glr_scatter3d_001.png)
+![3D散点图示例](https://matplotlib.org/_images/sphx_glr_scatter3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

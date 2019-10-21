@@ -2,7 +2,7 @@
 
 如何通过连接到移动和单击事件来与绘图画布交互的示例
 
-![Coords 演示](/static/images/gallery/sphx_glr_coords_demo_001.png)
+![Coords 演示](https://matplotlib.org/_images/sphx_glr_coords_demo_001.png)
 
 ```python
 import sys

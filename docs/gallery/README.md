@@ -9,7 +9,7 @@ sidebar: auto
 单击任何图像可以查看完整的图像和源代码。
 
 有关更长的教程，请参阅我们的[教程页面](/tutorials)。
-您还可以在我们的[用户指南](https://matplotlib.org/contents.html)中找到[外部资源](https://matplotlib.org/resources/index.html)和[常见问题解答](https://matplotlib.org/faq/index.html)。
+您还可以在我们的[用户指南](https://matplotlib.org/contents.html)中找到[外部资源](/resources/index.html)和[常见问题解答](/faq/index.html)。
 
 ## 线条、条形和标记
 
@@ -629,7 +629,7 @@ sidebar: auto
   </ul>
 </div>
 
-## Subplots, axes and figures
+## 副图、轴和数字
 
 <div class="gallery-examples-list">
   <ul>
@@ -847,7 +847,7 @@ sidebar: auto
   </ul>
 </div>
 
-## Statistics
+## 统计
 
 <div class="gallery-examples-list">
   <ul>
@@ -995,7 +995,7 @@ sidebar: auto
   </ul>
 </div>
 
-## Pie and polar charts
+## 饼图和极坐标图
 
 <div class="gallery-examples-list">
   <ul>
@@ -1066,7 +1066,7 @@ sidebar: auto
   </ul>
 </div>
 
-## Text, labels and annotations
+## 文字，标签和注释
 
 <div class="gallery-examples-list">
   <ul>
@@ -1368,7 +1368,7 @@ sidebar: auto
   </ul>
 </div>
 
-## Pyplot
+## Pyplot 绘图
 
 <div class="gallery-examples-list">
   <ul>
@@ -1558,10 +1558,10 @@ sidebar: auto
   </ul>
 </div>
 
-## Color
-For more in-depth information about the colormaps available in matplotlib
-as well as a description of their properties,
-see the colormaps tutorial.
+## 颜色
+
+有关 matplotlib 中可用的颜色图及其属性的描述的更多深入信息，请参见[颜色图教程](/tutorials/index.html#颜色)。
+
 <div class="gallery-examples-list">
   <ul>
     <li>
@@ -1624,7 +1624,7 @@ see the colormaps tutorial.
   </ul>
 </div>
 
-## Shapes and collections
+## 形状和集合
 
 <div class="gallery-examples-list">
   <ul>
@@ -1744,7 +1744,7 @@ see the colormaps tutorial.
   </ul>
 </div>
 
-## Style sheets
+## 样式表
 
 <div class="gallery-examples-list">
   <ul>
@@ -1801,7 +1801,7 @@ see the colormaps tutorial.
   </ul>
 </div>
 
-## Axes Grid
+## 轴线网格
 
 <div class="gallery-examples-list">
   <ul>
@@ -1998,7 +1998,7 @@ see the colormaps tutorial.
   </ul>
 </div>
 
-## Axis Artist
+## 轴线艺术对象
 
 <div class="gallery-examples-list">
   <ul>
@@ -2153,7 +2153,7 @@ see the colormaps tutorial.
   </ul>
 </div>
 
-## Showcase
+## 案例展示
 
 <div class="gallery-examples-list">
   <ul>
@@ -2203,7 +2203,7 @@ see the colormaps tutorial.
   </ul>
 </div>
 
-## Animation
+## 动画
 
 <div class="gallery-examples-list">
   <ul>
@@ -2295,14 +2295,10 @@ see the colormaps tutorial.
   </ul>
 </div>
 
-## Event handling
-Matplotlib supports event handling with a GUI
-neutral event model, so you can connect to Matplotlib events without knowledge
-of what user interface Matplotlib will ultimately be plugged in to. This has
-two advantages: the code you write will be more portable, and Matplotlib events
-are aware of things like data coordinate space and which axes the event occurs
-in so you don't have to mess with low level transformation details to go from
-canvas space to data space. Object picking examples are also included.
+## 事件处理
+
+Matplotlib支持使用GUI中立事件模型进行事件处理，因此您可以连接到Matplotlib事件，而无需知道最终将要插入什么用户界面。 这有两个优点：您编写的代码将更加可移植，并且Matplotlib事件可以知道数据坐标空间以及事件发生在哪个轴等方面，因此您不必为从画布空间移出底层转换细节而烦恼 到数据空间。 还包括对象拾取示例。
+
 <div class="gallery-examples-list">
   <ul>
     <li>
@@ -2456,7 +2452,7 @@ canvas space to data space. Object picking examples are also included.
   </ul>
 </div>
 
-## Front Page
+## 前端页面
 
 <div class="gallery-examples-list">
   <ul>
@@ -2492,7 +2488,7 @@ canvas space to data space. Object picking examples are also included.
   </ul>
 </div>
 
-## Miscellaneous
+## 杂项
 
 <div class="gallery-examples-list">
   <ul>
@@ -2738,7 +2734,7 @@ canvas space to data space. Object picking examples are also included.
   </ul>
 </div>
 
-## 3D plotting
+## 3D 绘图
 
 <div class="gallery-examples-list">
   <ul>
@@ -2998,10 +2994,11 @@ canvas space to data space. Object picking examples are also included.
   </ul>
 </div>
 
-## Our Favorite Recipes
-Here is a collection of short tutorials, examples and code snippets
-that illustrate some of the useful idioms and tricks to make snazzier
-figures and overcome some matplotlib warts.
+## 广受好评的技巧
+
+这是一些简短的教程，示例和代码片段的集合，这些片段说明了一些有用的习惯用法和技巧，
+这些技巧和技巧可用来制作出时尚的人物并克服一些matplotlib坑。
+
 <div class="gallery-examples-list">
   <ul>
     <li>
@@ -3043,8 +3040,10 @@ figures and overcome some matplotlib warts.
   </ul>
 </div>
 
-## Scales
-These examples cover how different scales are handled in Matplotlib.
+## 刻度、比例
+
+这些示例涵盖了如何在 Matplotlib 中处理不同的比例。
+
 <div class="gallery-examples-list">
   <ul>
     <li>
@@ -3107,7 +3106,7 @@ These examples cover how different scales are handled in Matplotlib.
   </ul>
 </div>
 
-## Specialty Plots
+## 专业图
 
 <div class="gallery-examples-list">
   <ul>
@@ -3199,7 +3198,7 @@ These examples cover how different scales are handled in Matplotlib.
   </ul>
 </div>
 
-## Ticks and spines
+## Ticks和spines图
 
 <div class="gallery-examples-list">
   <ul>
@@ -3354,9 +3353,10 @@ These examples cover how different scales are handled in Matplotlib.
   </ul>
 </div>
 
-## Units
-These examples cover the many representations of units
-in Matplotlib.
+## 单位
+
+这些示例涵盖了Matplotlib中单位的许多表示形式。
+
 <div class="gallery-examples-list">
   <ul>
     <li>
@@ -3433,10 +3433,12 @@ in Matplotlib.
   </ul>
 </div>
 
-## Embedding Matplotlib in graphical user interfaces
-You can embed Matplotlib directly into a user interface application by
-following the embedding_in_SOMEGUI.py examples here. Currently
-matplotlib supports wxpython, pygtk, tkinter and pyqt4/5.
+## 将Matplotlib嵌入图形用户界面中
+
+您可以按照此处的embedding_in_SOMEGUI.py示例将Matplotlib直接嵌入到用户界面应用程序中。 目前，matplotlib支持wxpython，pygtk，tkinter和pyqt4 / 5。
+
+将Matplotlib嵌入GUI时，必须直接使用Matplotlib API而不是pylab / pyplot程序界面，因此请查看examples / api目录，了解使用该API的一些示例代码。
+
 <div class="gallery-examples-list">
   <ul>
     <li>
@@ -3576,7 +3578,7 @@ matplotlib supports wxpython, pygtk, tkinter and pyqt4/5.
   </ul>
 </div>
 
-## Userdemo
+## 用户们的示例
 
 <div class="gallery-examples-list">
   <ul>
@@ -3815,9 +3817,10 @@ matplotlib supports wxpython, pygtk, tkinter and pyqt4/5.
   </ul>
 </div>
 
-## Widgets
-Examples of how to write primitive, but GUI agnostic, widgets in
-matplotlib
+## 小部件
+
+如何在matplotlib中编写原始但与GUI不相关的小部件的示例。
+
 <div class="gallery-examples-list">
   <ul>
     <li>
@@ -3907,3 +3910,8 @@ matplotlib
     </li>
   </ul>
 </div>
+
+## 下载本页所有示例
+
+- [下载python源码: annotate_with_units.py](https://matplotlib.org/_downloads/0ebb4ffe62f0e7ee47e4a93d5f36ba10/tutorials_python.zip)
+- [下载Jupyter notebook: annotate_with_units.ipynb](https://matplotlib.org/_downloads/b98186b910d0b9a8c139ad170f9c0eb6/tutorials_jupyter.zip)

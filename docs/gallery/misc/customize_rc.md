@@ -23,7 +23,7 @@ def set_pub():
 >>> rcdefaults()  # restore the defaults
 ```
 
-![自定义Rc示例](/static/images/gallery/sphx_glr_customize_rc_001.png)
+![自定义Rc示例](https://matplotlib.org/_images/sphx_glr_customize_rc_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -198,7 +198,7 @@ if __name__ == '__main__':
     plt.show()
 ```
 
-![雷达图示例](/static/images/gallery/sphx_glr_radar_chart_001.png)
+![雷达图示例](https://matplotlib.org/_images/sphx_glr_radar_chart_001.png)
 
 ## 参考
 

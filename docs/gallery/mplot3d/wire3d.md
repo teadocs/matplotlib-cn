@@ -2,7 +2,7 @@
 
 线框图的一个非常基本的演示。
 
-![3D线框图示例](/static/images/gallery/sphx_glr_wire3d_001.png)
+![3D线框图示例](https://matplotlib.org/_images/sphx_glr_wire3d_001.png)
 
 ```python
 from mpl_toolkits.mplot3d import axes3d

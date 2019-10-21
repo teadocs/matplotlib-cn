@@ -31,7 +31,7 @@ im = ax.imshow(Z, interpolation='bilinear', cmap=cm.RdYlGn,
 plt.show()
 ```
 
-![图像演示示例](/static/images/gallery/sphx_glr_image_demo_001.png)
+![图像演示示例](https://matplotlib.org/_images/sphx_glr_image_demo_001.png)
 
 还可以显示图片的图像。
 
@@ -67,9 +67,9 @@ ax.set_title('CT density')
 plt.show()
 ```
 
-![图像演示示例2](/static/images/gallery/sphx_glr_image_demo_002.png)
+![图像演示示例2](https://matplotlib.org/_images/sphx_glr_image_demo_002.png)
 
-![图像演示示例3](/static/images/gallery/sphx_glr_image_demo_003.png)
+![图像演示示例3](https://matplotlib.org/_images/sphx_glr_image_demo_003.png)
 
 ## 插值图像
 
@@ -113,7 +113,7 @@ for ax, interp in zip(axs, ['nearest', 'bilinear', 'bicubic']):
 plt.show()
 ```
 
-![图像演示示例4](/static/images/gallery/sphx_glr_image_demo_004.png)
+![图像演示示例4](https://matplotlib.org/_images/sphx_glr_image_demo_004.png)
 
 可以使用“原点”参数指定图像应以数组原点 x[0, 0] 绘制在左上角还是右下角。您还可以在matplotLibrary c文件中控制默认设置Image.Source。有关此主题的更多信息，请参阅关于起源和范围的完整指南。
 
@@ -130,7 +130,7 @@ axs[1].imshow(x, origin='lower', interpolation=interp)
 plt.show()
 ```
 
-![图像演示示例5](/static/images/gallery/sphx_glr_image_demo_005.png)
+![图像演示示例5](https://matplotlib.org/_images/sphx_glr_image_demo_005.png)
 
 最后，我们将使用剪辑路径显示图像。
 
@@ -156,7 +156,7 @@ im.set_clip_path(patch)
 plt.show()
 ```
 
-![图像演示示例6](/static/images/gallery/sphx_glr_image_demo_006.png)
+![图像演示示例6](https://matplotlib.org/_images/sphx_glr_image_demo_006.png)
 
 ## 参考
 

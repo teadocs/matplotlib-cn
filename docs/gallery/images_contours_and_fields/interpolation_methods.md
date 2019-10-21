@@ -32,7 +32,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![imshow或matshow的插值](/static/images/gallery/sphx_glr_interpolation_methods_001.png)
+![imshow或matshow的插值](https://matplotlib.org/_images/sphx_glr_interpolation_methods_001.png)
 
 ## 参考
 

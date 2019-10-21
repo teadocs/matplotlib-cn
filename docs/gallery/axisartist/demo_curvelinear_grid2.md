@@ -4,7 +4,7 @@
 
 此示例演示如何通过在网格上应用转换，使用GridHelperCurve线性来定义自定义网格和注释行。作为打印上的演示，轴上将显示5x5矩阵。
 
-![Curvelinear网格2示例](/static/images/gallery/sphx_glr_demo_curvelinear_grid2_001.png)
+![Curvelinear网格2示例](https://matplotlib.org/_images/sphx_glr_demo_curvelinear_grid2_001.png)
 
 ```python
 import numpy as np

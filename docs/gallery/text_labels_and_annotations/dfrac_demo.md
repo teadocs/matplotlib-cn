@@ -6,7 +6,7 @@
 
 **注意**：要将 \dfrac与LaTeX引擎一起使用（text.usetex：True），您需要使用text.latex.preamble rc导入amsmath包，这是一个不受支持的功能; 因此，在 \frac宏之前使用 \displaystyle选项来获取LaTeX引擎的这种行为可能是个更好的主意。
 
-![dfrac喝frac公式](/static/images/gallery/sphx_glr_dfrac_demo_001.png)
+![dfrac喝frac公式](https://matplotlib.org/_images/sphx_glr_dfrac_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

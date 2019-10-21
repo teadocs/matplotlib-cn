@@ -26,7 +26,7 @@ for ax in axs.flatten():
     example_plot(ax)
 ```
 
-![约束布局示例](/static/images/gallery/sphx_glr_demo_constrained_layout_001.png)
+![约束布局示例](https://matplotlib.org/_images/sphx_glr_demo_constrained_layout_001.png)
 
 添加 ``constrained_layout = True`` 会自动调整。
 
@@ -37,7 +37,7 @@ for ax in axs.flatten():
     example_plot(ax)
 ```
 
-![约束布局示例2](/static/images/gallery/sphx_glr_demo_constrained_layout_002.png)
+![约束布局示例2](https://matplotlib.org/_images/sphx_glr_demo_constrained_layout_002.png)
 
 下面是使用嵌套gridspecs的更复杂的示例。
 
@@ -62,7 +62,7 @@ for n in range(2):
 plt.show()
 ```
 
-![约束布局示例3](/static/images/gallery/sphx_glr_demo_constrained_layout_003.png)
+![约束布局示例3](https://matplotlib.org/_images/sphx_glr_demo_constrained_layout_003.png)
 
 ## 参考
 

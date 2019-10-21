@@ -16,7 +16,7 @@ ax.fill(x, y)
 plt.show()
 ```
 
-![绘制填充图的示例1](/static/images/gallery/sphx_glr_fill_001.png)
+![绘制填充图的示例1](https://matplotlib.org/_images/sphx_glr_fill_001.png)
 
 接下来，还有一些可选功能：
 
@@ -42,7 +42,7 @@ ax.plot([x[0], x[-1]], [y2[0], y2[-1]], c='r', alpha=0.8)
 plt.show()
 ```
 
-![绘制填充图的示例2](/static/images/gallery/sphx_glr_fill_002.png)
+![绘制填充图的示例2](https://matplotlib.org/_images/sphx_glr_fill_002.png)
 
 ## 下载这个示例
 

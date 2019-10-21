@@ -25,7 +25,7 @@ ax3.set_ylabel('between y1 and y2')
 ax3.set_xlabel('x')
 ```
 
-![填充线条之间的区域1](/static/images/gallery/sphx_glr_fill_between_demo_001.png)
+![填充线条之间的区域1](https://matplotlib.org/_images/sphx_glr_fill_between_demo_001.png)
 
 现在在满足逻辑条件的y1和y2之间填充。 请注意，这与调用fill_between(x[where], y1[where], y2[where]...)不同，因为多个连续区域的边缘效应。
 
@@ -46,7 +46,7 @@ ax1.fill_between(x, y1, y2, where=y2 <= y1,
 ax1.set_title('Now regions with y2>1 are masked')
 ```
 
-![填充线条之间的区域2](/static/images/gallery/sphx_glr_fill_between_demo_002.png)
+![填充线条之间的区域2](https://matplotlib.org/_images/sphx_glr_fill_between_demo_002.png)
 
 这个例子说明了一个问题; 由于数据网格化，在交叉点处存在不期望的未填充三角形。 蛮力解决方案是在绘图之前将所有阵列插值到非常精细的网格。
 
@@ -72,7 +72,7 @@ ax.fill_between(x, 0, 1, where=y < -theta,
 plt.show()
 ```
 
-![填充线条之间的区域3](/static/images/gallery/sphx_glr_fill_between_demo_003.png)
+![填充线条之间的区域3](https://matplotlib.org/_images/sphx_glr_fill_between_demo_003.png)
 
 ## 下载这个示例
 

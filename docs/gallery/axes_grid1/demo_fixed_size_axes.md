@@ -1,8 +1,8 @@
 # 演示固定尺寸轴
 
-![演示固定尺寸轴](/static/images/gallery/sphx_glr_demo_fixed_size_axes_001.png)
+![演示固定尺寸轴](https://matplotlib.org/_images/sphx_glr_demo_fixed_size_axes_001.png)
 
-![演示固定尺寸轴2](/static/images/gallery/sphx_glr_demo_fixed_size_axes_002.png)
+![演示固定尺寸轴2](https://matplotlib.org/_images/sphx_glr_demo_fixed_size_axes_002.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -2,7 +2,7 @@
 
 制作一个“破损”的水平条形图，即一个有间隙的条形图
 
-![破损条形图示](/static/images/gallery/sphx_glr_broken_barh_001.png);
+![破损条形图示](https://matplotlib.org/_images/sphx_glr_broken_barh_001.png);
 
 ```python
 import matplotlib.pyplot as plt

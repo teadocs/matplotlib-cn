@@ -2,59 +2,59 @@
 
 此脚本演示了一组常见示例图上的不同可用样式表：散点图，图像，条形图，面片，线图和直方图，
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_001.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_001.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_002.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_002.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_003.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_003.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_004.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_004.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_005.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_005.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_006.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_006.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_007.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_007.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_008.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_008.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_009.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_009.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_010.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_010.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_011.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_011.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_012.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_012.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_013.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_013.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_014.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_014.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_015.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_015.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_016.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_016.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_017.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_017.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_018.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_018.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_019.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_019.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_020.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_020.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_021.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_021.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_022.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_022.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_023.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_023.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_024.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_024.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_025.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_025.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_026.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_026.png)
 
-![样式表参考示例](/static/images/gallery/sphx_glr_style_sheets_reference_027.png)
+![样式表参考示例](https://matplotlib.org/_images/sphx_glr_style_sheets_reference_027.png)
 
 ```python
 import numpy as np

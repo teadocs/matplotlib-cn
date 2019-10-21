@@ -66,7 +66,7 @@ for i, m in enumerate(maps):
 plt.show()
 ```
 
-![BboxImage 演示](/static/images/gallery/sphx_glr_demo_bboximage_001.png)
+![BboxImage 演示](https://matplotlib.org/_images/sphx_glr_demo_bboximage_001.png)
 
 ## 参考
 

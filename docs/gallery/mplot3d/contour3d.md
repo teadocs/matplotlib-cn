@@ -2,7 +2,7 @@
 
 这类似于2D中的等高线图，除了f（x，y）= c曲线绘制在平面z = c上。
 
-![演示在3D中绘制轮廓（水平）曲线示例](/static/images/gallery/sphx_glr_contour3d_001.png)
+![演示在3D中绘制轮廓（水平）曲线示例](https://matplotlib.org/_images/sphx_glr_contour3d_001.png)
 
 ```python
 from mpl_toolkits.mplot3d import axes3d

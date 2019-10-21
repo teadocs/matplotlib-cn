@@ -19,7 +19,7 @@ Sankey(flows=[0.25, 0.15, 0.60, -0.20, -0.15, -0.05, -0.50, -0.10],
 plt.title("The default settings produce a diagram like this.")
 ```
 
-![桑基图类示例](/static/images/gallery/sphx_glr_sankey_basics_001.png)
+![桑基图类示例](https://matplotlib.org/_images/sphx_glr_sankey_basics_001.png)
 
 注意：
 
@@ -45,7 +45,7 @@ diagrams[0].texts[-1].set_color('r')
 diagrams[0].text.set_fontweight('bold')
 ```
 
-![桑基图类示例2](/static/images/gallery/sphx_glr_sankey_basics_002.png)
+![桑基图类示例2](https://matplotlib.org/_images/sphx_glr_sankey_basics_002.png)
 
 注意：
 
@@ -67,7 +67,7 @@ diagrams[-1].patch.set_hatch('/')
 plt.legend()
 ```
 
-![桑基图类示例3](/static/images/gallery/sphx_glr_sankey_basics_003.png)
+![桑基图类示例3](https://matplotlib.org/_images/sphx_glr_sankey_basics_003.png)
 
 请注意，只指定了一个连接，但系统形成一个电路，因为：（1）路径的长度是合理的，（2）流的方向和顺序是镜像的。
 

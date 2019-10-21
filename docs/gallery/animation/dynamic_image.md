@@ -1,6 +1,6 @@
 # 使用预先计算的图像列表的动画图像
 
-![使用预先计算的图像列表的动画图像示例](/static/images/gallery/sphx_glr_dynamic_image_001.png)
+![使用预先计算的图像列表的动画图像示例](https://matplotlib.org/_images/sphx_glr_dynamic_image_001.png)
 
 ```python
 import numpy as np

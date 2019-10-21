@@ -58,7 +58,7 @@ for ax, markers in zip(axes, split_list(unfilled_markers)):
 plt.show()
 ```
 
-![未填充标记图示](/static/images/gallery/sphx_glr_marker_reference_001.png)
+![未填充标记图示](https://matplotlib.org/_images/sphx_glr_marker_reference_001.png)
 
 绘制所有填满的标记。
 
@@ -74,7 +74,7 @@ fig.suptitle('filled markers', fontsize=14)
 plt.show()
 ```
 
-![已填充充标记图示](/static/images/gallery/sphx_glr_marker_reference_002.png)
+![已填充充标记图示](https://matplotlib.org/_images/sphx_glr_marker_reference_002.png)
 
 ## 带有MathText的自定义标记
 
@@ -97,7 +97,7 @@ format_axes(ax)
 plt.show()
 ```
 
-![带有MathText的自定义标记图示](/static/images/gallery/sphx_glr_marker_reference_003.png)
+![带有MathText的自定义标记图示](https://matplotlib.org/_images/sphx_glr_marker_reference_003.png)
 
 ## 下载这个示例
 

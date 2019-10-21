@@ -1,6 +1,6 @@
 # 花式箭头符号演示
 
-![花式箭头符号演示](/static/images/gallery/sphx_glr_fancyarrow_demo_001.png)
+![花式箭头符号演示](https://matplotlib.org/_images/sphx_glr_fancyarrow_demo_001.png)
 
 ```python
 import matplotlib.patches as mpatches

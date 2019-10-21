@@ -25,7 +25,7 @@ legend.get_frame().set_facecolor('C0')
 plt.show()
 ```
 
-![预定义标签的示例](/static/images/gallery/sphx_glr_legend_001.png)
+![预定义标签的示例](https://matplotlib.org/_images/sphx_glr_legend_001.png)
 
 ## 参考
 

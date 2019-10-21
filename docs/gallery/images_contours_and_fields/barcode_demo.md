@@ -30,7 +30,7 @@ ax2.imshow(x.reshape((1, -1)), **barprops)
 plt.show()
 ```
 
-![条形码示例](/static/images/gallery/sphx_glr_barcode_demo_001.png)
+![条形码示例](https://matplotlib.org/_images/sphx_glr_barcode_demo_001.png)
 
 ## 参考
 

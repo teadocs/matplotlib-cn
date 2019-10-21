@@ -2,7 +2,7 @@
 
 这是使用semilogx为x轴分配对数刻度的示例。
 
-![对数轴示例](/static/images/gallery/sphx_glr_log_test_001.png)
+![对数轴示例](https://matplotlib.org/_images/sphx_glr_log_test_001.png)
 
 ```python
 import matplotlib.pyplot as plt

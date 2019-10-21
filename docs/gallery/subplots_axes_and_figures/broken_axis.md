@@ -2,7 +2,7 @@
 
 折断轴的示例，其中y轴将切割出一部分。
 
-![折断轴示例](/static/images/gallery/sphx_glr_broken_axis_001.png)
+![折断轴示例](https://matplotlib.org/_images/sphx_glr_broken_axis_001.png)
 
 ```python
 import matplotlib.pyplot as plt

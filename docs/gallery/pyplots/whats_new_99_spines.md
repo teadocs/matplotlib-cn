@@ -49,7 +49,7 @@ adjust_spines(ax,['bottom'])
 plt.show()
 ```
 
-![Spines对象绘图示例](/static/images/gallery/sphx_glr_whats_new_99_spines_001.png)
+![Spines对象绘图示例](https://matplotlib.org/_images/sphx_glr_whats_new_99_spines_001.png)
 
 ## 参考
 

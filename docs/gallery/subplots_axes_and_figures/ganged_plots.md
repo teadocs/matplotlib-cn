@@ -4,7 +4,7 @@
 
 在此示例中，绘图共享一个公共x轴，但您可以遵循相同的逻辑来提供公共y轴。
 
-![](/static/images/gallery/sphx_glr_ganged_plots_001.png)
+![](https://matplotlib.org/_images/sphx_glr_ganged_plots_001.png)
 
 ```python
 import matplotlib.pyplot as plt

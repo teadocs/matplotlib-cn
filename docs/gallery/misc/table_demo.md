@@ -2,7 +2,7 @@
 
 演示表函数以在图表中显示表格。
 
-![表格演示示例](/static/images/gallery/sphx_glr_table_demo_001.png)
+![表格演示示例](https://matplotlib.org/_images/sphx_glr_table_demo_001.png)
 
 ```python
 import numpy as np

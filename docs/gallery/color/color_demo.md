@@ -45,7 +45,7 @@ ax.tick_params(labelcolor='tab:orange')
 plt.show()
 ```
 
-![基本颜色演示](/static/images/gallery/sphx_glr_color_demo_001.png)
+![基本颜色演示](https://matplotlib.org/_images/sphx_glr_color_demo_001.png)
 
 ## 参考
 

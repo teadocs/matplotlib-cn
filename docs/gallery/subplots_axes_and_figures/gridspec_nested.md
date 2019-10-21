@@ -2,7 +2,7 @@
 
 GridSpec可以嵌套，因此来自父GridSpec的子图可以设置嵌套的子图网格的位置。
 
-![嵌套的Gridspecs示例](/static/images/gallery/sphx_glr_gridspec_nested_001.png)
+![嵌套的Gridspecs示例](https://matplotlib.org/_images/sphx_glr_gridspec_nested_001.png)
 
 ```python
 import matplotlib.pyplot as plt

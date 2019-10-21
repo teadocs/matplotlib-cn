@@ -4,7 +4,7 @@
 
 您可以使用“文本框”小部件让用户提供需要显示的任何文本，包括公式。 您可以使用提交按钮创建具有给定输入的绘图。
 
-![文本框示例](/static/images/gallery/sphx_glr_textbox_001.png)
+![文本框示例](https://matplotlib.org/_images/sphx_glr_textbox_001.png)
 
 ```python
 import numpy as np

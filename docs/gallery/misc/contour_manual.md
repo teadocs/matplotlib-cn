@@ -40,7 +40,7 @@ plt.axis([-0.5, 3.5, -0.5, 4.5])
 plt.title('User-specified contours')
 ```
 
-![Contour手册示例](/static/images/gallery/sphx_glr_contour_manual_001.png)
+![Contour手册示例](https://matplotlib.org/_images/sphx_glr_contour_manual_001.png)
 
 可以在单个多边形顶点列表中指定多个填充轮廓线以及Path类中描述的顶点种类（代码类型）列表。 这对于带孔的多边形特别有用。 代码类型1是MOVETO，2是LINETO。
 
@@ -57,7 +57,7 @@ plt.title('User specified filled contours with holes')
 plt.show()
 ```
 
-![Contour手册示例2](/static/images/gallery/sphx_glr_contour_manual_002.png)
+![Contour手册示例2](https://matplotlib.org/_images/sphx_glr_contour_manual_002.png)
 
 ## 下载这个示例
             

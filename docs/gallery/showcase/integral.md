@@ -9,7 +9,7 @@
 - 使用轴刺来隐藏顶部和右侧脊柱。
 - 自定义刻度线和标签。
 
-![积分作为曲线下面积](/static/images/gallery/sphx_glr_integral_001.png)
+![积分作为曲线下面积](https://matplotlib.org/_images/sphx_glr_integral_001.png)
 
 ```python
 import numpy as np

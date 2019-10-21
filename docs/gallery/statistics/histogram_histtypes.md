@@ -5,7 +5,7 @@
 
 选择不同的存储量和大小会显著影响直方图的形状。Astropy文档有很多关于如何选择这些参数的部分: http://docs.astropy.org/en/stable/visualization/histogram.html
 
-![不同histtype设置示例](/static/images/gallery/sphx_glr_histogram_histtypes_001.png)
+![不同histtype设置示例](https://matplotlib.org/_images/sphx_glr_histogram_histtypes_001.png)
 
 ```python
 import numpy as np

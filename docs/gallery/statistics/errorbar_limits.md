@@ -4,7 +4,7 @@
 
 例如，如果``xlolims``为``True``，则``x-error``条形将仅从数据扩展到递增值。如果``uplims``是一个填充了``False``的数组，除了第4和第7个值之外，所有y误差条都是双向的，除了第4和第7个条形，它们将从数据延伸到减小的y值。
 
-![条形图限制示例](/static/images/gallery/sphx_glr_errorbar_limits_001.png)
+![条形图限制示例](https://matplotlib.org/_images/sphx_glr_errorbar_limits_001.png)
 
 ```python
 import numpy as np

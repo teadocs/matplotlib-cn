@@ -46,7 +46,7 @@ cbar = fig.colorbar(cs)
 plt.show()
 ```
 
-![Contourf 与记录颜色刻度示例](/static/images/gallery/sphx_glr_contourf_log_001.png)
+![Contourf 与记录颜色刻度示例](https://matplotlib.org/_images/sphx_glr_contourf_log_001.png)
 
 ## 参考
 

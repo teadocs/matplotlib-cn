@@ -85,7 +85,7 @@ ax.set_title('Gradient plot: an electrical dipole')
 plt.show()
 ```
 
-![Trigradient 演示](/static/images/gallery/sphx_glr_trigradient_demo_001.png)
+![Trigradient 演示](https://matplotlib.org/_images/sphx_glr_trigradient_demo_001.png)
 
 ## 参考
 

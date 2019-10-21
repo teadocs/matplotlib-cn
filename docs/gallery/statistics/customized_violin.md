@@ -4,7 +4,7 @@
 
 有关小提琴图的更多信息，scikit-learn文档有一个很棒的部分：http://scikit-learn.org/stable/modules/density.html
 
-![自定义小提琴图示例](/static/images/gallery/sphx_glr_customized_violin_001.png)
+![自定义小提琴图示例](https://matplotlib.org/_images/sphx_glr_customized_violin_001.png)
 
 ```python
 import matplotlib.pyplot as plt

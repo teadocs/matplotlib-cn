@@ -4,7 +4,7 @@
 
 在此示例中，滑块用于选择正弦波的频率。 您可以通过这种方式控制绘图的许多连续变化属性。
 
-![滑块演示](/static/images/gallery/sphx_glr_slider_demo_001.png)
+![滑块演示](https://matplotlib.org/_images/sphx_glr_slider_demo_001.png)
 
 ```python
 import numpy as np

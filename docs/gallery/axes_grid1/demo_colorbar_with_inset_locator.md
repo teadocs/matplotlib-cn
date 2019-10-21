@@ -1,6 +1,6 @@
 # 使用插入定位器演示Colorbar
 
-![使用插入定位器演示Colorbar](/static/images/gallery/sphx_glr_demo_colorbar_with_inset_locator_001.png)
+![使用插入定位器演示Colorbar](https://matplotlib.org/_images/sphx_glr_demo_colorbar_with_inset_locator_001.png)
 
 ```python
 import matplotlib.pyplot as plt

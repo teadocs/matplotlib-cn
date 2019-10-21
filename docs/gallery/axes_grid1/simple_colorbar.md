@@ -1,6 +1,6 @@
 # 简单的彩色条实现
 
-![简单的彩色条实现示例](/static/images/gallery/sphx_glr_simple_colorbar_001.png)
+![简单的彩色条实现示例](https://matplotlib.org/_images/sphx_glr_simple_colorbar_001.png)
 
 ```python
 import matplotlib.pyplot as plt

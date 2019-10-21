@@ -29,13 +29,13 @@
 
 以下示例说明了这些方法中的每一种。
  
-![选择事件示例](/static/images/gallery/sphx_glr_pick_event_demo_001.png)
+![选择事件示例](https://matplotlib.org/_images/sphx_glr_pick_event_demo_001.png)
 
-![选择事件示例2](/static/images/gallery/sphx_glr_pick_event_demo_002.png)
+![选择事件示例2](https://matplotlib.org/_images/sphx_glr_pick_event_demo_002.png)
 
-![选择事件示例3](/static/images/gallery/sphx_glr_pick_event_demo_003.png)
+![选择事件示例3](https://matplotlib.org/_images/sphx_glr_pick_event_demo_003.png)
 
-![选择事件示例4](/static/images/gallery/sphx_glr_pick_event_demo_004.png)
+![选择事件示例4](https://matplotlib.org/_images/sphx_glr_pick_event_demo_004.png)
 
 ```python
 import matplotlib.pyplot as plt

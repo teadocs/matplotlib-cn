@@ -2,7 +2,7 @@
 
 SpanSelector是一个鼠标小部件，用于选择xmin / xmax范围并绘制下轴中所选区域的详细视图
 
-![跨度选择器示例](/static/images/gallery/sphx_glr_span_selector_001.png)
+![跨度选择器示例](https://matplotlib.org/_images/sphx_glr_span_selector_001.png)
 
 ```python
 import numpy as np

@@ -44,7 +44,7 @@ fig1.colorbar(tpc)
 ax1.set_title('tripcolor of Delaunay triangulation, flat shading')
 ```
 
-![Tripcolor 演示](/static/images/gallery/sphx_glr_tripcolor_demo_001.png)
+![Tripcolor 演示](https://matplotlib.org/_images/sphx_glr_tripcolor_demo_001.png)
 
 说明Gouraud阴影。
 
@@ -56,7 +56,7 @@ fig2.colorbar(tpc)
 ax2.set_title('tripcolor of Delaunay triangulation, gouraud shading')
 ```
 
-![Tripcolor 演示2](/static/images/gallery/sphx_glr_tripcolor_demo_002.png)
+![Tripcolor 演示2](https://matplotlib.org/_images/sphx_glr_tripcolor_demo_002.png)
 
 您可以指定自己的三角剖分而不是执行点的Delaunay三角剖分，其中每个三角形由构成三角形的三个点的索引给出，以顺时针或逆时针方式排序。
 
@@ -123,7 +123,7 @@ ax3.set_ylabel('Latitude (degrees)')
 plt.show()
 ```
 
-![Tripcolor 演示3](/static/images/gallery/sphx_glr_tripcolor_demo_003.png)
+![Tripcolor 演示3](https://matplotlib.org/_images/sphx_glr_tripcolor_demo_003.png)
 
 ## 参考
 

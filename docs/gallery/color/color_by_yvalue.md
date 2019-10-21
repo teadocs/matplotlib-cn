@@ -22,7 +22,7 @@ ax.plot(t, smiddle, t, slower, t, supper)
 plt.show()
 ```
 
-![y-value绘制颜色示例](/static/images/gallery/sphx_glr_color_by_yvalue_001.png)
+![y-value绘制颜色示例](https://matplotlib.org/_images/sphx_glr_color_by_yvalue_001.png)
 
 ## 参考
 

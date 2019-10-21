@@ -18,7 +18,7 @@ fig.lines.extend([l1, l2])
 plt.show()
 ```
 
-![X图示例](/static/images/gallery/sphx_glr_fig_x_001.png)
+![X图示例](https://matplotlib.org/_images/sphx_glr_fig_x_001.png)
 
 ## 参考
 

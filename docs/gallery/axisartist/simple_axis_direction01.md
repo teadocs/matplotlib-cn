@@ -1,6 +1,6 @@
 # 简单轴方向01
 
-![简单轴方向01](/static/images/gallery/sphx_glr_simple_axis_direction01_001.png)
+![简单轴方向01](https://matplotlib.org/_images/sphx_glr_simple_axis_direction01_001.png)
 
 ```python
 import matplotlib.pyplot as plt
