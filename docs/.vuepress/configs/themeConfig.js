@@ -9,8 +9,12 @@ module.exports = {
     title: '文档公告',
     content: `我们经常发布文档更新，部分页面的翻译可能仍在进行中。有关最新信息，请访问<a href="/en/">英文文档</a>。如果某个页面上的翻译有问题，请提issues<a href="https://github.com/teadocs/matplotlib-cn/issues" target="_blank">告诉我们</a>。`
   }],
-  // 评论面板配置
+  // 评论设置
   comment: {
+    enable: true
+  },
+  // 聊天面板配置
+  chatRoom: {
     title: 'Matplotlib 爱好者'
   },
   repo: 'teadocs/matplotlib-cn',
