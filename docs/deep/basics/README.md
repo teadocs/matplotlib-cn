@@ -1,8 +1,8 @@
 # 深度学习基础教程
 
-本章由9篇文档组成，它们按照简单到难的顺序排列，将指导您如何使用 [NumPy](https://www.numpy.org.cn) 和 [PaddlePaddle](https://www.paddlepaddle.org.cn/?from=numpy-cn) 完成基础的深度学习任务
+本章由9篇文档组成，它们按照简单到难的顺序排列，将指导您如何使用 [NumPy](https://www.numpy.org.cn) 和 [PaddlePaddle](https://www.paddlepaddle.org.cn/?from=matplotlib-cn) 完成基础的深度学习任务
 
-本章文档涉及大量了深度学习基础知识，也介绍了如何使用 [NumPy](https://www.numpy.org.cn) 和 [PaddlePaddle](https://www.paddlepaddle.org.cn/?from=numpy-cn) 实现这些内容，请参阅以下说明了解如何使用：
+本章文档涉及大量了深度学习基础知识，也介绍了如何使用 [NumPy](https://www.numpy.org.cn) 和 [PaddlePaddle](https://www.paddlepaddle.org.cn/?from=matplotlib-cn) 实现这些内容，请参阅以下说明了解如何使用：
 
 ## 内容简介
 
