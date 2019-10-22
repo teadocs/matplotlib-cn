@@ -2,7 +2,7 @@
 
 演示制作3D绘图，其中2D条形图投影到平面y = 0，y = 1等。
 
-![在不同的平面中创建二维条形图示例](/static/images/gallery/sphx_glr_bars3d_001.png)
+![在不同的平面中创建二维条形图示例](https://matplotlib.org/_images/sphx_glr_bars3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

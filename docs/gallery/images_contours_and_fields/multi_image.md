@@ -50,7 +50,7 @@ for im in images:
 plt.show()
 ```
 
-![多重图像示例](/static/images/gallery/sphx_glr_multi_image_001.png)
+![多重图像示例](https://matplotlib.org/_images/sphx_glr_multi_image_001.png)
 
 ## 参考
 

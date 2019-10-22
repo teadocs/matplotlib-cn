@@ -35,7 +35,7 @@ fig.canvas.mpl_connect('draw_event', on_draw)
 plt.show()
 ```
 
-![自动调整子图](/static/images/gallery/sphx_glr_auto_subplots_adjust_0011.png)
+![自动调整子图](https://matplotlib.org/_images/sphx_glr_auto_subplots_adjust_0011.png)
 
 ## 参考
 

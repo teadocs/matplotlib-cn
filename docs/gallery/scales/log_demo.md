@@ -2,7 +2,7 @@
 
 具有对数轴的图的示例。
 
-![对数演示](/static/images/gallery/sphx_glr_log_demo_001.png)
+![对数演示](https://matplotlib.org/_images/sphx_glr_log_demo_001.png)
 
 ```python
 import numpy as np

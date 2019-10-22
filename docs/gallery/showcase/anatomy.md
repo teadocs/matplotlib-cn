@@ -2,7 +2,7 @@
 
 下图显示了组成一个图的几个matplotlib元素的名称。
 
-![解剖图](/static/images/gallery/sphx_glr_anatomy_001.png)
+![解剖图](https://matplotlib.org/_images/sphx_glr_anatomy_001.png)
 
 ```python
 import numpy as np

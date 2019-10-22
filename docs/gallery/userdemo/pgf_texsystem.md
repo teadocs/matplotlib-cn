@@ -1,6 +1,6 @@
 # Pgf文本系统
 
-![Pgf文本系统示例](/static/images/gallery/sphx_glr_pgf_texsystem_001.png)
+![Pgf文本系统示例](https://matplotlib.org/_images/sphx_glr_pgf_texsystem_001.png)
 
 ```python
 import matplotlib.pyplot as plt

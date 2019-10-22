@@ -21,7 +21,7 @@ plt.plot(np.arange(10)**2, '--r', marker=cut_star, markersize=15)
 plt.show()
 ```
 
-![标记路径示例](/static/images/gallery/sphx_glr_marker_path_001.png)
+![标记路径示例](https://matplotlib.org/_images/sphx_glr_marker_path_001.png)
 
 ## 参考
 

@@ -11,7 +11,7 @@
 
 此外，此示例演示如何使用带有误差线的对数刻度。
 
-![](/static/images/gallery/sphx_glr_errorbar_features_001.png)
+![](https://matplotlib.org/_images/sphx_glr_errorbar_features_001.png)
 
 ```python
 import numpy as np

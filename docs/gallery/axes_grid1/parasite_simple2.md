@@ -1,6 +1,6 @@
 # 简单寄生示例2
 
-![简单寄生示例2](/static/images/gallery/sphx_glr_parasite_simple2_001.png)
+![简单寄生示例2](https://matplotlib.org/_images/sphx_glr_parasite_simple2_001.png)
 
 ```python
 import matplotlib.transforms as mtransforms

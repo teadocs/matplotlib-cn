@@ -1,6 +1,6 @@
 # 演示Agg过滤器
 
-![演示Agg过滤器示例](/static/images/gallery/sphx_glr_demo_agg_filter_001.png)
+![演示Agg过滤器示例](https://matplotlib.org/_images/sphx_glr_demo_agg_filter_001.png)
 
 ```python
 import matplotlib.pyplot as plt

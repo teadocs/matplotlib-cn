@@ -2,7 +2,7 @@
 
 演示有两个子图。有关更多选项，请参阅[子图演示](https://matplotlib.org/gallery/subplots_axes_and_figures/subplots_demo.html)。
 
-![基本子图演示](/static/images/gallery/sphx_glr_subplot_demo_001.png)
+![基本子图演示](https://matplotlib.org/_images/sphx_glr_subplot_demo_001.png)
 
 ```python
 import numpy as np

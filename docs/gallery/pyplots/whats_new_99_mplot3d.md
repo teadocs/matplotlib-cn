@@ -21,7 +21,7 @@ ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.viridis)
 plt.show()
 ```
 
-![3D曲面图示例](/static/images/gallery/sphx_glr_whats_new_99_mplot3d_001.png)
+![3D曲面图示例](https://matplotlib.org/_images/sphx_glr_whats_new_99_mplot3d_001.png)
 
 ## 参考
 

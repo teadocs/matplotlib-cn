@@ -6,7 +6,7 @@
 
 在大多数情况下，山体阴影纯粹用于视觉目的，可以安全地忽略dx / dy。 在这种情况下，您可以通过反复试验调整vert_exag（垂直夸大）以获得所需的视觉效果。 但是，此示例演示了如何使用dx和dy kwargs来确保vert_exag参数是真正的垂直夸大。
 
-![地形山体阴影示例](/static/images/gallery/sphx_glr_topographic_hillshading_001.png)
+![地形山体阴影示例](https://matplotlib.org/_images/sphx_glr_topographic_hillshading_001.png)
 
 ```python
 import numpy as np

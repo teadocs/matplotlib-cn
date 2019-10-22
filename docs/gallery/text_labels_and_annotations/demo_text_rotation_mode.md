@@ -1,6 +1,6 @@
 # 演示文本旋转模式
 
-![演示文本旋转模式示例](/static/images/gallery/sphx_glr_demo_text_rotation_mode_001.png)
+![演示文本旋转模式示例](https://matplotlib.org/_images/sphx_glr_demo_text_rotation_mode_001.png)
 
 ```python
 from mpl_toolkits.axes_grid1.axes_grid import ImageGrid

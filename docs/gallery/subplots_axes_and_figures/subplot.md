@@ -2,7 +2,7 @@
 
 带有多个子图的简单演示。
 
-![多个子图](/static/images/gallery/sphx_glr_subplot_001.png)
+![多个子图](https://matplotlib.org/_images/sphx_glr_subplot_001.png)
 
 ```python
 import numpy as np

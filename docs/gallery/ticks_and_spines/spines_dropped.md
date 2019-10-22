@@ -2,7 +2,7 @@
 
 从轴上偏移的spines的演示（a.k.a。“掉落的spines”）。
 
-![掉落的spines示例](/static/images/gallery/sphx_glr_spines_dropped_001.png)
+![掉落的spines示例](https://matplotlib.org/_images/sphx_glr_spines_dropped_001.png)
 
 ```python
 import numpy as np

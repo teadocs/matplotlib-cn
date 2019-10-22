@@ -2,7 +2,7 @@
 
 通过在墨卡托投影中实现纬度数据的缩放用途来创建自定义比例。
 
-![自定义比例尺示例](/static/images/gallery/sphx_glr_custom_scale_001.png)
+![自定义比例尺示例](https://matplotlib.org/_images/sphx_glr_custom_scale_001.png)
 
 ```python
 import numpy as np

@@ -4,7 +4,7 @@
 
 有关Rrules的帮助，请参阅https://dateutil.readthedocs.io/en/stable/
 
-![演示日期Rrule示例](/static/images/gallery/sphx_glr_date_demo_rrule_001.png)
+![演示日期Rrule示例](https://matplotlib.org/_images/sphx_glr_date_demo_rrule_001.png)
 
 ```python
 import matplotlib.pyplot as plt

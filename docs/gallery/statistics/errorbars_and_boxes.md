@@ -7,7 +7,7 @@
 1. plotting kwargs that could be abbreviated are spelled out for better code readability in the future (for example we use ``facecolor`` instead of fc)
 1. the artists returned by the Axes plotting methods are then returned by the function so that, if desired, their styles can be modified later outside of the function (they are not modified in this example).
 
-![创建箱型图示例](/static/images/gallery/sphx_glr_errorbars_and_boxes_001.png)
+![创建箱型图示例](https://matplotlib.org/_images/sphx_glr_errorbars_and_boxes_001.png)
 
 ```python
 import numpy as np

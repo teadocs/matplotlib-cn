@@ -5,7 +5,7 @@
 有关小提琴图和KDE的更多信息，请参阅scikit-learn文档
 有一个很棒的部分：http://scikit-learn.org/stable/modules/density.html
 
-![小提琴图基础示例](/static/images/gallery/sphx_glr_violinplot_001.png)
+![小提琴图基础示例](https://matplotlib.org/_images/sphx_glr_violinplot_001.png)
 
 ```python
 import numpy as np

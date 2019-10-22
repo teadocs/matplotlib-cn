@@ -1,6 +1,6 @@
 # 简单轴分割器示例2
 
-![简单轴分割器示例2](/static/images/gallery/sphx_glr_simple_axes_divider2_001.png)
+![简单轴分割器示例2](https://matplotlib.org/_images/sphx_glr_simple_axes_divider2_001.png)
 
 ```python
 import mpl_toolkits.axes_grid1.axes_size as Size

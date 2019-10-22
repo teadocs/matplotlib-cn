@@ -2,9 +2,9 @@
 
 使用fill_betweenx在两条水平曲线之间着色。
 
-![betweenx填充示例](/static/images/gallery/sphx_glr_fill_betweenx_demo_001.png)
+![betweenx填充示例](https://matplotlib.org/_images/sphx_glr_fill_betweenx_demo_001.png)
 
-![betweenx填充示例2](/static/images/gallery/sphx_glr_fill_betweenx_demo_002.png)
+![betweenx填充示例2](https://matplotlib.org/_images/sphx_glr_fill_betweenx_demo_002.png)
 
 ```python
 import matplotlib.pyplot as plt

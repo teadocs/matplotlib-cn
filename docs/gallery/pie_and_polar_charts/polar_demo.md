@@ -21,7 +21,7 @@ ax.set_title("A line plot on a polar axis", va='bottom')
 plt.show()
 ```
 
-![极轴上绘制线段示例](/static/images/gallery/sphx_glr_polar_demo_001.png)
+![极轴上绘制线段示例](https://matplotlib.org/_images/sphx_glr_polar_demo_001.png)
 
 ## 参考
 

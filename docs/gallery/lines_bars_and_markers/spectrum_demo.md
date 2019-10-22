@@ -2,7 +2,7 @@
 
 该图显示了具有加性噪声的正弦信号的不同频谱表示。 通过利用快速傅立叶变换（FFT）计算离散时间信号的（频率）频谱。
 
-![频谱表示图例](/static/images/gallery/sphx_glr_spectrum_demo_001.png)
+![频谱表示图例](https://matplotlib.org/_images/sphx_glr_spectrum_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

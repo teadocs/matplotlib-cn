@@ -22,7 +22,7 @@ ax.set_xlabel('This is the default font')
 plt.show()
 ```
 
-![在Matplotlib中使用TTF字体文件](/static/images/gallery/sphx_glr_font_file_001.png)
+![在Matplotlib中使用TTF字体文件](https://matplotlib.org/_images/sphx_glr_font_file_001.png)
 
 ## 参考
 

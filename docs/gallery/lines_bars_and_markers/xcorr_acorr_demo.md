@@ -2,7 +2,7 @@
 
 使用互相关（xcorr）和自相关（acorr）图的示例。
 
-![交叉和自动关联演示图例](/static/images/gallery/sphx_glr_xcorr_acorr_demo_001.png)
+![交叉和自动关联演示图例](https://matplotlib.org/_images/sphx_glr_xcorr_acorr_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

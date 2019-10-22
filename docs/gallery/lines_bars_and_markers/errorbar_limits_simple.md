@@ -25,7 +25,7 @@ plt.errorbar(x, y, yerr=0.1, uplims=upperlimits, lolims=lowerlimits)
 plt.xlim(-1, 10)
 ```
 
-![限制型误差条形图示](/static/images/gallery/sphx_glr_errorbar_limits_simple_000.png);
+![限制型误差条形图示](https://matplotlib.org/_images/sphx_glr_errorbar_limits_simple_000.png);
 
 ```python
 fig = plt.figure(1)
@@ -46,7 +46,7 @@ plt.ylim(-0.1, 1.3)
 plt.show()
 ```
 
-![限制型误差条形图示2](/static/images/gallery/sphx_glr_errorbar_limits_simple_002.png);
+![限制型误差条形图示2](https://matplotlib.org/_images/sphx_glr_errorbar_limits_simple_002.png);
 
 ## 下载这个示例
 

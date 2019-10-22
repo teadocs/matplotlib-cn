@@ -1,6 +1,6 @@
 # Gridspec演示06
 
-![Gridspec演示06](/static/images/gallery/sphx_glr_demo_gridspec06_001.png)
+![Gridspec演示06](https://matplotlib.org/_images/sphx_glr_demo_gridspec06_001.png)
 
 ```python
 import matplotlib.pyplot as plt

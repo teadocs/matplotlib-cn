@@ -2,7 +2,7 @@
 
 Matplotlib的数学渲染引擎的选定功能。
 
-![数学文本例子](/static/images/gallery/sphx_glr_mathtext_examples_001.png)
+![数学文本例子](https://matplotlib.org/_images/sphx_glr_mathtext_examples_001.png)
 
 Out:
 

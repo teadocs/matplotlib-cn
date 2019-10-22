@@ -41,7 +41,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![QuadMesh 演示](/static/images/gallery/sphx_glr_quadmesh_demo_001.png)
+![QuadMesh 演示](https://matplotlib.org/_images/sphx_glr_quadmesh_demo_001.png)
 
 ## 参考
 

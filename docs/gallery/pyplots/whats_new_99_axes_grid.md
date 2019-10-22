@@ -49,7 +49,7 @@ ax.RGB.set_ylim(0.9, 10.6)
 plt.show()
 ```
 
-![创建RGB合成图像示例](/static/images/gallery/sphx_glr_whats_new_99_axes_grid_001.png)
+![创建RGB合成图像示例](https://matplotlib.org/_images/sphx_glr_whats_new_99_axes_grid_001.png)
 
 ## 参考
 

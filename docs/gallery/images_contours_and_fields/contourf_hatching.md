@@ -25,7 +25,7 @@ cs = ax1.contourf(x, y, z, hatches=['-', '/', '\\', '//'],
 fig1.colorbar(cs)
 ```
 
-![Contourf 影线法](/static/images/gallery/sphx_glr_contourf_hatching_001.png)
+![Contourf 影线法](https://matplotlib.org/_images/sphx_glr_contourf_hatching_001.png)
 
 绘制2：没有带图例的颜色的阴影图
 
@@ -43,7 +43,7 @@ ax2.legend(artists, labels, handleheight=2)
 plt.show()
 ```
 
-![Contourf 影线法2](/static/images/gallery/sphx_glr_contourf_hatching_002.png)
+![Contourf 影线法2](https://matplotlib.org/_images/sphx_glr_contourf_hatching_002.png)
 
 ## 参考
 

@@ -18,7 +18,7 @@ setp(ax2, xticklabels=[])
 setp(ax2.get_xticklabels(), visible=False)
 ```
 
-![共享轴演示](/static/images/gallery/sphx_glr_shared_axis_demo_001.png)
+![共享轴演示](https://matplotlib.org/_images/sphx_glr_shared_axis_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

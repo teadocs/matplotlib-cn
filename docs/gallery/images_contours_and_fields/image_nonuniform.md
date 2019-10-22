@@ -2,7 +2,7 @@
 
 这说明了非统一图像类。它不是通过AXES方法提供的，但是可以很容易地将它添加到AXIS实例中，如下所示。
 
-![图像掩码示例](/static/images/gallery/sphx_glr_image_nonuniform_001.png)
+![图像掩码示例](https://matplotlib.org/_images/sphx_glr_image_nonuniform_001.png)
 
 ```python
 import numpy as np

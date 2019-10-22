@@ -1,6 +1,6 @@
 # 光栅化演示
 
-![光栅化演示](/static/images/gallery/sphx_glr_rasterization_demo_001.png)
+![光栅化演示](https://matplotlib.org/_images/sphx_glr_rasterization_demo_001.png)
 
 ```python
 import numpy as np

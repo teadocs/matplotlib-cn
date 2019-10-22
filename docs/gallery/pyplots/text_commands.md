@@ -37,7 +37,7 @@ ax.axis([0, 10, 0, 10])
 plt.show()
 ```
 
-![绘制不同的文本示例](/static/images/gallery/sphx_glr_text_commands_001.png)
+![绘制不同的文本示例](https://matplotlib.org/_images/sphx_glr_text_commands_001.png)
 
 ## 参考
 

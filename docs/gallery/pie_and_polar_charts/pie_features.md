@@ -30,7 +30,7 @@ ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 plt.show()
 ```
 
-![基本饼图示例](/static/images/gallery/sphx_glr_pie_features_001.png)
+![基本饼图示例](https://matplotlib.org/_images/sphx_glr_pie_features_001.png)
 
 ## 参考
 

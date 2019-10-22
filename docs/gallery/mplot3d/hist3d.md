@@ -2,7 +2,7 @@
 
 将二维数据的直方图演示为3D中的条形图。
 
-![创建2D数据的3D直方图示例](/static/images/gallery/sphx_glr_hist3d_001.png)
+![创建2D数据的3D直方图示例](https://matplotlib.org/_images/sphx_glr_hist3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

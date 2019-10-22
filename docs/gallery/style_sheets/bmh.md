@@ -4,7 +4,7 @@
 
 [[1]](https://matplotlib.org/gallery/style_sheets/bmh.html#id1)   http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/
 
-![黑客贝叶斯方法样式表示例](/static/images/gallery/sphx_glr_bmh_001.png)
+![黑客贝叶斯方法样式表示例](https://matplotlib.org/_images/sphx_glr_bmh_001.png)
 
 ```python
 from numpy.random import beta

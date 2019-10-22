@@ -2,7 +2,7 @@
 
 使用工程格式化程序。
 
-![工程格式化示例](/static/images/gallery/sphx_glr_engineering_formatter_001.png)
+![工程格式化示例](https://matplotlib.org/_images/sphx_glr_engineering_formatter_001.png)
 
 ```python
 import matplotlib.pyplot as plt

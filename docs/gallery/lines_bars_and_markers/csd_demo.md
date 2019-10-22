@@ -2,7 +2,7 @@
 
 计算两个信号的交叉谱密度
 
-![计算两个信号的交叉谱密度图示](/static/images/gallery/sphx_glr_csd_demo_001.png);
+![计算两个信号的交叉谱密度图示](https://matplotlib.org/_images/sphx_glr_csd_demo_001.png);
 
 ```python
 import numpy as np

@@ -182,7 +182,7 @@ fig.text(0.815, 0.013, ' Average Value', color='black', weight='roman',
 plt.show()
 ```
 
-![箱形图](/static/images/gallery/sphx_glr_boxplot_demo_003.png)
+![箱形图](https://matplotlib.org/_images/sphx_glr_boxplot_demo_003.png)
 
 在这里，我们编写一个自定义函数来引导置信区间。然后我们可以使用boxplot和此函数来显示这些间隔。
 
@@ -230,7 +230,7 @@ plt.setp(bp['fliers'], markersize=3.0)
 plt.show()
 ```
 
-![箱形图2](/static/images/gallery/sphx_glr_boxplot_demo_004.png)
+![箱形图2](https://matplotlib.org/_images/sphx_glr_boxplot_demo_004.png)
 
 ## 下载这个示例
             

@@ -2,7 +2,7 @@
 
 显示如何连接到按键事件
 
-![按键演示](/static/images/gallery/sphx_glr_keypress_demo_001.png)
+![按键演示](https://matplotlib.org/_images/sphx_glr_keypress_demo_001.png)
 
 ```python
 import sys

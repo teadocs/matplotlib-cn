@@ -1,6 +1,6 @@
 # 负载转换器
 
-![负载转换器示例](/static/images/gallery/sphx_glr_load_converter_001.png)
+![负载转换器示例](https://matplotlib.org/_images/sphx_glr_load_converter_001.png)
 
 输出：
 

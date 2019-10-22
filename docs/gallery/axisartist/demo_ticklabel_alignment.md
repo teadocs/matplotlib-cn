@@ -1,6 +1,6 @@
 # Ticklabel对齐演示
 
-![Ticklabel对齐演示](/static/images/gallery/sphx_glr_demo_ticklabel_alignment_001.png)
+![Ticklabel对齐演示](https://matplotlib.org/_images/sphx_glr_demo_ticklabel_alignment_001.png)
 
 ```python
 import matplotlib.pyplot as plt

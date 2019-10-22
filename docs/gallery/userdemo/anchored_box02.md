@@ -1,6 +1,6 @@
 # 锚定Box02
 
-![锚定Box02示例](/static/images/gallery/sphx_glr_anchored_box02_001.png)
+![锚定Box02示例](https://matplotlib.org/_images/sphx_glr_anchored_box02_001.png)
 
 ```python
 from matplotlib.patches import Circle

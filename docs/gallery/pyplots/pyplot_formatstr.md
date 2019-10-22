@@ -9,7 +9,7 @@ plt.axis([0, 6, 0, 20])
 plt.show()
 ```
 
-![格式字符串示例](/static/images/gallery/sphx_glr_pyplot_formatstr_001.png)
+![格式字符串示例](https://matplotlib.org/_images/sphx_glr_pyplot_formatstr_001.png)
 
 ## 参考
 

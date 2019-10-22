@@ -1,6 +1,6 @@
 # 简单的轴垫
 
-![简单的轴垫](/static/images/gallery/sphx_glr_simple_axis_pad_001.png)
+![简单的轴垫](https://matplotlib.org/_images/sphx_glr_simple_axis_pad_001.png)
 
 ```python
 import numpy as np

@@ -1,6 +1,6 @@
 # 锚定Box04
 
-![锚定Box04示例](/static/images/gallery/sphx_glr_anchored_box04_001.png)
+![锚定Box04示例](https://matplotlib.org/_images/sphx_glr_anchored_box04_001.png)
 
 ```python
 from matplotlib.patches import Ellipse

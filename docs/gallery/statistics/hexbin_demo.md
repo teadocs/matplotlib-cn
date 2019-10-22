@@ -4,7 +4,7 @@
 
 Hexbin是一种轴方法或pyplot函数，它基本上是具有六边形单元的二维直方图的pcolor。 它可以比散点图更具信息性。 在下面的第一个图中，尝试用'scatter'代替'hexbin'。
 
-![Hexbin演示](/static/images/gallery/sphx_glr_hexbin_demo_001.png)
+![Hexbin演示](https://matplotlib.org/_images/sphx_glr_hexbin_demo_001.png)
 
 ```python
 import numpy as np

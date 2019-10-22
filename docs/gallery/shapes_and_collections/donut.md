@@ -59,7 +59,7 @@ ax.set_aspect(1.0)
 plt.show()
 ```
 
-![绘制甜甜圈示例](/static/images/gallery/sphx_glr_donut_001.png)
+![绘制甜甜圈示例](https://matplotlib.org/_images/sphx_glr_donut_001.png)
 
 ## 参考
 

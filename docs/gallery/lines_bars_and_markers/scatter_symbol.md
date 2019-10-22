@@ -2,7 +2,7 @@
 
 用三叶草符号表示散点图。
 
-![三叶草样式的散点图示例](/static/images/gallery/sphx_glr_scatter_symbol_001.png)
+![三叶草样式的散点图示例](https://matplotlib.org/_images/sphx_glr_scatter_symbol_001.png)
 
 ```python
 import matplotlib.pyplot as plt

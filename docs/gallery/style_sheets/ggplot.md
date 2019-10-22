@@ -6,7 +6,7 @@
 
 [[1]](https://matplotlib.org/gallery/style_sheets/ggplot.html#id1) https://web.archive.org/web/20111215111010/http://www.huyng.com/archives/sane-color-scheme-for-matplotlib/691/
 
-![ggplot样式表示例](/static/images/gallery/sphx_glr_ggplot_001.png)
+![ggplot样式表示例](https://matplotlib.org/_images/sphx_glr_ggplot_001.png)
 
 ```python
 import numpy as np

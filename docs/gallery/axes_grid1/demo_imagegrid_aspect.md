@@ -1,6 +1,6 @@
 # 演示Imagegrid Aspect
 
-![演示Imagegrid Aspect](/static/images/gallery/sphx_glr_demo_imagegrid_aspect_001.png)
+![演示Imagegrid Aspect](https://matplotlib.org/_images/sphx_glr_demo_imagegrid_aspect_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -1,6 +1,6 @@
 # 演示轴方向
 
-![演示轴方向示例](/static/images/gallery/sphx_glr_demo_axis_direction_001.png)
+![演示轴方向示例](https://matplotlib.org/_images/sphx_glr_demo_axis_direction_001.png)
 
 ```python
 import numpy as np

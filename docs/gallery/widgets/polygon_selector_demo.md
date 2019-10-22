@@ -2,7 +2,7 @@
 
 显示如何以交互方式选择多边形的索引。
 
-![多边形选择器演示](/static/images/gallery/sphx_glr_polygon_selector_demo_001.png)
+![多边形选择器演示](https://matplotlib.org/_images/sphx_glr_polygon_selector_demo_001.png)
 
 输出：
 

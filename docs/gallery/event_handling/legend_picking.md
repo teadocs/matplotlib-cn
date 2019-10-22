@@ -2,7 +2,7 @@
 
 启用图例上的拾取以打开和关闭原始线。
 
-![图例选择](/static/images/gallery/sphx_glr_legend_picking_001.png)
+![图例选择](https://matplotlib.org/_images/sphx_glr_legend_picking_001.png)
 
 ```python
 import numpy as np

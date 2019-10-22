@@ -27,7 +27,7 @@ ax.set_ylim(0, 10)
 plt.show()
 ```
 
-![椭圆演示](/static/images/gallery/sphx_glr_ellipse_demo_001.png)
+![椭圆演示](https://matplotlib.org/_images/sphx_glr_ellipse_demo_001.png)
 
 # 椭圆旋转
 
@@ -56,7 +56,7 @@ plt.ylim(-1, 3)
 plt.show()
 ```
 
-![椭圆演示2](/static/images/gallery/sphx_glr_ellipse_demo_002.png)
+![椭圆演示2](https://matplotlib.org/_images/sphx_glr_ellipse_demo_002.png)
 
 ## 参考
 

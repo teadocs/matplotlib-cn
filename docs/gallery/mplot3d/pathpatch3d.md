@@ -2,7 +2,7 @@
 
 演示如何使用pathpatch_2d_to_3d在3D绘图上“绘制”形状和文本。
 
-![在3D绘图中绘制平面对象示例](/static/images/gallery/sphx_glr_pathpatch3d_001.png)
+![在3D绘图中绘制平面对象示例](https://matplotlib.org/_images/sphx_glr_pathpatch3d_001.png)
 
 ```python
 import numpy as np

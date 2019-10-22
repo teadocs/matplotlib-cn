@@ -17,7 +17,7 @@ plt.setp(baseline, color='r', linewidth=2)
 plt.show()
 ```
 
-![茎状图示图例3](/static/images/gallery/sphx_glr_stem_plot_001.png)
+![茎状图示图例3](https://matplotlib.org/_images/sphx_glr_stem_plot_001.png)
 
 此示例使用了： * [matplotlib.axes.Axes.stem()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.stem.html#matplotlib.axes.Axes.stem)
 

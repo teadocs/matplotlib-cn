@@ -4,7 +4,7 @@
 
 Matplotlib允许您使用data关键字参数提供此类对象。如果提供，则可以生成具有与这些变量对应的字符串的图。
 
-![用关键字绘图示例](/static/images/gallery/sphx_glr_keyword_plotting_001.png)
+![用关键字绘图示例](https://matplotlib.org/_images/sphx_glr_keyword_plotting_001.png)
 
 ```python
 import numpy as np

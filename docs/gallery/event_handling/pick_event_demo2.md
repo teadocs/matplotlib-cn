@@ -2,7 +2,7 @@
 
 计算100个数据集的平均值和标准差（stddev），并绘制平均值vs stddev。单击其中一个mu，sigma点时，绘制生成均值和stddev的数据集中的原始数据。
 
-![选择事件演示2](/static/images/gallery/sphx_glr_pick_event_demo2_001.png)
+![选择事件演示2](https://matplotlib.org/_images/sphx_glr_pick_event_demo2_001.png)
 
 ```python
 import numpy as np

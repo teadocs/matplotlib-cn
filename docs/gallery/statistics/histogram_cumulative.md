@@ -8,7 +8,7 @@
 
 选择不同的箱数和大小会显着影响直方图的形状。Astropy文档有关于如何选择这些参数的重要部分：http://docs.astropy.org/en/stable/visualization/histogram.html
 
-![使用直方图绘制累积分布](/static/images/gallery/sphx_glr_histogram_cumulative_001.png)
+![使用直方图绘制累积分布](https://matplotlib.org/_images/sphx_glr_histogram_cumulative_001.png)
 
 ```python
 import numpy as np

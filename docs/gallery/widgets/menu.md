@@ -1,6 +1,6 @@
 # 菜单
 
-![菜单示例](/static/images/gallery/sphx_glr_menu_001.png)
+![菜单示例](https://matplotlib.org/_images/sphx_glr_menu_001.png)
 
 输出：
 

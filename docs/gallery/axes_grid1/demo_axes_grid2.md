@@ -2,7 +2,7 @@
 
 共享xaxis和yaxis的图像网格。
 
-![演示Axes Grid2](/static/images/gallery/sphx_glr_demo_axes_grid2_001.png)
+![演示Axes Grid2](https://matplotlib.org/_images/sphx_glr_demo_axes_grid2_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -2,7 +2,7 @@
 
 滚动三维阵列的二维图像切片。
 
-![图像切片查看器](/static/images/gallery/sphx_glr_image_slices_viewer_001.png)
+![图像切片查看器](https://matplotlib.org/_images/sphx_glr_image_slices_viewer_001.png)
 
 ```python
 import numpy as np

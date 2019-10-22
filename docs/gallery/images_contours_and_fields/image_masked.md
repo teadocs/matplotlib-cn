@@ -72,7 +72,7 @@ fig.suptitle('imshow, with out-of-range and masked data')
 plt.show()
 ```
 
-![图像掩码示例](/static/images/gallery/sphx_glr_image_masked_001.png)
+![图像掩码示例](https://matplotlib.org/_images/sphx_glr_image_masked_001.png)
 
 ## 参考
 

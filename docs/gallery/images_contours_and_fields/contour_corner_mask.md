@@ -35,7 +35,7 @@ for ax, corner_mask in zip(axs, corner_masks):
 plt.show()
 ```
 
-![条形码示例](/static/images/gallery/sphx_glr_contour_corner_mask_001.png)
+![条形码示例](https://matplotlib.org/_images/sphx_glr_contour_corner_mask_001.png)
 
 ## 参考
 

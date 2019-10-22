@@ -2,7 +2,7 @@
 
 这是一个示例，展示如何使用Matplotlib事件处理来构建跨GUI应用程序，以与画布上的对象进行交互。
 
-![综合编辑器示例](/static/images/gallery/sphx_glr_poly_editor_001.png)
+![综合编辑器示例](https://matplotlib.org/_images/sphx_glr_poly_editor_001.png)
 
 ```python
 import numpy as np

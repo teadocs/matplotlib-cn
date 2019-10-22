@@ -1,6 +1,6 @@
 # 花式文本框演示
 
-![花式文本框演示](/static/images/gallery/sphx_glr_fancytextbox_demo_001.png)
+![花式文本框演示](https://matplotlib.org/_images/sphx_glr_fancytextbox_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

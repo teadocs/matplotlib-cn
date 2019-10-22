@@ -1,10 +1,10 @@
 # 使用Axesgrid为Ylabel腾出空间
 
-![使用Axesgrid为Ylabel腾出空间](/static/images/gallery/sphx_glr_make_room_for_ylabel_using_axesgrid_001.png)
+![使用Axesgrid为Ylabel腾出空间](https://matplotlib.org/_images/sphx_glr_make_room_for_ylabel_using_axesgrid_001.png)
 
-![使用Axesgrid为Ylabel腾出空间示例1](/static/images/gallery/sphx_glr_make_room_for_ylabel_using_axesgrid_001.png)
+![使用Axesgrid为Ylabel腾出空间示例1](https://matplotlib.org/_images/sphx_glr_make_room_for_ylabel_using_axesgrid_001.png)
 
-![使用Axesgrid为Ylabel腾出空间示例2](/static/images/gallery/sphx_glr_make_room_for_ylabel_using_axesgrid_001.png)
+![使用Axesgrid为Ylabel腾出空间示例2](https://matplotlib.org/_images/sphx_glr_make_room_for_ylabel_using_axesgrid_001.png)
 
 ```python
 from mpl_toolkits.axes_grid1 import make_axes_locatable

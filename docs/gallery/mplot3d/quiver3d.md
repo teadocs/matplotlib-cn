@@ -2,7 +2,7 @@
 
 演示在3d网格上的点处绘制方向箭头。
 
-![3D箭袋图像示例](/static/images/gallery/sphx_glr_quiver3d_001.png)
+![3D箭袋图像示例](https://matplotlib.org/_images/sphx_glr_quiver3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

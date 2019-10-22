@@ -26,7 +26,7 @@ fig.figimage(im, 10, 10, zorder=3)
 plt.show()
 ```
 
-![图像水印示例](/static/images/gallery/sphx_glr_watermark_image_001.png)
+![图像水印示例](https://matplotlib.org/_images/sphx_glr_watermark_image_001.png)
 
 Out:
 

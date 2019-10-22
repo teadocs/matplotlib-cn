@@ -4,7 +4,7 @@
 
 此示例演示如何通过在网格上应用转换，使用GridHelperCurve线性来定义自定义网格和注释行。这可以用作第二个打印上的演示，用于在矩形框中创建极轴投影。
 
-![Curvelinear网格示例](/static/images/gallery/sphx_glr_demo_curvelinear_grid_0011.png)
+![Curvelinear网格示例](https://matplotlib.org/_images/sphx_glr_demo_curvelinear_grid_0011.png)
 
 ```python
 import numpy as np

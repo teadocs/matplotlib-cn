@@ -98,7 +98,7 @@ ax.add_patch(dolphin_patch2)
 plt.show()
 ```
 
-![绘制海豚示例](/static/images/gallery/sphx_glr_dolphin_001.png)
+![绘制海豚示例](https://matplotlib.org/_images/sphx_glr_dolphin_001.png)
 
 ## 参考
 

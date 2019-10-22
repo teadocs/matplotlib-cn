@@ -2,7 +2,7 @@
 
 我们可以使用[rcParams["ytick.labelright"]](https://matplotlib.org/tutorials/introductory/customizing.html#matplotlib-rcparams)（默认为False）和[rcParams["ytick.right"]](https://matplotlib.org/tutorials/introductory/customizing.html#matplotlib-rcparams)（默认为False）和[rcParams["ytick.labelleft"]](https://matplotlib.org/tutorials/introductory/customizing.html#matplotlib-rcparams)（默认为True）和 [rcParams["ytick.left"]](https://matplotlib.org/tutorials/introductory/customizing.html#matplotlib-rcparams)（默认为True）控制轴上的刻度和标签出现的位置。这些属性也可以在.matplotlib / matplotlibrc中设置。
 
-![在右侧设置默认的y轴刻度标签示例](/static/images/gallery/sphx_glr_tick_label_right_001.png)
+![在右侧设置默认的y轴刻度标签示例](https://matplotlib.org/_images/sphx_glr_tick_label_right_001.png)
 
 ```python
 import matplotlib.pyplot as plt

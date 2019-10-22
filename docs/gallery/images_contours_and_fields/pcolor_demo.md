@@ -27,7 +27,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![Pcolor 演示](/static/images/gallery/sphx_glr_pcolor_demo_001.png)
+![Pcolor 演示](https://matplotlib.org/_images/sphx_glr_pcolor_demo_001.png)
 
 ## 比较pcolor与类似的功能
 
@@ -78,7 +78,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![Pcolor 演示2](/static/images/gallery/sphx_glr_pcolor_demo_002.png)
+![Pcolor 演示2](https://matplotlib.org/_images/sphx_glr_pcolor_demo_002.png)
 
 ## Pcolor具有对数刻度
 
@@ -107,7 +107,7 @@ fig.colorbar(c, ax=ax1)
 plt.show()
 ```
 
-![Pcolor 演示3](/static/images/gallery/sphx_glr_pcolor_demo_003.png)
+![Pcolor 演示3](https://matplotlib.org/_images/sphx_glr_pcolor_demo_003.png)
 
 ## 参考
 

@@ -2,7 +2,7 @@
 
 本演示展示了如何通过 [zoomed_inset_axes](https://matplotlib.org/api/_as_gen/mpl_toolkits.axes_grid1.inset_locator.zoomed_inset_axes.html#mpl_toolkits.axes_grid1.inset_locator.zoomed_inset_axes) 创建缩放插图。 在第一个子图中，[AnchoredSizeBar](https://matplotlib.org/api/_as_gen/mpl_toolkits.axes_grid1.anchored_artists.AnchoredSizeBar.html#mpl_toolkits.axes_grid1.anchored_artists.AnchoredSizeBar) 显示缩放效果。 在第二个子图中，通过[mark_inset](https://matplotlib.org/api/_as_gen/mpl_toolkits.axes_grid1.inset_locator.mark_inset.html#mpl_toolkits.axes_grid1.inset_locator.mark_inset) 创建与感兴趣区域的连接。
 
-![插入定位器演示2](/static/images/gallery/sphx_glr_inset_locator_demo2_001.png)
+![插入定位器演示2](https://matplotlib.org/_images/sphx_glr_inset_locator_demo2_001.png)
 
 ```python
 import matplotlib.pyplot as plt

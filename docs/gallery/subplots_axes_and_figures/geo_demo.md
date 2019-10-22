@@ -13,7 +13,7 @@ plt.title("Aitoff")
 plt.grid(True)
 ```
 
-![地理预测示例](/static/images/gallery/sphx_glr_geo_demo_001.png)
+![地理预测示例](https://matplotlib.org/_images/sphx_glr_geo_demo_001.png)
 
 ```python
 plt.figure()
@@ -22,7 +22,7 @@ plt.title("Hammer")
 plt.grid(True)
 ```
 
-![地理预测示例2](/static/images/gallery/sphx_glr_geo_demo_002.png)
+![地理预测示例2](https://matplotlib.org/_images/sphx_glr_geo_demo_002.png)
 
 ```python
 plt.figure()
@@ -31,7 +31,7 @@ plt.title("Lambert")
 plt.grid(True)
 ```
 
-![地理预测示例3](/static/images/gallery/sphx_glr_geo_demo_003.png)
+![地理预测示例3](https://matplotlib.org/_images/sphx_glr_geo_demo_003.png)
 
 ```python
 plt.figure()
@@ -42,7 +42,7 @@ plt.grid(True)
 plt.show()
 ```
 
-![地理预测示例4](/static/images/gallery/sphx_glr_geo_demo_004.png)
+![地理预测示例4](https://matplotlib.org/_images/sphx_glr_geo_demo_004.png)
 
 ## 下载这个示例
             

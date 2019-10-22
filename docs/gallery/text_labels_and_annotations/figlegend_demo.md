@@ -2,7 +2,7 @@
 
 不是在每个轴上绘制图例，而是可以绘制图形的所有子轴上的所有艺术家的图例。
 
-![图形图例演示](/static/images/gallery/sphx_glr_figlegend_demo_001.png)
+![图形图例演示](https://matplotlib.org/_images/sphx_glr_figlegend_demo_001.png)
 
 ```python
 import numpy as np

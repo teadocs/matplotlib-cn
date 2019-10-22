@@ -2,7 +2,7 @@
 
 从散点图创建直方图，并将其添加到散点图的两侧。
 
-![散点图视图拆解示例](/static/images/gallery/sphx_glr_scatter_hist_001.png)
+![散点图视图拆解示例](https://matplotlib.org/_images/sphx_glr_scatter_hist_001.png)
 
 ```python
 import numpy as np

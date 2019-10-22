@@ -61,7 +61,7 @@ ax.xaxis.set_ticks_position('bottom')
 ax.yaxis.set_ticks_position('left')
 ```
 
-![Spine的放置演示](/static/images/gallery/sphx_glr_spine_placement_demo_001.png)
+![Spine的放置演示](https://matplotlib.org/_images/sphx_glr_spine_placement_demo_001.png)
 
 定义一个调整轴Spine位置的方法
 
@@ -115,7 +115,7 @@ adjust_spines(ax, ['bottom'])
 plt.show()
 ```
 
-![Spine的放置演示2](/static/images/gallery/sphx_glr_spine_placement_demo_002.png)
+![Spine的放置演示2](https://matplotlib.org/_images/sphx_glr_spine_placement_demo_002.png)
 
 ## 下载这个示例
             

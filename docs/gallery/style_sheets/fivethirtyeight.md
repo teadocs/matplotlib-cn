@@ -2,7 +2,7 @@
 
 这显示了“fivethirtyeight”样式的一个示例，它试图从FiveThirtyEight.com复制样式。
 
-![FiveThirtyEight样式表示例](/static/images/gallery/sphx_glr_fivethirtyeight_001.png)
+![FiveThirtyEight样式表示例](https://matplotlib.org/_images/sphx_glr_fivethirtyeight_001.png)
 
 ```python
 import matplotlib.pyplot as plt

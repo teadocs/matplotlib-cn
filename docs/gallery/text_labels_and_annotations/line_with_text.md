@@ -61,7 +61,7 @@ ax.add_line(line)
 plt.show()
 ```
 
-![艺术家中的艺术家](/static/images/gallery/sphx_glr_line_with_text_001.png)
+![艺术家中的艺术家](https://matplotlib.org/_images/sphx_glr_line_with_text_001.png)
 
 ## 参考
 

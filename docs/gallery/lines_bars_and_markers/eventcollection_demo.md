@@ -2,7 +2,7 @@
 
 绘制两条曲线，然后使用EventCollections标记每条曲线的相应轴上的x和y数据点的位置
 
-![绘制事件集的示例](/static/images/gallery/sphx_glr_eventcollection_demo_001.png);
+![绘制事件集的示例](https://matplotlib.org/_images/sphx_glr_eventcollection_demo_001.png);
 
 ```python
 import matplotlib.pyplot as plt

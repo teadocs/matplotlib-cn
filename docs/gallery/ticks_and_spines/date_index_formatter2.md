@@ -2,7 +2,7 @@
 
 在绘制每日数据时，频繁的请求是绘制忽略跳过的数据，例如，周末没有额外的空格。这在金融时间序列中尤为常见，因为您可能拥有M-F而非Sat，Sun的数据，并且您不需要x轴上的间隙。方法是简单地使用xdata的整数索引和自定义刻度Formatter来获取给定索引的适当日期字符串。
 
-![日期索引格式化程序示例](/static/images/gallery/sphx_glr_date_index_formatter2_001.png)
+![日期索引格式化程序示例](https://matplotlib.org/_images/sphx_glr_date_index_formatter2_001.png)
 
 输出：
 

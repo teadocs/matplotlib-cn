@@ -2,7 +2,7 @@
 
 在散点图中创建自定义椭圆符号。
 
-![散点图自定义符号示例](/static/images/gallery/sphx_glr_scatter_custom_symbol_001.png)
+![散点图自定义符号示例](https://matplotlib.org/_images/sphx_glr_scatter_custom_symbol_001.png)
 
 ```python
 import matplotlib.pyplot as plt

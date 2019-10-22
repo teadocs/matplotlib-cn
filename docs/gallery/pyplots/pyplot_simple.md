@@ -9,7 +9,7 @@ plt.ylabel('some numbers')
 plt.show()
 ```
 
-![简单图示例](/static/images/gallery/sphx_glr_pyplot_simple_001.png)
+![简单图示例](https://matplotlib.org/_images/sphx_glr_pyplot_simple_001.png)
 
 ## 参考
 

@@ -81,7 +81,7 @@ ani = animation.FuncAnimation(fig, animate, 100, repeat=False, blit=True)
 plt.show()
 ```
 
-![动画直方图示例](/static/images/gallery/sphx_glr_animated_histogram_001.png)
+![动画直方图示例](https://matplotlib.org/_images/sphx_glr_animated_histogram_001.png)
 
 ## 下载这个示例
             

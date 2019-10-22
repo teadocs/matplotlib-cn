@@ -6,7 +6,7 @@
 
 请注意，调用[time.sleep](https://docs.python.org/3/library/time.html#time.sleep)而不是[暂停](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pause.html#matplotlib.pyplot.pause)将不起作用。
 
-![pyplot动画](/static/images/gallery/sphx_glr_animation_demo_001.png)
+![pyplot动画](https://matplotlib.org/_images/sphx_glr_animation_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

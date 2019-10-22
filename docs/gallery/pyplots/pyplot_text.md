@@ -23,7 +23,7 @@ plt.grid(True)
 plt.show()
 ```
 
-![Pyplot 文本示例](/static/images/gallery/sphx_glr_pyplot_text_001.png)
+![Pyplot 文本示例](https://matplotlib.org/_images/sphx_glr_pyplot_text_001.png)
 
 ## 参考
 

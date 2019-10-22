@@ -18,7 +18,7 @@ qk = ax1.quiverkey(Q, 0.9, 0.9, 2, r'$2 \frac{m}{s}$', labelpos='E',
                    coordinates='figure')
 ```
 
-![箭图示例](/static/images/gallery/sphx_glr_quiver_demo_001.png)
+![箭图示例](https://matplotlib.org/_images/sphx_glr_quiver_demo_001.png)
 
 ```python
 fig2, ax2 = plt.subplots()
@@ -30,7 +30,7 @@ qk = ax2.quiverkey(Q, 0.9, 0.9, 1, r'$1 \frac{m}{s}$', labelpos='E',
 ax2.scatter(X[::3, ::3], Y[::3, ::3], color='r', s=5)
 ```
 
-![箭图示例2](/static/images/gallery/sphx_glr_quiver_demo_002.png)
+![箭图示例2](https://matplotlib.org/_images/sphx_glr_quiver_demo_002.png)
 
 ```python
 fig3, ax3 = plt.subplots()
@@ -45,7 +45,7 @@ ax3.scatter(X, Y, color='k', s=5)
 plt.show()
 ```
 
-![箭图示例3](/static/images/gallery/sphx_glr_quiver_demo_003.png)
+![箭图示例3](https://matplotlib.org/_images/sphx_glr_quiver_demo_003.png)
 
 ## 参考
 

@@ -2,7 +2,7 @@
 
 有关如何使用和不使用着色绘制3D条形图的基本演示。
 
-![3D条形图演示](/static/images/gallery/sphx_glr_3d_bars_001.png)
+![3D条形图演示](https://matplotlib.org/_images/sphx_glr_3d_bars_001.png)
 
 ```python
 import numpy as np

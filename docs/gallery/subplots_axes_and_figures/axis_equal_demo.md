@@ -2,7 +2,7 @@
 
 如何设置和调整具有等轴比的图像。
 
-![等轴比示例图](/static/images/gallery/sphx_glr_axis_equal_demo_001.png)
+![等轴比示例图](https://matplotlib.org/_images/sphx_glr_axis_equal_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

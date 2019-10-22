@@ -4,7 +4,7 @@
 
 作者：Nicolas P. Rougier
 
-![雨模拟示例](/static/images/gallery/sphx_glr_rain_001.png)
+![雨模拟示例](https://matplotlib.org/_images/sphx_glr_rain_001.png)
 
 ```python
 import numpy as np

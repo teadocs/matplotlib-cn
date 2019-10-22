@@ -1,0 +1,58 @@
+pre.vue-container
+  border-left-width .5rem
+  border-left-style solid
+  border-color #42b983
+  border-radius 0px
+  & > code
+    font-size 14px !important
+    & > p
+      margin -5px 0 -20px 0
+    code
+      background-color #42b983 !important
+      padding 3px 5px
+      border-radius 3px
+      color #000
+    em
+      color #808080
+      font-weight light
+
+.MathJax
+  outline:0
+
+.gallery-examples-list
+  ul
+    list-style none
+
+    &:after 
+      display block
+      content ""
+      height 0
+      clear both
+      overflow hidden
+      visibility hidden
+
+    li
+      position relative
+      margin-bottom 10px
+      z-index 10
+      width 25%
+      padding 2.5px
+      overflow hidden
+      box-sizing border-box
+      height 180px
+      float left
+      text-align center
+      transition all 0.5s
+      cursor pointer
+
+      .text
+        line-height 1.1
+        display -webkit-box
+        -webkit-box-orient vertical
+        -webkit-line-clamp 3
+        overflow hidden
+        a
+          font-size 14px
+
+      &:hover 
+        box-shadow 0 5px 10px rgba(0,0,0,0.12)

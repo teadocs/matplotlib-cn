@@ -116,7 +116,7 @@ ax4.set_ylim(ax4.get_ylim()[::-1])
 plt.show()
 ```
 
-![缩放功能示例](/static/images/gallery/sphx_glr_collections_001.png)
+![缩放功能示例](https://matplotlib.org/_images/sphx_glr_collections_001.png)
 
 ## 参考
 

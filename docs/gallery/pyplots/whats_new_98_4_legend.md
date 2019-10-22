@@ -19,7 +19,7 @@ leg.get_frame().set_alpha(0.5)
 plt.show()
 ```
 
-![新特性图例示例](/static/images/gallery/sphx_glr_whats_new_98_4_legend_001.png)
+![新特性图例示例](https://matplotlib.org/_images/sphx_glr_whats_new_98_4_legend_001.png)
 
 ## 参考
 

@@ -152,7 +152,7 @@ aux_ax3.scatter(theta, radius)
 plt.show()
 ```
 
-![演示浮动轴](/static/images/gallery/sphx_glr_demo_floating_axes_001.png)
+![演示浮动轴](https://matplotlib.org/_images/sphx_glr_demo_floating_axes_001.png)
 
 ## 下载这个示例
             

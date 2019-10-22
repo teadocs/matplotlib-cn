@@ -82,7 +82,7 @@ ax.set_axis_off()
 plt.show()
 ```
 
-![不同文本的布局](/static/images/gallery/sphx_glr_text_layout_001.png)
+![不同文本的布局](https://matplotlib.org/_images/sphx_glr_text_layout_001.png)
 
 ## 参考
 

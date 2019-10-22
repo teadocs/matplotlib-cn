@@ -4,7 +4,7 @@
 
 感谢Tony Yu <tsyu80@gmail.com>的标志设计
 
-![Matplotlib标志示例](/static/images/gallery/sphx_glr_logos2_001.png)
+![Matplotlib标志示例](https://matplotlib.org/_images/sphx_glr_logos2_001.png)
 
 ```python
 import numpy as np

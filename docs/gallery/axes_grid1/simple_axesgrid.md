@@ -1,6 +1,6 @@
 # 简单的轴线网格
 
-![简单的轴线网格](/static/images/gallery/sphx_glr_simple_axesgrid_001.png)
+![简单的轴线网格](https://matplotlib.org/_images/sphx_glr_simple_axesgrid_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -31,7 +31,7 @@ axs[0].hist(x, bins=n_bins)
 axs[1].hist(y, bins=n_bins)
 ```
 
-![直方图示例](/static/images/gallery/sphx_glr_hist_001.png)
+![直方图示例](https://matplotlib.org/_images/sphx_glr_hist_001.png)
 
 ## 更新直方图颜色
 
@@ -61,7 +61,7 @@ axs[1].hist(x, bins=n_bins, density=True)
 axs[1].yaxis.set_major_formatter(PercentFormatter(xmax=1))
 ```
 
-![直方图示例2](/static/images/gallery/sphx_glr_hist_002.png)
+![直方图示例2](https://matplotlib.org/_images/sphx_glr_hist_002.png)
 
 ## 绘制二维直方图
 
@@ -72,7 +72,7 @@ fig, ax = plt.subplots(tight_layout=True)
 hist = ax.hist2d(x, y)
 ```
 
-![直方图示例3](/static/images/gallery/sphx_glr_hist_003.png)
+![直方图示例3](https://matplotlib.org/_images/sphx_glr_hist_003.png)
 
 ## 自定义直方图
 
@@ -94,7 +94,7 @@ axs[2].hist2d(x, y, bins=(80, 10), norm=colors.LogNorm())
 plt.show()
 ```
 
-![直方图示例4](/static/images/gallery/sphx_glr_hist_004.png)
+![直方图示例4](https://matplotlib.org/_images/sphx_glr_hist_004.png)
 
 ## 下载这个示例
             

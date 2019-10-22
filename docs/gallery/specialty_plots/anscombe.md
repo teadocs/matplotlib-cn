@@ -1,6 +1,6 @@
 # Anscombe的四重奏
 
-![Anscombe的四重奏示例](/static/images/gallery/sphx_glr_anscombe_001.png)
+![Anscombe的四重奏示例](https://matplotlib.org/_images/sphx_glr_anscombe_001.png)
 
 输出：
 

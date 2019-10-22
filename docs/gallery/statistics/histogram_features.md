@@ -41,7 +41,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![直方图特性演示](/static/images/gallery/sphx_glr_histogram_features_001.png)
+![直方图特性演示](https://matplotlib.org/_images/sphx_glr_histogram_features_001.png)
 
 ## 参考
 

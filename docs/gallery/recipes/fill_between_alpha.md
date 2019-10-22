@@ -33,7 +33,7 @@ fig.suptitle('Google (GOOG) daily closing price')
 fig.autofmt_xdate()
 ```
 
-![在和Alpha之间填充示例](/static/images/gallery/sphx_glr_fill_between_alpha_001.png)
+![在和Alpha之间填充示例](https://matplotlib.org/_images/sphx_glr_fill_between_alpha_001.png)
 
 此处不需要Alpha通道，但它可以用于软化颜色以获得更具视觉吸引力的图形。在其他示例中，正如我们将在下面看到的，alpha通道在功能上非常有用，因为阴影区域可以重叠，alpha允许您查看两者。请注意，postscript格式不支持alpha（这是postscript限制，而不是matplotlib限制），因此在使用alpha时保存PNG，PDF或SVG中的数字。
 
@@ -72,7 +72,7 @@ ax.set_ylabel('position')
 ax.grid()
 ```
 
-![在和Alpha之间填充示例2](/static/images/gallery/sphx_glr_fill_between_alpha_002.png)
+![在和Alpha之间填充示例2](https://matplotlib.org/_images/sphx_glr_fill_between_alpha_002.png)
 
 where关键字参数非常便于突出显示图形的某些区域。其中布尔掩码的长度与x，ymin和ymax参数的长度相同，并且仅填充布尔掩码为True的区域。在下面的示例中，我们模拟单个随机游走者并计算人口位置的分析平均值和标准差。总体平均值显示为黑色虚线，并且与平均值的正/负一西格玛偏差显示为黄色填充区域。我们使用where掩码X> upper_bound来找到walker在一个sigma边界之上的区域，并将该区域遮蔽为蓝色。
 
@@ -107,7 +107,7 @@ ax.set_ylabel('position')
 ax.grid()
 ```
 
-![在和Alpha之间填充示例3](/static/images/gallery/sphx_glr_fill_between_alpha_003.png)
+![在和Alpha之间填充示例3](https://matplotlib.org/_images/sphx_glr_fill_between_alpha_003.png)
 
 填充区域的另一个方便用途是突出显示轴的水平或垂直跨度 - 因为matplotlib具有一些辅助函数 [axhspan()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.axhspan.html#matplotlib.axes.Axes.axhspan) 和[axvspan()](https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.axvspan.html#matplotlib.axes.Axes.axvspan) 以及示例[axhspan Demo](https://matplotlib.org/gallery/subplots_axes_and_figures/axhspan_demo.html)。
 

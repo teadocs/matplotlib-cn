@@ -45,7 +45,7 @@ ax.scatter(range(3), range(3), marker=xy3,
 plt.show()
 ```
 
-![带有饼图标记的散点图示例](/static/images/gallery/sphx_glr_scatter_piecharts_001.png)
+![带有饼图标记的散点图示例](https://matplotlib.org/_images/sphx_glr_scatter_piecharts_001.png)
 
 ## 参考
 

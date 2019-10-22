@@ -36,7 +36,7 @@ Pxx, freqs, bins, im = ax2.specgram(x, NFFT=NFFT, Fs=Fs, noverlap=900)
 plt.show()
 ```
 
-![频谱图示例](/static/images/gallery/sphx_glr_specgram_demo_001.png)
+![频谱图示例](https://matplotlib.org/_images/sphx_glr_specgram_demo_001.png)
 
 ## 参考
 

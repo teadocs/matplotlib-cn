@@ -1,6 +1,6 @@
 # 注释说明
 
-![注释说明示例](/static/images/gallery/sphx_glr_annotate_explain_001.png)
+![注释说明示例](https://matplotlib.org/_images/sphx_glr_annotate_explain_001.png)
 
 ```python
 import matplotlib.pyplot as plt

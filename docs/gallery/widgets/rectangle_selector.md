@@ -2,7 +2,7 @@
 
 在某处鼠标点击，将鼠标移动到某个目的地，然后释放按钮。 此类提供单击和释放事件，并从点击点到实际鼠标位置（在相同轴内）绘制一条线或一个框，直到释放按钮。 在方法'self.ignore()'中，检查来自eventpress和eventrelease的按钮是否相同。
 
-![矩形选择器示例](/static/images/gallery/sphx_glr_rectangle_selector_001.png)
+![矩形选择器示例](https://matplotlib.org/_images/sphx_glr_rectangle_selector_001.png)
 
 输出：
 

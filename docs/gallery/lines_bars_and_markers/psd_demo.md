@@ -30,7 +30,7 @@ plt.psd(s, 512, 1 / dt)
 plt.show()
 ```
 
-![功率谱密度图示例](/static/images/gallery/sphx_glr_psd_demo_001.png)
+![功率谱密度图示例](https://matplotlib.org/_images/sphx_glr_psd_demo_001.png)
 
 将其与等效的Matlab代码进行比较，以完成相同的任务：
 
@@ -96,7 +96,7 @@ plt.title('overlap')
 plt.show()
 ```
 
-![功率谱密度图示例2](/static/images/gallery/sphx_glr_psd_demo_002.png)
+![功率谱密度图示例2](https://matplotlib.org/_images/sphx_glr_psd_demo_002.png)
 
 这是一个来自信号处理工具箱的MATLAB示例的移植版本，它显示了Matplotlib和MATLAB对PSD的缩放之间的一些差异。
 
@@ -134,7 +134,7 @@ ax1.set_ylim(yrange)
 plt.show()
 ```
 
-![功率谱密度图示例3](/static/images/gallery/sphx_glr_psd_demo_003.png)
+![功率谱密度图示例3](https://matplotlib.org/_images/sphx_glr_psd_demo_003.png)
 
 这是一个来自信号处理工具箱的MATLAB示例的移植版本，它显示了Matplotlib和MATLAB对PSD的缩放之间的一些差异。
 
@@ -175,7 +175,7 @@ ax1.set_ylim(yrange)
 plt.show()
 ```
 
-![功率谱密度图示例4](/static/images/gallery/sphx_glr_psd_demo_004.png)
+![功率谱密度图示例4](https://matplotlib.org/_images/sphx_glr_psd_demo_004.png)
 
 ## 下载这个示例
 

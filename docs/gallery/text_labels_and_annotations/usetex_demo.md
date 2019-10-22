@@ -4,7 +4,7 @@
 
 另请参阅 [“使用latex进行文本渲染”](https://matplotlib.org/tutorials/text/usetex.html) 指南。
 
-![Usetex 演示](/static/images/gallery/sphx_glr_usetex_demo_001.png)
+![Usetex 演示](https://matplotlib.org/_images/sphx_glr_usetex_demo_001.png)
 
 ```python
 import numpy as np

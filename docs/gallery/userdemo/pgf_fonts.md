@@ -1,6 +1,6 @@
 # Pgf字体
 
-![Pgf字体](/static/images/gallery/sphx_glr_pgf_fonts_001.png)
+![Pgf字体](https://matplotlib.org/_images/sphx_glr_pgf_fonts_001.png)
 
 ```python
 import matplotlib.pyplot as plt

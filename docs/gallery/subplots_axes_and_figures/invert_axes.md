@@ -2,7 +2,7 @@
 
 可以通过翻转轴限制的法线顺序来使用递减轴。
 
-![反转轴示例](/static/images/gallery/sphx_glr_invert_axes_001.png)
+![反转轴示例](https://matplotlib.org/_images/sphx_glr_invert_axes_001.png)
 
 ```python
 import matplotlib.pyplot as plt

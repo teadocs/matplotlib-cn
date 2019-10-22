@@ -31,7 +31,7 @@ ax.format_coord = format_coord
 plt.show()
 ```
 
-![修改坐标格式化程序](/static/images/gallery/sphx_glr_image_zcoord_001.png)
+![修改坐标格式化程序](https://matplotlib.org/_images/sphx_glr_image_zcoord_001.png)
 
 
 ## 参考

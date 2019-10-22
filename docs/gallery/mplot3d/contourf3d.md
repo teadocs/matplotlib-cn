@@ -4,7 +4,7 @@ contourf与轮廓的不同之处在于它创建了填充轮廓，即。 离散�
 
 这类似于2D中的等高线图，除了对应于等级c的阴影区域在平面z = c上绘制图形。
 
-![填充轮廓示例](/static/images/gallery/sphx_glr_contourf3d_001.png)
+![填充轮廓示例](https://matplotlib.org/_images/sphx_glr_contourf3d_001.png)
 
 ```python
 from mpl_toolkits.mplot3d import axes3d

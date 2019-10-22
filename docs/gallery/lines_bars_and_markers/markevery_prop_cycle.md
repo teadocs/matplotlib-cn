@@ -4,7 +4,7 @@
 
 使用每列的移位正弦曲线渲染绘图，每个正弦曲线都有一个唯一的市场价值。
 
-![markevery支持1](/static/images/gallery/sphx_glr_markevery_prop_cycle_001.png)
+![markevery支持1](https://matplotlib.org/_images/sphx_glr_markevery_prop_cycle_001.png)
 
 ```python
 from cycler import cycler

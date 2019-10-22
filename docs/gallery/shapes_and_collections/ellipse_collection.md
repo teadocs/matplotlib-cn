@@ -32,7 +32,7 @@ cbar.set_label('X+Y')
 plt.show()
 ```
 
-![椭圆集合示例](/static/images/gallery/sphx_glr_ellipse_collection_001.png)
+![椭圆集合示例](https://matplotlib.org/_images/sphx_glr_ellipse_collection_001.png)
 
 ## 参考
 

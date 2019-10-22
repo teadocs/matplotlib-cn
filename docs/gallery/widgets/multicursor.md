@@ -4,7 +4,7 @@
 
 此示例生成两个子图，并将光标悬停在一个子图中的数据上，该数据点的值分别显示在两个子图中。
 
-![多光标示例](/static/images/gallery/sphx_glr_multicursor_001.png)
+![多光标示例](https://matplotlib.org/_images/sphx_glr_multicursor_001.png)
 
 ```python
 import numpy as np

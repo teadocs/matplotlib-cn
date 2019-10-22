@@ -6,7 +6,7 @@
 
 注意，xlabel “XLabel11” 通常更接近x轴，“YLabel1 0” 将更接近其各自轴的y轴。
 
-![对齐标签图示](/static/images/gallery/sphx_glr_align_labels_demo_001.png)
+![对齐标签图示](https://matplotlib.org/_images/sphx_glr_align_labels_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -25,7 +25,7 @@ ax.legend()
 plt.show()
 ```
 
-![极轴图上的图例演示](/static/images/gallery/sphx_glr_polar_legend_001.png)
+![极轴图上的图例演示](https://matplotlib.org/_images/sphx_glr_polar_legend_001.png)
 
 ## 参考
 

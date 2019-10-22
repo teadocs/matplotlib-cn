@@ -25,7 +25,7 @@ fig.figimage(rgba2, 100, 300)
 plt.show()
 ```
 
-![数学文本图像作为numpy数组](/static/images/gallery/sphx_glr_mathtext_asarray_001.png)
+![数学文本图像作为numpy数组](https://matplotlib.org/_images/sphx_glr_mathtext_asarray_001.png)
 
 ## 参考
 

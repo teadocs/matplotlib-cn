@@ -6,7 +6,7 @@
  - 仅在左侧和底部有spine的轴;
  - 使用自定义边界限制spine范围的轴。
 
-![Spines图示例](/static/images/gallery/sphx_glr_spines_001.png)
+![Spines图示例](https://matplotlib.org/_images/sphx_glr_spines_001.png)
 
 ```python
 import numpy as np

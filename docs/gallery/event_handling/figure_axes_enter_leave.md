@@ -40,7 +40,7 @@ fig1.canvas.mpl_connect('axes_enter_event', enter_axes)
 fig1.canvas.mpl_connect('axes_leave_event', leave_axes)
 ```
 
-![图轴的进入和离开示例](/static/images/gallery/sphx_glr_figure_axes_enter_leave_001.png)
+![图轴的进入和离开示例](https://matplotlib.org/_images/sphx_glr_figure_axes_enter_leave_001.png)
 
 ```python
 fig2, (ax, ax2) = plt.subplots(2, 1)
@@ -54,7 +54,7 @@ fig2.canvas.mpl_connect('axes_leave_event', leave_axes)
 plt.show()
 ```
 
-![图轴的进入和离开示例2](/static/images/gallery/sphx_glr_figure_axes_enter_leave_002.png)
+![图轴的进入和离开示例2](https://matplotlib.org/_images/sphx_glr_figure_axes_enter_leave_002.png)
 
 ## 下载这个示例
             

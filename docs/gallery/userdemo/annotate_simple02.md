@@ -1,6 +1,6 @@
 # 注释Simple02
 
-![注释Simple02示例](/static/images/gallery/sphx_glr_annotate_simple02_001.png)
+![注释Simple02示例](https://matplotlib.org/_images/sphx_glr_annotate_simple02_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -4,7 +4,7 @@ Matplotlib中包含的标记填充样式的参考。
 
 另请参阅 标记填充样式 和[标记路径示例](https://matplotlib.org/gallery/shapes_and_collections/marker_path.html)。
 
-![标记填充样式图示](/static/images/gallery/sphx_glr_marker_fillstyle_reference_001.png)
+![标记填充样式图示](https://matplotlib.org/_images/sphx_glr_marker_fillstyle_reference_001.png)
 
 ```python
 import numpy as np

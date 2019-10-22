@@ -2,7 +2,7 @@
 
 演示使用坐标不均匀的ax.voxels
 
-![三维体素绘制Numpy的Logo示例](/static/images/gallery/sphx_glr_voxels_numpy_logo_001.png)
+![三维体素绘制Numpy的Logo示例](https://matplotlib.org/_images/sphx_glr_voxels_numpy_logo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

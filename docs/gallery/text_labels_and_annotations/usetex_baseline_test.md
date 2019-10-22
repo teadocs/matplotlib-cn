@@ -1,6 +1,6 @@
 # Usetex基线测试
 
-![Usetex基线测试示例](/static/images/gallery/sphx_glr_usetex_baseline_test_001.png)
+![Usetex基线测试示例](https://matplotlib.org/_images/sphx_glr_usetex_baseline_test_001.png)
 
 ```python
 import matplotlib.pyplot as plt

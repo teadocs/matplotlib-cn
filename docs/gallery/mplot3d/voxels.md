@@ -2,7 +2,7 @@
 
 演示使用ax.voxels绘制3D体积对象
 
-![三维体素/体积绘制示例](/static/images/gallery/sphx_glr_voxels_001.png)
+![三维体素/体积绘制示例](https://matplotlib.org/_images/sphx_glr_voxels_001.png)
 
 ```python
 import matplotlib.pyplot as plt

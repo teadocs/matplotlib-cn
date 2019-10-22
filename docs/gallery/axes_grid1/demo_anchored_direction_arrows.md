@@ -1,6 +1,6 @@
 # 演示锚定方向箭头
 
-![演示锚定方向箭头示例](/static/images/gallery/sphx_glr_demo_anchored_direction_arrows_001.png)
+![演示锚定方向箭头示例](https://matplotlib.org/_images/sphx_glr_demo_anchored_direction_arrows_001.png)
 
 ```python
 import matplotlib.pyplot as plt

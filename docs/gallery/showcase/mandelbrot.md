@@ -4,7 +4,7 @@
 
 maxiter给出了计算的精度。 在大多数现代笔记本电脑上，maxiter = 200应该需要几秒钟。
 
-![阴影和增强标准化渲染示例](/static/images/gallery/sphx_glr_mandelbrot_001.png)
+![阴影和增强标准化渲染示例](https://matplotlib.org/_images/sphx_glr_mandelbrot_001.png)
 
 ```python
 import numpy as np

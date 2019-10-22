@@ -8,7 +8,7 @@
 
 注意：也可以通过[property_cycle](https://matplotlib.org/tutorials/intermediate/color_cycle.html)配置破折号样式，方法是使用关键字破折号将破折号序列列表传递给循环器。这个例子中没有显示。
 
-![自定义虚线样式](/static/images/gallery/sphx_glr_line_demo_dash_control_001.png)
+![自定义虚线样式](https://matplotlib.org/_images/sphx_glr_line_demo_dash_control_001.png)
 
 ```python
 import numpy as np

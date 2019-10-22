@@ -1,6 +1,6 @@
 # 演示Edge Colorbar
 
-![演示Edge Colorbar](/static/images/gallery/sphx_glr_demo_edge_colorbar_001.png)
+![演示Edge Colorbar](https://matplotlib.org/_images/sphx_glr_demo_edge_colorbar_001.png)
 
 ```python
 import matplotlib.pyplot as plt

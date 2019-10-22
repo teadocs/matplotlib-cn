@@ -19,7 +19,7 @@ ax.set_title('Fill Between')
 plt.show()
 ```
 
-![填充示例](/static/images/gallery/sphx_glr_whats_new_98_4_fill_between_001.png)
+![填充示例](https://matplotlib.org/_images/sphx_glr_whats_new_98_4_fill_between_001.png)
 
 ## 参考
 

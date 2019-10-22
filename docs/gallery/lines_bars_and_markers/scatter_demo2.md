@@ -2,7 +2,7 @@
 
 演示散点图与不同的标记颜色和大小。
 
-![散点图自定义样式图示](/static/images/gallery/sphx_glr_scatter_demo2_001.png)
+![散点图自定义样式图示](https://matplotlib.org/_images/sphx_glr_scatter_demo2_001.png)
 
 ```python
 import numpy as np

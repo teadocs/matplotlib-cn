@@ -1,6 +1,6 @@
 # 简单的 RGB
 
-![简单的RGB示例](/static/images/gallery/sphx_glr_simple_rgb_001.png)
+![简单的RGB示例](https://matplotlib.org/_images/sphx_glr_simple_rgb_001.png)
 
 ```python
 import matplotlib.pyplot as plt

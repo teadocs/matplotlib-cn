@@ -4,7 +4,7 @@
 
 作者：Nicolas P. Rougier
 
-![MATPLOTLIB UNCHAINED示例](/static/images/gallery/sphx_glr_unchained_001.png)
+![MATPLOTLIB UNCHAINED示例](https://matplotlib.org/_images/sphx_glr_unchained_001.png)
 
 ```python
 import numpy as np

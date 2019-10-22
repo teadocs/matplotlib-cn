@@ -104,11 +104,11 @@ for ax, extend in zip(axs.ravel(), extends):
 plt.show()
 ```
 
-![Contourf演示](/static/images/gallery/sphx_glr_contourf_demo_001.png)
+![Contourf演示](https://matplotlib.org/_images/sphx_glr_contourf_demo_001.png)
 
-![Contourf演示2](/static/images/gallery/sphx_glr_contourf_demo_002.png)
+![Contourf演示2](https://matplotlib.org/_images/sphx_glr_contourf_demo_002.png)
 
-![Contourf演示3](/static/images/gallery/sphx_glr_contourf_demo_003.png)
+![Contourf演示3](https://matplotlib.org/_images/sphx_glr_contourf_demo_003.png)
 
 ## 参考
 

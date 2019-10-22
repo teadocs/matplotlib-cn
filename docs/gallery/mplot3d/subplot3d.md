@@ -2,7 +2,7 @@
 
 展示包括3D图作为子图。
 
-![3D绘图作为子图示例](/static/images/gallery/sphx_glr_subplot3d_001.png)
+![3D绘图作为子图示例](https://matplotlib.org/_images/sphx_glr_subplot3d_001.png)
 
 ```python
 import matplotlib.pyplot as plt

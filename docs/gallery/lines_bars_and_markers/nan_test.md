@@ -2,7 +2,7 @@
 
 示例：插入Nan的简单线条图。
 
-![Nan的简单线条图](/static/images/gallery/sphx_glr_nan_test_001.png)
+![Nan的简单线条图](https://matplotlib.org/_images/sphx_glr_nan_test_001.png)
 
 ```python
 import numpy as np

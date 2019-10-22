@@ -4,7 +4,7 @@
 
 这是一个概念验证实现（尽管它可以按原样使用）。将对API进行一些改进。
 
-![套索演示](/static/images/gallery/sphx_glr_lasso_demo_001.png)
+![套索演示](https://matplotlib.org/_images/sphx_glr_lasso_demo_001.png)
 
 ```python
 from matplotlib import colors as mcolors, path

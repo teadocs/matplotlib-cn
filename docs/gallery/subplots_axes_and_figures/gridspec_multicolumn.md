@@ -2,7 +2,7 @@
 
 [GridSpec](https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec)是布置子打印网格的一种灵活方式。下面是一个使用3x3网格和横跨所有三列、两列和两行的轴的示例。
 
-![GridSpec示例](/static/images/gallery/sphx_glr_gridspec_multicolumn_001.png)
+![GridSpec示例](https://matplotlib.org/_images/sphx_glr_gridspec_multicolumn_001.png)
 
 ```python
 import matplotlib.pyplot as plt

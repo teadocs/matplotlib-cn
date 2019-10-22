@@ -40,7 +40,7 @@ im2 = plt.imshow(Z2, cmap=plt.cm.viridis, alpha=.9, interpolation='bilinear',
 plt.show()
 ```
 
-![图层图像示例](/static/images/gallery/sphx_glr_layer_images_001.png)
+![图层图像示例](https://matplotlib.org/_images/sphx_glr_layer_images_001.png)
 
 ## 参考
 

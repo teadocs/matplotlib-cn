@@ -54,7 +54,7 @@ fig.colorbar(p, ax=ax)
 plt.show()
 ```
 
-![圆，楔和多边形示例](/static/images/gallery/sphx_glr_patch_collection_001.png)
+![圆，楔和多边形示例](https://matplotlib.org/_images/sphx_glr_patch_collection_001.png)
 
 ## 参考
 

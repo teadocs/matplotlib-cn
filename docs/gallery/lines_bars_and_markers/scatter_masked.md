@@ -2,7 +2,7 @@
 
 屏蔽一些数据点，并添加一条线去标记掩码区域。
 
-![散点图遮盖示例](/static/images/gallery/sphx_glr_scatter_masked_001.png)
+![散点图遮盖示例](https://matplotlib.org/_images/sphx_glr_scatter_masked_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -1,6 +1,6 @@
 # 轴缩放效果
 
-![轴缩放效果示例](/static/images/gallery/sphx_glr_axes_zoom_effect_001.png)
+![轴缩放效果示例](https://matplotlib.org/_images/sphx_glr_axes_zoom_effect_001.png)
 
 ```python
 from matplotlib.transforms import (

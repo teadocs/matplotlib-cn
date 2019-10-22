@@ -4,7 +4,7 @@
 
 此示例介绍了如何与多个画布交互数据。这样，您可以选择并突出显示一个轴上的点，并在另一个轴上生成该点的数据。
 
-![数据浏览器示例](/static/images/gallery/sphx_glr_data_browser_001.png)
+![数据浏览器示例](https://matplotlib.org/_images/sphx_glr_data_browser_001.png)
 
 ```python
 import numpy as np

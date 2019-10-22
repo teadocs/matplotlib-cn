@@ -1,6 +1,6 @@
 # 连接样式演示
 
-![连接样式演示](/static/images/gallery/sphx_glr_connectionstyle_demo_001.png)
+![连接样式演示](https://matplotlib.org/_images/sphx_glr_connectionstyle_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -4,7 +4,7 @@
 
 请注意，此方法使用 [matplotlib.axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) 及其Spines。 寄生虫轴的另一种方法显示在[Demo Parasite Axes](https://matplotlib.org/gallery/axisartist/demo_parasite_axes.html) 和 [Demo Parasite Axes2](https://matplotlib.org/gallery/axisartist/demo_parasite_axes2.html)示例中。
 
-![多个Yaxis与Spines示例](/static/images/gallery/sphx_glr_multiple_yaxis_with_spines_001.png)
+![多个Yaxis与Spines示例](https://matplotlib.org/_images/sphx_glr_multiple_yaxis_with_spines_001.png)
 
 ```python
 import matplotlib.pyplot as plt

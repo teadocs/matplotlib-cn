@@ -2,7 +2,7 @@
 
 这个例子展示了复制Tikz / PGF的不同线条样式。
 
-![线的样式图示](/static/images/gallery/sphx_glr_linestyles_001.png)
+![线的样式图示](https://matplotlib.org/_images/sphx_glr_linestyles_001.png)
 
 ```python
 import numpy as np

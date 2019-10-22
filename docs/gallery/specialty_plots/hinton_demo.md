@@ -4,7 +4,7 @@ Hinton图对于可视化2D阵列的值（例如，权重矩阵）是有用的：
 
 David Warde-Farley在SciPy Cookbook上的初步想法
 
-![Hinton图示例](/static/images/gallery/sphx_glr_hinton_demo_001.png)
+![Hinton图示例](https://matplotlib.org/_images/sphx_glr_hinton_demo_001.png)
 
 ```python
 import numpy as np

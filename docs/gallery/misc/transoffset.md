@@ -4,7 +4,7 @@
 
 每个Artist  - 从中派生Text和Line等类的mpl类 - 都有一个可以在创建Artist时设置的转换，例如通过相应的pyplot命令。 默认情况下，这通常是Axes.transData转换，从数据单元到屏幕点。 我们可以使用offset_copy函数来修改此转换的副本，其中修改包含偏移量。
 
-![Transoffset示例](/static/images/gallery/sphx_glr_transoffset_001.png)
+![Transoffset示例](https://matplotlib.org/_images/sphx_glr_transoffset_001.png)
 
 ```python
 import matplotlib.pyplot as plt

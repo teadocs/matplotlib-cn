@@ -46,7 +46,7 @@ for i, case in enumerate(cases):
     ax[-1].plot(x, y, 'o', ls='-', ms=4, markevery=case)
 ```
 
-![Markevery示例图示](/static/images/gallery/sphx_glr_markevery_demo_001.png)
+![Markevery示例图示](https://matplotlib.org/_images/sphx_glr_markevery_demo_001.png)
 
 将每个Markevery案例绘制为log x和y scale
 
@@ -64,7 +64,7 @@ for i, case in enumerate(cases):
 fig2.tight_layout()
 ```
 
-![Markevery示例图示2](/static/images/gallery/sphx_glr_markevery_demo_003.png)
+![Markevery示例图示2](https://matplotlib.org/_images/sphx_glr_markevery_demo_003.png)
 
 将每个Markevery案例绘制为线性x和y比例，但放大时请注意放大时的行为。当指定开始标记偏移时，它始终相对于可能与第一个可见数据点不同的第一个数据点进行解释。
 
@@ -86,7 +86,7 @@ r = np.linspace(0, 3.0, 200)
 theta = 2 * np.pi * r
 ```
 
-![Markevery示例图示3](/static/images/gallery/sphx_glr_markevery_demo_005.png)
+![Markevery示例图示3](https://matplotlib.org/_images/sphx_glr_markevery_demo_005.png)
 
 绘制每个Markevery案例的极坐标图。
 
@@ -104,7 +104,7 @@ fig4.tight_layout()
 plt.show()
 ```
 
-![Markevery示例图示4](/static/images/gallery/sphx_glr_markevery_demo_007.png)
+![Markevery示例图示4](https://matplotlib.org/_images/sphx_glr_markevery_demo_007.png)
 
 ## 下载这个示例
 

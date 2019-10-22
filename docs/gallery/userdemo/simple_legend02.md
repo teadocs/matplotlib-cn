@@ -1,6 +1,6 @@
 # 简单的Legend02
 
-![简单的Legend02示例](/static/images/gallery/sphx_glr_simple_legend02_001.png)
+![简单的Legend02示例](https://matplotlib.org/_images/sphx_glr_simple_legend02_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -2,7 +2,7 @@
 
 下采样会降低信号的采样率或采样大小。在本教程中，当通过拖动和缩放调整打印时，将对信号进行缩减采样。
 
-![重采样数据示例](/static/images/gallery/sphx_glr_resample_001.png)
+![重采样数据示例](https://matplotlib.org/_images/sphx_glr_resample_001.png)
 
 ```python
 import numpy as np

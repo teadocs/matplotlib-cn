@@ -73,7 +73,7 @@ for n_bin, ax in zip(n_bins, axs.ravel()):
     fig.colorbar(im, ax=ax)
 ```
 
-![从颜色列表创建颜色映射示例](/static/images/gallery/sphx_glr_custom_cmap_001.png)
+![从颜色列表创建颜色映射示例](https://matplotlib.org/_images/sphx_glr_custom_cmap_001.png)
 
 --- 自定义色彩映射 ---
 
@@ -202,7 +202,7 @@ fig.subplots_adjust(top=0.9)
 plt.show()
 ```
 
-![从颜色列表创建颜色映射示例2](/static/images/gallery/sphx_glr_custom_cmap_002.png)
+![从颜色列表创建颜色映射示例2](https://matplotlib.org/_images/sphx_glr_custom_cmap_002.png)
 
 ### 参考
 

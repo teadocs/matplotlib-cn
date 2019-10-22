@@ -1,6 +1,6 @@
 # 修补效果演示
 
-![修补效果演示](/static/images/gallery/sphx_glr_patheffect_demo_001.png)
+![修补效果演示](https://matplotlib.org/_images/sphx_glr_patheffect_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

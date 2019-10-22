@@ -1,10 +1,11 @@
 # 嵌入WebAgg
 
-此示例演示如何在您自己的Web应用程序和框架中嵌入matplotlib WebAgg交互式绘图。 基于龙卷风的服务器“侧面”是基于龙卷风的服务器。
+此示例演示如何在您自己的Web应用程序和框架中嵌入matplotlib WebAgg交互式绘图。
+基于龙卷风的服务器“侧面”是基于龙卷风的服务器。
 
 使用的框架必须支持Web套接字。
 
-```python
+``` python
 import io
 
 try:

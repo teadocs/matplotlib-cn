@@ -32,7 +32,7 @@ ax.set_title('Damped oscillation')
 plt.show()
 ```
 
-![图例示例](/static/images/gallery/sphx_glr_legend_demo_001.png)
+![图例示例](https://matplotlib.org/_images/sphx_glr_legend_demo_001.png)
 
 接下来，我们将演示绘制更复杂的标签。
 
@@ -58,7 +58,7 @@ ax1.legend(shadow=True, fancybox=True)
 plt.show()
 ```
 
-![图例示例2](/static/images/gallery/sphx_glr_legend_demo_002.png)
+![图例示例2](https://matplotlib.org/_images/sphx_glr_legend_demo_002.png)
 
 在这里，我们将图例附加到更复杂的图上。
 
@@ -84,7 +84,7 @@ bottom_ax.legend()
 plt.show()
 ```
 
-![图例示例3](/static/images/gallery/sphx_glr_legend_demo_003.png)
+![图例示例3](https://matplotlib.org/_images/sphx_glr_legend_demo_003.png)
 
 现在我们将展示带有多个关键图例的图例条目。
 
@@ -119,7 +119,7 @@ l = ax2.legend([(rpos, rneg), (rneg, rpos)], ['pad!=0', 'pad=0'],
 plt.show()
 ```
 
-![图例示例4](/static/images/gallery/sphx_glr_legend_demo_004.png)
+![图例示例4](https://matplotlib.org/_images/sphx_glr_legend_demo_004.png)
 
 最后，还可以编写定义如何对图例进行样式化的自定义对象。
 
@@ -186,7 +186,7 @@ ax.legend([lc], ['multi-line'], handler_map={type(lc): HandlerDashedLines()},
 plt.show()
 ```
 
-![图例示例5](/static/images/gallery/sphx_glr_legend_demo_005.png)
+![图例示例5](https://matplotlib.org/_images/sphx_glr_legend_demo_005.png)
 
 ## 下载这个示例
             

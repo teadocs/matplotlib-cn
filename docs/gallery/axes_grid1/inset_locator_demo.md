@@ -33,7 +33,7 @@ for axi in [axins, axins2, axins3, axins4]:
 plt.show()
 ```
 
-![插入定位器演示](/static/images/gallery/sphx_glr_inset_locator_demo_001.png)
+![插入定位器演示](https://matplotlib.org/_images/sphx_glr_inset_locator_demo_001.png)
 
 参数``bbox_to_anchor`` 和 ``bbox_transfrom`` 可用于对插入位置和大小进行更细粒度的控制，甚至可以将插入位置置于完全任意位置。``bbox_to_anchor`` 根据 ``bbox_transform`` 设置坐标中的边界框。
 
@@ -87,7 +87,7 @@ for axi in [axins2, axins3, ax2, ax3]:
 plt.show()
 ```
 
-![插入定位器演示2](/static/images/gallery/sphx_glr_inset_locator_demo_002.png)
+![插入定位器演示2](https://matplotlib.org/_images/sphx_glr_inset_locator_demo_002.png)
 
 在上述方法中，使用了轴变换和4元组边界框，因为它主要用于指定相对于其所插入的轴的插入值。但是，其他用例也是可能的。下面的示例检查其中一些。
 
@@ -129,7 +129,7 @@ axins4 = inset_axes(ax2, width="16%", height="34%",
 plt.show()
 ```
 
-![插入定位器演示3](/static/images/gallery/sphx_glr_inset_locator_demo_003.png)
+![插入定位器演示3](https://matplotlib.org/_images/sphx_glr_inset_locator_demo_003.png)
 
 ## 下载这个示例
             

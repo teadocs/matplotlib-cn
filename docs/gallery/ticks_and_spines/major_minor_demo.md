@@ -44,7 +44,7 @@ ax.xaxis.set_minor_locator(minorLocator)
 plt.show()
 ```
 
-![Major和Minor的示例](/static/images/gallery/sphx_glr_major_minor_demo_001.png)
+![Major和Minor的示例](https://matplotlib.org/_images/sphx_glr_major_minor_demo_001.png)
 
 主要和次要刻度的自动刻度选择。
 
@@ -71,7 +71,7 @@ ax.tick_params(which='minor', length=4, color='r')
 plt.show()
 ```
 
-![Major和Minor的示例2](/static/images/gallery/sphx_glr_major_minor_demo_002.png)
+![Major和Minor的示例2](https://matplotlib.org/_images/sphx_glr_major_minor_demo_002.png)
 
 ## 下载这个示例
             

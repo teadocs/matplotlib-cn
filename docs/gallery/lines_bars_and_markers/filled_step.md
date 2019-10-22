@@ -203,7 +203,7 @@ ax2.set_xlabel('counts')
 ax2.set_ylabel('x')
 ```
 
-![填充直方图](/static/images/gallery/sphx_glr_filled_step_001.png)
+![填充直方图](https://matplotlib.org/_images/sphx_glr_filled_step_001.png)
 
 输出：
 
@@ -256,7 +256,7 @@ ax2.set_ylabel('x')
 plt.show()
 ```
 
-![填充直方图2](/static/images/gallery/sphx_glr_filled_step_002.png)
+![填充直方图2](https://matplotlib.org/_images/sphx_glr_filled_step_002.png)
 
 输出：
 

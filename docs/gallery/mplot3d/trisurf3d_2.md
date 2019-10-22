@@ -4,7 +4,7 @@
 
 第一个演示使用plot_trisurf的三角形参数，第二个设置Triangulation对象的蒙版并将对象直接传递给plot_trisurf。
 
-![多三角三维曲面示例](/static/images/gallery/sphx_glr_trisurf3d_2_001.png)
+![多三角三维曲面示例](https://matplotlib.org/_images/sphx_glr_trisurf3d_2_001.png)
 
 ```python
 import numpy as np

@@ -2,7 +2,7 @@
 
 例如，使用鼠标事件模拟用于检查数据的镜子。
 
-![镜子示例](/static/images/gallery/sphx_glr_looking_glass_001.png)
+![镜子示例](https://matplotlib.org/_images/sphx_glr_looking_glass_001.png)
 
 ```python
 import numpy as np

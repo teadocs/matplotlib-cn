@@ -2,7 +2,7 @@
 
 显示图形关闭时发生的连接事件的示例。
 
-![关闭事件示例](/static/images/gallery/sphx_glr_close_event_001.png)
+![关闭事件示例](https://matplotlib.org/_images/sphx_glr_close_event_001.png)
 
 ```python
 import matplotlib.pyplot as plt

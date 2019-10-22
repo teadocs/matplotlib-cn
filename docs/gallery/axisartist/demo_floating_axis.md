@@ -4,7 +4,7 @@
 
 以下代码演示了如何将浮动极坐标曲线放在矩形框内。 为了更好地了解极坐标曲线，请查看demo_curvelinear_grid.py。
 
-![演示浮动轴2](/static/images/gallery/sphx_glr_demo_floating_axis_001.png)
+![演示浮动轴2](https://matplotlib.org/_images/sphx_glr_demo_floating_axis_001.png)
 
 ```python
 import numpy as np

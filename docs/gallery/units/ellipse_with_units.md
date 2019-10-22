@@ -52,7 +52,7 @@ ax.add_patch(e2)
 fig.savefig('ellipse_compare')
 ```
 
-![椭圆与单位示例](/static/images/gallery/sphx_glr_ellipse_with_units_001.png)
+![椭圆与单位示例](https://matplotlib.org/_images/sphx_glr_ellipse_with_units_001.png)
 
 ```python
 fig = plt.figure()
@@ -77,7 +77,7 @@ fig.savefig('arc_compare')
 plt.show()
 ```
 
-![椭圆与单位示例2](/static/images/gallery/sphx_glr_ellipse_with_units_002.png)
+![椭圆与单位示例2](https://matplotlib.org/_images/sphx_glr_ellipse_with_units_002.png)
 
 ## 下载这个示例
             

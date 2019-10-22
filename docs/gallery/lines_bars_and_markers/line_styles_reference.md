@@ -2,7 +2,7 @@
 
 Matplotlib附带的线型参考。
 
-![线型样式参考图示](/static/images/gallery/sphx_glr_line_styles_reference_001.png)
+![线型样式参考图示](https://matplotlib.org/_images/sphx_glr_line_styles_reference_001.png)
 
 ```python
 import numpy as np

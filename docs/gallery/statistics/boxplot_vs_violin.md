@@ -10,7 +10,7 @@
 
 有关小提琴绘制的更多信息，scikit-learn文档有一个很棒的部分：http://scikit-learn.org/stable/modules/density.html
 
-![箱形图与小提琴图对比示例](/static/images/gallery/sphx_glr_boxplot_vs_violin_001.png)
+![箱形图与小提琴图对比示例](https://matplotlib.org/_images/sphx_glr_boxplot_vs_violin_001.png)
 
 ```python
 import matplotlib.pyplot as plt

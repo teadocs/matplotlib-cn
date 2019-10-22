@@ -22,7 +22,7 @@ ax = fig.add_subplot(111, projection='polar')
 c = ax.scatter(theta, r, c=colors, s=area, cmap='hsv', alpha=0.75)
 ```
 
-![极轴上的散点图示例](/static/images/gallery/sphx_glr_polar_scatter_001.png)
+![极轴上的散点图示例](https://matplotlib.org/_images/sphx_glr_polar_scatter_001.png)
 
 ## 极轴上的散点图，具有偏移原点
 
@@ -37,7 +37,7 @@ ax.set_rorigin(-2.5)
 ax.set_theta_zero_location('W', offset=10)
 ```
 
-![极轴上的散点图2](/static/images/gallery/sphx_glr_polar_scatter_002.png)
+![极轴上的散点图2](https://matplotlib.org/_images/sphx_glr_polar_scatter_002.png)
 
 ## 极轴上的散点图局限于扇区
 
@@ -54,7 +54,7 @@ ax.set_thetamax(135)
 plt.show()
 ```
 
-![极轴上的散点图示例3](/static/images/gallery/sphx_glr_polar_scatter_003.png)
+![极轴上的散点图示例3](https://matplotlib.org/_images/sphx_glr_polar_scatter_003.png)
 
 ### 参考
 

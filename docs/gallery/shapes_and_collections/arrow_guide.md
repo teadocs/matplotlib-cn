@@ -44,7 +44,7 @@ axs[1].set_xlim(0, 2)
 axs[1].set_ylim(0, 2)
 ```
 
-![箭头指南示例](/static/images/gallery/sphx_glr_arrow_guide_001.png)
+![箭头指南示例](https://matplotlib.org/_images/sphx_glr_arrow_guide_001.png)
 
 ## 头部形状和锚点固定在展示空间中
 
@@ -69,7 +69,7 @@ axs[1].set_xlim(0, 2)
 axs[1].set_ylim(0, 2)
 ```
 
-![箭头指南2](/static/images/gallery/sphx_glr_arrow_guide_002.png)
+![箭头指南2](https://matplotlib.org/_images/sphx_glr_arrow_guide_002.png)
 
 ## 头部形状和锚点固定在数据空间中
 
@@ -89,7 +89,7 @@ axs[1].set_xlim(0, 2)
 axs[1].set_ylim(0, 2)
 ```
 
-![箭头指南3](/static/images/gallery/sphx_glr_arrow_guide_003.png)
+![箭头指南3](https://matplotlib.org/_images/sphx_glr_arrow_guide_003.png)
 
 ```python
 plt.show()

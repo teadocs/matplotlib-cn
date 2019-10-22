@@ -2,7 +2,7 @@
 
 此示例显示如何在同一图上绘制2D和3D绘图。
 
-![相同图中的2D和3D轴示例](/static/images/gallery/sphx_glr_mixed_subplots_001.png)
+![相同图中的2D和3D轴示例](https://matplotlib.org/_images/sphx_glr_mixed_subplots_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

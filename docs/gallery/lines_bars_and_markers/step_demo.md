@@ -2,7 +2,7 @@
 
 阶梯图例子：
 
-![阶梯图示例图例](/static/images/gallery/sphx_glr_step_demo_001.png)
+![阶梯图示例图例](https://matplotlib.org/_images/sphx_glr_step_demo_001.png)
 
 ```python
 import numpy as np

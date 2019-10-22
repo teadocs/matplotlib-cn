@@ -38,7 +38,7 @@ fig.suptitle('Colors in the default prop_cycle', fontsize='large')
 plt.show()
 ```
 
-![默认属性循环中的颜色示例](/static/images/gallery/sphx_glr_color_cycle_default_001.png)
+![默认属性循环中的颜色示例](https://matplotlib.org/_images/sphx_glr_color_cycle_default_001.png)
 
 ## 参考
 

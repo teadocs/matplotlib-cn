@@ -14,7 +14,7 @@ plt.plot(t, t, 'r--', t, t**2, 'bs', t, t**3, 'g^')
 plt.show()
 ```
 
-![Pyplot 绘制三条线示例](/static/images/gallery/sphx_glr_pyplot_three_001.png)
+![Pyplot 绘制三条线示例](https://matplotlib.org/_images/sphx_glr_pyplot_three_001.png)
 
 ## 参考
 

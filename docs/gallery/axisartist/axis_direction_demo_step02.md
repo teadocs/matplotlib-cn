@@ -1,6 +1,6 @@
 # 轴方向演示步骤02
 
-![轴方向演示步骤02示例](/static/images/gallery/sphx_glr_axis_direction_demo_step02_001.png)
+![轴方向演示步骤02示例](https://matplotlib.org/_images/sphx_glr_axis_direction_demo_step02_001.png)
 
 ```python
 import matplotlib.pyplot as plt

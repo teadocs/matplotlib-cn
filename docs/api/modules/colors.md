@@ -1,1 +1,0 @@
-# Colors in Matplotlib

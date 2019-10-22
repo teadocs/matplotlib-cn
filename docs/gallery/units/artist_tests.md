@@ -6,7 +6,7 @@
 
 此示例需要 [basic_units.py](https://matplotlib.org/_downloads/3a73b4cd6e12aa53ff277b1b80d631c1/basic_units.py)
 
-![艺术家对象测试示例](/static/images/gallery/sphx_glr_artist_tests_001.png)
+![艺术家对象测试示例](https://matplotlib.org/_images/sphx_glr_artist_tests_001.png)
 
 ```python
 import random

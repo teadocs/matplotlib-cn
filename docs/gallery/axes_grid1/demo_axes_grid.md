@@ -2,7 +2,7 @@
 
 具有单个或自己的彩条的2x2图像的网格。
 
-![演示Axes Grid](/static/images/gallery/sphx_glr_demo_axes_grid_0011.png)
+![演示Axes Grid](https://matplotlib.org/_images/sphx_glr_demo_axes_grid_0011.png)
 
 ```python
 import matplotlib.pyplot as plt

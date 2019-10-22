@@ -4,7 +4,7 @@
 - 使用生成器来驱动动画，
 - 在动画期间更改轴限制。
 
-![衰变示例](/static/images/gallery/sphx_glr_animate_decay_001.png)
+![衰变示例](https://matplotlib.org/_images/sphx_glr_animate_decay_001.png)
 
 ```python
 import numpy as np

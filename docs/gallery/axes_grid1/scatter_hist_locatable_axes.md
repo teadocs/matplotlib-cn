@@ -1,6 +1,6 @@
 # 散点图
 
-![散点图示例](/static/images/gallery/sphx_glr_scatter_hist_locatable_axes_001.png)
+![散点图示例](https://matplotlib.org/_images/sphx_glr_scatter_hist_locatable_axes_001.png)
 
 ```python
 import numpy as np

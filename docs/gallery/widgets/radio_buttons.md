@@ -4,7 +4,7 @@
 
 单选按钮允许您在可视化中选择多个选项。在这种情况下，按钮允许用户选择要在图中显示的三种不同正弦波中的一种。
 
-![单选按钮示例](/static/images/gallery/sphx_glr_radio_buttons_001.png)
+![单选按钮示例](https://matplotlib.org/_images/sphx_glr_radio_buttons_001.png)
 
 ```python
 import numpy as np

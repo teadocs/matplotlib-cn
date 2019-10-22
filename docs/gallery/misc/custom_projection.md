@@ -2,7 +2,7 @@
 
 通过减轻Matplotlib的许多功能来展示Hammer投影。
 
-![自定义投影示例](/static/images/gallery/sphx_glr_custom_projection_001.png)
+![自定义投影示例](https://matplotlib.org/_images/sphx_glr_custom_projection_001.png)
 
 ```python
 import matplotlib

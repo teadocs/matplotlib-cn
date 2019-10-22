@@ -22,7 +22,7 @@ fig.savefig("test.png")
 plt.show()
 ```
 
-![简单图例](/static/images/gallery/sphx_glr_simple_plot_001.png)
+![简单图例](https://matplotlib.org/_images/sphx_glr_simple_plot_001.png)
 
 ## 参考
 

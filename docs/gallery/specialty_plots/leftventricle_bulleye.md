@@ -2,7 +2,7 @@
 
 该示例演示了如何为美国心脏协会（AHA）推荐的左心室创建17段模型。
 
-![左心室靶心示例](/static/images/gallery/sphx_glr_leftventricle_bulleye_001.png)
+![左心室靶心示例](https://matplotlib.org/_images/sphx_glr_leftventricle_bulleye_001.png)
 
 ```python
 import numpy as np

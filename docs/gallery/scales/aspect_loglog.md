@@ -1,6 +1,6 @@
 # 双对数
 
-![双对数示例](/static/images/gallery/sphx_glr_aspect_loglog_001.png)
+![双对数示例](https://matplotlib.org/_images/sphx_glr_aspect_loglog_001.png)
 
 ```python
 import matplotlib.pyplot as plt

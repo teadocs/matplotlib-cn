@@ -1,8 +1,8 @@
 # 堆积条形图
 
-这是使用条形创建带有误差线的堆积条形图的示例。注意yerr用于误差条的参数，并且底部用于将``女人``的条形堆叠在``男人``条形的顶部。
+这是使用 [``bar``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar) 创建带有误差线的堆积条形图的示例。注意yerr用于误差条的参数，并且底部用于将``女人``的条形堆叠在``男人``条形的顶部。
 
-![堆积条形图示](/static/images/gallery/sphx_glr_bar_stacked_001.png);
+![堆积条形图示](https://matplotlib.org/_images/sphx_glr_bar_stacked_001.png);
 
 ```python
 import numpy as np

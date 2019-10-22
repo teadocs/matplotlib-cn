@@ -2,7 +2,7 @@
 
 演示使用ax.voxels可视化颜色空间的各个部分
 
-![带有rgb颜色的3D体素/体积图示例](/static/images/gallery/sphx_glr_voxels_rgb_001.png)
+![带有rgb颜色的3D体素/体积图示例](https://matplotlib.org/_images/sphx_glr_voxels_rgb_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -79,11 +79,11 @@ plot_colortable(mcolors.CSS4_COLORS, "CSS Colors")
 plt.show()
 ```
 
-![可视化命名颜色示例](/static/images/gallery/sphx_glr_named_colors_001.png)
+![可视化命名颜色示例](https://matplotlib.org/_images/sphx_glr_named_colors_001.png)
 
-![可视化命名颜色示例2](/static/images/gallery/sphx_glr_named_colors_002.png)
+![可视化命名颜色示例2](https://matplotlib.org/_images/sphx_glr_named_colors_002.png)
 
-![可视化命名颜色示例3](/static/images/gallery/sphx_glr_named_colors_003.png)
+![可视化命名颜色示例3](https://matplotlib.org/_images/sphx_glr_named_colors_003.png)
 
 ## 参考
 

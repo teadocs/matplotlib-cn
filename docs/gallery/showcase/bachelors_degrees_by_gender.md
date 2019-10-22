@@ -4,7 +4,7 @@
 
 还演示了文本标签沿右边缘的自定义放置，作为传统图例的替代方法。
 
-![按性别分列的学士学位示例](/static/images/gallery/sphx_glr_bachelors_degrees_by_gender_001.png)
+![按性别分列的学士学位示例](https://matplotlib.org/_images/sphx_glr_bachelors_degrees_by_gender_001.png)
 
 ```python
 import numpy as np

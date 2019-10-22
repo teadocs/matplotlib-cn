@@ -2,7 +2,7 @@
 
 绘制具有对数y轴的条形图。
 
-![对数条形图示例](/static/images/gallery/sphx_glr_log_bar_001.png)
+![对数条形图示例](https://matplotlib.org/_images/sphx_glr_log_bar_001.png)
 
 ```python
 import matplotlib.pyplot as plt

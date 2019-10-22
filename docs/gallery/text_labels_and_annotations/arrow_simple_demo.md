@@ -1,6 +1,6 @@
 # 箭头符号简单演示
 
-![箭头符号简单演示](/static/images/gallery/sphx_glr_arrow_simple_demo_001.png)
+![箭头符号简单演示](https://matplotlib.org/_images/sphx_glr_arrow_simple_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

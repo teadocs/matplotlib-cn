@@ -1,6 +1,6 @@
 # 演示嵌入轴颜色条
 
-![演示嵌入轴颜色条](/static/images/gallery/sphx_glr_demo_colorbar_of_inset_axes_001.png)
+![演示嵌入轴颜色条](https://matplotlib.org/_images/sphx_glr_demo_colorbar_of_inset_axes_001.png)
 
 ```python
 import matplotlib.pyplot as plt

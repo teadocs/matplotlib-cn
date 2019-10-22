@@ -7,7 +7,7 @@
 - 使用带有color关键字的文本功能。
 - 使用text2D函数将文本放在ax对象上的固定位置。
 
-![三维中的文字注释示例](/static/images/gallery/sphx_glr_text3d_001.png)
+![三维中的文字注释示例](https://matplotlib.org/_images/sphx_glr_text3d_001.png)
 
 ```python
 # This import registers the 3D projection, but is otherwise unused.

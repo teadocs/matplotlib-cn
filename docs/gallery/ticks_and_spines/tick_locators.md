@@ -2,7 +2,7 @@
 
 显示不同的刻度定位器。
 
-![刻度定位器示例](/static/images/gallery/sphx_glr_tick-locators_001.png)
+![刻度定位器示例](https://matplotlib.org/_images/sphx_glr_tick-locators_001.png)
 
 ```python
 import numpy as np

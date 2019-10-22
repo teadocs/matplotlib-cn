@@ -1,6 +1,6 @@
 # 图中插入注释框
 
-![图中插入注释框示例](/static/images/gallery/sphx_glr_demo_annotation_box_001.png)
+![图中插入注释框示例](https://matplotlib.org/_images/sphx_glr_demo_annotation_box_001.png)
 
 ```python
 import matplotlib.pyplot as plt

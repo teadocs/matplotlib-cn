@@ -4,7 +4,7 @@
 
 请注意，此方法使用 [parasite_axes](https://matplotlib.org/api/_as_gen/mpl_toolkits.axes_grid1.parasite_axes.html#module-mpl_toolkits.axes_grid1.parasite_axes) 的 [HostAxes](https://matplotlib.org/api/_as_gen/mpl_toolkits.axes_grid1.parasite_axes.HostAxes.html#mpl_toolkits.axes_grid1.parasite_axes.HostAxes) 和 [ParasiteAxes](https://matplotlib.org/api/_as_gen/mpl_toolkits.axes_grid1.parasite_axes.ParasiteAxes.html#mpl_toolkits.axes_grid1.parasite_axes.ParasiteAxes)。 在 [Demo Parasite Axes2](https://matplotlib.org/api/toolkits/axes_grid1.html#toolkit-axesgrid1-index) 示例中可以找到使用[Matplotlib axes_grid1 Toolkit](https://matplotlib.org/api/toolkits/axisartist.html#toolkit-axisartist-index) 和 Matplotlib axisartist Toolkit的替代方法。 使用通常的matplotlib子图的替代方法显示在 [Multiple Yaxis With Spines](https://matplotlib.org/gallery/ticks_and_spines/multiple_yaxis_with_spines.html) 示例中。
 
-![演示寄生轴](/static/images/gallery/sphx_glr_demo_parasite_axes_001.png)
+![演示寄生轴](https://matplotlib.org/_images/sphx_glr_demo_parasite_axes_001.png)
 
 ```python
 from mpl_toolkits.axisartist.parasite_axes import HostAxes, ParasiteAxes

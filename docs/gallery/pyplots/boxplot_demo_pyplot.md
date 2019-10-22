@@ -23,7 +23,7 @@ ax1.set_title('Basic Plot')
 ax1.boxplot(data)
 ```
 
-![Boxplot示例](/static/images/gallery/sphx_glr_boxplot_demo_pyplot_001.png)
+![Boxplot示例](https://matplotlib.org/_images/sphx_glr_boxplot_demo_pyplot_001.png)
 
 ```python
 fig2, ax2 = plt.subplots()
@@ -31,7 +31,7 @@ ax2.set_title('Notched boxes')
 ax2.boxplot(data, notch=True)
 ```
 
-![Boxplot示例2](/static/images/gallery/sphx_glr_boxplot_demo_pyplot_002.png)
+![Boxplot示例2](https://matplotlib.org/_images/sphx_glr_boxplot_demo_pyplot_002.png)
 
 ```python
 green_diamond = dict(markerfacecolor='g', marker='D')
@@ -40,7 +40,7 @@ ax3.set_title('Changed Outlier Symbols')
 ax3.boxplot(data, flierprops=green_diamond)
 ```
 
-![Boxplot示例3](/static/images/gallery/sphx_glr_boxplot_demo_pyplot_003.png)
+![Boxplot示例3](https://matplotlib.org/_images/sphx_glr_boxplot_demo_pyplot_003.png)
 
 ```python
 fig4, ax4 = plt.subplots()
@@ -48,7 +48,7 @@ ax4.set_title('Hide Outlier Points')
 ax4.boxplot(data, showfliers=False)
 ```
 
-![Boxplot示例4](/static/images/gallery/sphx_glr_boxplot_demo_pyplot_004.png)
+![Boxplot示例4](https://matplotlib.org/_images/sphx_glr_boxplot_demo_pyplot_004.png)
 
 ```python
 red_square = dict(markerfacecolor='r', marker='s')
@@ -57,7 +57,7 @@ ax5.set_title('Horizontal Boxes')
 ax5.boxplot(data, vert=False, flierprops=red_square)
 ```
 
-![Boxplot示例5](/static/images/gallery/sphx_glr_boxplot_demo_pyplot_005.png)
+![Boxplot示例5](https://matplotlib.org/_images/sphx_glr_boxplot_demo_pyplot_005.png)
 
 ```python
 fig6, ax6 = plt.subplots()
@@ -65,7 +65,7 @@ ax6.set_title('Shorter Whisker Length')
 ax6.boxplot(data, flierprops=red_square, vert=False, whis=0.75)
 ```
 
-![Boxplot示例6](/static/images/gallery/sphx_glr_boxplot_demo_pyplot_006.png)
+![Boxplot示例6](https://matplotlib.org/_images/sphx_glr_boxplot_demo_pyplot_006.png)
 
 模拟一些更多的数据。
 
@@ -90,7 +90,7 @@ ax7.boxplot(data)
 plt.show()
 ```
 
-![Boxplot示例7](/static/images/gallery/sphx_glr_boxplot_demo_pyplot_007.png)
+![Boxplot示例7](https://matplotlib.org/_images/sphx_glr_boxplot_demo_pyplot_007.png)
 
 ## 参考
 

@@ -26,7 +26,7 @@ cbar = fig.colorbar(cax, ticks=[-1, 0, 1])
 cbar.ax.set_yticklabels(['< -1', '0', '> 1'])  # vertically oriented colorbar
 ```
 
-![颜色栏刻度标签示例](/static/images/gallery/sphx_glr_colorbar_tick_labelling_demo_001.png)
+![颜色栏刻度标签示例](https://matplotlib.org/_images/sphx_glr_colorbar_tick_labelling_demo_001.png)
 
 使用水平颜色条制作绘图
 
@@ -44,7 +44,7 @@ cbar.ax.set_xticklabels(['Low', 'Medium', 'High'])  # horizontal colorbar
 plt.show()
 ```
 
-![颜色栏刻度标签示例2](/static/images/gallery/sphx_glr_colorbar_tick_labelling_demo_002.png)
+![颜色栏刻度标签示例2](https://matplotlib.org/_images/sphx_glr_colorbar_tick_labelling_demo_002.png)
 
 ## 下载这个示例
             

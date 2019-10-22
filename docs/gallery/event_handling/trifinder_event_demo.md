@@ -2,7 +2,7 @@
 
 显示使用TriFinder对象的示例。当鼠标在三角测量上移动时，光标下方的三角形将突出显示，三角形的索引将显示在图表标题中。
 
-![Trifinder 事件演示](/static/images/gallery/sphx_glr_trifinder_event_demo_001.png)
+![Trifinder 事件演示](https://matplotlib.org/_images/sphx_glr_trifinder_event_demo_001.png)
 
 ```python
 import matplotlib.pyplot as plt

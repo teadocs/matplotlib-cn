@@ -4,7 +4,7 @@
 
 这些属性也可以在.matplotlib / matplotlibrc中设置。
 
-![在顶部设置默认的x轴刻度标签示例](/static/images/gallery/sphx_glr_tick_xlabel_top_001.png)
+![在顶部设置默认的x轴刻度标签示例](https://matplotlib.org/_images/sphx_glr_tick_xlabel_top_001.png)
 
 ```python
 import matplotlib.pyplot as plt

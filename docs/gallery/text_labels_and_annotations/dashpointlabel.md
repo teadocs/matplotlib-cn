@@ -1,6 +1,6 @@
 # Dashpoint标签
 
-![Dashpoint标签示例](/static/images/gallery/sphx_glr_dashpointlabel_001.png)
+![Dashpoint标签示例](https://matplotlib.org/_images/sphx_glr_dashpointlabel_001.png)
 
 ```python
 import matplotlib.pyplot as plt

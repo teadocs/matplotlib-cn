@@ -1,6 +1,6 @@
 # 简单的Axisartist1
 
-![简单的Axisartist1](/static/images/gallery/sphx_glr_simple_axisartist1_001.png)
+![简单的Axisartist1](https://matplotlib.org/_images/sphx_glr_simple_axisartist1_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -2,7 +2,7 @@
 
 您可以调整轴的刻度和网格属性。
 
-![轴线属性示例](/static/images/gallery/sphx_glr_axes_props_001.png)
+![轴线属性示例](https://matplotlib.org/_images/sphx_glr_axes_props_001.png)
 
 ```python
 import matplotlib.pyplot as plt

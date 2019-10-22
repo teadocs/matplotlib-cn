@@ -2,7 +2,7 @@
 
 创建在水平方向或垂直方向跨越轴的直线或矩形。
 
-![axhspan 演示示例](/static/images/gallery/sphx_glr_axhspan_demo_001.png)
+![axhspan 演示示例](https://matplotlib.org/_images/sphx_glr_axhspan_demo_001.png)
 
 ```python
 import numpy as np

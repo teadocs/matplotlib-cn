@@ -27,9 +27,9 @@ ax.stackplot(x, y)
 plt.show()
 ```
 
-![堆栈图示例图例](/static/images/gallery/sphx_glr_stackplot_demo_001.png)
+![堆栈图示例图例](https://matplotlib.org/_images/sphx_glr_stackplot_demo_001.png)
 
-![堆栈图示例图例2](/static/images/gallery/sphx_glr_stackplot_demo_002.png)
+![堆栈图示例图例2](https://matplotlib.org/_images/sphx_glr_stackplot_demo_002.png)
 
 这里我们展示了使用stackplot制作流图的示例。
 
@@ -59,7 +59,7 @@ ax.stackplot(range(100), d.T, baseline='wiggle')
 plt.show()
 ```
 
-![堆栈图示例图例3](/static/images/gallery/sphx_glr_stackplot_demo_003.png)
+![堆栈图示例图例3](https://matplotlib.org/_images/sphx_glr_stackplot_demo_003.png)
 
 ## 下载这个示例
 

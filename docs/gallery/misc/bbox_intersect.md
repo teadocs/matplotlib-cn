@@ -2,7 +2,7 @@
 
 与矩形相交的线条用红色着色，而其他线条用蓝色线条留下。此示例展示了intersect_bbox函数。
 
-![改变与盒子相交的线条的颜色示例](/static/images/gallery/sphx_glr_bbox_intersect_001.png)
+![改变与盒子相交的线条的颜色示例](https://matplotlib.org/_images/sphx_glr_bbox_intersect_001.png)
 
 ```python
 import numpy as np

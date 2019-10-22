@@ -21,7 +21,7 @@ ax.set_ylim(-2, 2)
 plt.show()
 ```
 
-![注释图像示例](/static/images/gallery/sphx_glr_annotation_basic_001.png)
+![注释图像示例](https://matplotlib.org/_images/sphx_glr_annotation_basic_001.png)
 
 ## 参考
 

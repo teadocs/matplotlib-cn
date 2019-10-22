@@ -2,7 +2,7 @@
 
 一个事件图，显示具有各种线属性的事件序列。该图以水平和垂直方向显示。
 
-![绘制事件集的示例](/static/images/gallery/sphx_glr_eventplot_demo_001.png);
+![绘制事件集的示例](https://matplotlib.org/_images/sphx_glr_eventplot_demo_001.png);
 
 ```python
 import matplotlib.pyplot as plt

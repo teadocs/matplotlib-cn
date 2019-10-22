@@ -4,7 +4,7 @@
 
 注意如何使用unicode提供y轴的标签！
 
-![使用纹理渲染数学方程示例](/static/images/gallery/sphx_glr_tex_demo_001.png)
+![使用纹理渲染数学方程示例](https://matplotlib.org/_images/sphx_glr_tex_demo_001.png)
 
 ```python
 import numpy as np

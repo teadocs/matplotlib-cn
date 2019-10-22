@@ -50,7 +50,7 @@ fig.tight_layout()
 plt.show()
 ```
 
-![条形图演示](/static/images/gallery/sphx_glr_barchart_demo_001.png)
+![条形图演示](https://matplotlib.org/_images/sphx_glr_barchart_demo_001.png)
 
 这个例子来自一个应用程序，在这个应用程序中，小学体育教师希望能够向父母展示他们的孩子在一些健身测试中的表现，而且重要的是，相对于其他孩子的表现。 为了演示目的提取绘图代码，我们只为小Johnny Doe编制一些数据......
 
@@ -205,7 +205,7 @@ arts = plot_student_results(student, scores, cohort_size)
 plt.show()
 ```
 
-![条形图演示2](/static/images/gallery/sphx_glr_barchart_demo_002.png)
+![条形图演示2](https://matplotlib.org/_images/sphx_glr_barchart_demo_002.png)
 
 ## 下载这个示例
             

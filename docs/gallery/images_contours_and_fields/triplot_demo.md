@@ -42,7 +42,7 @@ ax1.triplot(triang, 'bo-', lw=1)
 ax1.set_title('triplot of Delaunay triangulation')
 ```
 
-![Triplot 演示](/static/images/gallery/sphx_glr_triplot_demo_001.png)
+![Triplot 演示](https://matplotlib.org/_images/sphx_glr_triplot_demo_001.png)
 
 您可以指定自己的三角剖分而不是执行点的Delaunay三角剖分，其中每个三角形由构成三角形的三个点的索引给出，以顺时针或逆时针方式排序。
 
@@ -102,7 +102,7 @@ ax2.set_ylabel('Latitude (degrees)')
 plt.show()
 ```
 
-![Triplot 演示2](/static/images/gallery/sphx_glr_triplot_demo_002.png)
+![Triplot 演示2](https://matplotlib.org/_images/sphx_glr_triplot_demo_002.png)
 
 ## 参考
 

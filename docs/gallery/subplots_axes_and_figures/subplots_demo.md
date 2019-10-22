@@ -23,7 +23,7 @@ ax.plot(x, y)
 ax.set_title('Simple plot')
 ```
 
-![子图演示大全](/static/images/gallery/sphx_glr_subplots_demo_001.png)
+![子图演示大全](https://matplotlib.org/_images/sphx_glr_subplots_demo_001.png)
 
 两个子图，轴数组是一维的。
 
@@ -34,7 +34,7 @@ axarr[0].plot(x, y)
 axarr[1].scatter(x, y)
 ```
 
-![子图演示大全2](/static/images/gallery/sphx_glr_subplots_demo_002.png)
+![子图演示大全2](https://matplotlib.org/_images/sphx_glr_subplots_demo_002.png)
 
 Two subplots, unpack the axes array immediately
 
@@ -45,7 +45,7 @@ ax1.plot(x, y)
 ax2.scatter(x, y)
 ```
 
-![子图演示大全3](/static/images/gallery/sphx_glr_subplots_demo_003.png)
+![子图演示大全3](https://matplotlib.org/_images/sphx_glr_subplots_demo_003.png)
 
 共享x/y轴的三个子图
 
@@ -62,7 +62,7 @@ for ax in axarr:
     ax.label_outer()
 ```
 
-![子图演示大全4](/static/images/gallery/sphx_glr_subplots_demo_004.png)
+![子图演示大全4](https://matplotlib.org/_images/sphx_glr_subplots_demo_004.png)
 
 行和列共享
 
@@ -75,7 +75,7 @@ ax3.scatter(x, 2 * y ** 2 - 1, color='r')
 ax4.plot(x, 2 * y ** 2 - 1, color='r')
 ```
 
-![子图演示大全5](/static/images/gallery/sphx_glr_subplots_demo_005.png)
+![子图演示大全5](https://matplotlib.org/_images/sphx_glr_subplots_demo_005.png)
 
 四个轴，作为二维数组返回
 
@@ -96,7 +96,7 @@ for ax in axarr.flat:
     ax.label_outer()
 ```
 
-![子图演示大全6](/static/images/gallery/sphx_glr_subplots_demo_006.png)
+![子图演示大全6](https://matplotlib.org/_images/sphx_glr_subplots_demo_006.png)
 
 四极轴
 
@@ -116,7 +116,7 @@ f.subplots_adjust(hspace=0.3)
 plt.show()
 ```
 
-![子图演示大全7](/static/images/gallery/sphx_glr_subplots_demo_007.png)
+![子图演示大全7](https://matplotlib.org/_images/sphx_glr_subplots_demo_007.png)
 
 ## 下载这个示例
             

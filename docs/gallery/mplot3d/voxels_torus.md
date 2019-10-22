@@ -2,7 +2,7 @@
 
 演示使用ax.voxels的x，y，z参数。
 
-![具有圆柱坐标的3D体素/体积图示例](/static/images/gallery/sphx_glr_voxels_torus_001.png)
+![具有圆柱坐标的3D体素/体积图示例](https://matplotlib.org/_images/sphx_glr_voxels_torus_001.png)
 
 ```python
 import matplotlib.pyplot as plt

@@ -2,7 +2,7 @@
 
 当绘制时间序列（例如，金融时间序列）时，人们经常想要省去没有数据的日子，即周末。下面的示例显示了如何使用“索引格式化程序”来实现所需的绘图。
 
-![时间序列的自定义刻度格式化程序示例](/static/images/gallery/sphx_glr_date_index_formatter_001.png)
+![时间序列的自定义刻度格式化程序示例](https://matplotlib.org/_images/sphx_glr_date_index_formatter_001.png)
 
 ```python
 import numpy as np

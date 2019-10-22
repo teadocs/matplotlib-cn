@@ -31,7 +31,7 @@ for i, stylename in enumerate(sorted(styles)):
 plt.show()
 ```
 
-![Fancybox演示示例](/static/images/gallery/sphx_glr_fancybox_demo_001.png)
+![Fancybox演示示例](https://matplotlib.org/_images/sphx_glr_fancybox_demo_001.png)
 
 接下来，我们将同时展示多个精美的盒子。
 
@@ -196,7 +196,7 @@ def test_all():
 test_all()
 ```
 
-![Fancybox演示2](/static/images/gallery/sphx_glr_fancybox_demo_002.png)
+![Fancybox演示2](https://matplotlib.org/_images/sphx_glr_fancybox_demo_002.png)
 
 ## 参考
 
