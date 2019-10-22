@@ -242,7 +242,7 @@ BATCH_SIZE = 10      # batch size 大小
 embedding_name = 'emb'
 ```
 
-这里需要特别说明的是，参数 `hidden_dim = 512` 实际指定了LSTM隐层向量的维度为128，关于这一点请参考PaddlePaddle官方文档中[dynamic_lstm](http://www.paddlepaddle.org/documentation/docs/zh/1.2/api_cn/layers_cn.html#dynamic-lstm?from=numpy-cn)的说明。
+这里需要特别说明的是，参数 `hidden_dim = 512` 实际指定了LSTM隐层向量的维度为128，关于这一点请参考PaddlePaddle官方文档中[dynamic_lstm](http://www.paddlepaddle.org/documentation/docs/zh/1.2/api_cn/layers_cn.html#dynamic-lstm?from=matplotlib-cn)的说明。
 
 - 如上文提到，我们用基于英文维基百科训练好的词向量来初始化序列输入、谓词上下文总共6个特征的embedding层参数，在训练中不更新。
 
@@ -569,4 +569,4 @@ print("Inference Shape: ", np_data.shape)
 10. Zhou J, Xu W. [End-to-end learning of semantic role labeling using recurrent neural networks](http://www.aclweb.org/anthology/P/P15/P15-1109.pdf)[C]//Proceedings of the Annual Meeting of the Association for Computational Linguistics. 2015.
 
 <br/>
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://paddlepaddleimage.cdn.bcebos.com/bookimage/camo.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">本教程</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="http://book.paddlepaddle.org/?from=numpy-cn" property="cc:attributionName" rel="cc:attributionURL">PaddlePaddle</a> 创作，采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享 署名-相同方式共享 4.0 国际 许可协议</a>进行许可。
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://paddlepaddleimage.cdn.bcebos.com/bookimage/camo.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">本教程</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="http://book.paddlepaddle.org/?from=matplotlib-cn" property="cc:attributionName" rel="cc:attributionURL">PaddlePaddle</a> 创作，采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享 署名-相同方式共享 4.0 国际 许可协议</a>进行许可。
