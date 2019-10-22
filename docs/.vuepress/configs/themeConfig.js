@@ -28,7 +28,8 @@ module.exports = {
       lastUpdated: '上次更新',
       nav: require('../nav/zh'),
       sidebar: {
-        '/docs/': require('../sidebar/docs_zh')()
+        '/docs/': require('../sidebar/docs_zh')(),
+        '/deep/': require('../sidebar/deep_zh')()
       }
     },
     '/en/': {
