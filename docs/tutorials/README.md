@@ -8,7 +8,7 @@ sidebar: auto
 本页面包含有关使用Matplotlib的更深入的指南。
 它分为初学者、中级和高级部分，以及涵盖特定主题的部分。
 
-有关更短的示例，请参阅我们的[示例页面](/gallery/index.html)。
+有关更短的示例，请参阅我们的[示例陈列馆](/gallery/index.html)。
 您还可以在我们的[用户指南](https://matplotlib.org/contents.html)中找到[外部资源](/resources/index.html)
 和[常见问题解答](/faq/index.html)。
 

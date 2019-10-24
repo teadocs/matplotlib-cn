@@ -83,14 +83,25 @@ async function main() {
     for (const item of block.list) {
       // item.poster = await uploadImage(item.poster);
       // item.text = await translation(item.text);
-      // let data = await request.get(item.url);
+      // if (item.url.indexOf('usage.html') !== -1) {
+      //   continue;
+      // } 
+      console.log('item.url', item.url);
+      let data = await request.get(item.url);
       let _url = item.url.split('.html')[0];
       let url = _url.replace(C.GALLERY_BASE_URL, '');
       item.url = url;
       // console.log('C.GALLERY_BASE_URL', C.GALLERY_BASE_URL);
-      // outputMd(url, htmlToMd(data.data));
+      let content = htmlToMd(data.data);
+      content = `---
+sidebarDepth: 3
+sidebar: auto
+---
+
+` + content;
+      outputMd(url, content);
       // console.log('url', url);
-      // await sleep(500);
+      await sleep(500);
     }
   }
   generateIndex(jsonList);

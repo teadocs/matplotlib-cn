@@ -46,7 +46,10 @@ class Convert {
         content = `\n##### ${this.getHtext(el)}\n`;
         break;
       case 'TABLE': {
-        let tempContent = this.$(el).prop("innerText");
+        let tempContent = el.innerText;
+        if (tempContent == undefined) {
+          tempContent = this.$(el).text();
+        }
         tempContent = tempContent.replace(new RegExp(/(	)/g), ' | ');
         let tempArr = tempContent.split('\n');
         let tempArr2 = tempArr[0].split('|');

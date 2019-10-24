@@ -4,6 +4,7 @@
 
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
+const C = require('./const');
 
 function getStruct ($, el) {
   let title = $(el).find('h2').text();
@@ -24,7 +25,7 @@ function getStruct ($, el) {
     poster = poster.replace('../', 'https://matplotlib.org/');
     let text = $(figureEl).find('.caption-text').text();
     let url = $(figureEl).find('a').attr('href');
-    url = 'https://matplotlib.org/gallery/' + url;
+    url = C.GALLERY_BASE_URL + url;
     block.list.push({
       poster,
       text,
