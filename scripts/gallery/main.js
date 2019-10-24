@@ -50,7 +50,7 @@ jsonList.forEach(block => {
         <img src="${item.poster}" />
       </div>
       <div class="text">
-        <a href="${item.url}">${item.text}</a>
+        <a href="${item.url}.html">${item.text}</a>
       </div>
     </li>`;
   });
@@ -79,18 +79,18 @@ async function main() {
   // return false;
   for (const block of jsonList) {
     console.log(block.title);
-    block.title = await translation(block.title);
+    // block.title = await translation(block.title);
     for (const item of block.list) {
-      item.poster = await uploadImage(item.poster);
-      item.text = await translation(item.text);
-      let data = await request.get(item.url);
+      // item.poster = await uploadImage(item.poster);
+      // item.text = await translation(item.text);
+      // let data = await request.get(item.url);
       let _url = item.url.split('.html')[0];
       let url = _url.replace(C.GALLERY_BASE_URL, '');
       item.url = url;
       // console.log('C.GALLERY_BASE_URL', C.GALLERY_BASE_URL);
       // outputMd(url, htmlToMd(data.data));
       // console.log('url', url);
-      await sleep(500);
+      // await sleep(500);
     }
   }
   generateIndex(jsonList);
