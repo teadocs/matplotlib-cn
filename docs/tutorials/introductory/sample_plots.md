@@ -3,14 +3,14 @@ sidebarDepth: 3
 sidebar: auto
 ---
 
-# Sample plots in Matplotlib
+# Matplotlib的简单图表
 
-Here you'll find a host of example plots with the code that
-generated them.
+在这里，您将找到大量示例图以及生成它们的代码
 
-## Line Plot
+## 折线图
 
 Here's how to create a line plot with text labels using
+创建带有文本标签的折线图的方法 
 [``plot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot).
 
 <center>
@@ -18,13 +18,13 @@ Here's how to create a line plot with text labels using
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_simple_plot_0011.png">
   </a>
   <p>
-    <b>Simple Plot</b>
+    <b>简单图</b>
   </p>
 </center>
 
-## Multiple subplots in one figure
+## 一个图中有多个子图
 
-Multiple axes (i.e. subplots) are created with the
+通过subplot()函数可以创建多个轴（即子图） 
 [``subplot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot) function:
 
 <center>
@@ -32,14 +32,13 @@ Multiple axes (i.e. subplots) are created with the
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_subplot_0011.png">
   </a>
   <p>
-    <b>Subplot</b>
+    <b>子图</b>
   </p>
 </center>
 
-## Images
+## 图片
 
-Matplotlib can display images (assuming equally spaced
-horizontal dimensions) using the [``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) function.
+Matplotlib可以使用[``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) 函数显示图像（假设为水平等距）.
 
 <center>
   <a href="/gallery/images_contours_and_fields/image_demo.html">
@@ -47,15 +46,12 @@ horizontal dimensions) using the [``imshow()``](https://matplotlib.org/api/_as_g
   </a>
 </center>
 
-**Example of using [``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) to display a CT scan**
+**[``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) 函数用于显示CT扫描图像**
 
-## Contouring and pseudocolor
+## 轮廓和伪色
 
-The [``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) function can make a colored
-representation of a two-dimensional array, even if the horizontal dimensions
-are unevenly spaced. The
-[``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour) function is another way to represent
-the same data:
+[``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) 即使水平尺寸的间距不均匀，该函数也可以用彩色表示二维数组。
+[``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour) 函数是表示相同数据的另一种方式：
 
 <center>
   <a href="/gallery/images_contours_and_fields/pcolormesh_levels.html">
@@ -63,41 +59,39 @@ the same data:
   </a>
 </center>
 
-**Example comparing [``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) and [``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour) for plotting two-dimensional data**
+**比较 [``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) 和 [``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour) 绘制二维数据的示例**
 
-## Histograms
+## 直方图
 
-The [``hist()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist) function automatically generates
-histograms and returns the bin counts or probabilities:
+[``hist()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist)函数自动生成直方图，并返回bin计数或概率：
 
 <center>
   <a href="/gallery/statistics/histogram_features.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_histogram_features_0011.png">
   </a>
   <p>
-    <b>Histogram Features</b>
+    <b>直方图功能</b>
   </p>
 </center>
 
-## Paths
+## 路径
 
-You can add arbitrary paths in Matplotlib using the
-[``matplotlib.path``](https://matplotlib.org/api/path_api.html#module-matplotlib.path) module:
+你可以使用
+[``matplotlib.path``](https://matplotlib.org/api/path_api.html#module-matplotlib.path) 模块在Matplotlib中添加任意路径 ：
 
 <center>
   <a href="/gallery/shapes_and_collections/path_patch.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_path_patch_0011.png">
   </a>
   <p>
-    <b>Path Patch</b>
+    <b>路径补丁</b>
   </p>
 </center>
 
-## Three-dimensional plotting
+## 三维绘图
 
-The mplot3d toolkit (see [Getting started](https://matplotlib.org//toolkits/mplot3d.html#toolkit-mplot3d-tutorial) and
-[3D plotting](https://matplotlib.org/gallery/index.html#mplot3d-examples-index)) has support for simple 3d graphs
-including surface, wireframe, scatter, and bar charts.
+mplot3d 工具包 (请参阅 [入门](https://matplotlib.org//toolkits/mplot3d.html#toolkit-mplot3d-tutorial) and
+[3D 绘图](https://matplotlib.org/gallery/index.html#mplot3d-examples-index)) 支持简单的3d图形，包括表面图，线框图，散点图和条形图。
 
 <center>
   <a href="/gallery/mplot3d/surface3d.html">
@@ -108,119 +102,98 @@ including surface, wireframe, scatter, and bar charts.
   </p>
 </center>
 
-Thanks to John Porter, Jonathon Taylor, Reinier Heeres, and Ben Root for
-the ``mplot3d`` toolkit. This toolkit is included with all standard Matplotlib
-installs.
+感谢John Porter，Jonathon Taylor，Reinier Heeres和Ben Root提供的mplot3d工具包。该工具包包含在所有标准Matplotlib安装中。
 
-## Streamplot
+## 流图
 
-The [``streamplot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.streamplot.html#matplotlib.pyplot.streamplot) function plots the streamlines of
-a vector field. In addition to simply plotting the streamlines, it allows you
-to map the colors and/or line widths of streamlines to a separate parameter,
-such as the speed or local intensity of the vector field.
+[``streamplot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.streamplot.html#matplotlib.pyplot.streamplot) 函数绘制矢量场的流线。除了简单地绘制流线之外，它还允许您将流线的颜色和/或线宽映射到单独的参数，例如矢量场的速度或局部强度
 
 <center>
   <a href="/gallery/images_contours_and_fields/plot_streamplot.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_plot_streamplot_0011.png">
   </a>
   <p>
-    <b>Streamplot with various plotting options.</b>
+    <b>具有各种绘图选项的Streamplot.</b>
   </p>
 </center>
 
-This feature complements the [``quiver()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver) function for
-plotting vector fields. Thanks to Tom Flannaghan and Tony Yu for adding the
-streamplot function.
+此功能补充了 [``quiver()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver) 绘制矢量场的功能。感谢Tom Flannaghan和Tony Yu添加了streamplot函数
 
-## Ellipses
+## 椭圆形
 
-In support of the [Phoenix](http://www.jpl.nasa.gov/news/phoenix/main.php)
-mission to Mars (which used Matplotlib to display ground tracking of
-spacecraft), Michael Droettboom built on work by Charlie Moad to provide
-an extremely accurate 8-spline approximation to elliptical arcs (see
-[``Arc``](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)), which are insensitive to zoom level.
+为了支持 [凤凰号](http://www.jpl.nasa.gov/news/phoenix/main.php)
+火星飞行任务（使用Matplotlib来显示航天器的地面跟踪），迈克尔·德罗特布姆（Michael Droettboom）建立在查理·莫阿德（Charlie Moad）的工作基础上，提供了对椭圆弧非常精确的8样条曲线(请参阅参考 
+[``Arc``](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)), w该椭圆对缩放级别不敏感。
 
 <center>
   <a href="/gallery/shapes_and_collections/ellipse_demo.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_ellipse_demo_0011.png">
   </a>
   <p>
-    <b>Ellipse Demo</b>
+    <b>椭圆演示</b>
   </p>
 </center>
 
-## Bar charts
+## 条形图
 
-Use the [``bar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar) function to make bar charts, which
-includes customizations such as error bars:
+[``bar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar) 函数制作条形图，其中包括诸如误差线之类的自定义项：
 
 <center>
   <a href="/gallery/statistics/barchart_demo.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_barchart_demo_0011.png">
   </a>
   <p>
-    <b>Barchart Demo</b>
+    <b>条形图演示</b>
   </p>
 </center>
 
-You can also create stacked bars
+您还可以创建堆叠的条形图
 ([bar_stacked.py](https://matplotlib.org/gallery/lines_bars_and_markers/bar_stacked.html)),
-or horizontal bar charts
+或水平条形图
 ([barh.py](https://matplotlib.org/gallery/lines_bars_and_markers/barh.html)).
 
-## Pie charts
+## 饼状图
 
-The [``pie()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pie.html#matplotlib.pyplot.pie) function allows you to create pie
-charts. Optional features include auto-labeling the percentage of area,
-exploding one or more wedges from the center of the pie, and a shadow effect.
-Take a close look at the attached code, which generates this figure in just
-a few lines of code.
+[``pie()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pie.html#matplotlib.pyplot.pie) 函数允许您创建饼状图。可选功能包括自动标记面积百分比，从饼图中心爆炸一个或多个楔形，以及阴影效果。请仔细查看附带的代码，该代码仅用几行代码即可生成此图。
 
 <center>
   <a href="/gallery/pie_and_polar_charts/pie_features.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_pie_features_0011.png">
   </a>
   <p>
-    <b>Pie Features</b>
+    <b>饼状图</b>
   </p>
 </center>
 
 ## Tables
 
-The [``table()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.table.html#matplotlib.pyplot.table) function adds a text table
-to an axes.
+[``table()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.table.html#matplotlib.pyplot.table) 函数将文本表添加到轴
 
 <center>
   <a href="/gallery/misc/table_demo.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_table_demo_0011.png">
   </a>
   <p>
-    <b>Table Demo</b>
+    <b>演示图</b>
   </p>
 </center>
 
-## Scatter plots
+## 散点图
 
-The [``scatter()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter) function makes a scatter plot
-with (optional) size and color arguments. This example plots changes
-in Google's stock price, with marker sizes reflecting the
-trading volume and colors varying with time. Here, the
-alpha attribute is used to make semitransparent circle markers.
+[``scatter()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter) 函数使用（可选）大小和颜色参数绘制散点图。本示例绘制了Google股票价格的变化图，标记大小反映了交易量，颜色随时间变化。在此，alpha属性用于制作半透明的圆形标记。
 
 <center>
   <a href="/gallery/lines_bars_and_markers/scatter_demo2.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_scatter_demo2_0011.png">
   </a>
   <p>
-    <b>Scatter Demo2</b>
+    <b>散点图 演示2</b>
   </p>
 </center>
 
-## GUI widgets
+## GUI小部件
 
-Matplotlib has basic GUI widgets that are independent of the graphical
-user interface you are using, allowing you to write cross GUI figures
-and widgets. See [``matplotlib.widgets``](https://matplotlib.org/api/widgets_api.html#module-matplotlib.widgets) and the
+Matplotlib具有与所使用的图形用户界面无关的基本GUI小部件，可让您编写跨GUI图形和小部件。请参阅 [``matplotlib.widgets``](https://matplotlib.org/api/widgets_api.html#module-matplotlib.widgets) 和
 [widget examples](https://matplotlib.org/gallery/index.html).
 
 <center>
@@ -228,79 +201,73 @@ and widgets. See [``matplotlib.widgets``](https://matplotlib.org/api/widgets_api
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_slider_demo_0011.png">
   </a>
   <p>
-    <b>Slider and radio-button GUI.</b>
+    <b>滑块和单选按钮GUI.</b>
   </p>
 </center>
 
-## Filled curves
+## 填充曲线
 
-The [``fill()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill.html#matplotlib.pyplot.fill) function lets you
-plot filled curves and polygons:
+[``fill()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill.html#matplotlib.pyplot.fill) 函数使您可以绘制填充的曲线和多边形：
 
 <center>
   <a href="/gallery/lines_bars_and_markers/fill.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_fill_0011.png">
   </a>
   <p>
-    <b>Fill</b>
+    <b>填充</b>
   </p>
 </center>
 
-Thanks to Andrew Straw for adding this function.
+感谢Andrew Straw添加了此功能。
 
-## Date handling
+## 日期处理
 
-You can plot timeseries data with major and minor ticks and custom
-tick formatters for both.
+您可以使用主要和次要刻度线以及自定义刻度线格式器来绘制时间序列数据。
 
 <center>
   <a href="/gallery/text_labels_and_annotations/date.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_date_0011.png">
   </a>
   <p>
-    <b>Date</b>
+    <b>日期</b>
   </p>
 </center>
 
-See [``matplotlib.ticker``](https://matplotlib.org/api/ticker_api.html#module-matplotlib.ticker) and [``matplotlib.dates``](https://matplotlib.org/api/dates_api.html#module-matplotlib.dates) for details and usage.
+有关详细信息和用法，请参见[``matplotlib.ticker``](https://matplotlib.org/api/ticker_api.html#module-matplotlib.ticker) 和 [``matplotlib.dates``](https://matplotlib.org/api/dates_api.html#module-matplotlib.dates)
 
-## Log plots
+## 对数图
 
-The [``semilogx()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogx.html#matplotlib.pyplot.semilogx),
-[``semilogy()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogy.html#matplotlib.pyplot.semilogy) and
-[``loglog()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.loglog.html#matplotlib.pyplot.loglog) functions simplify the creation of
-logarithmic plots.
+[``semilogx()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogx.html#matplotlib.pyplot.semilogx),
+[``semilogy()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogy.html#matplotlib.pyplot.semilogy) 和
+[``loglog()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.loglog.html#matplotlib.pyplot.loglog) 功能简化了对数图的创建
 
 <center>
   <a href="/gallery/scales/log_demo.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_log_demo_0011.png">
   </a>
   <p>
-    <b>Log Demo</b>
+    <b>演示</b>
   </p>
 </center>
 
-Thanks to Andrew Straw, Darren Dale and Gregory Lielens for contributions
-log-scaling infrastructure.
+感谢Andrew Straw，Darren Dale和Gregory Lielens为日志扩展基础架构做出的贡献。
 
-## Polar plots
+## 极坐标图
 
-The [``polar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.polar.html#matplotlib.pyplot.polar) function generates polar plots.
+[``polar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.polar.html#matplotlib.pyplot.polar) 函数生成极坐标图。
 
 <center>
   <a href="/gallery/pie_and_polar_charts/polar_demo.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_polar_demo_0011.png">
   </a>
   <p>
-    <b>Polar Demo</b>
+    <b>演示</b>
   </p>
 </center>
 
 ## Legends
 
-The [``legend()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend) function automatically
-generates figure legends, with MATLAB-compatible legend-placement
-functions.
+[``legend()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend) 函数通过与MATLAB兼容的图例放置功能自动生成图形图例。
 
 <center>
   <a href="/gallery/text_labels_and_annotations/legend.html">
@@ -311,65 +278,58 @@ functions.
   </p>
 </center>
 
-Thanks to Charles Twardy for input on the legend function.
+感谢Charles Twardy在图例功能上的输入。
 
-## TeX-notation for text objects
+## 文本对象的TeX表示法
 
-Below is a sampling of the many TeX expressions now supported by Matplotlib's
-internal mathtext engine. The mathtext module provides TeX style mathematical
-expressions using [FreeType](https://www.freetype.org/)
-and the DejaVu, BaKoMa computer modern, or [STIX](http://www.stixfonts.org)
-fonts. See the [``matplotlib.mathtext``](https://matplotlib.org/api/mathtext_api.html#module-matplotlib.mathtext) module for additional details.
+下面是Matplotlib的内部mathtext引擎现在支持的许多TeX表达式的示例。mathtext模块使用[FreeType](https://www.freetype.org/)
+和DejaVu，BaKoMa computer modern或[STIX](http://www.stixfonts.org)
+字体提供TeX样式的数学表达式。有关[``matplotlib.mathtext``](https://matplotlib.org/api/mathtext_api.html#module-matplotlib.mathtext) 其他详细信息，请参见模块
 
 <center>
   <a href="/gallery/text_labels_and_annotations/mathtext_examples.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_mathtext_examples_0011.png">
   </a>
   <p>
-    <b>Mathtext Examples</b>
+    <b>Mathtext 示例</b>
   </p>
 </center>
 
-Matplotlib's mathtext infrastructure is an independent implementation and
-does not require TeX or any external packages installed on your computer. See
-the tutorial at [Writing mathematical expressions](https://matplotlib.org//text/mathtext.html).
+Matplotlib的mathtext基础结构是独立的实现，不需要在计算机上安装TeX或任何外部软件包。请参阅[Writing mathematical expressions](https://matplotlib.org//text/mathtext.html).
 
-## Native TeX rendering
+## 本机TeX渲染
 
-Although Matplotlib's internal math rendering engine is quite
-powerful, sometimes you need TeX. Matplotlib supports external TeX
-rendering of strings with the *usetex* option.
+尽管Matplotlib的内部数学渲染引擎非常强大，但有时您需要TeX。Matplotlib通过usetex选项支持字符串的外部TeX渲染。
 
 <center>
   <a href="/gallery/text_labels_and_annotations/tex_demo.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_tex_demo_0011.png">
   </a>
   <p>
-    <b>Tex Demo</b>
+    <b>Tex 演示</b>
   </p>
 </center>
 
-## EEG GUI
+## 脑电图
 
-You can embed Matplotlib into pygtk, wx, Tk, or Qt applications.
-Here is a screenshot of an EEG viewer called [pbrain](https://github.com/nipy/pbrain).
+您可以将Matplotlib嵌入pygtk，wx，Tk或Qt应用程序中。这是一个称为[pbrain](https://github.com/nipy/pbrain)的EEG查看器的屏幕截图。
 
 ![eeg_small](https://matplotlib.org/_images/eeg_small.png)
 
-The lower axes uses [``specgram()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.specgram.html#matplotlib.pyplot.specgram)
-to plot the spectrogram of one of the EEG channels.
+下轴用于 [``specgram()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.specgram.html#matplotlib.pyplot.specgram)
+绘制EEG通道之一的频谱图。
 
-For examples of how to embed Matplotlib in different toolkits, see:
+有关如何在不同的工具包中嵌入Matplotlib的示例，请参见：
 
-- [Embedding in GTK3](https://matplotlib.org/gallery/user_interfaces/embedding_in_gtk3_sgskip.html)
-- [Embedding in wx #2](https://matplotlib.org/gallery/user_interfaces/embedding_in_wx2_sgskip.html)
-- [Matplotlib With Glade 3](https://matplotlib.org/gallery/user_interfaces/mpl_with_glade3_sgskip.html)
-- [Embedding in Qt](https://matplotlib.org/gallery/user_interfaces/embedding_in_qt_sgskip.html)
-- [Embedding in Tk](https://matplotlib.org/gallery/user_interfaces/embedding_in_tk_sgskip.html)
+- [嵌入GTK3](https://matplotlib.org/gallery/user_interfaces/embedding_in_gtk3_sgskip.html)
+- [嵌入 wx #2](https://matplotlib.org/gallery/user_interfaces/embedding_in_wx2_sgskip.html)
+- [Matplotlib 与 Glade 3](https://matplotlib.org/gallery/user_interfaces/mpl_with_glade3_sgskip.html)
+- [嵌入 Qt](https://matplotlib.org/gallery/user_interfaces/embedding_in_qt_sgskip.html)
+- [嵌入 Tk](https://matplotlib.org/gallery/user_interfaces/embedding_in_tk_sgskip.html)
 
-## XKCD-style sketch plots
+## XKCD样式的草图
 
-Just for fun, Matplotlib supports plotting in the style of ``xkcd``.
+仅出于娱乐目的，Matplotlib支持以样式绘制xkcd。
 
 <center>
   <a href="/gallery/showcase/xkcd.html">
@@ -380,10 +340,9 @@ Just for fun, Matplotlib supports plotting in the style of ``xkcd``.
   </p>
 </center>
 
-## Subplot example
+## 子图示例
 
-Many plot types can be combined in one figure to create
-powerful and flexible representations of data.
+许多图类型可以组合在一个图中，以创建强大而灵活的数据表示形式。
 
 <center>
   <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_sample_plots_001.png">
@@ -405,7 +364,7 @@ axs[1, 1].hist2d(data[0], data[1])
 plt.show()
 ```
 
-## Download
+## 下载地址
 
-- [Download Python source code: sample_plots.py](https://matplotlib.org/_downloads/6b0f2d1b3dc8d0e75eaa96feb738e947/sample_plots.py)
-- [Download Jupyter notebook: sample_plots.ipynb](https://matplotlib.org/_downloads/dcfd63fc031d50e9c085f5dc4aa458b1/sample_plots.ipynb)
+- [下载Python源代码：sample_plots.py](https://matplotlib.org/_downloads/6b0f2d1b3dc8d0e75eaa96feb738e947/sample_plots.py)
+- [下载Jupyter笔记本：sample_plots.ipynb](https://matplotlib.org/_downloads/dcfd63fc031d50e9c085f5dc4aa458b1/sample_plots.ipynb)
