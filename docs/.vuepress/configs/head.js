@@ -86,5 +86,30 @@ module.exports = [
     src: 'https://hm.baidu.com/hm.js?ffb401b873c9c6f5368dcd814cd15ba7',
     defer: 'defer',
     async: 'true'
-  }]
+  }],
+  // 谷歌统计
+  ['script', {
+    src: 'https://www.googletagmanager.com/gtag/js?id=UA-163860037-3',
+    defer: 'defer',
+    async: 'true'
+  }],
+  // 谷歌统计第二段代码
+  ['script', {}, `
+  (function() {
+    document.onreadystatechange = function() {
+      if (document.readyState == 'complete') {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-163860037-3');
+      }
+    }
+  })();
+`],
+  // 广告系统
+  ['script', {}, `
+  (function() {
+    document.write("<s"+"cript defer='defer' type='text/javascript' src='https://analytics.numpy.org.cn/public/ad.js?"+Math.random()+"'></scr"+"ipt>"); 
+  })();
+  `],
 ]
