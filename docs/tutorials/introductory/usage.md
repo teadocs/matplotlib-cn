@@ -59,12 +59,12 @@ import numpy as np
 ### ``Figure``
 
 The **whole** figure. The figure keeps
-track of all the child [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes), a smattering of
+track of all the child [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes), a smattering of
 'special' artists (titles, figure legends, etc), and the **canvas**.
 (Don't worry too much about the canvas, it is crucial as it is the
 object that actually does the drawing to get you your plot, but as the
 user it is more-or-less invisible to you). A figure can have any
-number of [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes), but to be useful should have
+number of [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes), but to be useful should have
 at least one.
 
 The easiest way to create a new figure is with pyplot:
@@ -83,7 +83,7 @@ fig, ax_lst = plt.subplots(2, 2)  # a figure with a 2x2 grid of Axes
 
 This is what you think of as 'a plot', it is the region of the image
 with the data space. A given figure
-can contain many Axes, but a given [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes)
+can contain many Axes, but a given [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)
 object can only be in one [``Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure). The
 Axes contains two (or three in the case of 3D)
 [``Axis``](https://matplotlib.orgapi/axis_api.html#matplotlib.axis.Axis) objects (be aware of the difference
@@ -559,7 +559,7 @@ plt.xlabel("index")
 
 and you will see the plot being updated after each line. Since version 1.5,
 modifying the plot by other means *should* also automatically
-update the display on most backends. Get a reference to the [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) instance,
+update the display on most backends. Get a reference to the [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) instance,
 and call a method of that instance:
 
 ``` python

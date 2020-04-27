@@ -5,55 +5,55 @@ sidebar: auto
 
 # API 概览
 
-- [Usage patterns](https://matplotlib.org/api/index.html#usage-patterns)
-  - [The pyplot API](https://matplotlib.org/api/index.html#the-pyplot-api)
-  - [The object-oriented API](https://matplotlib.org/api/index.html#the-object-oriented-api)
-  - [The pylab API (disapproved)](https://matplotlib.org/api/index.html#the-pylab-api-disapproved)
-- [Modules](https://matplotlib.org/api/index.html#modules)
-- [Toolkits](https://matplotlib.org/api/index.html#toolkits)
+- [使用方法](https://matplotlib.org/api/index.html#usage-patterns)
+  - [绘图API](https://matplotlib.org/api/index.html#the-pyplot-api)
+  - [面向对象的API](https://matplotlib.org/api/index.html#the-object-oriented-api)
+  - [pylabAPI（不建议使用）](https://matplotlib.org/api/index.html#the-pylab-api-disapproved)
+- [模块](https://matplotlib.org/api/index.html#modules)
+- [工具包](https://matplotlib.org/api/index.html#toolkits)
 
-See also the [API Changes](https://matplotlib.org/api/api_changes.html).
+另外你还可以看 [API 改动日志](https://matplotlib.org/api/api_changes.html).
 
-## Usage patterns
+## 使用方法
 
-Below we describe several common approaches to plotting with Matplotlib.
+下面，我们描述使用Matplotlib进行绘图的几种常用方法。
 
-### The pyplot API
+### pylot API
 
-[matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) is a collection of command style functions that make Matplotlib work like MATLAB. Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc.
+[matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)是一组命令样式函数，使Matplotlib的工作方式类似于MATLAB。每个pylot函数对图形进行一些更改：例如，创建图形、在图形中创建绘图区域、在绘图区域中绘制一些线、使用标签装饰绘图等。
 
-[pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) is mainly intended for interactive plots and simple cases of programmatic plot generation.
+[pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) 主要用于交互式绘图和编程绘图生成简单图例。
 
-Further reading:
+进一步阅读：
 
-- The [matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) function reference
-- [Pyplot tutorial](https://matplotlib.org/tutorials/introductory/pyplot.html)
-- [Pyplot examples](https://matplotlib.org/gallery/index.html#pyplots-examples)
+- [matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) 函数引用
+- [Pyplot 教程](/tutorials/introductory/pyplot.html)
+- [Pyplot 例子](/gallery/index.html)
 
-### The object-oriented API
+### 面向对象的API
 
-At its core, Matplotlib is object-oriented. We recommend directly working with the objects, if you need more control and customization of your plots.
+Matplotlib的核心是面向对象的。如果需要对 plots 进行更多控制和自定义，我们建议直接使用对象。
 
-In many cases you will create a [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) and one or more [Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) using [pyplot.subplots](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots) and from then on only work on these objects. However, it's also possible to create [Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)s explicitly (e.g. when including them in GUI applications).
+在许多情况下，您将使用 [pyplot.subplots](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots) 创建一个 [图形](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) 和一个或多个 [轴](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) ，然后只处理这些对象。不过，也可以显式创建[图形](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)(例如，当图形包含在GUI应用程序中时)。
 
-Further reading:
+进一步阅读：
 
-- [matplotlib.axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) and [matplotlib.figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) for an overview of plotting functions.
-- Most of the [examples](https://matplotlib.org/gallery/index.html#examples-index) use the object-oriented approach (except for the pyplot section)
+- 有关绘图函数的概述，请参阅 [matplotlib.axes.Axes](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) 和 [matplotlib.figure.Figure](https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)。
+- 大多数[示例](https://matplotlib.org/gallery/index.html#examples-index)都使用面向对象的方法(pyploy节除外)。
 
-### The pylab API (disapproved)
+### pylab接口（不建议）
 
-::: danger Warning
+::: danger 警告
 
-Since heavily importing into the global namespace may result in unexpected behavior, the use of pylab is strongly discouraged. Use [matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) instead.
+由于大量导入到全局名称空间可能会导致意外行为，因此强烈建议不要使用pylab。请改用[matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)。
 
 :::
 
-pylab is a module that includes [matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot), [numpy](https://docs.scipy.org/doc/numpy/reference/index.html#module-numpy) and some additional functions within a single namespace. Its original purpose was to mimic a MATLAB-like way of working by importing all functions into the global namespace. This is considered bad style nowadays.
+pylab是一个模块，它在单个名称空间中包含[matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)、[numpy](https://docs.scipy.org/doc/numpy/reference/index.html#module-numpy)和一些附加函数。它最初的目的是通过将所有函数导入全局名称空间来模仿类似 MATLAB 的工作方式。这在当今被认为是不好的风格。
 
-## Modules
+## 模块
 
-Matplotlib consists of the following submodules:
+Matplotlib由以下子模块组成：
 
 - [matplotlib](https://matplotlib.org/api/matplotlib_configuration_api.html)
 - [matplotlib.afm](https://matplotlib.org/api/afm_api.html)
@@ -111,9 +111,9 @@ Matplotlib consists of the following submodules:
 - [matplotlib.units](https://matplotlib.org/api/units_api.html)
 - [matplotlib.widgets](https://matplotlib.org/api/widgets_api.html)
 
-## Toolkits
+## 工具包
 
-[Toolkits](https://matplotlib.org/api/toolkits/index.html#toolkits-index) are collections of application-specific functions that extend Matplotlib. The following toolkits are included:
+[Toolkits](https://matplotlib.org/api/toolkits/index.html#toolkits-index)是扩展Matplotlib的特定于应用程序的函数的集合。其中包括以下工具包：
 
 - [Toolkits](https://matplotlib.org/api/toolkits/index.html)
 - [mplot3d API](https://matplotlib.org/api/toolkits/mplot3d.html)

@@ -21,7 +21,7 @@ by Chris Moffitt. It was transformed into this tutorial by Chris Holdgraf.
 ## A note on the Object-Oriented API vs Pyplot
 
 Matplotlib has two interfaces. The first is an object-oriented (OO)
-interface. In this case, we utilize an instance of [``axes.Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes)
+interface. In this case, we utilize an instance of [``axes.Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)
 in order to render visualizations on an instance of [``figure.Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure).
 
 The second is based on MATLAB and uses a state-based interface. This is
@@ -76,7 +76,7 @@ group_mean = np.mean(group_data)
 This data is naturally visualized as a barplot, with one bar per
 group. To do this with the object-oriented approach, we'll first generate
 an instance of [``figure.Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) and
-[``axes.Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes). The Figure is like a canvas, and the Axes
+[``axes.Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes). The Figure is like a canvas, and the Axes
 is a part of that canvas on which we will make a particular visualization.
 
 ::: tip Note
@@ -256,7 +256,7 @@ ax.xaxis.set_major_formatter(formatter)
 ## Combining multiple visualizations
 
 It is possible to draw multiple plot elements on the same instance of
-[``axes.Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes). To do this we simply need to call another one of
+[``axes.Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes). To do this we simply need to call another one of
 the plot methods on that axes object.
 
 ``` python

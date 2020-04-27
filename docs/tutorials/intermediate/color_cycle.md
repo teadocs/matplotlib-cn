@@ -65,7 +65,7 @@ plt.rc('axes', prop_cycle=default_cycler)
 Now we'll generate a figure with two axes, one on top of the other. On the
 first axis, we'll plot with the default cycler. On the second axis, we'll
 set the ``prop_cycle`` using [``matplotlib.axes.Axes.set_prop_cycle()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_prop_cycle.html#matplotlib.axes.Axes.set_prop_cycle),
-which will only set the ``prop_cycle`` for this [``matplotlib.axes.Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes)
+which will only set the ``prop_cycle`` for this [``matplotlib.axes.Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)
 instance. We'll use a second ``cycler`` that combines a color cycler and a
 linewidth cycler.
 

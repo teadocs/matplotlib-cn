@@ -317,7 +317,7 @@ In [70]: plt.setp(lines)
 MATLAB, and [``pyplot``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot), have the concept of the current
 figure and the current axes. All plotting commands apply to the
 current axes. The function [``gca()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.gca.html#matplotlib.pyplot.gca) returns the
-current axes (a [``matplotlib.axes.Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) instance), and
+current axes (a [``matplotlib.axes.Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) instance), and
 [``gcf()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.gcf.html#matplotlib.pyplot.gcf) returns the current figure
 ([``matplotlib.figure.Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) instance). Normally, you don't have
 to worry about this, because it is all taken care of behind the

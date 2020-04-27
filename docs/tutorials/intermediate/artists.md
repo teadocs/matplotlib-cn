@@ -29,9 +29,9 @@ represent the standard graphical objects we want to paint onto our canvas:
 [``Line2D``](https://matplotlib.orgapi/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D), [``Rectangle``](https://matplotlib.orgapi/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle),
 [``Text``](https://matplotlib.orgapi/text_api.html#matplotlib.text.Text), [``AxesImage``](https://matplotlib.orgapi/image_api.html#matplotlib.image.AxesImage), etc., and
 the containers are places to put them ([``Axis``](https://matplotlib.orgapi/axis_api.html#matplotlib.axis.Axis),
-[``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) and [``Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)). The
+[``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) and [``Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)). The
 standard use is to create a [``Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) instance, use
-the ``Figure`` to create one or more [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) or
+the ``Figure`` to create one or more [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) or
 ``Subplot`` instances, and use the ``Axes`` instance
 helper methods to create the primitives. In the example below, we create a
 ``Figure`` instance using [``matplotlib.pyplot.figure()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure), which is a
@@ -49,7 +49,7 @@ fig = plt.figure()
 ax = fig.add_subplot(2, 1, 1) # two rows, one column, first plot
 ```
 
-The [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) is probably the most important
+The [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) is probably the most important
 class in the matplotlib API, and the one you will be working with most
 of the time. This is because the ``Axes`` is the plotting area into
 which most of the objects go, and the ``Axes`` has many special helper
@@ -162,7 +162,7 @@ Every element in the figure is represented by a matplotlib
 properties to configure its appearance. The figure itself contains a
 [``Rectangle``](https://matplotlib.orgapi/_as_gen/matplotlib.patches.Rectangle.html#matplotlib.patches.Rectangle) exactly the size of the figure,
 which you can use to set the background color and transparency of the
-figures. Likewise, each [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) bounding box
+figures. Likewise, each [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) bounding box
 (the standard white box with black edges in the typical matplotlib
 plot, has a ``Rectangle`` instance that determines the color,
 transparency, and other properties of the Axes. These instances are
@@ -295,7 +295,7 @@ primitives and containers. The primitives are usually the things you
 want to configure (the font of a [``Text``](https://matplotlib.orgapi/text_api.html#matplotlib.text.Text)
 instance, the width of a [``Line2D``](https://matplotlib.orgapi/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D)) although
 the containers also have some properties as well -- for example the
-[``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) [``Artist``](https://matplotlib.orgapi/artist_api.html#matplotlib.artist.Artist) is a
+[``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) [``Artist``](https://matplotlib.orgapi/artist_api.html#matplotlib.artist.Artist) is a
 container that contains many of the primitives in your plot, but it
 also has properties like the ``xscale`` to control whether the xaxis
 is 'linear' or 'log'. In this section we'll review where the various
@@ -408,7 +408,7 @@ A list Figure Text instances
 
 ### Axes container
 
-The [``matplotlib.axes.Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) is the center of the matplotlib
+The [``matplotlib.axes.Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) is the center of the matplotlib
 universe -- it contains the vast majority of all the ``Artists`` used
 in a figure with many helper methods to create and add these
 ``Artists`` to itself, as well as helper methods to access and
@@ -762,7 +762,7 @@ plt.show()
 
 The [``matplotlib.axis.Tick``](https://matplotlib.orgapi/axis_api.html#matplotlib.axis.Tick) is the final container object in our
 descent from the [``Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) to the
-[``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) to the [``Axis``](https://matplotlib.orgapi/axis_api.html#matplotlib.axis.Axis)
+[``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) to the [``Axis``](https://matplotlib.orgapi/axis_api.html#matplotlib.axis.Axis)
 to the [``Tick``](https://matplotlib.orgapi/axis_api.html#matplotlib.axis.Tick). The ``Tick`` contains the tick
 and grid line instances, as well as the label instances for the upper
 and lower ticks. Each of these is accessible directly as an attribute

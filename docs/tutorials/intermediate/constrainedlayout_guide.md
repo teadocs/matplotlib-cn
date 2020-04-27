@@ -684,7 +684,7 @@ Figures are laid out in a hierarchy:
 Each item has a layoutbox associated with it. The nesting of gridspecs
 created with [``GridSpecFromSubplotSpec``](https://matplotlib.orgapi/_as_gen/matplotlib.gridspec.GridSpecFromSubplotSpec.html#matplotlib.gridspec.GridSpecFromSubplotSpec) can be arbitrarily deep.
 
-Each [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) has *two* layoutboxes. The first one,
+Each [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) has *two* layoutboxes. The first one,
 ``ax._layoutbox`` represents the outside of the Axes and all its
 decorations (i.e. ticklabels,axis labels, etc.).
 The second layoutbox corresponds to the Axes' ``ax.position``, which sets

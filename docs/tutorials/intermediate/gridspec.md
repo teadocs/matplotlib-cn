@@ -28,7 +28,7 @@ both [``subplots()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.subplo
 
 Using [``subplots()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots) is quite simple.
 It returns a [``Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) instance and an array of
-[``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) objects.
+[``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) objects.
 
 ``` python
 fig1, f1_axes = plt.subplots(ncols=2, nrows=2, constrained_layout=True)

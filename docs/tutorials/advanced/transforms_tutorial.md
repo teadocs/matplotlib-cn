@@ -17,7 +17,7 @@ you, or create your own (see [``matplotlib.transforms``](https://matplotlib.orga
 below summarizes the some useful coordinate systems, the transformation
 object you should use to work in that coordinate system, and the
 description of that system. In the ``Transformation Object`` column,
-``ax`` is a [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) instance, and ``fig`` is a
+``ax`` is a [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) instance, and ``fig`` is a
 [``Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) instance.
 
 
@@ -526,7 +526,7 @@ to coordinates in one step. This is not true of all possible
 transformations.
 
 Here is how the ``ax.transData`` instance is defined in the basic
-separable axis [``Axes``](https://matplotlib.orgapi/axes_api.html#matplotlib.axes.Axes) class:
+separable axis [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) class:
 
 ``` python
 self.transData = self.transScale + (self.transLimits + self.transAxes)
