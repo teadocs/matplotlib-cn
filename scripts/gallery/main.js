@@ -50,7 +50,7 @@ jsonList.forEach(block => {
         <img src="${item.poster}" />
       </div>
       <div class="text">
-        <a href="${item.url}">${item.text}</a>
+        <a href="${item.url}.html">${item.text}</a>
       </div>
     </li>`;
   });

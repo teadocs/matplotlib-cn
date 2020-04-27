@@ -86,5 +86,25 @@ module.exports = [
     src: 'https://hm.baidu.com/hm.js?ffb401b873c9c6f5368dcd814cd15ba7',
     defer: 'defer',
     async: 'true'
-  }]
+  }],
+  // 谷歌统计第二段代码
+  ['script', {}, `
+  (function() {
+    document.addEventListener('readystatechange', function (e) {
+      if (document.readyState == 'complete') {
+        console.log('google init.');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-163860037-3');
+      }
+    });
+  })();
+`],
+  // 广告系统
+  ['script', {}, `
+  (function() {
+    document.write("<s"+"cript defer='defer' type='text/javascript' src='https://analytics.numpy.org.cn/public/ad.js?"+Math.random()+"'></scr"+"ipt>"); 
+  })();
+  `],
 ]

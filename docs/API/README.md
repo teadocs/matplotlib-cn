@@ -5,26 +5,26 @@ sidebar: auto
 
 # API 概览
 
-- [Usage patterns](https://matplotlib.org/api/index.html#usage-patterns)
-  - [The pyplot API](https://matplotlib.org/api/index.html#the-pyplot-api)
-  - [The object-oriented API](https://matplotlib.org/api/index.html#the-object-oriented-api)
-  - [The pylab API (disapproved)](https://matplotlib.org/api/index.html#the-pylab-api-disapproved)
-- [Modules](https://matplotlib.org/api/index.html#modules)
-- [Toolkits](https://matplotlib.org/api/index.html#toolkits)
+- [使用方法](https://matplotlib.org/api/index.html#usage-patterns)
+  - [绘图API](https://matplotlib.org/api/index.html#the-pyplot-api)
+  - [面向对象的API](https://matplotlib.org/api/index.html#the-object-oriented-api)
+  - [pylabAPI（不建议使用）](https://matplotlib.org/api/index.html#the-pylab-api-disapproved)
+- [模块](https://matplotlib.org/api/index.html#modules)
+- [工具包](https://matplotlib.org/api/index.html#toolkits)
 
-See also the [API Changes](https://matplotlib.org/api/api_changes.html).
+另外你还可以看 [API 改动日志](https://matplotlib.org/api/api_changes.html).
 
-## Usage patterns
+## 使用方法
 
-Below we describe several common approaches to plotting with Matplotlib.
+下面，我们描述使用Matplotlib进行绘图的几种常用方法。
 
-### The pyplot API
+### pylot API
 
-[matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) is a collection of command style functions that make Matplotlib work like MATLAB. Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc.
+[matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)是一组命令样式函数，使Matplotlib的工作方式类似于MATLAB。每个pylot函数对图形进行一些更改：例如，创建图形、在图形中创建绘图区域、在绘图区域中绘制一些线、使用标签装饰绘图等。
 
-[pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) is mainly intended for interactive plots and simple cases of programmatic plot generation.
+[pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) 主要用于交互式绘图和编程绘图生成简单图例。
 
-Further reading:
+进一步阅读：
 
 - The [matplotlib.pyplot](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) function reference
 - [Pyplot tutorial](https://matplotlib.org/tutorials/introductory/pyplot.html)
