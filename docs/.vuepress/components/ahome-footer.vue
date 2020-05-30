@@ -27,7 +27,12 @@
     <div class="right-box item friends">
       <h4>👬友情链接</h4>
       <ul>
-        <li></li>
+        <li>
+          <a href="https://www.leiphone.com/?from=matplotlib.org.cn" target="_blank">雷锋网</a>
+        </li>
+        <li>
+          <a href="https://www.yanxishe.com/?from=matplotlib.org.cn" target="_blank">AI研习社</a>
+        </li>
       </ul>
     </div>
   </div>
