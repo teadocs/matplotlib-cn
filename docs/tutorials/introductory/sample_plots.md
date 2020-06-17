@@ -43,7 +43,7 @@ sidebar: auto
   </a>
 </center>
 
-**Example of using [``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) to display a CT scan**
+**上图为使用[``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow)展示的CT图**
 
 ## 热力图（pcolormesh）与等高线（contour）
 
@@ -56,7 +56,7 @@ sidebar: auto
   </a>
 </center>
 
-**Example comparing [``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) and [``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour) for plotting two-dimensional data**
+**[``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) 与[``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour)的比较**
 
 ## 直方图（Histogram）
 
@@ -113,8 +113,7 @@ matpltlib三维工具箱(The mplot3d toolkit）能够支持简单的三维图表
   </p>
 </center>
 
-该图为函数 [``quiver()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver) 提供了
-绘制向量场的功能,感谢Tom Flannaghan 与 Tony Yu.
+感谢Tom Flannaghan 与 Tony Yu 为[``quiver()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver) 提供了绘制向量场的功能.
 
 ## 椭圆（Ellipses）
 
@@ -276,7 +275,7 @@ Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI�
 
 ## 文本对象的TeX表示法（TeX-notation for text objects）
 
-下面是Matplotlib的mathtext引擎当前支持的许多TeX表达式的示例。它使用了[FreeType](https://www.freetype.org/)与DejaVu, BaKoMa computer modern, 以及 [STIX](http://www.stixfonts.org)，详见 [``matplotlib.mathtext``](https://matplotlib.org/api/mathtext_api.html#module-matplotlib.mathtext).
+下面是Matplotlib的mathtext引擎当前支持的TeX表达式的示例。它使用了[FreeType](https://www.freetype.org/)与DejaVu, BaKoMa computer modern, 以及 [STIX](http://www.stixfonts.org)，详见 [``matplotlib.mathtext``](https://matplotlib.org/api/mathtext_api.html#module-matplotlib.mathtext).
 
 <center>
   <a href="/gallery/text_labels_and_annotations/mathtext_examples.html">
@@ -287,7 +286,7 @@ Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI�
   </p>
 </center>
 
-Matplotlib的mathtext架构的实现是独立的，不依赖于 TeX or 以及其他需要安装到电脑的包. 教程详见 [Writing mathematical expressions](https://matplotlib.org//text/mathtext.html).
+Matplotlib的mathtext架构的实现是独立的，不依赖于 TeX 以及其他需要安装到电脑的包. 教程详见 [Writing mathematical expressions](https://matplotlib.org//text/mathtext.html).
 
 ## 原生TeX渲染（Native TeX rendering）
 
@@ -308,8 +307,8 @@ Matplotlib的mathtext架构的实现是独立的，不依赖于 TeX or 以及其
 
 ![eeg_small](https://matplotlib.org/_images/eeg_small.png)
 
-下方的数轴使用了 [``specgram()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.specgram.html#matplotlib.pyplot.specgram)
-绘制了脑电图的一个通道的频谱图。
+最下方的图像是使用 [``specgram()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.specgram.html#matplotlib.pyplot.specgram)
+绘制的脑电图的一个通道的频谱图。
 
 以下是将Matplotlib插入到不同界面的方式:
 
