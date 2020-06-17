@@ -2,15 +2,12 @@
 sidebarDepth: 3
 sidebar: auto
 ---
+# 使用Matplotlib绘制简单图形
+在此会提供很多图例以及绘制他们的代码.
 
-# Sample plots in Matplotlib
+## 折线图
 
-Here you'll find a host of example plots with the code that
-generated them.
-
-## Line Plot
-
-Here's how to create a line plot with text labels using
+创建带有文本标签的折线图
 [``plot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot).
 
 <center>
@@ -22,10 +19,10 @@ Here's how to create a line plot with text labels using
   </p>
 </center>
 
-## Multiple subplots in one figure
+## 一个图（figure）中含多个子图（subplots）
 
-Multiple axes (i.e. subplots) are created with the
-[``subplot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot) function:
+多子图使用
+[``subplot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot) 函数创建:
 
 <center>
   <a href="/gallery/subplots_axes_and_figures/subplot.html">
@@ -36,10 +33,9 @@ Multiple axes (i.e. subplots) are created with the
   </p>
 </center>
 
-## Images
+## 图像
 
-Matplotlib can display images (assuming equally spaced
-horizontal dimensions) using the [``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) function.
+可以使用 [``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) 函数来显示图像.
 
 <center>
   <a href="/gallery/images_contours_and_fields/image_demo.html">
@@ -49,13 +45,10 @@ horizontal dimensions) using the [``imshow()``](https://matplotlib.org/api/_as_g
 
 **Example of using [``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) to display a CT scan**
 
-## Contouring and pseudocolor
+## 热力图（pcolormesh）与等高线（contour）
 
-The [``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) function can make a colored
-representation of a two-dimensional array, even if the horizontal dimensions
-are unevenly spaced. The
-[``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour) function is another way to represent
-the same data:
+ 函数[``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) 可以使用色彩来描绘横坐标间隔一致或不一致的二维向量。
+ 函数[``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour)与其类似:
 
 <center>
   <a href="/gallery/images_contours_and_fields/pcolormesh_levels.html">
@@ -65,10 +58,9 @@ the same data:
 
 **Example comparing [``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) and [``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour) for plotting two-dimensional data**
 
-## Histograms
+## 直方图
 
-The [``hist()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist) function automatically generates
-histograms and returns the bin counts or probabilities:
+函数 [``hist()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist) 自动生成直方图，并且返回每bin的数目或概率：
 
 <center>
   <a href="/gallery/statistics/histogram_features.html">
