@@ -119,7 +119,7 @@ streamplot function.
 
 ## 椭圆（Ellipses）
 
-为了凤凰号火星任务[Phoenix](http://www.jpl.nasa.gov/news/phoenix/main.php)(使用matplolib做追踪航天器的地面站), 迈克尔·德罗特布姆（Michael Droettboom）以查理·莫阿德（Charlie Moad）的作品为基础，为椭圆弧提供了极其精确的8样条近似(详见[``Arc``](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)), 其对对缩放级别不敏感.
+为了凤凰号火星任务[Phoenix](http://www.jpl.nasa.gov/news/phoenix/main.php)(使用matplolib做地面站追踪航天器), 迈克尔·德罗特布姆（Michael Droettboom）以查理·莫阿德（Charlie Moad）的作品为基础，为椭圆弧提供了极其精确的8样条近似(详见[``Arc``](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)), 这种椭圆弧其对缩放级别不敏感.
 
 <center>
   <a href="/gallery/shapes_and_collections/ellipse_demo.html">
@@ -163,9 +163,7 @@ streamplot function.
 
 ## 表格（Tables）
 
-The [``table()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.table.html#matplotlib.pyplot.table) function adds a text table
-to an axes.
-
+函数[``table()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.table.html#matplotlib.pyplot.table) 添加表格到坐标轴上。
 <center>
   <a href="/gallery/misc/table_demo.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_table_demo_0011.png">
@@ -177,11 +175,7 @@ to an axes.
 
 ## 散点图（Scatter plots）
 
-The [``scatter()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter) function makes a scatter plot
-with (optional) size and color arguments. This example plots changes
-in Google's stock price, with marker sizes reflecting the
-trading volume and colors varying with time. Here, the
-alpha attribute is used to make semitransparent circle markers.
+函数 [``scatter()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter)用于绘制可设置大小及颜色的散点图，本示例绘制了Google股票价格的变化图，散点大小反映了交易量，颜色随时间变化，函数中的alpha为透明度。
 
 <center>
   <a href="/gallery/lines_bars_and_markers/scatter_demo2.html">
@@ -194,9 +188,7 @@ alpha attribute is used to make semitransparent circle markers.
 
 ## 图形界面控件（GUI widgets）
 
-Matplotlib has basic GUI widgets that are independent of the graphical
-user interface you are using, allowing you to write cross GUI figures
-and widgets. See [``matplotlib.widgets``](https://matplotlib.org/api/widgets_api.html#module-matplotlib.widgets) and the
+Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI控件, 供用户跨GUI绘图. 详见 [``matplotlib.widgets``](https://matplotlib.org/api/widgets_api.html#module-matplotlib.widgets) 与
 [widget examples](https://matplotlib.org/gallery/index.html).
 
 <center>
@@ -210,8 +202,7 @@ and widgets. See [``matplotlib.widgets``](https://matplotlib.org/api/widgets_api
 
 ## 曲线色彩填充（Filled curves）
 
-The [``fill()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill.html#matplotlib.pyplot.fill) function lets you
-plot filled curves and polygons:
+函数 [``fill()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill.html#matplotlib.pyplot.fill) 可以让你填充曲线与多边形:
 
 <center>
   <a href="/gallery/lines_bars_and_markers/fill.html">
@@ -222,12 +213,11 @@ plot filled curves and polygons:
   </p>
 </center>
 
-Thanks to Andrew Straw for adding this function.
+感谢 Andrew Straw 添加了这个函数.
 
 ## 时间处理（Date handling）
 
-You can plot timeseries data with major and minor ticks and custom
-tick formatters for both.
+你可以绘制可设置主次刻度的时间序列。
 
 <center>
   <a href="/gallery/text_labels_and_annotations/date.html">
@@ -238,14 +228,13 @@ tick formatters for both.
   </p>
 </center>
 
-See [``matplotlib.ticker``](https://matplotlib.org/api/ticker_api.html#module-matplotlib.ticker) and [``matplotlib.dates``](https://matplotlib.org/api/dates_api.html#module-matplotlib.dates) for details and usage.
+详见 [``matplotlib.ticker``](https://matplotlib.org/api/ticker_api.html#module-matplotlib.ticker) and [``matplotlib.dates``](https://matplotlib.org/api/dates_api.html#module-matplotlib.dates).
 
 ## 对数图（Log plots）
 
-The [``semilogx()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogx.html#matplotlib.pyplot.semilogx),
-[``semilogy()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogy.html#matplotlib.pyplot.semilogy) and
-[``loglog()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.loglog.html#matplotlib.pyplot.loglog) functions simplify the creation of
-logarithmic plots.
+函数 [``semilogx()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogx.html#matplotlib.pyplot.semilogx),
+[``semilogy()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogy.html#matplotlib.pyplot.semilogy) 与
+[``loglog()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.loglog.html#matplotlib.pyplot.loglog) 简化了对数图的创建。
 
 <center>
   <a href="/gallery/scales/log_demo.html">
@@ -256,12 +245,11 @@ logarithmic plots.
   </p>
 </center>
 
-Thanks to Andrew Straw, Darren Dale and Gregory Lielens for contributions
-log-scaling infrastructure.
+感谢 Andrew Straw, Darren Dale 与 Gregory Lielens 对log-scaling infrastructure的贡献.
 
 ## 极坐标图（Polar plots）
 
-The [``polar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.polar.html#matplotlib.pyplot.polar) function generates polar plots.
+函数 [``polar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.polar.html#matplotlib.pyplot.polar) 可生成极坐标图.
 
 <center>
   <a href="/gallery/pie_and_polar_charts/polar_demo.html">
@@ -274,9 +262,7 @@ The [``polar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.polar.htm
 
 ## 图例（Legends）
 
-The [``legend()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend) function automatically
-generates figure legends, with MATLAB-compatible legend-placement
-functions.
+函数 [``legend()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend) 使用了MATLAB-compatible legend-placement自动生成图例
 
 <center>
   <a href="/gallery/text_labels_and_annotations/legend.html">
@@ -287,15 +273,11 @@ functions.
   </p>
 </center>
 
-Thanks to Charles Twardy for input on the legend function.
+感谢 Charles Twardy 添加 legend 函数.
 
 ## 文本对象的Tex表示法（TeX-notation for text objects）
 
-Below is a sampling of the many TeX expressions now supported by Matplotlib's
-internal mathtext engine. The mathtext module provides TeX style mathematical
-expressions using [FreeType](https://www.freetype.org/)
-and the DejaVu, BaKoMa computer modern, or [STIX](http://www.stixfonts.org)
-fonts. See the [``matplotlib.mathtext``](https://matplotlib.org/api/mathtext_api.html#module-matplotlib.mathtext) module for additional details.
+下面是Matplotlib的mathtext引擎当前支持的许多TeX表达式的示例。它使用了[FreeType](https://www.freetype.org/)与DejaVu, BaKoMa computer modern, 以及 [STIX](http://www.stixfonts.org)，详见 [``matplotlib.mathtext``](https://matplotlib.org/api/mathtext_api.html#module-matplotlib.mathtext).
 
 <center>
   <a href="/gallery/text_labels_and_annotations/mathtext_examples.html">
@@ -306,15 +288,11 @@ fonts. See the [``matplotlib.mathtext``](https://matplotlib.org/api/mathtext_api
   </p>
 </center>
 
-Matplotlib's mathtext infrastructure is an independent implementation and
-does not require TeX or any external packages installed on your computer. See
-the tutorial at [Writing mathematical expressions](https://matplotlib.org//text/mathtext.html).
+Matplotlib的mathtext架构的实现是独立的，不依赖于 TeX or 以及其他需要安装到电脑的包. 教程详见 [Writing mathematical expressions](https://matplotlib.org//text/mathtext.html).
 
 ## 原生Tex渲染（Native TeX rendering）
 
-Although Matplotlib's internal math rendering engine is quite
-powerful, sometimes you need TeX. Matplotlib supports external TeX
-rendering of strings with the *usetex* option.
+尽管Matplotlib原生的渲染引擎已非常强大，但有时你还可能需要TeX. Matplotlib可通过 *usetex*选项支持第三方TeX字符渲染。
 
 <center>
   <a href="/gallery/text_labels_and_annotations/tex_demo.html">
@@ -325,17 +303,16 @@ rendering of strings with the *usetex* option.
   </p>
 </center>
 
-## EEG GUI
+## 脑电图图形界面（EEG GUI）
 
-You can embed Matplotlib into pygtk, wx, Tk, or Qt applications.
-Here is a screenshot of an EEG viewer called [pbrain](https://github.com/nipy/pbrain).
+你可以将Matplotlib的界面插入到pygtk, wx, Tk, Qt，PyQt中去.以下是EEG界面[pbrain](https://github.com/nipy/pbrain)的截图。
 
 ![eeg_small](https://matplotlib.org/_images/eeg_small.png)
 
-The lower axes uses [``specgram()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.specgram.html#matplotlib.pyplot.specgram)
-to plot the spectrogram of one of the EEG channels.
+下方的数轴使用了 [``specgram()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.specgram.html#matplotlib.pyplot.specgram)
+绘制了脑电图的一个通道的频谱图。
 
-For examples of how to embed Matplotlib in different toolkits, see:
+以下是将Matplotlib插入到不同界面的方式:
 
 - [Embedding in GTK3](https://matplotlib.org/gallery/user_interfaces/embedding_in_gtk3_sgskip.html)
 - [Embedding in wx #2](https://matplotlib.org/gallery/user_interfaces/embedding_in_wx2_sgskip.html)
@@ -343,9 +320,9 @@ For examples of how to embed Matplotlib in different toolkits, see:
 - [Embedding in Qt](https://matplotlib.org/gallery/user_interfaces/embedding_in_qt_sgskip.html)
 - [Embedding in Tk](https://matplotlib.org/gallery/user_interfaces/embedding_in_tk_sgskip.html)
 
-## XKCD-style sketch plots
+## XKCD风格草图绘制（XKCD-style sketch plots）
 
-Just for fun, Matplotlib supports plotting in the style of ``xkcd``.
+Matplotlib 支持名为 ``xkcd``的风格，不过这图没啥用，只能用来玩玩
 
 <center>
   <a href="/gallery/showcase/xkcd.html">
@@ -358,8 +335,7 @@ Just for fun, Matplotlib supports plotting in the style of ``xkcd``.
 
 ## 子图实例（Subplot example）
 
-Many plot types can be combined in one figure to create
-powerful and flexible representations of data.
+可以将不同的图组合到一个图中，以创建功能强大且灵活的数据表示形式。
 
 <center>
   <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_sample_plots_001.png">
