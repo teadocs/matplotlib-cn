@@ -71,9 +71,9 @@ sidebar: auto
   </p>
 </center>
 
-## 路径（Paths）
+## 折线轨迹（Paths）
 
-[``matplotlib.path``](https://matplotlib.org/api/path_api.html#module-matplotlib.path) 模块添加各种路径到Matplotlib中:
+matplotlib中用于折线处理的类主要是[``matplotlib.path``](https://matplotlib.org/api/path_api.html#module-matplotlib.path) ，几乎所有矢量绘图都在绘图管道（drawing pipeline）中使用了折线，虽然无法绘制path实例本身，但也可以使其可视化:
 
 <center>
   <a href="/gallery/shapes_and_collections/path_patch.html">
@@ -102,10 +102,7 @@ matpltlib三维工具箱(The mplot3d toolkit）能够支持简单的三维图表
 
 ## 流量图（Streamplot）
 
-The [``streamplot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.streamplot.html#matplotlib.pyplot.streamplot) function plots the streamlines of
-a vector field. In addition to simply plotting the streamlines, it allows you
-to map the colors and/or line widths of streamlines to a separate parameter,
-such as the speed or local intensity of the vector field.
+函数[``streamplot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.streamplot.html#matplotlib.pyplot.streamplot)绘制向量场的流量图. 除了简单的绘制流线外, 它还允许您将流线的颜色和（或）线宽映射到单独的参数，例如矢量场的速度或局部强度。
 
 <center>
   <a href="/gallery/images_contours_and_fields/plot_streamplot.html">
@@ -122,11 +119,7 @@ streamplot function.
 
 ## 椭圆（Ellipses）
 
-In support of the [Phoenix](http://www.jpl.nasa.gov/news/phoenix/main.php)
-mission to Mars (which used Matplotlib to display ground tracking of
-spacecraft), Michael Droettboom built on work by Charlie Moad to provide
-an extremely accurate 8-spline approximation to elliptical arcs (see
-[``Arc``](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)), which are insensitive to zoom level.
+为了凤凰号火星任务[Phoenix](http://www.jpl.nasa.gov/news/phoenix/main.php)(使用matplolib做追踪航天器的地面站), 迈克尔·德罗特布姆（Michael Droettboom）以查理·莫阿德（Charlie Moad）的作品为基础，为椭圆弧提供了极其精确的8样条近似(详见[``Arc``](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)), 其对对缩放级别不敏感.
 
 <center>
   <a href="/gallery/shapes_and_collections/ellipse_demo.html">
@@ -139,8 +132,7 @@ an extremely accurate 8-spline approximation to elliptical arcs (see
 
 ## 条形图（Bar charts）
 
-Use the [``bar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar) function to make bar charts, which
-includes customizations such as error bars:
+使用 [``bar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar) 函数来创建一个条形图, 其中包括自定义设置，例如错误栏:
 
 <center>
   <a href="/gallery/statistics/barchart_demo.html">
@@ -151,18 +143,14 @@ includes customizations such as error bars:
   </p>
 </center>
 
-You can also create stacked bars
+你也可以创建多分类累计柱状图（stacked bars）
 ([bar_stacked.py](https://matplotlib.org/gallery/lines_bars_and_markers/bar_stacked.html)),
-or horizontal bar charts
+或是水平条状态（horizontal bar charts）
 ([barh.py](https://matplotlib.org/gallery/lines_bars_and_markers/barh.html)).
 
 ## 饼图（Pie charts）
 
-The [``pie()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pie.html#matplotlib.pyplot.pie) function allows you to create pie
-charts. Optional features include auto-labeling the percentage of area,
-exploding one or more wedges from the center of the pie, and a shadow effect.
-Take a close look at the attached code, which generates this figure in just
-a few lines of code.
+函数[``pie()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pie.html#matplotlib.pyplot.pie) 可以创建一个饼图.可选功能包括自动标记面积百分比，从饼图中心爆炸一个或多个楔形以及阴影效果，只需几行代码即可生成此图形。
 
 <center>
   <a href="/gallery/pie_and_polar_charts/pie_features.html">
