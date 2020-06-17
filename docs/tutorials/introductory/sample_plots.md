@@ -15,7 +15,7 @@ sidebar: auto
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_simple_plot_0011.png">
   </a>
   <p>
-    <b>Simple Plot</b>
+    <b>简单绘图</b>
   </p>
 </center>
 
@@ -29,7 +29,7 @@ sidebar: auto
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_subplot_0011.png">
   </a>
   <p>
-    <b>Subplot</b>
+    <b>子图</b>
   </p>
 </center>
 
@@ -67,7 +67,7 @@ sidebar: auto
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_histogram_features_0011.png">
   </a>
   <p>
-    <b>Histogram Features</b>
+    <b>直方图</b>
   </p>
 </center>
 
@@ -80,7 +80,7 @@ matplotlib中用于折线处理的类主要是[``matplotlib.path``](https://matp
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_path_patch_0011.png">
   </a>
   <p>
-    <b>Path Patch</b>
+    <b>轨迹绘制</b>
   </p>
 </center>
 
@@ -93,7 +93,7 @@ matpltlib三维工具箱(The mplot3d toolkit）能够支持简单的三维图表
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_surface3d_0011.png">
   </a>
   <p>
-    <b>Surface3d</b>
+    <b>3维曲面</b>
   </p>
 </center>
 
@@ -109,24 +109,23 @@ matpltlib三维工具箱(The mplot3d toolkit）能够支持简单的三维图表
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_plot_streamplot_0011.png">
   </a>
   <p>
-    <b>Streamplot with various plotting options.</b>
+    <b>流量图的各种类型.</b>
   </p>
 </center>
 
-This feature complements the [``quiver()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver) function for
-plotting vector fields. Thanks to Tom Flannaghan and Tony Yu for adding the
-streamplot function.
+该图为函数 [``quiver()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.quiver.html#matplotlib.pyplot.quiver) 提供了
+绘制向量场的功能,感谢Tom Flannaghan 与 Tony Yu.
 
 ## 椭圆（Ellipses）
 
-为了凤凰号火星任务[Phoenix](http://www.jpl.nasa.gov/news/phoenix/main.php)(使用matplolib做地面站追踪航天器), 迈克尔·德罗特布姆（Michael Droettboom）以查理·莫阿德（Charlie Moad）的作品为基础，为椭圆弧提供了极其精确的8样条近似(详见[``Arc``](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)), 这种椭圆弧其对缩放级别不敏感.
+迈克尔·德罗特布姆（Michael Droettboom）以查理·莫阿德（Charlie Moad）的作品为基础，为椭圆弧提供了极其精确的八次贝塞尔样条近似(eight cubic Bezier splines)(详见[``Arc``](https://matplotlib.org/api/_as_gen/matplotlib.patches.Arc.html#matplotlib.patches.Arc)), 这种椭圆弧其对缩放级别不敏感.
 
 <center>
   <a href="/gallery/shapes_and_collections/ellipse_demo.html">
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_ellipse_demo_0011.png">
   </a>
   <p>
-    <b>Ellipse Demo</b>
+    <b>椭圆展示</b>
   </p>
 </center>
 
@@ -139,7 +138,7 @@ streamplot function.
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_barchart_demo_0011.png">
   </a>
   <p>
-    <b>Barchart Demo</b>
+    <b>条形图展示</b>
   </p>
 </center>
 
@@ -157,7 +156,7 @@ streamplot function.
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_pie_features_0011.png">
   </a>
   <p>
-    <b>Pie Features</b>
+    <b>饼图展示</b>
   </p>
 </center>
 
@@ -169,7 +168,7 @@ streamplot function.
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_table_demo_0011.png">
   </a>
   <p>
-    <b>Table Demo</b>
+    <b>表格展示</b>
   </p>
 </center>
 
@@ -182,7 +181,7 @@ streamplot function.
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_scatter_demo2_0011.png">
   </a>
   <p>
-    <b>Scatter Demo2</b>
+    <b>散点图展示</b>
   </p>
 </center>
 
@@ -196,11 +195,11 @@ Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI�
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_slider_demo_0011.png">
   </a>
   <p>
-    <b>Slider and radio-button GUI.</b>
+    <b>滑动条与播放旋钮.</b>
   </p>
 </center>
 
-## 曲线色彩填充（Filled curves）
+## 色彩填充（Filled curves）
 
 函数 [``fill()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill.html#matplotlib.pyplot.fill) 可以让你填充曲线与多边形:
 
@@ -209,7 +208,7 @@ Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI�
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_fill_0011.png">
   </a>
   <p>
-    <b>Fill</b>
+    <b>填充</b>
   </p>
 </center>
 
@@ -224,7 +223,7 @@ Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI�
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_date_0011.png">
   </a>
   <p>
-    <b>Date</b>
+    <b>时间序列</b>
   </p>
 </center>
 
@@ -241,7 +240,7 @@ Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI�
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_log_demo_0011.png">
   </a>
   <p>
-    <b>Log Demo</b>
+    <b>对数图展示</b>
   </p>
 </center>
 
@@ -256,7 +255,7 @@ Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI�
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_polar_demo_0011.png">
   </a>
   <p>
-    <b>Polar Demo</b>
+    <b>极坐标图展示</b>
   </p>
 </center>
 
@@ -269,13 +268,13 @@ Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI�
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_legend_0011.png">
   </a>
   <p>
-    <b>Legend</b>
+    <b>图例</b>
   </p>
 </center>
 
 感谢 Charles Twardy 添加 legend 函数.
 
-## 文本对象的Tex表示法（TeX-notation for text objects）
+## 文本对象的TeX表示法（TeX-notation for text objects）
 
 下面是Matplotlib的mathtext引擎当前支持的许多TeX表达式的示例。它使用了[FreeType](https://www.freetype.org/)与DejaVu, BaKoMa computer modern, 以及 [STIX](http://www.stixfonts.org)，详见 [``matplotlib.mathtext``](https://matplotlib.org/api/mathtext_api.html#module-matplotlib.mathtext).
 
@@ -284,13 +283,13 @@ Matplotlib提供了一些基本的独立于用户所使用的交互界面的GUI�
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_mathtext_examples_0011.png">
   </a>
   <p>
-    <b>Mathtext Examples</b>
+    <b>Mathtext示例</b>
   </p>
 </center>
 
 Matplotlib的mathtext架构的实现是独立的，不依赖于 TeX or 以及其他需要安装到电脑的包. 教程详见 [Writing mathematical expressions](https://matplotlib.org//text/mathtext.html).
 
-## 原生Tex渲染（Native TeX rendering）
+## 原生TeX渲染（Native TeX rendering）
 
 尽管Matplotlib原生的渲染引擎已非常强大，但有时你还可能需要TeX. Matplotlib可通过 *usetex*选项支持第三方TeX字符渲染。
 
@@ -299,7 +298,7 @@ Matplotlib的mathtext架构的实现是独立的，不依赖于 TeX or 以及其
     <img style="width: 50%" src="https://matplotlib.org/_images/sphx_glr_tex_demo_0011.png">
   </a>
   <p>
-    <b>Tex Demo</b>
+    <b>TeX 展示</b>
   </p>
 </center>
 
