@@ -5,7 +5,7 @@ sidebar: auto
 # 使用Matplotlib绘制简单图形
 在此会提供很多图例以及绘制他们的代码.
 
-## 折线图
+## 折线图（line plot）
 
 创建带有文本标签的折线图
 [``plot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot).
@@ -33,7 +33,7 @@ sidebar: auto
   </p>
 </center>
 
-## 图像
+## 图像显示（image）
 
 可以使用 [``imshow()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow) 函数来显示图像.
 
@@ -58,7 +58,7 @@ sidebar: auto
 
 **Example comparing [``pcolormesh()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh) and [``contour()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html#matplotlib.pyplot.contour) for plotting two-dimensional data**
 
-## 直方图
+## 直方图（Histogram）
 
 函数 [``hist()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist) 自动生成直方图，并且返回每bin的数目或概率：
 
@@ -71,10 +71,9 @@ sidebar: auto
   </p>
 </center>
 
-## Paths
+## 路径（Paths）
 
-You can add arbitrary paths in Matplotlib using the
-[``matplotlib.path``](https://matplotlib.org/api/path_api.html#module-matplotlib.path) module:
+[``matplotlib.path``](https://matplotlib.org/api/path_api.html#module-matplotlib.path) 模块添加各种路径到Matplotlib中:
 
 <center>
   <a href="/gallery/shapes_and_collections/path_patch.html">
@@ -85,11 +84,9 @@ You can add arbitrary paths in Matplotlib using the
   </p>
 </center>
 
-## Three-dimensional plotting
+## 绘制三维图表
 
-The mplot3d toolkit (see [Getting started](https://matplotlib.org//toolkits/mplot3d.html#toolkit-mplot3d-tutorial) and
-[3D plotting](https://matplotlib.org/gallery/index.html#mplot3d-examples-index)) has support for simple 3d graphs
-including surface, wireframe, scatter, and bar charts.
+matpltlib三维工具箱(The mplot3d toolkit）能够支持简单的三维图表，其中包括曲面图，线框图，散点图与条形图。 (详见 [Getting started](https://matplotlib.org//toolkits/mplot3d.html#toolkit-mplot3d-tutorial) 与[3D plotting](https://matplotlib.org/gallery/index.html#mplot3d-examples-index))
 
 <center>
   <a href="/gallery/mplot3d/surface3d.html">
@@ -100,11 +97,10 @@ including surface, wireframe, scatter, and bar charts.
   </p>
 </center>
 
-Thanks to John Porter, Jonathon Taylor, Reinier Heeres, and Ben Root for
-the ``mplot3d`` toolkit. This toolkit is included with all standard Matplotlib
-installs.
+感谢John Porter, Jonathon Taylor, Reinier Heeres, 与 Ben Root 对
+``mplot3d``所做出的贡献 . 该工具箱在所有完整版的matpltlib中均已包含，无需再次安装.
 
-## Streamplot
+## 流量图（Streamplot）
 
 The [``streamplot()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.streamplot.html#matplotlib.pyplot.streamplot) function plots the streamlines of
 a vector field. In addition to simply plotting the streamlines, it allows you
@@ -124,7 +120,7 @@ This feature complements the [``quiver()``](https://matplotlib.org/api/_as_gen/m
 plotting vector fields. Thanks to Tom Flannaghan and Tony Yu for adding the
 streamplot function.
 
-## Ellipses
+## 椭圆（Ellipses）
 
 In support of the [Phoenix](http://www.jpl.nasa.gov/news/phoenix/main.php)
 mission to Mars (which used Matplotlib to display ground tracking of
@@ -141,7 +137,7 @@ an extremely accurate 8-spline approximation to elliptical arcs (see
   </p>
 </center>
 
-## Bar charts
+## 条形图（Bar charts）
 
 Use the [``bar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar) function to make bar charts, which
 includes customizations such as error bars:
@@ -160,7 +156,7 @@ You can also create stacked bars
 or horizontal bar charts
 ([barh.py](https://matplotlib.org/gallery/lines_bars_and_markers/barh.html)).
 
-## Pie charts
+## 饼图（Pie charts）
 
 The [``pie()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pie.html#matplotlib.pyplot.pie) function allows you to create pie
 charts. Optional features include auto-labeling the percentage of area,
@@ -177,7 +173,7 @@ a few lines of code.
   </p>
 </center>
 
-## Tables
+## 表格（Tables）
 
 The [``table()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.table.html#matplotlib.pyplot.table) function adds a text table
 to an axes.
@@ -191,7 +187,7 @@ to an axes.
   </p>
 </center>
 
-## Scatter plots
+## 散点图（Scatter plots）
 
 The [``scatter()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter) function makes a scatter plot
 with (optional) size and color arguments. This example plots changes
@@ -208,7 +204,7 @@ alpha attribute is used to make semitransparent circle markers.
   </p>
 </center>
 
-## GUI widgets
+## 图形界面控件（GUI widgets）
 
 Matplotlib has basic GUI widgets that are independent of the graphical
 user interface you are using, allowing you to write cross GUI figures
@@ -224,7 +220,7 @@ and widgets. See [``matplotlib.widgets``](https://matplotlib.org/api/widgets_api
   </p>
 </center>
 
-## Filled curves
+## 曲线色彩填充（Filled curves）
 
 The [``fill()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill.html#matplotlib.pyplot.fill) function lets you
 plot filled curves and polygons:
@@ -240,7 +236,7 @@ plot filled curves and polygons:
 
 Thanks to Andrew Straw for adding this function.
 
-## Date handling
+## 时间处理（Date handling）
 
 You can plot timeseries data with major and minor ticks and custom
 tick formatters for both.
@@ -256,7 +252,7 @@ tick formatters for both.
 
 See [``matplotlib.ticker``](https://matplotlib.org/api/ticker_api.html#module-matplotlib.ticker) and [``matplotlib.dates``](https://matplotlib.org/api/dates_api.html#module-matplotlib.dates) for details and usage.
 
-## Log plots
+## 对数图（Log plots）
 
 The [``semilogx()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogx.html#matplotlib.pyplot.semilogx),
 [``semilogy()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.semilogy.html#matplotlib.pyplot.semilogy) and
@@ -275,7 +271,7 @@ logarithmic plots.
 Thanks to Andrew Straw, Darren Dale and Gregory Lielens for contributions
 log-scaling infrastructure.
 
-## Polar plots
+## 极坐标图（Polar plots）
 
 The [``polar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.polar.html#matplotlib.pyplot.polar) function generates polar plots.
 
@@ -288,7 +284,7 @@ The [``polar()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.polar.htm
   </p>
 </center>
 
-## Legends
+## 图例（Legends）
 
 The [``legend()``](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend) function automatically
 generates figure legends, with MATLAB-compatible legend-placement
@@ -305,7 +301,7 @@ functions.
 
 Thanks to Charles Twardy for input on the legend function.
 
-## TeX-notation for text objects
+## 文本对象的Tex表示法（TeX-notation for text objects）
 
 Below is a sampling of the many TeX expressions now supported by Matplotlib's
 internal mathtext engine. The mathtext module provides TeX style mathematical
@@ -326,7 +322,7 @@ Matplotlib's mathtext infrastructure is an independent implementation and
 does not require TeX or any external packages installed on your computer. See
 the tutorial at [Writing mathematical expressions](https://matplotlib.org//text/mathtext.html).
 
-## Native TeX rendering
+## 原生Tex渲染（Native TeX rendering）
 
 Although Matplotlib's internal math rendering engine is quite
 powerful, sometimes you need TeX. Matplotlib supports external TeX
@@ -372,7 +368,7 @@ Just for fun, Matplotlib supports plotting in the style of ``xkcd``.
   </p>
 </center>
 
-## Subplot example
+## 子图实例（Subplot example）
 
 Many plot types can be combined in one figure to create
 powerful and flexible representations of data.
@@ -397,7 +393,7 @@ axs[1, 1].hist2d(data[0], data[1])
 plt.show()
 ```
 
-## Download
+## 下载（Download）
 
 - [Download Python source code: sample_plots.py](https://matplotlib.org/_downloads/6b0f2d1b3dc8d0e75eaa96feb738e947/sample_plots.py)
 - [Download Jupyter notebook: sample_plots.ipynb](https://matplotlib.org/_downloads/dcfd63fc031d50e9c085f5dc4aa458b1/sample_plots.ipynb)
