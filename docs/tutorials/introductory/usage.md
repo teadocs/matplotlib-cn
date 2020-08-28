@@ -3,48 +3,27 @@ sidebarDepth: 3
 sidebar: auto
 ---
 
-# Usage Guide
+# 使用指南
 
-This tutorial covers some basic usage patterns and best-practices to
-help you get started with Matplotlib.
+本教程介绍一些基本的使用模式和最佳实践，以帮助您开始使用Matplotlib。
 
-## General Concepts
+## 一般概念
 
-``matplotlib`` has an extensive codebase that can be daunting to many
-new users. However, most of matplotlib can be understood with a fairly
-simple conceptual framework and knowledge of a few important points.
+' ' matplotlib ' ' '有一个规模庞大的代码库，可能会让许多新用户望而生畏。然而，大部分matplotlib内容可通过相当简单的概念性框架和一些重要的知识点来理解。
 
-Plotting requires action on a range of levels, from the most general
-(e.g., 'contour this 2-D array') to the most specific (e.g., 'color
-this screen pixel red'). The purpose of a plotting package is to assist
-you in visualizing your data as easily as possible, with all the necessary
-control -- that is, by using relatively high-level commands most of
-the time, and still have the ability to use the low-level commands when
-needed.
+绘图需要不同层次的操作，，从最一般的(例如，“绘制这个二维数组的轮廓”)到最具体的(例如，“将这个屏幕像素涂成红色”)。绘图包的目的是帮助您尽可能轻松地可视化数据，并提供所有必要的控制——也就是说，大多数时候使用相对高级的命令，并且在需要时仍然能够使用低级命令。
 
-Therefore, everything in matplotlib is organized in a hierarchy. At the top
-of the hierarchy is the matplotlib "state-machine environment" which is
-provided by the [``matplotlib.pyplot``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) module. At this level, simple
-functions are used to add plot elements (lines, images, text, etc.) to
-the current axes in the current figure.
+因此，matplotlib中的所有内容都按照层次结构组织。在层次结构的最顶端是matplotlib“状态机环境”，它由[``matplotlib.pyplot``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) 模块提供。在这个层次上，使用简单的函数将图形元素(线、图像、文本等)添加到当前图形的当前axes上。
 
 ::: tip Note
 
-Pyplot's state-machine environment behaves similarly to MATLAB and
-should be most familiar to users with MATLAB experience.
+Pyplot的状态机环境的行为类似于MATLAB，具有MATLAB经验的用户应该最熟悉它。
 
 :::
 
-The next level down in the hierarchy is the first level of the object-oriented
-interface, in which pyplot is used only for a few functions such as figure
-creation, and the user explicitly creates and keeps track of the figure
-and axes objects. At this level, the user uses pyplot to create figures,
-and through those figures, one or more axes objects can be created. These
-axes objects are then used for most plotting actions.
+层次结构的下一层是面向对象接口的第一层，在这一层中，pyplot仅用于一些函数，比如创建figure，用户显式地创建并跟踪figure和axis对象。在这个级别上，用户使用pyplot创建figure，通过这些figure，可以创建一个或多个axes对象。然后，这些axes对象将用于大多数绘图操作。
 
-For even more control -- which is essential for things like embedding
-matplotlib plots in GUI applications -- the pyplot level may be dropped
-completely, leaving a purely object-oriented approach.
+至于更多的控制——这对于在GUI应用程序中嵌入matplotlib图形是必不可少的——pyplot级别可以完全删除，只留下纯面向对象的方法。
 
 ``` python
 # sphinx_gallery_thumbnail_number = 3
@@ -58,16 +37,9 @@ import numpy as np
 
 ### ``Figure``
 
-The **whole** figure. The figure keeps
-track of all the child [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes), a smattering of
-'special' artists (titles, figure legends, etc), and the **canvas**.
-(Don't worry too much about the canvas, it is crucial as it is the
-object that actually does the drawing to get you your plot, but as the
-user it is more-or-less invisible to you). A figure can have any
-number of [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes), but to be useful should have
-at least one.
+**整个**figure如上图所示。图中展示了[``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)的所有子对象，一系列“特殊”的artists（标题、图例等）和**canvas**。（不要太注重canvas，虽然它非常重要的，因为它是实际绘制图形的对象，以获得您的绘图，但作为用户，它或多或少对您是不可见的）。一个figure可以有任意数量的[``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)，但应该至少有一个。
 
-The easiest way to create a new figure is with pyplot:
+创建新figure的最简单方法是使用pyplot：
 
 ``` python
 fig = plt.figure()  # an empty figure with no axes
@@ -81,77 +53,41 @@ fig, ax_lst = plt.subplots(2, 2)  # a figure with a 2x2 grid of Axes
 
 ### ``Axes``
 
-This is what you think of as 'a plot', it is the region of the image
-with the data space. A given figure
-can contain many Axes, but a given [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)
-object can only be in one [``Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure). The
-Axes contains two (or three in the case of 3D)
-[``Axis``](https://matplotlib.orgapi/axis_api.html#matplotlib.axis.Axis) objects (be aware of the difference
-between **Axes** and **Axis**) which take care of the data limits (the
-data limits can also be controlled via set via the
-[``set_xlim()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_xlim.html#matplotlib.axes.Axes.set_xlim) and
-[``set_ylim()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_ylim.html#matplotlib.axes.Axes.set_ylim) ``Axes`` methods). Each
-``Axes`` has a title (set via
-[``set_title()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title)), an x-label (set via
-[``set_xlabel()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel)), and a y-label set via
-[``set_ylabel()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel)).
+这就是你所认为的“图像”，它是带有数据空间的图像区域。一个给定的figure可以包含许多axes，但一个给定的[``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)只能隶属于一个[``Figure``](https://matplotlib.orgapi/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure)。一个axes包含两个（在3D图中是三个）[``Axis``](https://matplotlib.orgapi/axis_api.html#matplotlib.axis.Axis)对象（请注意axes和axis的不同，虽然翻译过来都叫轴），axis负责控制数据范围，可通过``Axes``的[``set_xlim()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_xlim.html#matplotlib.axes.Axes.set_xlim) 和 [``set_ylim()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_ylim.html#matplotlib.axes.Axes.set_ylim) 这两个方法来设置。每个``Axes``都有一个title（通过[``set_title()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title)来设置），一个x轴标题 x-label（通过[``set_xlabel()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel)设置），一个y轴标题 y-label（通过[``set_ylabel()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel)设置）。
 
-The ``Axes`` class and its member functions are the primary entry
-point to working with the OO interface.
+``Axes``类及其成员函数是使用面向对象接口的主要入口。
 
 ### ``Axis``
 
-These are the number-line-like objects. They take
-care of setting the graph limits and generating the ticks (the marks
-on the axis) and ticklabels (strings labeling the ticks). The
-location of the ticks is determined by a
-[``Locator``](https://matplotlib.orgapi/ticker_api.html#matplotlib.ticker.Locator) object and the ticklabel strings
-are formatted by a [``Formatter``](https://matplotlib.orgapi/ticker_api.html#matplotlib.ticker.Formatter). The
-combination of the correct ``Locator`` and ``Formatter`` gives
-very fine control over the tick locations and labels.
+这些是数字/线一类的对象。它们负责设置图形界限并生成ticks(坐标轴上的刻度)和ticklabel(标记刻度的字符串)。ticks的位置由[``Locator``](https://matplotlib.orgapi/ticker_api.html#matplotlib.ticker.Locator)对象决定，ticklabel字符串由[``Formatter``](https://matplotlib.orgapi/ticker_api.html#matplotlib.ticker.Formatter)设置格式。正确使用``Locator``和``Formatter``的组合可以很好地控制刻度的位置和标签。
 
 ### ``Artist``
 
-Basically everything you can see on the figure is an artist (even the
-``Figure``, ``Axes``, and ``Axis`` objects). This
-includes ``Text`` objects, ``Line2D`` objects,
-``collection`` objects, ``Patch`` objects ... (you get the
-idea). When the figure is rendered, all of the artists are drawn to
-the **canvas**. Most Artists are tied to an Axes; such an Artist
-cannot be shared by multiple Axes, or moved from one to another.
+基本上，你在figure上看到的一切都是artist（甚至``Figure``，``Axes``，和``Axis``对象也是）。这包括``Text`` 对象，``Line2D``对象，``collection``对象，``Patch``对象等等（你懂的）。当figure渲染时，所有的artist将绘制到**canvas**上。大部分artists都绑定在axes上，不能被多个axes共享，也不能从一个axes移动到另一上。
 
 ## Types of inputs to plotting functions
 
-All of plotting functions expect ``np.array`` or ``np.ma.masked_array`` as
-input. Classes that are 'array-like' such as [``pandas``](https://pandas.pydata.org/pandas-docs/stable/index.html#module-pandas) data objects
-and ``np.matrix`` may or may not work as intended. It is best to
-convert these to ``np.array`` objects prior to plotting.
+所有的绘图函数都期望``np.array``或``np.ma.masked_array``作为输入参数，和array类似的对象，如[``pandas``](https://pandas.pydata.org/pandas-docs/stable/index.html#module-pandas)数据对象和``np.matrix``可能会也可能不会像预期的那样工作。但最好在绘图前将他们转换为``np.array``对象。
 
-For example, to convert a [``pandas.DataFrame``](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)
+举个例子，将[``pandas.DataFrame``](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)对象转换为``np.array``对象
 
 ``` python
 a = pandas.DataFrame(np.random.rand(4,5), columns = list('abcde'))
 a_asarray = a.values
 ```
 
-and to convert a ``np.matrix``
+将``np.matrix``转换为``np.array``对象
 
 ``` python
 b = np.matrix([[1,2],[3,4]])
 b_asarray = np.asarray(b)
 ```
 
-## Matplotlib, pyplot and pylab: how are they related?
+## Matplotlib、pyplot和pylab之间的联系
 
-Matplotlib is the whole package and [``matplotlib.pyplot``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) is a module in
-Matplotlib.
+Matplotlib指的是整个包，而[``matplotlib.pyplot``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)只是其中一个常用模块
 
-For functions in the pyplot module, there is always a "current" figure and
-axes (which is created automatically on request). For example, in the
-following example, the first call to ``plt.plot`` creates the axes, then
-subsequent calls to ``plt.plot`` add additional lines on the same axes, and
-``plt.xlabel``, ``plt.ylabel``, ``plt.title`` and ``plt.legend`` set the
-axes labels and title and add a legend.
+对于pyplot模块中的函数，始终有一个“当前”figure和axes(根据请求自动创建)。例如，在下面的示例中，第一次调用``plt.plot``会创建axes，之后调用``plt.plot``会继续在该axes上添加额外的线，接着``plt.xlabel``，``plt.ylabel``，``plt.title``和``plt.legend``设置坐标轴标签和标题，并添加一个图例。
 
 ``` python
 x = np.linspace(0, 2, 100)
@@ -172,45 +108,31 @@ plt.show()
 
 ![sphx_glr_usage_003](https://matplotlib.org/_images/sphx_glr_usage_003.png)
 
-``pylab`` is a convenience module that bulk imports
-[``matplotlib.pyplot``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot) (for plotting) and [``numpy``](https://docs.scipy.org/doc/numpy/reference/index.html#module-numpy)
-(for mathematics and working with arrays) in a single namespace.
-pylab is deprecated and its use is strongly discouraged because
-of namespace pollution. Use pyplot instead.
+``pylab``是在一个简单的命名空间中批量导入[``matplotlib.pyplot``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot)（用于绘图）和[``numpy``](https://docs.scipy.org/doc/numpy/reference/index.html#module-numpy)（用于处理矩阵和数组）的便利模块。由于名称空间污染，不推荐使用pylab。
+请使用pyplot代替。
 
-For non-interactive plotting it is suggested
-to use pyplot to create the figures and then the OO interface for
-plotting.
+对于非交互式绘图，建议使用培养plot创建figure，然后使用面向对象接口绘图。
 
-## Coding Styles
+## 代码风格
 
-When viewing this documentation and examples, you will find different
-coding styles and usage patterns. These styles are perfectly valid
-and have their pros and cons. Just about all of the examples can be
-converted into another style and achieve the same results.
-The only caveat is to avoid mixing the coding styles for your own code.
+当查看这个文档和例子时，你会看到不同的代码风格与使用模式。这些风格都是合适的，都有不同的优缺点。几乎所有的例子都可以转换到另一种风格，并且输出同样的结果。唯一需要注意的是避免在你自己的代码中混杂两种不同风格的代码。
 
 ::: tip Note
 
-Developers for matplotlib have to follow a specific style and guidelines.
-See [The Matplotlib Developers' Guide](https://matplotlib.orgdevel/index.html#developers-guide-index).
+matplotlib开发人员需要遵循另一套特定的风格和指导原则。详见[The Matplotlib Developers' Guide](https://matplotlib.orgdevel/index.html#developers-guide-index)
 
 :::
 
-Of the different styles, there are two that are officially supported.
-Therefore, these are the preferred ways to use matplotlib.
+在所有不同风格中，有两种是官方支持的。因此这些是使用matplotlib的首选方案。
 
-For the pyplot style, the imports at the top of your
-scripts will typically be:
+其中pyplot风格，程序顶部的导入通常为：
 
 ``` python
 import matplotlib.pyplot as plt
 import numpy as np
 ```
 
-Then one calls, for example, np.arange, np.zeros, np.pi, plt.figure,
-plt.plot, plt.show, etc. Use the pyplot interface
-for creating figures, and then use the object methods for the rest:
+接下来是np.arange, np.zeros, np.pi, plt.figure,plt.plot, plt.show等。使用pyplot接口创建figure，然后使用pyplot对象的方法完成其余工作:
 
 ``` python
 x = np.arange(0, 10, 0.2)
@@ -222,19 +144,9 @@ plt.show()
 
 ![sphx_glr_usage_004](https://matplotlib.org/_images/sphx_glr_usage_004.png)
 
-So, why all the extra typing instead of the MATLAB-style (which relies
-on global state and a flat namespace)? For very simple things like
-this example, the only advantage is academic: the wordier styles are
-more explicit, more clear as to where things come from and what is
-going on. For more complicated applications, this explicitness and
-clarity becomes increasingly valuable, and the richer and more
-complete object-oriented interface will likely make the program easier
-to write and maintain.
+至于为什么要在每个函数前多输入“plt.”而不是像MATLAB那样使用全局声明和扁平化的命名空间？如这个简单例子所示，这样做更具学术性：单词的风格更明确，你可清晰看到调用的函数从哪来，发生了什么。对于更复杂的应用，这种明确和清晰的写法变得越来越有价值，而且更丰富和更完整的面向对象接口可能会使程序更容易编写和维护。
 
-Typically one finds oneself making the same plots over and over
-again, but with different data sets, which leads to needing to write
-specialized functions to do the plotting. The recommended function
-signature is something like:
+通常，对于不同数据重复绘制相同图像的情况，推荐编写专门的函数来进行绘制，提供代码复用性。推荐的函数签名写法如下：
 
 ``` python
 def my_plotter(ax, data1, data2, param_dict):
@@ -272,7 +184,7 @@ my_plotter(ax, data1, data2, {'marker': 'x'})
 
 ![sphx_glr_usage_005](https://matplotlib.org/_images/sphx_glr_usage_005.png)
 
-or if you wanted to have 2 sub-plots:
+或者你需要绘制两个子图：
 
 ``` python
 fig, (ax1, ax2) = plt.subplots(1, 2)
@@ -282,76 +194,31 @@ my_plotter(ax2, data3, data4, {'marker': 'o'})
 
 ![sphx_glr_usage_006](https://matplotlib.org/_images/sphx_glr_usage_006.png)
 
-Again, for these simple examples this style seems like overkill, however
-once the graphs get slightly more complex it pays off.
+同样的，虽然对于这个简单例子来说，这种风格显得十分繁琐，但对于更复杂的的图像，这样做是很值得的。
 
-## Backends
+## 后端
 
-### What is a backend?
+### 什么是后端?
 
-A lot of documentation on the website and in the mailing lists refers
-to the "backend" and many new users are confused by this term.
-matplotlib targets many different use cases and output formats. Some
-people use matplotlib interactively from the python shell and have
-plotting windows pop up when they type commands. Some people run
-[Jupyter](https://jupyter.org) notebooks and draw inline plots for
-quick data analysis. Others embed matplotlib into graphical user
-interfaces like wxpython or pygtk to build rich applications. Some
-people use matplotlib in batch scripts to generate postscript images
-from numerical simulations, and still others run web application
-servers to dynamically serve up graphs.
+网站上和邮件列表中的很多文档都提到了“backend”，许多新用户对这个术语感到困惑。matplotlib适用于不同的用例和输出格式。有些人从python shell交互式地使用matplotlib，并在键入命令时弹出绘图窗口。有些人会使用[Jupyter](https://jupyter.org) notebook绘制内嵌图以进行快速数据分析。还有一些将matplotlib嵌入到图形用户界面(如wxpython或pygtk)中，以构建丰富的应用程序。有些人在批处理脚本中使用matplotlib来从数值模拟中生成postscript图像，还有一些人运行web应用程序服务器来动态地提供图像。
 
-To support all of these use cases, matplotlib can target different
-outputs, and each of these capabilities is called a backend; the
-"frontend" is the user facing code, i.e., the plotting code, whereas the
-"backend" does all the hard work behind-the-scenes to make the figure.
-There are two types of backends: user interface backends (for use in
-pygtk, wxpython, tkinter, qt4, or macosx; also referred to as
-"interactive backends") and hardcopy backends to make image files
-(PNG, SVG, PDF, PS; also referred to as "non-interactive backends").
+为了支持所有这些场景，matplotlib可以针对不同的输出，每个功能都被称为后端；“前端”是用户面对的代码，也就是绘图代码，而“后端”则在幕后完成绘制图形的所有艰苦工作。有两种类型的后端：用户界面后端(用于pygtk、wxpython、tkinter、qt4或macosx中；也称为“交互后端”)和硬拷贝后端，以制作图像文件(PNG, SVG, PDF, PS；也被称为“非交互式后端”)。
 
-There are four ways to configure your backend. If they conflict each other,
-the method mentioned last in the following list will be used, e.g. calling
-[``use()``](https://matplotlib.orgapi/matplotlib_configuration_api.html#matplotlib.use) will override the setting in your ``matplotlibrc``.
+配置后端有四种方法。如果它们相互冲突，将使用下面列表中最后提到的方法，例如调用[``use()``](https://matplotlib.orgapi/matplotlib_configuration_api.html#matplotlib.use)将覆盖``matplotlibrc``中的设置。
 
 ::: tip Note
 
-Backend name specifications are not case-sensitive; e.g., 'GTK3Agg'
-and 'gtk3agg' are equivalent.
+后端名称规范不区分大小写；例如，“GTK3Agg”和“GTK3Agg”是等价的。
 
 :::
 
-With a typical installation of matplotlib, such as from a
-binary installer or a linux distribution package, a good default
-backend will already be set, allowing both interactive work and
-plotting from scripts, with output to the screen and/or to
-a file, so at least initially you will not need to use any of the
-methods given above.
+matplotlib的典型安装，如从二进制安装程序或linux发行版的包，一个好的默认后台已经被设置，允许从交互式工作和脚本输出到屏幕上和/或一个文件，所以至少一开始你不需要使用任何上面给出的方法。
 
-If, however, you want to write graphical user interfaces, or a web
-application server ([How to use Matplotlib in a web application server](https://matplotlib.orgfaq/howto_faq.html#howto-webapp)), or need a better
-understanding of what is going on, read on. To make things a little
-more customizable for graphical user interfaces, matplotlib separates
-the concept of the renderer (the thing that actually does the drawing)
-from the canvas (the place where the drawing goes). The canonical
-renderer for user interfaces is ``Agg`` which uses the [Anti-Grain
-Geometry](http://antigrain.com/) C++ library to make a raster (pixel) image of the figure.
-All of the user interfaces except ``macosx`` can be used with
-agg rendering, e.g., ``WXAgg``, ``GTK3Agg``, ``QT4Agg``, ``QT5Agg``,
-``TkAgg``. In addition, some of the user interfaces support other rendering
-engines. For example, with GTK+ 3, you can also select Cairo rendering
-(backend ``GTK3Cairo``).
+但是，如果您希望编写图形用户界面或web应用程序服务器（[How to use Matplotlib in a web application server](https://matplotlib.orgfaq/howto_faq.html#howto-webapp)），或者需要更好地理解正在进行的操作，请继续阅读。为了让图形用户界面更加可定制，matplotlib将渲染器(实际完成绘图的东西)的概念从画布(绘图的地方)中分离出来。用户界面的标准渲染器是``Agg``，它使用[Anti-GrainGeometry](http://antigrain.com/)c++库来制作图形的栅格(像素)图像。除``macosx``以外的所有用户界面都可以用于agg渲染，如``WXAgg``，``GTK3Agg``，``QT4Agg``，``QT5Agg``，``TkAgg``。此外，一些用户界面支持其他渲染引擎。例如，对于GTK+ 3，您还可以选择Cairo渲染（``GTK3Cairo``后端）。
 
-For the rendering engines, one can also distinguish between [vector](https://en.wikipedia.org/wiki/Vector_graphics) or [raster](https://en.wikipedia.org/wiki/Raster_graphics) renderers. Vector
-graphics languages issue drawing commands like "draw a line from this
-point to this point" and hence are scale free, and raster backends
-generate a pixel representation of the line whose accuracy depends on a
-DPI setting.
+对于渲染引擎，还可以区分[矢量](https://en.wikipedia.org/wiki/Vector_graphics)或[栅格](https://en.wikipedia.org/wiki/Raster_graphics)渲染。矢量图形语言通过“从这一点画一条线到这一点”这样的绘图命令绘制图形，因此是可以任意缩放的，而栅格后端生成像素表示线条，其精度取决于DPI的设置。
 
-Here is a summary of the matplotlib renderers (there is an eponymous
-backend for each; these are *non-interactive backends*, capable of
-writing to a file):
-
+下面是matplotlib渲染器的汇总（每个渲染器都有一个同名的后端；这些是*非交互式后端*，能够写入文件）：
 
 ---
 
@@ -360,30 +227,27 @@ writing to a file):
 
 
 
-Renderer
-Filetypes
-Description
+渲染器的文件描述
 
 
 
 [AGG](htt[[ps](https://matplotlib.org/../glossary/index.html#term-ps)](https://matplotlib.org/../glossary/index.html#term-ps)://matplotlib.org/../glossary/index.html#term-agg)
 [[png](https://matplotlib.org/../glossary/index.html#term-png)](https://matplotlib.org/../glossary/index.html#term-png)
-[[raster graphics](https://matplotlib.org/../glossary/index.html#term-raster-graphics)](https://matplotlib.org/../glossary/index.html#term-raster-graphics) -- high quality images
-using the [Anti-Grain Geometry](http://antigrain.com/) engine
+[[raster graphics](https://matplotlib.org/../glossary/index.html#term-raster-graphics)](https://matplotlib.org/../glossary/index.html#term-raster-graphics) -- 使用[Anti-Grain Geometry](http://antigrain.com/) 引擎的高质量图像。
 
 PS
 ps
 [eps](https://matplotlib.org/../glossary/index.html#term-eps)
-[[[[vector graphics](https://matplotlib.org/../glossary/index.html#term-vector-graphics)](https://matplotlib.org/../glossary/index.html#term-vector-graphics)](https://matplotlib.org/../glossary/index.html#term-vector-graphics)](https://matplotlib.org/../glossary/index.html#term-vector-graphics) -- [Postscript](https://en.wikipedia.org/wiki/PostScript) output
+[[[[vector graphics](https://matplotlib.org/../glossary/index.html#term-vector-graphics)](https://matplotlib.org/../glossary/index.html#term-vector-graphics)](https://matplotlib.org/../glossary/index.html#term-vector-graphics)](https://matplotlib.org/../glossary/index.html#term-vector-graphics) -- [Postscript](https://en.wikipedia.org/wiki/PostScript) 输出
 
 PDF
 [[pdf](https://matplotlib.org/../glossary/index.html#term-pdf)](https://matplotlib.org/../glossary/index.html#term-pdf)
-vector graphics --
+矢量图形 --
 [Portable Document Format](https://en.wikipedia.org/wiki/Portable_Document_Format)
 
 SVG
 [[svg](https://matplotlib.org/../glossary/index.html#term-svg)](https://matplotlib.org/../glossary/index.html#term-svg)
-vector graphics --
+矢量图形 --
 [Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
 
 [Cairo](https://matplotlib.org/../glossary/index.html#term-cairo)
@@ -391,18 +255,14 @@ png
 ps
 pdf
 svg
-raster graphics and
-vector graphics -- using the
-[Cairo graphics](https://wwW.cairographics.org) library
+栅格图形 and
+矢量图形 -- 使用
+[Cairo graphics](https://wwW.cairographics.org) 库
 
 
 
 
-And here are the user interfaces and renderer combinations supported;
-these are *interactive backends*, capable of displaying to the screen
-and of using appropriate renderers from the table above to write to
-a file:
-
+以下是支持的用户界面和渲染器组合；这些是*交互后端*，能够显示到屏幕和使用适当的渲染器从上表写入文件:
 
 ---
 
@@ -410,136 +270,101 @@ a file:
 
 
 
-Backend
-Description
+后端描述
 
 
 
 [Qt5](https://matplotlib.org/../glossary/index.html#term-qt5)Agg
-Agg rendering in a Qt5 canvas (requires [PyQt5](https://riverbankcomputing.com/software/pyqt/intro)). This
-backend can be activated in IPython with %matplotlib qt5.
+Agg 渲染到 Qt5 画布(需要 [PyQt5](https://riverbankcomputing.com/software/pyqt/intro)). 这个后端可以在IPython中使用%matplotlib qt5激活。
 
 ipympl
-Agg rendering embedded in a Jupyter widget. (requires ipympl).
-This backend can be enabled in a Jupyter notebook with
-%matplotlib ipympl.
+嵌入在Jupyter widget中的Agg渲染(需要 ipympl)。这个后端可以在使用%matplotlib ipympl的Jupyter notebook中启用。
 
 [[GTK](https://matplotlib.org/../glossary/index.html#term-gtk)](https://matplotlib.org/../glossary/index.html#term-gtk)3Agg
-Agg rendering to a GTK 3.x canvas (requires [[PyGObject](https://wiki.gnome.org/action/show/Projects/PyGObject)](https://wiki.gnome.org/action/show/Projects/PyGObject),
-and [[pycairo](https://www.cairographics.org/pycairo/)](https://www.cairographics.org/pycairo/) or [[cairocffi](https://pythonhosted.org/cairocffi/)](https://pythonhosted.org/cairocffi/)). This backend can be activated in
-IPython with %matplotlib gtk3.
+Agg 渲染到 GTK 3.x 画布 (需要 [[PyGObject](https://wiki.gnome.org/action/show/Projects/PyGObject)](https://wiki.gnome.org/action/show/Projects/PyGObject),
+and [[pycairo](https://www.cairographics.org/pycairo/)](https://www.cairographics.org/pycairo/) 或 [[cairocffi](https://pythonhosted.org/cairocffi/)](https://pythonhosted.org/cairocffi/)). 这个后端可以在IPython中使用%matplotlib gtk3激活。
 
 macosx
-Agg rendering into a Cocoa canvas in OSX. This backend can be
-activated in IPython with %matplotlib osx.
+Agg渲染到一个OSX的Cocoa画布。这个后端可以在IPython中使用%matplotlib osx激活。
+
 
 [Tk](https://matplotlib.org/../glossary/index.html#term-tk)Agg
-Agg rendering to a Tk canvas (requires [TkInter](https://wiki.python.org/moin/TkInter)). This
-backend can be activated in IPython with %matplotlib tk.
+Agg渲染到Tk画布 (需要 [TkInter](https://wiki.python.org/moin/TkInter)). 这个后端可以在IPython中使用%matplotlib tk激活。
 
 nbAgg
-Embed an interactive figure in a Jupyter classic notebook. This
-backend can be enabled in Jupyter notebooks via
-%matplotlib notebook.
+在经典Jupyter notebook嵌入一个可交互式图像。这个后端可以通过%matplotlib笔记本在Jupyter notebook中启用。
 
 WebAgg
-On show() will start a tornado server with an interactive
-figure.
+使用show()将使用交互式图形启动tornado服务器。
 
 GTK3Cairo
-Cairo rendering to a GTK 3.x canvas (requires PyGObject,
-and pycairo or cairocffi).
+Cairo渲染到GTK 3.x画布(需要 PyGObject和 pycairo 或者 cairocffi).
 
 [Qt4](https://matplotlib.org/../glossary/index.html#term-qt4)Agg
-Agg rendering to a Qt4 canvas (requires [PyQt4](https://riverbankcomputing.com/software/pyqt/intro) or
-pyside). This backend can be activated in IPython with
-%matplotlib qt4.
+Agg渲染到Qt4画布(需要 [PyQt4](https://riverbankcomputing.com/software/pyqt/intro)或者pyside)。可以在IPython中使用%matplotlib qt4激活该后端。
 
 WXAgg
-Agg rendering to a [wxWidgets](https://matplotlib.org/../glossary/index.html#term-wxwidgets) canvas (requires [wxPython](https://www.wxpython.org/) 4).
-This backend can be activated in IPython with %matplotlib wx.
+Agg渲染到[wxWidgets](https://matplotlib.org/../glossary/index.html#term-wxwidgets)画布(需要 [wxPython](https://www.wxpython.org/) 4).
+这个后端可以在IPython中使用%matplotlib wx激活。
 
 
 
 
 ### ipympl
 
-The Jupyter widget ecosystem is moving too fast to support directly in
-Matplotlib. To install ipympl
+Jupyter widget生态发展太快以至于无法直接在Matplotlib中支持，请安装ipympl
 
 ``` bash
 pip install ipympl
 jupyter nbextension enable --py --sys-prefix ipympl
 ```
 
-or
+或者
 
 ``` bash
 conda install ipympl -c conda-forge
 ```
 
-See [jupyter-matplotlib](https://github.com/matplotlib/jupyter-matplotlib)
-for more details.
+详见[jupyter-matplotlib](https://github.com/matplotlib/jupyter-matplotlib)。
 
 ### GTK and Cairo
 
-``GTK3`` backends (*both* ``GTK3Agg`` and ``GTK3Cairo``) depend on Cairo
+``GTK3``后端(``GTK3Agg`` 和 ``GTK3Cairo``**都**)取决于Cairo
 (pycairo>=1.11.0 or cairocffi).
 
-### How do I select PyQt4 or PySide?
+### 我如何选择PyQt4或PySide?
 
-The ``QT_API`` environment variable can be set to either ``pyqt`` or ``pyside``
-to use ``PyQt4`` or ``PySide``, respectively.
+
+``QT_API``环境变量可以设置为``pyqt``或``pyside``来分别使用``PyQt4``或``pyside``。
 
 Since the default value for the bindings to be used is ``PyQt4``,
 ``matplotlib`` first tries to import it, if the import fails, it tries to
 import ``PySide``.
+由于使用的绑定的默认值是``PyQt4``，``matplotlib``首先尝试导入它，如果导入失败，则会尝试导入``PySide``。
 
-## What is interactive mode?
+## 什么是交互模式?
 
-Use of an interactive backend (see [What is a backend?](#what-is-a-backend))
-permits--but does not by itself require or ensure--plotting
-to the screen. Whether and when plotting to the screen occurs,
-and whether a script or shell session continues after a plot
-is drawn on the screen, depends on the functions and methods
-that are called, and on a state variable that determines whether
-matplotlib is in "interactive mode". The default Boolean value is set
-by the ``matplotlibrc`` file, and may be customized like any other
-configuration parameter (see [Customizing Matplotlib with style sheets and rcParams](customizing.html)). It
-may also be set via [``matplotlib.interactive()``](https://matplotlib.orgapi/matplotlib_configuration_api.html#matplotlib.interactive), and its
-value may be queried via [``matplotlib.is_interactive()``](https://matplotlib.orgapi/matplotlib_configuration_api.html#matplotlib.is_interactive). Turning
-interactive mode on and off in the middle of a stream of plotting
-commands, whether in a script or in a shell, is rarely needed
-and potentially confusing, so in the following we will assume all
-plotting is done with interactive mode either on or off.
+
+使用交互式后端(参见[什么是后端?](#what-is-a-backend))允许——但其本身并不要求或确保——绘图到屏幕上。
+是否以及何时在屏幕上进行绘图，以及在屏幕上绘制图形之后脚本或shell会话是否继续，都取决于所调用的函数和方法，以及一个状态变量，该状态变量决定matplotlib是否处于“交互模式”。默认的布尔值是由``matplotlibrc``文件设置的，可以像其他配置参数一样自定义(参见[用样式表和rcParams自定义Matplotlib](customizing.html))。它也可以通过设置[``matplotlib.interactive()``](https://matplotlib.orgapi/matplotlib_configuration_api.html#matplotlib.interactive)，和它的价值可能通过查询[``matplotlib.is_interactive()``](https://matplotlib.orgapi/matplotlib_configuration_api.html#matplotlib.is_interactive)。在绘图命令流中(无论是在脚本中还是在shell中)打开和关闭交互模式很少需要，而且可能会造成混乱，因此在下文中我们将假定所有绘图都是在打开或关闭交互模式下完成的。
 
 ::: tip Note
 
-Major changes related to interactivity, and in particular the
-role and behavior of [``show()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show), were made in the
-transition to matplotlib version 1.0, and bugs were fixed in
-1.0.1. Here we describe the version 1.0.1 behavior for the
-primary interactive backends, with the partial exception of
-*macosx*.
+在过渡到matplotlib 1.0版本时，交互模式相关发生了变化，特别是[``show()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show)的作用和行为，并且在1.0.1中修复了错误。这里我们描述了主要交互后端1.0.1版本的行为，*macosx*除外。
 
 :::
 
-Interactive mode may also be turned on via [``matplotlib.pyplot.ion()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.ion.html#matplotlib.pyplot.ion),
-and turned off via [``matplotlib.pyplot.ioff()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.ioff.html#matplotlib.pyplot.ioff).
+交互模式通过[``matplotlib.pyplot.ion()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.ion.html#matplotlib.pyplot.ion)打开，通过[``matplotlib.pyplot.ioff()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.ioff.html#matplotlib.pyplot.ioff)关闭
 
 ::: tip Note
 
-Interactive mode works with suitable backends in ipython and in
-the ordinary python shell, but it does *not* work in the IDLE IDE.
-If the default backend does not support interactivity, an interactive
-backend can be explicitly activated using any of the methods discussed in [What is a backend?](#id4).
+在ipython和普通的pythonshell中，交互式模式与合适的后端一起工作，但是在空闲IDE中它**不**工作。如果默认后端不支持交互，则可以使用[What is a backend?](#id4)中讨论的任何方法显式激活交互式后端？。
 
 :::
 
-### Interactive example
+### 交互模式的例子
 
-From an ordinary python prompt, or after invoking ipython with no options,
-try this:
+从一个普通的python提示符，或者在没有选项的情况下调用ipython后，尝试这样做:
 
 ``` python
 import matplotlib.pyplot as plt
@@ -547,39 +372,29 @@ plt.ion()
 plt.plot([1.6, 2.7])
 ```
 
-Assuming you are running version 1.0.1 or higher, and you have
-an interactive backend installed and selected by default, you should
-see a plot, and your terminal prompt should also be active; you
-can type additional commands such as:
+假设您运行的版本是1.0.1或更高，并且默认安装并选择了交互式后端，您应该会看到一个绘图，并且您的终端提示也应该是激活的；您可以键入其他命令，如:
 
 ``` python
 plt.title("interactive test")
 plt.xlabel("index")
 ```
 
-and you will see the plot being updated after each line. Since version 1.5,
-modifying the plot by other means *should* also automatically
-update the display on most backends. Get a reference to the [``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes) instance,
-and call a method of that instance:
+您将看到在每一行之后都会更新图像。自从1.5版本以来，通过其他方式修改图像*应该*也会自动更新大多数后端上显示的图像。例如，获取一个[``Axes``](https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes)实例的引用，并调用该实例的一个方法:
 
 ``` python
 ax = plt.gca()
 ax.plot([3.1, 2.2])
 ```
 
-If you are using certain backends (like ``macosx``), or an older version
-of matplotlib, you may not see the new line added to the plot immediately.
-In this case, you need to explicitly call [``draw()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.draw.html#matplotlib.pyplot.draw)
-in order to update the plot:
+如果使用某些后端(如``macosx``)或较旧版本的matplotlib，可能不会立即看到添加到绘图中的新行。 在这种情况下，您需要显式调用[``draw()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.draw.html#matplotlib.pyplot.draw)来更新绘图:
 
 ``` python
 plt.draw()
 ```
 
-### Non-interactive example
+### 非交互式的例子
 
-Start a fresh session as in the previous example, but now
-turn interactive mode off:
+像前面的例子一样开始一个新的会话，但是现在关闭交互模式:
 
 ``` python
 import matplotlib.pyplot as plt
@@ -587,34 +402,19 @@ plt.ioff()
 plt.plot([1.6, 2.7])
 ```
 
-Nothing happened--or at least nothing has shown up on the
-screen (unless you are using *macosx* backend, which is
-anomalous). To make the plot appear, you need to do this:
+什么也没有发生——或者至少在屏幕上什么也没有显示(除非您使用*macosx*后端，将会抛出异常)。为了使图像出现，你需要这样做:
 
 ``` python
 plt.show()
 ```
 
-Now you see the plot, but your terminal command line is
-unresponsive; the ``show()`` command *blocks* the input
-of additional commands until you manually kill the plot
-window.
+现在您看到了这个图，但是您的终端命令行没有响应；``show()``命令会阻塞其他命令的输入，直到您手动杀死plot窗口为止。
 
-What good is this--being forced to use a blocking function?
-Suppose you need a script that plots the contents of a file
-to the screen. You want to look at that plot, and then end
-the script. Without some blocking command such as show(), the
-script would flash up the plot and then end immediately,
-leaving nothing on the screen.
+强制使用阻塞函数有什么好处?假设您需要一个脚本将文件的内容绘制到屏幕上。你想看看图像，然后结束剧本。如果没有show()之类的阻塞命令，脚本就会刷新图像，然后立即结束，在屏幕上什么也不留下。
 
-In addition, non-interactive mode delays all drawing until
-show() is called; this is more efficient than redrawing
-the plot each time a line in the script adds a new feature.
+此外，非交互模式延迟所有绘制直到show()被调用；这比每次脚本中的一行添加新特性时重新绘制图形更有效率。
 
-Prior to version 1.0, show() generally could not be called
-more than once in a single script (although sometimes one
-could get away with it); for version 1.0.1 and above, this
-restriction is lifted, so one can write a script like this:
+在1.0版本之前，show()通常不能在单个脚本中被多次调用(尽管有时可以使用它)；对于版本1.0.1和更高版本，这个限制被取消了，所以人们可以这样写一个脚本“
 
 ``` python
 import numpy as np
@@ -626,53 +426,34 @@ for i in range(3):
     plt.show()
 ```
 
-which makes three plots, one at a time. I.e. the second plot will show up,
-once the first plot is closed.
+将会输出三个图像，一次一个。也就是说，一旦第一个图像关闭，第二个图像就会出现。
 
-### Summary
+### 总结
 
-In interactive mode, pyplot functions automatically draw
-to the screen.
+在交互模式下，pyplot函数会自动绘制到屏幕上。
 
 When plotting interactively, if using
 object method calls in addition to pyplot functions, then
 call [``draw()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.draw.html#matplotlib.pyplot.draw) whenever you want to
 refresh the plot.
+在交互绘图时，如果除了使用pyplot函数外还使用了对象方法调用，那么当您想刷新绘图时，请调用[``draw()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.draw.html#matplotlib.pyplot.draw)。
 
 Use non-interactive mode in scripts in which you want to
 generate one or more figures and display them before ending
 or generating a new set of figures. In that case, use
 [``show()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show) to display the figure(s) and
 to block execution until you have manually destroyed them.
+当您想要生成一个或多个图形并在结束或生成一组新的图形之前显示它们时，请在脚本中使用非交互模式。在这种情况下，使用[``show()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show)来显示图并阻止执行，直到您手动销毁它们。
 
-## Performance
+## 性能
 
-Whether exploring data in interactive mode or programmatically
-saving lots of plots, rendering performance can be a painful
-bottleneck in your pipeline. Matplotlib provides a couple
-ways to greatly reduce rendering time at the cost of a slight
-change (to a settable tolerance) in your plot's appearance.
-The methods available to reduce rendering time depend on the
-type of plot that is being created.
+无论是以交互模式浏览数据，还是以编程方式保存大量图形，渲染性能都可能是管线中一个令人头疼的瓶颈。Matplotlib提供了两种方法来极大地减少渲染时间，但代价是对绘图的外观进行轻微的更改(对可设置的容忍度)。可用于减少渲染时间的方法取决于所创建的图形的类型。
 
-### Line segment simplification
+### 线段简化
 
-For plots that have line segments (e.g. typical line plots,
-outlines of polygons, etc.), rendering performance can be
-controlled by the ``path.simplify`` and
-``path.simplify_threshold`` parameters in your
-``matplotlibrc`` file (see
-[Customizing Matplotlib with style sheets and rcParams](customizing.html) for
-more information about the ``matplotlibrc`` file).
-The ``path.simplify`` parameter is a boolean indicating whether
-or not line segments are simplified at all. The
-``path.simplify_threshold`` parameter controls how much line
-segments are simplified; higher thresholds result in quicker
-rendering.
+对于具有线段的图形(例如典型的线段，多边形的轮廓等)，渲染性能可以通过``matplotlibrc``文件中的``path.simplify``和``path.simplify_threshold``参数简化。(参见[使用样式表和rcParams自定义Matplotlib](customizing.html)获得更多关于``matplotlibrc``文件的信息)。``path.simplify``参数是一个布尔值，指示线段是否被简化。“路径。``path.simplify_threshold``参数控制了多少线段被简化；设置较高的阈值获得更快的渲染速度。
 
-The following script will first display the data without any
-simplification, and then display the same data with simplification.
-Try interacting with both of them:
+下面的脚本将首先显示不经过任何简化的数据，然后显示相同的经过简化的数据。尝试与他们两个互动:
 
 ``` python
 import numpy as np
@@ -694,68 +475,32 @@ plt.plot(y)
 plt.show()
 ```
 
-Matplotlib currently defaults to a conservative simplification
-threshold of ``1/9``. If you want to change your default settings
-to use a different value, you can change your ``matplotlibrc``
-file. Alternatively, you could create a new style for
-interactive plotting (with maximal simplification) and another
-style for publication quality plotting (with minimal
-simplification) and activate them as necessary. See
-[Customizing Matplotlib with style sheets and rcParams](customizing.html) for
-instructions on how to perform these actions.
+Matplotlib目前默认为保守的简化阈值``1/9``。如果你想改变你的默认设置来使用一个不同的值，你可以改变你的``matplotlibrc``文件。或者，您可以创建一种新的交互绘图样式(简化程度最高)和另一种样式(简化程度最低)，并根据需要激活它们。有关如何执行这些操作的说明，请参阅[使用样式表和rcParams自定义Matplotlib](customizing.html)。
 
-The simplification works by iteratively merging line segments
-into a single vector until the next line segment's perpendicular
-distance to the vector (measured in display-coordinate space)
-is greater than the ``path.simplify_threshold`` parameter.
+这种简化的原理是迭代地将线段合并成一个向量，直到下一个线段到向量的垂直距离(在显示坐标空间中测距)大于``path.simplify_threshold``参数。
 
 ::: tip Note
 
-Changes related to how line segments are simplified were made
-in version 2.1. Rendering time will still be improved by these
-parameters prior to 2.1, but rendering time for some kinds of
-data will be vastly improved in versions 2.1 and greater.
+在版本2.1中进行了与线段如何简化相关的更改。在2.1版本之前，这些参数仍然会提高渲染时间，但在2.1版本和更大版本中，某些类型数据的渲染时间将会大大提高。
 
 :::
 
-### Marker simplification
+### 标记简化
 
-Markers can also be simplified, albeit less robustly than
-line segments. Marker simplification is only available
-to [``Line2D``](https://matplotlib.orgapi/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) objects (through the
-``markevery`` property). Wherever
-[``Line2D``](https://matplotlib.orgapi/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) construction parameters
-are passed through, such as
-[``matplotlib.pyplot.plot()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot) and
-[``matplotlib.axes.Axes.plot()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot), the ``markevery``
-parameter can be used:
+标记也可以简化，尽管不如线段。仅对[``Line2D``](https://matplotlib.orgapi/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) 对象适用 (通过``markevery`` 属性). 无论通过[``Line2D``](https://matplotlib.orgapi/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D) 传递构造参数，例如[``matplotlib.pyplot.plot()``](https://matplotlib.orgapi/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot) 和
+[``matplotlib.axes.Axes.plot()``](https://matplotlib.orgapi/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot)，``markevery``参数都可以使用。
 
 ``` python
 plt.plot(x, y, markevery=10)
 ```
 
-The markevery argument allows for naive subsampling, or an
-attempt at evenly spaced (along the *x* axis) sampling. See the
-[Markevery Demo](https://matplotlib.orggallery/lines_bars_and_markers/markevery_demo.html)
-for more information.
+markevery参数允许简单的子抽样，或者尝试均匀间隔(沿着*x*轴)的抽样。更多信息，请参见[Markevery Demo](https://matplotlib.orggallery/lines_bars_and_markers/markevery_demo.html)。
 
-### Splitting lines into smaller chunks
+### 把线分成更小的块
 
-If you are using the Agg backend (see [What is a backend?](#what-is-a-backend)),
-then you can make use of the ``agg.path.chunksize`` rc parameter.
-This allows you to specify a chunk size, and any lines with
-greater than that many vertices will be split into multiple
-lines, each of which has no more than ``agg.path.chunksize``
-many vertices. (Unless ``agg.path.chunksize`` is zero, in
-which case there is no chunking.) For some kind of data,
-chunking the line up into reasonable sizes can greatly
-decrease rendering time.
+如果你正在使用Agg后端(请参阅[什么是后端?](#what-is-a-backend))，那么你可以使用``agg.path.chunksize``的rc参数。这允许你指定一个块的大小，任何大于这个数目的顶点的线将被分割成多个线，每个线不超过``agg.path.chunksize``的顶点。(除非``agg.path.chunksize``为零，此时不存在分块。)对于某些类型的数据，将线段分成合理的大小可以大大减少渲染时间。
 
-The following script will first display the data without any
-chunk size restriction, and then display the same data with
-a chunk size of 10,000. The difference can best be seen when
-the figures are large, try maximizing the GUI and then
-interacting with them:
+下面的脚本将首先显示没有任何块大小限制的数据，然后绘制块大小为10,000的相同数据。当图形很大的时候，差异就会很明显，试着最大化GUI，然后与它们交互:
 
 ``` python
 import numpy as np
@@ -778,34 +523,26 @@ plt.plot(y)
 plt.show()
 ```
 
-### Legends
+### 图例
 
-The default legend behavior for axes attempts to find the location
-that covers the fewest data points (``loc='best'``). This can be a
-very expensive computation if there are lots of data points. In
-this case, you may want to provide a specific location.
+axis的默认图例行为试图找到覆盖最少数据点的位置(``loc='best'``)。如果有很多数据点，这将是一个非常耗时的计算。在这种情况下，您可能需要提供一个指定的位置。
 
-### Using the fast style
+### 使用fast样式
 
-The *fast* style can be used to automatically set
-simplification and chunking parameters to reasonable
-settings to speed up plotting large amounts of data.
-It can be used simply by running:
+使用*fast*风格可自动设置简化和块参数为合理的设置，以加快绘制大量数据。它可以简单使用:
 
 ``` python
 import matplotlib.style as mplstyle
 mplstyle.use('fast')
 ```
 
-It is very light weight, so it plays nicely with other
-styles, just make sure the fast style is applied last
-so that other styles do not overwrite the settings:
+它是非常轻量级的，所以它可以很好地与其他样式混搭，只要确保快速样式是最后应用，这样其他样式不会覆盖设置:
 
 ``` python
 mplstyle.use(['dark_background', 'ggplot', 'fast'])
 ```
 
-## Download
+## 下载
 
 - [Download Python source code: usage.py](https://matplotlib.org/_downloads/841a514c2538fd0de68b22f22b25f56d/usage.py)
 - [Download Jupyter notebook: usage.ipynb](https://matplotlib.org/_downloads/16d604c55fb650c0dce205aa67def02b/usage.ipynb)
