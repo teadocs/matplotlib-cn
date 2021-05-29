@@ -8,10 +8,14 @@ module.exports = [
     link: '/gallery/'
   },
   {
-    text: '深度学习',
-    link: '/deep/',
-    important: true
+    text: '在线论坛',
+    link: 'https://www.kuxai.com/f/matplotlib'
   },
+  // {
+  //   text: '深度学习',
+  //   link: '/deep/',
+  //   important: true
+  // },
   {
     text: 'Matplotlib 教程',
     link: '/tutorials/'

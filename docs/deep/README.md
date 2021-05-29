@@ -18,7 +18,7 @@ meta:
 
 欢迎来到 Matplotlib 与深度学习栏目！
 
-本栏目会指导你如何使用 [Matplotlib](https://www.numpy.org.cn/)、[Matplotlib](https://www.matplotlib.org.cn/)、[Pandas](https://www.pypandas.cn/) 和 国产深度学习框架[MegEngine](https://megengine.org.cn/?id=MatplotlibDeep_pic_index_01) 进行深度学习的入门。
+本栏目会指导你如何使用 [Numpy](https://www.numpy.org.cn/)、[Matplotlib](https://www.matplotlib.org.cn/)、[Pandas](https://www.pypandas.cn/) 和 国产深度学习框架[MegEngine](https://megengine.org.cn/?id=MatplotlibDeep_pic_index_01) 进行深度学习的入门。
 
 ## 为深度学习新手准备的教程目录
 
