@@ -138,7 +138,7 @@
 // 名称
 const name = 'Matplotlib';
 // 静态文件地址
-const staticDomain = 'https://static.matplotlib.org.cn/';
+const staticDomain = 'https://static.matplotlib.thto.net/';
 // qq群号码
 const qqGroupNumber = '23077413';
 // 版本

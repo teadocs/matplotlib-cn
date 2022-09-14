@@ -15,7 +15,7 @@
 </template>
 
 <script>
-const staticDomain = 'https://static.matplotlib.org.cn/';
+const staticDomain = 'https://static.matplotlib.thto.net/';
 
 export default {
   data() {
