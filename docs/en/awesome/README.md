@@ -12,11 +12,11 @@ sidebar: auto
 <p></p>
 <p></p>
 <center>
-<img style="width: 180px" src="/logo_awesome.svg">
+<!-- <img style="width: 180px" src="/logo_awesome.svg"> -->
 <h1>Matplotlib 精选资源</h1>
 </center>
 
-精选的Matplotlib相关的资源、工具、文章、教程列表（均从互联网收集或转发）。
+精选的 Matplotlib 相关的资源、工具、文章、教程列表（均从互联网收集或转发）。
 
 如果你有发现更好的资料可以分享，欢迎[告诉我们](https://github.com/teadocs/matplotlib-cn/issues)或者直接[修改这个页面](https://github.com/teadocs/matplotlib-cn/edit/master/docs/awesome/README.md)。
 
@@ -32,7 +32,7 @@ sidebar: auto
 
 ## 开源相关
 
-与Matplotlib有关的开源项目。
+与 Matplotlib 有关的开源项目。
 
 <awesome :data="[
 ]"></awesome>

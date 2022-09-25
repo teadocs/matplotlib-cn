@@ -1,4 +1,6 @@
-module.exports = [
+import type { HeadConfig } from '@vuepress/core'
+
+export const head: HeadConfig[] = [
   ['link', {
     rel: 'dns-prefetch',
     href: `//cdn.bootcss.com`
@@ -15,8 +17,8 @@ module.exports = [
     showProcessingMessages: false, //关闭js加载过程信息
     messageStyle: "none", //不显示信息
     tex2jax: {
-      "inlineMath": [["$", "$"], ["\\\\(", "\\\\)"]], 
-      "processEscapes": true, 
+      "inlineMath": [["$", "$"], ["\\\\(", "\\\\)"]],
+      "processEscapes": true,
       "ignoreClass": "document",
       skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'a', 'td'],
       "processClass": "math|output_area"
@@ -108,9 +110,9 @@ module.exports = [
   })();
 `],
   // 广告系统
-  ['script', {}, `
-  (function() {
-    document.write("<s"+"cript defer='defer' type='text/javascript' src='https://analytics.numpy.org.cn/public/ad.js?"+Math.random()+"'></scr"+"ipt>"); 
-  })();
-  `],
+  ['script', {
+    src: `https://analytics.numpy.org.cn/public/ad.js?${Math.random()}`,
+    defer: 'defer',
+    async: 'true'
+  }],
 ]

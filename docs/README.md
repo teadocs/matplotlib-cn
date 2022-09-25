@@ -6,10 +6,13 @@ meta:
   - name: description
     content: Matplotlib中文网、Matplotlib官方中文文档。
 heroImage: /logo.svg
-actionText: 快速了解 →
-actionLink: /intro/
-action2Text: 开始深度学习
-action2Link: https://analytics.numpy.org.cn/course.html
+actions:
+  - text: 快速了解 →
+    link: /intro/
+    type: primary
+  - text: 开始深度学习
+    link: https://analytics.numpy.org.cn/course.html
+    type: primary
 footer: 署名-非商业性使用-相同方式共享 3.0 中国大陆 (CC BY-NC-SA 3.0 CN) | Copyright © 2019-present Zhi Bing
 ---
 
@@ -21,7 +24,6 @@ footer: 署名-非商业性使用-相同方式共享 3.0 中国大陆 (CC BY-NC-
   <div class="feature">
     <h2>为什么选择 Matplotlib？</h2>
     <p>如果某天你发现自己要学习 Matplotlib, 很可能是因为: 1、Matplotlib 是一个非常强大的 Python 画图工具；2、手中有很多数据, 可是不知道该怎么呈现这些数据。
-    </ul>
     </p>
   </div>
   <div class="feature">
@@ -30,9 +32,9 @@ footer: 署名-非商业性使用-相同方式共享 3.0 中国大陆 (CC BY-NC-
   </div>
 </div>
 
-### 就像1、2、3 一样简单
+### 就像 1、2、3 一样简单
 
-``` bash
+```bash:no-line-numbers
 # 1、安装包
 $ pip install matplotlib
 

@@ -1,4 +1,6 @@
-module.exports = [
+import type { NavbarConfig } from 'vuepress-theme-teadocs'
+
+export const navbarZh: NavbarConfig = [
   {
     text: '简介',
     link: '/intro/'

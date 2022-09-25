@@ -19,7 +19,6 @@ footer: Attribution-NonCommercial-ShareAlike 3.0 China Mainland (CC BY-NC-SA 3.0
   <div class="feature">
     <h2>Why choose Matplotlib?</h2>
     <p>If you find yourself learning Matplotlib one day, it is probably because: 1. Matplotlib is a very powerful Python drawing tool; 2. There is a lot of data in hand, but I don't know how to present it.
-    </ul>
     </p>
   </div>
   <div class="feature">
@@ -30,7 +29,7 @@ footer: Attribution-NonCommercial-ShareAlike 3.0 China Mainland (CC BY-NC-SA 3.0
 
 ### As Easy as 1, 2, 3
 
-``` bash
+```bash
 # 1. installation package
 $ pip install matplotlib
 
@@ -54,4 +53,3 @@ Change the world from **Python**.
 This site is recommended to use [Python 3.x](https://www.python.org/downloads/) and above.
 
 :::
-
