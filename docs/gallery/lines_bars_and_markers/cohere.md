@@ -2,7 +2,7 @@
 
 举例说明如何绘制两个信号的相干性。
 
-![绘制两个信号的相干性图示](https://matplotlib.org/_images/sphx_glr_categorical_variables_001.png)
+![绘制两个信号的相干性图示](https://matplotlib.org/_images/sphx_glr_cohere_thumb.png)
 
 ```python
 import numpy as np
